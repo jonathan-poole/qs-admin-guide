@@ -4,12 +4,12 @@ Stuff.
 
 ### Markdown stuff
 
-More stuff
+Table of Contents
 
-
-* TOC {:toc}
 1. Part 1
 2. Part 2
+* TOC
+{:toc}
 
 
 [Link](url) and ![Image](src)
