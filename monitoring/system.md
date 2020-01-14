@@ -1,7 +1,7 @@
 ---
 layout: default
 title: System
-parent: monitoring
+parent: Monitoring
 nav_order: 1
 ---
 
