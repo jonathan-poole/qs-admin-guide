@@ -1,2 +1,9 @@
 remote_theme: pmarsceill/just-the-docs
 markdown: kramdown
+aux_links:
+  "Diagnostic Toolkit":
+    - "//diagnostictoolkit.qlik-poc.com"
+  "EA Powertools":
+    - "//github.com/eapowertools"
+  "Qlik Help":
+    - "//help.qlik.com"
