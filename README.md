@@ -4,11 +4,10 @@ Stuff.
 
 ### Markdown stuff
 
-Table of Contents
+# Contents header
+{:.no_toc}
 
-1. Part 1
-2. Part 2
-* TOC
+* A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
 
