@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unused Sheets
-parent: applications
+parent: Applications
 nav_order: 1
 ---
 
