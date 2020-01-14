@@ -2,15 +2,6 @@
 
 Stuff.
 
-### Markdown stuff
-
-# Contents header
-{:.no_toc}
-
-* A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
-
-
-[Link](url) and ![Image](src)
-
-
+# Table of Contents
+- [Test](test.md)
+- [Test2](test2.md)
