@@ -1,2 +1,2 @@
-remote_theme: leakyabstractions/pretty-docs
+remote_theme: pmarsceill/just-the-docs
 markdown: kramdown
