@@ -1,14 +1,12 @@
 ---
 layout: default
-title: Applications
-nav_order: 3
+title: Asset Management
+nav_order: 1
 has_children: true
-permalink: docs/applications
+permalink: docs/asset_management
 ---
 
-# Applications
+# Asset Management
 {: .no_toc }
 
-Your apps are bad news!
-
-![Brad](images/brad_image.png)
+content content content.
