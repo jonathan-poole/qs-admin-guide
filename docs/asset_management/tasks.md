@@ -1,12 +1,11 @@
 ---
 layout: default
-title: Asset Management
+title: Tasks
 nav_order: 1
 has_children: true
-permalink: docs/asset_management
 ---
 
-# Asset Management
+# Tasks
 {: .no_toc }
 
 stuff stuff stuff.
