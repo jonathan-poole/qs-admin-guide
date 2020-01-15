@@ -10,3 +10,5 @@ permalink: docs/applications
 {: .no_toc }
 
 Your apps are bad news!
+
+![Brad](images/brad_image.png)
