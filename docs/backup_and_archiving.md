@@ -2,7 +2,7 @@
 layout: default
 title: Backup & Archiving
 has_children: true
-nav_order: 1
+nav_order: 5
 permalink: docs/backup_and_archiving
 ---
 
