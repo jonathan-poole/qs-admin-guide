@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Custom Properties
-nav_order: 1
+nav_order: 6
 parent: Asset Management
 ---
 
