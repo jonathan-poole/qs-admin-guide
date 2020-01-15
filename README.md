@@ -4,7 +4,7 @@ A repository of administrative best practices, organized by time and type.
 
 | Daily                                                    | Weekly                                | Monthly                        | Quarterly                      | Yearly                          |
 |----------------------------------------------------------|---------------------------------------|--------------------------------|--------------------------------|---------------------------------|
-| [QMC - Tasks Page](asset_management/tasks/unused_tasks.html) | QMC - Apps Page - New Apps            | Remove/Quarantine Unused Apps  | Review/Optimize QVD Structures | Review Architecture Scale Plan  |
+| [QMC - Tasks Page](docs/asset_management/tasks/unused_tasks.html) | QMC - Apps Page - New Apps            | Remove/Quarantine Unused Apps  | Review/Optimize QVD Structures | Review Architecture Scale Plan  |
 | QMC - Nodes Page                                         | QMC - Data Connections - New          | Remove Unused Tasks            | Archive old Archive Logs       | Review Hardware for Replacement |
 | Ops Mon - Review 24Hr Summary                            | QMC - Streams Page - New Streams      | Remove Unused Connections      | Update Capacity Plan           | Practice Recovery Processes     |
 | Telemetry - Expensive Objects/Apps                       | QMC - Tasks Page - New Tasks          | Remove Unused Streams          | Optimize Batch Window          |                                 |
