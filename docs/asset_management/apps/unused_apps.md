@@ -24,6 +24,7 @@ For this task, we will use the Operations Monitor application.   Make sure this 
         _Look for Unpublished applications that have not been used for a long time (fig 3)_
 		
     - **Actions**
+    	 
     	```
     	NOTE:  Instead of just deleting any apps, it is considered a best practice to export the QVF without data and store a copy somewhere to retain the code.
     	```
@@ -41,4 +42,5 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 
   
   **Tags**
+  
   #monthly #apps #unused
