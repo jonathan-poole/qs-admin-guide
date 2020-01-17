@@ -27,9 +27,7 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 		
     - **Actions**
     	 
-    	```
-    	NOTE:  Instead of just deleting any apps, it is considered a best practice to export the QVF without data and store a copy somewhere to retain the code.
-    	```
+    	```NOTE:  Instead of just deleting any apps, it is considered a best practice to export the QVF without data and store a copy somewhere to retain the code.```
     	
         1. If you don't already have a stream named "Quarantine", this is a good time to create one. 
             - See instructions and security rule here --> **insert link**
@@ -46,4 +44,3 @@ For this task, we will use the Operations Monitor application.   Make sure this 
   **Tags**
   
   #monthly #apps #unused
-
