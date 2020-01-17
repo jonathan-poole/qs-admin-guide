@@ -18,6 +18,7 @@ For this task, we will use the Operations Monitor application.   Make sure this 
     - **Priority 1**
         - Look for applications that are Published but have not been accessed
         - ![fig_1.png](images/fig_1.png)
+	[![fig_1.png](images/fig_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/fig_1.png)
     - **Priority 2**
         - Look for applications that are Published and have not been used for a long time
         - (fig 2)
