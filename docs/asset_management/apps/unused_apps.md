@@ -45,4 +45,4 @@ For this task, we will use the Operations Monitor application.   Make sure this 
   
   **Tags**
   
-  #monthly #apps #unused
+  #monthly
