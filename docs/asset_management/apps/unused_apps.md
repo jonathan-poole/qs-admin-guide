@@ -16,12 +16,14 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 3. In the App Details table object, sort by Last Accessed field and scroll to old dates or null dates 
 
     - **Priority 1**
-        _Look for applications that are Published but have not been accessed (fig 1)_
-        ![fig_1.png](images/fig_1.png)
+        - Look for applications that are Published but have not been accessed
+        - ![fig_1.png](images/fig_1.png)
     - **Priority 2**
-        _Look for applications that are Published and have not been used for a long time (fig 2)_
+        - Look for applications that are Published and have not been used for a long time
+        - (fig 2)
     - **Priority 3**	
-        _Look for Unpublished applications that have not been used for a long time (fig 3)_
+        - Look for Unpublished applications that have not been used for a long time
+        - (fig 3)
 		
     - **Actions**
     	 
@@ -44,3 +46,4 @@ For this task, we will use the Operations Monitor application.   Make sure this 
   **Tags**
   
   #monthly #apps #unused
+
