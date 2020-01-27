@@ -1,4 +1,4 @@
-## Qlik Sense Admin Guide
+## Qlik Sense Admin Playbook
 
 A repository of administrative best practices, organized by time and type.
 
