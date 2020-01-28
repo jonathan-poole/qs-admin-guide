@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Unused Apps
+title: Remove/Quarantine Unused Apps
 parent: Apps
 grand_parent: Asset Management
 nav_order: 2
