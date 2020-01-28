@@ -2,7 +2,7 @@
 layout: default
 title: Operations Monitor
 nav_order: 1
-parent: Tooling
+parent: Tooling Appendix
 ---
 
 # Operations Monitor
