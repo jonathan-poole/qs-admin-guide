@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Capacity Planning
+title: Review/Update Capacity Plan
 nav_order: 1
 parent: System Planning
 ---
 
-# Capacity Planning
+# Review/Update Capacity Plan
 {: .no_toc }
 
 stuff stuff stuff.
