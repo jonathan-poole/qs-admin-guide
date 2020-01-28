@@ -1,4 +1,4 @@
-var wb = XLSX.utils.table_to_book(document.getElementById('mytable'), {sheet:"Sheet JS"});
+var wb = XLSX.utils.table_to_book(document.getElementById('playbook'), {sheet:"Sheet JS"});
 var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
 function s2ab(s) {
                 var buf = new ArrayBuffer(s.length);
