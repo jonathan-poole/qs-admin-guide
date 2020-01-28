@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Analyze/Curate Extensions
-nav_order: 1
+nav_order: 8
 parent: Asset Management
 ---
 
