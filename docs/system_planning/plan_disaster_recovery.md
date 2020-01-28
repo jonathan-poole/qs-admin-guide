@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Disaster Recovery Planning
+title: Plan Disaster Recovery
 nav_order: 5
 parent: System Planning
 ---
 
-# Disaster Recovery Planning
+# Plan Disaster Recovery
 {: .no_toc }
 
 stuff stuff stuff.
