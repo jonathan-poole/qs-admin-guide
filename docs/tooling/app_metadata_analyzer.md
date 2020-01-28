@@ -2,7 +2,7 @@
 layout: default
 title: App Metadata Analyzer
 nav_order: 3
-parent: Tooling
+parent: Tooling Appendix
 ---
 
 # App Metadata Analyzer
