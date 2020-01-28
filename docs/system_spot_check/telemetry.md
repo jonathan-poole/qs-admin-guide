@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Telemetry
+title: Review Expensive Objects/Apps (Telemetry)
 parent: System Spot Check
 nav_order: 3
 ---
 
-# Telemetry
+# Review Expensive Objects/Apps (Telemetry)
 {: .no_toc }
 
 contentttttttttttt.
