@@ -1,12 +1,7 @@
-<head>
-<script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
-<script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
-</head>
-
 ## Qlik Sense Admin Playbook
 
 A repository of administrative best practices, organized by time and type.
-{:#playbook}
+
 | Daily                                                    | Weekly                                | Monthly                        | Quarterly                      | Yearly                          |
 |----------------------------------------------------------|---------------------------------------|--------------------------------|--------------------------------|---------------------------------|
 | [Review Tasks](docs/system_spot_check/tasks.md)                                                   | [Check for New<br>Apps](docs/asset_management/apps/check_new_apps.md)                                        | [Remove/Quarantine<br>Unused Apps](docs/asset_management/apps/remove_quarantine_unused_apps.md)                     | [Review/Optimize<br>QVD Structures](docs/asset_management/qvds/review_optimize_qvd_structures.md) | [Review<br>Architecture/Scale<br>Plan](docs/system_planning/review_architecture_scale_plan.md)  |
@@ -23,19 +18,4 @@ A repository of administrative best practices, organized by time and type.
 |                                                                                                   |                                                                                                              | [Review Pinning/<br>Load Balancing](docs/asset_management/apps/review_pinning_load_balancing.md)                    |                                                                                                   |                                 |
 |                                                                                                   |                                                                                                              | [Analyze Security<br>Rules](docs/asset_management/security_rules/analyze_security_rules.md)                         |                                                                                                   |                                 |
 |                                                                                                   |                                                                                                              | [Audit User<br>Access](docs/audit/audit_user_access.md)                                                             |                                                                                                   |                                 |
-<div>
-  <button id="exportTable" onclick="exportToExcel('playbook')">Export To Excel</button>
-</div>
-<script>
-        var wb = XLSX.utils.table_to_book(document.getElementById('mytable'), {sheet:"Sheet JS"});
-        var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
-        function s2ab(s) {
-                        var buf = new ArrayBuffer(s.length);
-                        var view = new Uint8Array(buf);
-                        for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
-                        return buf;
-        }
-        function exportToExcel(tableID) {
-            saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'test.xlsx');
-        }
-</script>
+
