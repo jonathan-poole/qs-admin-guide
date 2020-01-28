@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Upgrades
+title: Plan/Review Upgrade Strategy
 nav_order: 2
 parent: System Planning
 ---
 
-# Upgrades
+# Plan/Review Upgrade Strategy
 {: .no_toc }
 
 stuff stuff stuff.
