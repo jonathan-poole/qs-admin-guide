@@ -2,7 +2,8 @@
 
 A repository of administrative best practices, organized by time and type.
 
-{: #playbook}
+{:#playbook}
+
 | Daily                                                    | Weekly                                | Monthly                        | Quarterly                      | Yearly                          |
 |----------------------------------------------------------|---------------------------------------|--------------------------------|--------------------------------|---------------------------------|
 | [Review Tasks](docs/system_spot_check/tasks.md)                                                   | [Check for New<br>Apps](docs/asset_management/apps/check_new_apps.md)                                        | [Remove/Quarantine<br>Unused Apps](docs/asset_management/apps/remove_quarantine_unused_apps.md)                     | [Review/Optimize<br>QVD Structures](docs/asset_management/qvds/review_optimize_qvd_structures.md) | [Review<br>Architecture/Scale<br>Plan](docs/system_planning/review_architecture_scale_plan.md)  |
