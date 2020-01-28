@@ -1,7 +1,7 @@
 ---
 layout: default
 title: License Allocation
-nav_order: 3
+nav_order: 1
 parent: Licensing
 ---
 
