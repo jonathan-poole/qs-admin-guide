@@ -19,4 +19,4 @@ A repository of administrative best practices, organized by time and type.
 |                                                                                                   |                                                                                                              | [Analyze Security<br>Rules](docs/asset_management/security_rules/analyze_security_rules.md)                         |                                                                                                   |                                 |
 |                                                                                                   |                                                                                                              | [Audit User<br>Access](docs/audit/audit_user_access.md)                                                             |                                                                                                   |                                 |
 
-<button id="button-a" onclick="exportToExcel('mytable')">Create Excel</button>
+<button id="button-a" onclick="exportToExcel('mytable')">Export to Excel</button>
