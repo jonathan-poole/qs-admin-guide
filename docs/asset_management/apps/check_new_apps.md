@@ -6,12 +6,7 @@ grand_parent: Asset Management
 nav_order: 1
 ---
 
-# Check for New Apps (QMC)
-<div class="social-icons">
-  <a class="social-icon social-icon--codepen">
-    <i class="fas fa-dolly-flatbed"></i>
-    <div class="tooltip">Shipped | Native Capability</div>
-</div>
+# Check for New Apps (QMC)  <i class="fas fa-dolly-flatbed" title="Shipped | Native Capability"></i>
 
 ## Access Qlik Management Console (QMC)
 
