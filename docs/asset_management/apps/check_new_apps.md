@@ -7,7 +7,8 @@ nav_order: 1
 ---
 
 # Check for New Apps (QMC)
-<div>
+<div class="social-icons">
+  <a class="social-icon social-icon--codepen">
     <i class="fas fa-dolly-flatbed"></i>
     <div class="tooltip">Shipped | Native Capability</div>
 </div>
