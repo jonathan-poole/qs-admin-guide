@@ -22,4 +22,3 @@ A repository of administrative best practices, organized by time and type.
 |                                                                                                   |                                                                                                                    | [Audit User&nbsp;<br>Access](docs/audit/audit_user_access.md)                                                        |                                                                                                         |                                                                                                             |
 
 <button id="button-a" class="btn btn-primary" onclick="exportToExcel('playbook')">Export to Excel</button>
-<i class="fas fa-camera"></i>
