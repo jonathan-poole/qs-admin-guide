@@ -6,7 +6,7 @@ grand_parent: Asset Management
 nav_order: 1
 ---
 
-# Check for New Apps (QMC) <i class="fas fa-box"></i>
+# Check for New Apps (QMC) <i class="fas fa-dolly-flatbed"></i>
 
 ## Access Qlik Management Console (QMC)
 
