@@ -20,7 +20,7 @@ To access QMC open you browser an access:
 
 For more information in how to access Qlik Management console [click here](https://help.qlik.com/en-US/sense-admin/November2019/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/start-the-QMC.htm).
 
-## QMC - Apps
+### QMC - Apps
 
 As soon as you access QMC click on **Apps** to have a list of all streams:
 
