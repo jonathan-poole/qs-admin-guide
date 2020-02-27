@@ -43,7 +43,13 @@ Double click on the **Created** column to order it in descending order:
 
 ## Get List of New Apps (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
+```ps
+GC foo.txt
+```
 
+```powershell
+GC foo.txt
+```
 
 **Tags**
 
