@@ -8,7 +8,7 @@ nav_order: 1
 
 # Check for New Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
-### QMC - Apps
+### QMC - Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 As soon as you access QMC click on **Apps** to have a list of all streams:
 
