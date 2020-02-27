@@ -8,18 +8,6 @@ nav_order: 1
 
 # Check for New Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
-## Access Qlik Management Console (QMC) <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability">
-
-To access QMC open you browser an access:
-
-* **https://**_\<QPS server name\>_/qmc if you using encrypted communication.
-
-  or
-
-* **http://**_\<QPS server name\>_:_\<Service listen port HTTP\>_/qmc if your are using unencrypted communication.
-
-For more information in how to access Qlik Management console [click here](https://help.qlik.com/en-US/sense-admin/November2019/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/start-the-QMC.htm).
-
 ### QMC - Apps
 
 As soon as you access QMC click on **Apps** to have a list of all streams:
