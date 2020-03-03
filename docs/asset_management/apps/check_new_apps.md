@@ -39,7 +39,30 @@ Lastly, you can review the resulting table and view any new apps, noting their f
 ## Get List of New Apps (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 ```powershell
-GC foo.txt
+# Function to collect applications that were created in the last x days over z size in bytes
+
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = 'machineName'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$daysBack = 1
+$byteSize = 0
+$filePath = 'C:\'
+$fileName = 'output'
+$outputFormat = 'json'
+
+$outFile = ($filePath + $fileName + '.' + $outputFormat)
+$date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+# Main
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+
+If ($outputFormat.ToLower() -eq 'csv') {
+  Get-QlikApp -filter "createdDate ge '$date' and fileSize ge $byteSize" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
+  }  Else {
+  Get-QlikApp -filter "createdDate ge '$date' and fileSize ge $byteSize" -full | ConvertTo-Json | Set-Content $outFile
+} 
 ```
 
 **Tags**
