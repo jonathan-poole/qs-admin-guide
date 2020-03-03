@@ -41,7 +41,7 @@ Lastly, you can review the resulting table and view any new streams. You will wa
 
 -------------------------
 
-## Get List of New Streams (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+## Get List of New/Modified Security Rules (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
