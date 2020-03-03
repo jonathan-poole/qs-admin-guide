@@ -6,6 +6,9 @@ grand_parent: Asset Management
 nav_order: 1
 ---
 
+* TOC
+{:toc}
+
 # Check for New Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 ## Applicable Environments
