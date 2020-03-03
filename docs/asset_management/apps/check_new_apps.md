@@ -66,6 +66,7 @@ The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
 The script will bring back any application that is greater than or equal to x days old _and_ greater than or equal to z bytes. The script will then store the output into the location of your choice in either csv or json format.
 
+## Script
 ```powershell
 # Function to collect applications that were created in the last x days over z size in bytes
 
@@ -91,6 +92,44 @@ If ($outputFormat.ToLower() -eq 'csv') {
   }  Else {
   Get-QlikApp -filter "createdDate ge '$date' and fileSize ge $byteSize" -full | ConvertTo-Json | Set-Content $outFile
 } 
+```
+
+## Example Output
+```
+{
+    "id":  "71c2361f-024b-4079-8487-5c442b50db8f",
+    "createdDate":  "2020/03/03 16:04",
+    "modifiedDate":  "2020/03/03 16:04",
+    "modifiedByUserName":  "QLIK-POC\\dpi",
+    "customProperties":  [
+
+                         ],
+    "owner":  {
+                  "id":  "27a825fe-3cad-488a-9dcd-d436a90e319c",
+                  "userId":  "dpi",
+                  "userDirectory":  "QLIK-POC",
+                  "name":  "dpi",
+                  "privileges":  null
+              },
+    "name":  "New App!",
+    "appId":  "",
+    "sourceAppId":  "00000000-0000-0000-0000-000000000000",
+    "targetAppId":  "00000000-0000-0000-0000-000000000000",
+    "publishTime":  "1753/01/01 00:00",
+    "published":  false,
+    "tags":  null,
+    "description":  "",
+    "stream":  null,
+    "fileSize":  139762,
+    "lastReloadTime":  "1753/01/01 00:00",
+    "thumbnail":  "",
+    "savedInProductVersion":  "12.475.3",
+    "migrationHash":  "21ecc792c56e18162f1785d3d41f28fdaced5c96",
+    "dynamicColor":  "",
+    "availabilityStatus":  "Available",
+    "privileges":  null,
+    "schemaPath":  "App"
+}
 ```
 
 **Tags**
