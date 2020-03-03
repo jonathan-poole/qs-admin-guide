@@ -38,7 +38,7 @@ Lastly, you can review the resulting table and view any new apps, noting their f
 
 ## Get List of New Apps (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
-The below script snippet requires the [Qlik CLI](docs/tooling_appendix/qlik_cli.md).
+The below script snippet requires the [Qlik CLI](docs/tooling/qlik_cli.md).
 
 The script will bring back any application that is greater than or equal to x days old _and_ greater than or equal to z bytes. The script will then store the output into the location of your choice in either csv or json format.
 
