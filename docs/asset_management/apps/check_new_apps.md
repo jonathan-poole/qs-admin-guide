@@ -14,6 +14,8 @@ nav_order: 1
 ## Goal
 While the idea of simply checking for new applications seems relatively trivial and not particularly actionable, it is a good practice as it only takes a couple of minutes and could save you finding out about a very large app in a more unpleasant fashion (i.e. your engine node locking up). This page shows you two methods of visualizing/gathering that high-level application data on newly created applications so that you can be aware/potentially report on it.
 
+--------------------------
+
 ## QMC - Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 In the QMC, select **Apps**:
@@ -31,6 +33,8 @@ Now select the filter icon for the **Created** column, and then select the filte
 Lastly, you can review the resulting table and view any new apps, noting their file sizes. If any are particularly large, it might be worthwhile to follow-up with the owner of the application, and possibly do further analysis in with the App Metadata Analyzer.
 
 [![check_new_apps_native_4.png](images/check_new_apps_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_4.png)
+
+--------------------------
 
 ## Get List of New Apps (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
