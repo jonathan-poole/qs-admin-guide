@@ -6,17 +6,19 @@ grand_parent: Asset Management
 nav_order: 1
 ---
 
-* TOC
-{:toc}
-
 # Check for New Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+{:.no_toc}
 
 ## Applicable Environments
+{:.no_toc}
 - Development
 
 ## Goal
+{:.no_toc}
 While the idea of simply checking for new applications seems relatively trivial and not particularly actionable, it is a good practice as it only takes a couple of minutes and could save you finding out about a very large app in a more unpleasant fashion (i.e. your engine node locking up). This page shows you three methods of visualizing/gathering that high-level application data on newly created applications so that you can be aware/potentially report on it.
 
+* TOC
+{:toc}
 -------------------------
 
 ## QMC - Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
