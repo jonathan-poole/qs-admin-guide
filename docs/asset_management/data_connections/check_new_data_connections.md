@@ -31,7 +31,7 @@ In the QMC, select **Data Connections**:
 
 [![check_new_data_connections_native_1.png](images/check_new_data_connections_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/data_connections/images/check_new_data_connections_native_1.png)
 
-In the upper right hand side of the screen, select the **Column selector**, and then selected the **Connection String**, **Type**, and **Created** columns.
+In the upper right hand side of the screen, select the **Column selector**, and then select the **Connection String**, **Type**, and **Created** columns.
 
 [![check_new_data_connections_native_2.png](images/check_new_data_connections_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/data_connections/images/check_new_data_connections_native_2.png)
 
