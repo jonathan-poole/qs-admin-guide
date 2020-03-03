@@ -31,7 +31,7 @@ In the QMC, select **Tasks**:
 
 [![check_tasks_native_1.png](images/check_tasks_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1.png)
 
-In the upper right hand side of the screen, select the **Column selector**, and then selected the **Created** column.
+In the upper right hand side of the screen, select the **Column selector**, and then select the **Created** column.
 
 [![check_tasks_native_2.png](images/check_tasks_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_2.png)
 
@@ -86,7 +86,7 @@ The script will bring back any reload tasks with a **Created Date** that is grea
 
 ### Script
 ```powershell
-# Function to collect data connections that were created in the last x days
+# Function to collect reload tasks that were created in the last x days
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
