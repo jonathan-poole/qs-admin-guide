@@ -45,6 +45,39 @@ Lastly, you can review the resulting table and view any new tasks.
 
 -------------------------
 
+## Hub - Operations Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+
+Open up the Hub and navigate to your **Monitoring apps** stream. Select the **Operations Monitor** application.
+
+[![check_tasks_native_1_1.png](images/check_tasks_native_1_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_1.png)
+
+From the **App overview** page, select the **Task Details** sheet.
+
+[![check_tasks_native_1_2.png](images/check_tasks_native_1_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_2.png)
+
+Select **Duplicate**, as we are going to add a column that isn't currently in a table.
+
+[![check_tasks_native_1_3.png](images/check_tasks_native_1_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_3.png)
+
+In **Edit** mode, select the **Reload Summary Statistics** table and shrink it to allow for more real estate, as we will be adding another table.
+
+Drag in a new table object, and add the dimension of **Task Name**.
+
+[![check_tasks_native_1_4.png](images/check_tasks_native_1_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_4.png)
+
+Now we also need to add the **Task Created** dimension to that table. Note that reloads from the Hub and manual reloads will not show a created date.
+
+[![check_tasks_native_1_5.png](images/check_tasks_native_1_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_5.png)
+
+You can now sort by that **Task Created** column to view new tasks.
+
+[![check_tasks_native_1_6.png](images/check_tasks_native_1_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_6.png)
+
+For deeper analysis into tasks, refer to [Analyze Tasks](analyze_tasks.md)
+
+
+-------------------------
+
 ## Get List of New Tasks (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
