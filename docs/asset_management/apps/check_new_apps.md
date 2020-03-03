@@ -17,6 +17,9 @@ nav_order: 1
 {:.no_toc}
 While the idea of simply checking for new applications seems relatively trivial and not particularly actionable, it is a good practice as it only takes a couple of minutes and could save you finding out about a very large app in a more unpleasant fashion (i.e. your engine node locking up). This page shows you three methods of visualizing/gathering that high-level application data on newly created applications so that you can be aware/potentially report on it.
 
+## Table of Contents
+{:.no_toc}
+
 * TOC
 {:toc}
 -------------------------
@@ -72,6 +75,7 @@ The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 The script will bring back any application that is greater than or equal to x days old _and_ greater than or equal to z bytes. The script will then store the output into the location of your choice in either csv or json format.
 
 ### Script
+{:.no_toc}
 ```powershell
 # Function to collect applications that were created in the last x days over z size in bytes
 
@@ -100,6 +104,7 @@ If ($outputFormat.ToLower() -eq 'csv') {
 ```
 
 ### Example Output
+{:.no_toc}
 ```
 {
     "id":  "71c2361f-024b-4079-8487-5c442b50db8f",
