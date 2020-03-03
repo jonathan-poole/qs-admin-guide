@@ -14,7 +14,7 @@ nav_order: 1
 ## Goal
 While the idea of simply checking for new applications seems relatively trivial and not particularly actionable, it is a good practice as it only takes a couple of minutes and could save you finding out about a very large app in a more unpleasant fashion (i.e. your engine node locking up). This page shows you three methods of visualizing/gathering that high-level application data on newly created applications so that you can be aware/potentially report on it.
 
-======================
+-------------------------
 
 ## QMC - Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
@@ -34,7 +34,7 @@ Lastly, you can review the resulting table and view any new apps, noting their f
 
 [![check_new_apps_native_4.png](images/check_new_apps_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_4.png)
 
-======================
+-------------------------
 
 ## Hub - Operations Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
@@ -58,7 +58,7 @@ You can now sort by that column to view new apps. In addition, feel free to add 
 
 [![check_new_apps_native_2_5.png](images/check_new_apps_native_2_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_2_5.png)
 
-======================
+-------------------------
 
 ## Get List of New Apps (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
