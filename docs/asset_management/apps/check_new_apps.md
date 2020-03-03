@@ -75,7 +75,6 @@ The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 The script will bring back any application that is greater than or equal to x days old _and_ greater than or equal to z bytes. The script will then store the output into the location of your choice in either csv or json format.
 
 ### Script
-{:.no_toc}
 ```powershell
 # Function to collect applications that were created in the last x days over z size in bytes
 
@@ -104,7 +103,6 @@ If ($outputFormat.ToLower() -eq 'csv') {
 ```
 
 ### Example Output
-{:.no_toc}
 ```
 {
     "id":  "71c2361f-024b-4079-8487-5c442b50db8f",
