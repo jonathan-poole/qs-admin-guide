@@ -70,6 +70,3 @@ The application can be found under _%ProgramData%\Qlik\Sense\Repository\DefaultA
 
 [![sense_app_metadata_analyzer_app_availability.png](images/sense_app_metadata_analyzer_app_availability.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_app_availability.png)
 
-**Tags**
-
-#weekly
