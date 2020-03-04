@@ -12,8 +12,16 @@ parent: Tooling Appendix
 {:.no_toc}
 - All
 
-## About
+## Table of Contents
 {:.no_toc}
+
+* TOC
+{:toc}
+
+-------------------------
+
+## About
+
 _The App Metadata Analyzer is now a supported application that is shipped with Qlik Sense as of the September 2019 release._
 
 The App Metadata Analyzer iterates over every application metadata endpoint along with several other QRS calls (Nodes, Apps, Proxies, LB audit), ultimately providing a comprehensive dashboard to analyze your application metadata server-wide.
@@ -44,17 +52,23 @@ The data from the endpoint includes:
   ```
 </details>
 
-## Table of Contents
-{:.no_toc}
-
-* TOC
-{:toc}
 -------------------------
 
 ## Where to get it <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 The application can be found under _%ProgramData%\Qlik\Sense\Repository\DefaultApps_ and is titled _App Metadata Analyzer.qvf_. This however might not be the most recent version of the app, as there have been bug fixes since. The most recent version of the app can be found at [Qlik Community - Sense App Metadata Analyzer](https://community.qlik.com/t5/Qlik-Monitoring-Administration/Sense-App-Metadata-Analyzer/gpm-p/1592163), and can be used from June 2018 and beyond.
 
+-------------------------
+
+## Screenshots
+
+[![sense_app_metadata_analyzer_dashboard.png](images/sense_app_metadata_analyzer_dashboard.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_dashboard.png)
+
+[![sense_app_metadata_analyzer_threshold.png](images/sense_app_metadata_analyzer_threshold.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_threshold.png)
+
+[![sense_app_metadata_analyzer_app_analysis.png](images/sense_app_metadata_analyzer_app_analysis.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_app_analysis.png)
+
+[![sense_app_metadata_analyzer_app_availability.png](images/sense_app_metadata_analyzer_app_availability.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_app_availability.png)
 
 **Tags**
 
