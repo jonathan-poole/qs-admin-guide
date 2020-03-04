@@ -97,7 +97,3 @@ The application can be found on GitHub under the EA Powertools repository here: 
 
 Complete documentation can be found here: [Data Connection Analyzer - Documentation](https://github.com/eapowertools/qs-data-connection-analyzer/blob/assets/qs-data-connection-analyzer.pdf).
 
-
-**Tags**
-
-#weekly
