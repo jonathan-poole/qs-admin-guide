@@ -30,7 +30,7 @@ This allows you to have a holistic view of the makeup of all of your Qlik applic
  
 As of the Qlik Sense June 2018 release, a new application level metadata endpoint is available. Data is populated for this endpoint per app post-reload in a June 2018+ environment. You can view this application metadata within your own June 2018+ environment at:
 
-```http(s)://<server>/api/v1/apps/<GUID>/data/metadata**```
+`http(s)://<server>/api/v1/apps/<GUID>/data/metadata`
  
 where <server> is your Qlik Sense Enterprise server and <GUID> is the application ID. Note that the application does not need to be lifted into RAM for the metadata to be accessed.
 
