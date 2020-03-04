@@ -70,3 +70,8 @@ The application can be found under _%ProgramData%\Qlik\Sense\Repository\DefaultA
 
 [![sense_app_metadata_analyzer_app_availability.png](images/sense_app_metadata_analyzer_app_availability.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_app_availability.png)
 
+-------------------------
+
+## Documentation
+
+[App Metadata Analyzer - Qlik Help](https://help.qlik.com/en-US/sense-admin/November2019/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/app-metadata-analyzer-app.htm)
