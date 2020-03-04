@@ -97,17 +97,6 @@ The application can be found on GitHub under the EA Powertools repository here: 
 
 Complete documentation can be found here: [Data Connection Analyzer - Documentation](https://github.com/eapowertools/qs-data-connection-analyzer/blob/assets/qs-data-connection-analyzer.pdf).
 
--------------------------
-
-## Screenshots
-
-[![sense_app_metadata_analyzer_dashboard.png](images/sense_app_metadata_analyzer_dashboard.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_dashboard.png)
-
-[![sense_app_metadata_analyzer_threshold.png](images/sense_app_metadata_analyzer_threshold.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_threshold.png)
-
-[![sense_app_metadata_analyzer_app_analysis.png](images/sense_app_metadata_analyzer_app_analysis.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_app_analysis.png)
-
-[![sense_app_metadata_analyzer_app_availability.png](images/sense_app_metadata_analyzer_app_availability.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/sense_app_metadata_analyzer_app_availability.png)
 
 **Tags**
 
