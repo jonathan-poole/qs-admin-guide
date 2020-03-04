@@ -14,7 +14,7 @@ nav_order: 4
 
 ## Goal
 {:.no_toc}
-The goal for this spot-check is use the [Operations Monitor](../../tooling/operations_monitor.md) to review the last 24 hours of activity for the Qlik site. This will allow the administrator the ability to spot anomalies, keep abreast of trends, and be generally aware of the health of a Qlik Sense Enterprise deployment.
+The goal for this spot-check is use the [Operations Monitor](../tooling/operations_monitor.html) to review the last 24 hours of activity for the Qlik site. This will allow the administrator the ability to spot anomalies, keep abreast of trends, and be generally aware of the health of a Qlik Sense Enterprise deployment.
 
 ## Table of Contents
 {:.no_toc}
