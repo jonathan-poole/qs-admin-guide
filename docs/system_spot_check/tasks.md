@@ -28,7 +28,7 @@ The goal for this spot-check is to be aware of any task failures which have occu
 
 In the QMC, select **Tasks**:
 
-[![check_tasks-1.png](images/check_tasks-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_spot_check/images/check_tasks=1.png)
+[![check_tasks-1.png](images/check_tasks-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_spot_check/images/check_tasks-1.png)
 
 For smaller deployments, a simple sorting of the **Last execution** column can be done to focus on recently executed tasks:
 
@@ -53,4 +53,3 @@ Once the administrator is satisfied at a cursory understanding of what reload ta
 **Tags**
 
 #daily
-
