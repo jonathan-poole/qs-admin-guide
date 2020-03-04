@@ -100,6 +100,10 @@ If ($outputFormat.ToLower() -eq 'csv') {
 }
 ```
 
+## Backup Up Security Rules
+
+Given the Qlik CLI script above, that script could actually be modified to pull security rules on a scheduled basis and store them out to separate files at your desired cadence, so that if an administrator wanted to "roll back" changes, they could. Refer to an example here: [Qlik Support - Exporting and Importing Security Rules](https://support.qlik.com/articles/000040012).
+
 **Tags**
 
 #weekly
