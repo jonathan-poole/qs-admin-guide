@@ -6,7 +6,7 @@ grand_parent: Asset Management
 parent: Security Rules
 ---
 
-# Check for New Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+# Check for New/Modified Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
 ## Applicable Environments
