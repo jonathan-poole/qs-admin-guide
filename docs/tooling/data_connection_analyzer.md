@@ -28,24 +28,6 @@ The application is supported by Qlik’s Americas Enterprise Architecture team, 
 
 -------------------------
 
-## Screenshots
-
-[![qs-data-connection-analyzer-1.png](images/qs-data-connection-analyzer-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-1.png)
-
-[![qs-data-connection-analyzer-2.png](images/qs-data-connection-analyzer-2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-2.png)
-
-[![qs-data-connection-analyzer-3.png](images/qs-data-connection-analyzer-3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-3.png)
-
-[![qs-data-connection-analyzer-4.png](images/qs-data-connection-analyzer-4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-4.png)
-
-[![qs-data-connection-analyzer-5.png](images/qs-data-connection-analyzer-5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-5.png)
-
-[![qs-data-connection-analyzer-6.png](images/qs-data-connection-analyzer-6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-6.png)
-
-[![qs-data-connection-analyzer-7.png](images/qs-data-connection-analyzer-7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-7.png)
-
--------------------------
-
 ## Common Questions & Associated Benefits of the App
 
 **Which connections are no longer used? (A data connection is found in a script log and exists in the Qlik Sense site, however no associated applications currently exist that at one point had used it).**
@@ -84,6 +66,24 @@ Removing unused connections makes general administration easier, as there is les
 **Via what mechanism are data connections being used?**
 
 - The application visualizes what connections are being run as tasks, manually, or in ODAG (or other API) requests. This is crucial in understanding user behavior.
+
+-------------------------
+
+## Screenshots
+
+[![qs-data-connection-analyzer-1.png](images/qs-data-connection-analyzer-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-1.png)
+
+[![qs-data-connection-analyzer-2.png](images/qs-data-connection-analyzer-2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-2.png)
+
+[![qs-data-connection-analyzer-3.png](images/qs-data-connection-analyzer-3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-3.png)
+
+[![qs-data-connection-analyzer-4.png](images/qs-data-connection-analyzer-4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-4.png)
+
+[![qs-data-connection-analyzer-5.png](images/qs-data-connection-analyzer-5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-5.png)
+
+[![qs-data-connection-analyzer-6.png](images/qs-data-connection-analyzer-6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-6.png)
+
+[![qs-data-connection-analyzer-7.png](images/qs-data-connection-analyzer-7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-7.png)
 
 -------------------------
 
