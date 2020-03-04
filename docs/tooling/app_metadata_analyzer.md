@@ -22,7 +22,7 @@ This allows you to have a holistic view of the makeup of all of your Qlik applic
  
 As of the Qlik Sense June 2018 release, a new application level metadata endpoint is available. Data is populated for this endpoint per app post-reload in a June 2018+ environment. You can view this application metadata within your own June 2018+ environment at:
 
-http(s)://<server>/api/v1/apps/<GUID>/data/metadata
+**http(s)://<server>/api/v1/apps/<GUID>/data/metadata**
  
 where <server> is your Qlik Sense Enterprise server and <GUID> is the application ID. Note that the application does not need to be lifted into RAM for the metadata to be accessed.
 
@@ -53,7 +53,7 @@ The data from the endpoint includes:
 
 ## Where to get it <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-The application can be found under _%ProgramData%\Qlik\Sense\Repository\DefaultApps_ and is titled _App Metadata Analyzer.qvf_. This however might not be the most recent version of the app, as there have been bug fixes since. The most recent version of the app can be found at https://community.qlik.com/t5/Qlik-Monitoring-Administration/Sense-App-Metadata-Analyzer/gpm-p/1592163, and can be used from June 2018 and beyond.
+The application can be found under _%ProgramData%\Qlik\Sense\Repository\DefaultApps_ and is titled _App Metadata Analyzer.qvf_. This however might not be the most recent version of the app, as there have been bug fixes since. The most recent version of the app can be found at [Qlik Community - Sense App Metadata Analyzer](https://community.qlik.com/t5/Qlik-Monitoring-Administration/Sense-App-Metadata-Analyzer/gpm-p/1592163), and can be used from June 2018 and beyond.
 
 
 **Tags**
