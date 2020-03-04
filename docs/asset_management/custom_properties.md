@@ -19,7 +19,7 @@ Regularly checking for new/modified custom properties allows you to track what/h
 Some of the goals:
   - Discover new custom properties so that their usage can be identified (e.g. through contacting the creator)
   - Identify modified custom properties so that their expanded usage can be identified and tracked
-  - Regulate the amount of custom property value options, as there can be performance impacts if there are very many
+  - Regulate the amount of custom property value options, as there can be performance impacts if there are many
   - Identify whether individual custom properties are being leveraged for security rules or for management/automation purposes
 
 ## Table of Contents
@@ -79,7 +79,7 @@ The script will bring back any custom properties that have been created or modif
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'us-ea-hybrid-qs'
+$computerName = 'machineName'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
 $daysBack = 1
 $filePath = 'C:\'
