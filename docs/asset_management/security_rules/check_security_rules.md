@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Check for New Security Rules
+title: Check for New/Modified Security Rules
 nav_order: 1
 grand_parent: Asset Management
 parent: Security Rules
 ---
 
-# Check for New Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+# Check for New/Modified Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
 ## Applicable Environments
@@ -100,7 +100,7 @@ If ($outputFormat.ToLower() -eq 'csv') {
 }
 ```
 
-## Backup Up Security Rules
+## Backup Security Rules
 
 Given the Qlik CLI script above, that script could actually be modified to pull security rules on a scheduled basis and store them out to separate files at your desired cadence, so that if an administrator wanted to "roll back" changes, they could. Refer to an example here: [Qlik Support - Exporting and Importing Security Rules](https://support.qlik.com/articles/000040012).
 
