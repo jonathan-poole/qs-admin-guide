@@ -22,7 +22,7 @@ parent: Tooling Appendix
 
 ## About
 
-_The App Metadata Analyzer is now a supported application that is shipped with Qlik Sense as of the September 2019 release._
+**_The App Metadata Analyzer is now a supported application that is shipped with Qlik Sense as of the September 2019 release._**
 
 The App Metadata Analyzer iterates over every application metadata endpoint along with several other QRS calls (Nodes, Apps, Proxies, LB audit), ultimately providing a comprehensive dashboard to analyze your application metadata server-wide.
 
@@ -30,13 +30,13 @@ This allows you to have a holistic view of the makeup of all of your Qlik applic
  
 As of the Qlik Sense June 2018 release, a new application level metadata endpoint is available. Data is populated for this endpoint per app post-reload in a June 2018+ environment. You can view this application metadata within your own June 2018+ environment at:
 
-**http(s)://<server>/api/v1/apps/<GUID>/data/metadata**
+```http(s)://<server>/api/v1/apps/<GUID>/data/metadata**```
  
 where <server> is your Qlik Sense Enterprise server and <GUID> is the application ID. Note that the application does not need to be lifted into RAM for the metadata to be accessed.
 
 Data from this endpoint is derived as part of the app reload process, and therefore does not include any object or expression related metadata. 
 
-The data from the endpoint includes:
+**The data from the endpoint includes:**
 
 - server metadata including number of server cores, total server RAM
 - reload time
