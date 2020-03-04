@@ -32,7 +32,7 @@ Open the Qlik Sense Telemetry Dashboard application and navigate to the **Detail
 For this example, we are interested in Visualization objects, App Open Events, and Reloads which have taken more than 30 seconds.
 
  * **Note**: The primary Engine calls which are relevant for most users of the Telemetry Dashboard are:
-   * OpenApp : The request to the Engine to open an application. This is the time it takes for the Engine to request the application binary from disk, load it over the network, and uncompress it to RAM.
+   * OpenApp : The request to the Engine to open an application. This is the time it takes for the Engine to request the application binary from disk, load it over the network, and un-compress it to RAM.
    * Reloads : How long a reload execution takes. This type of request is less frequently relevant to most organizations. At least for the scope of this task.
    * Visualizations : The request to the Engine to render a visualization, e.g. a table chart.
  * A more exhaustive write-up of the Telemetry Dashboard is found [here](../../tooling/telemetry_dashboard.md)
@@ -42,7 +42,7 @@ With a narrowed set of interactions, action plans can be constructed. For exampl
  * App Open : If the threshold is unacceptable given the important of the application, then a cache warming process can be built. Reference [here](../../tooling/cache_warming.md) for more specific guidance.
  * Visualization : Use the data from the Telemetry Dashboard like **App**, **Sheet** and **Object Type** + **ObjectID** to reach out to the application's owner and/or maintainer in order for a fix to be implemented. Since the Qlik Sense Telemetry Dashboard does not imply a specific fix, the developer will need to review the application to see what improvements can be made. Potential avenues for fixes: 
    * Table / Pivot Table : Use calculation conditions to force drill downs.
-   * Other visualizations : Review expressions used. Simplify where possible and/or off-load the calculations to the application's load script to pre calculate. The [Diagnostic Toolkit](https://diagnostictoolkit.qlik-poc.com/) project can be used for reference.
+   * Other visualizations : Review expressions used. Simplify where possible and/or off-load the calculations to the application's load script to pre-calculate. The [Diagnostic Toolkit](https://diagnostictoolkit.qlik-poc.com/) project can be used for reference.
 
 **Tags**
 
