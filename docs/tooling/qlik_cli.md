@@ -40,7 +40,7 @@ For documentation, please visit the Wiki for the repository here: [Qlik Cli Wiki
 
 -------------------------
 
-## Example Script </i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+## Example Script <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 The below is a simple example of the Qlik Cli importing an app into a Qlik environment and publishing it to a stream.
 
