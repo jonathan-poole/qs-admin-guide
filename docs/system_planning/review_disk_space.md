@@ -50,7 +50,7 @@ In this example we have the following locations displayed (there were more):
 - USRAL-LTU2
 - the C drive
 
-**Note**: If this is a multi-node Qlik Sense site then the presence of local paths (`C:\`, `D:\`) is concerning. See our section on [Analyzing Data Connections](..\asset_management\data_connections\analyze_data_connections.md) for guidance on converting these to UNC share paths.
+**Note**: If this is a multi-node Qlik Sense site then the presence of local paths (`C:\`, `D:\`) is concerning. See our section on [Analyzing Data Connections](..\asset_management\data_connections\analyze_data_connections.html) for guidance on converting these to UNC share paths.
 
 ### Storage used for Qlik Sense storage
 
