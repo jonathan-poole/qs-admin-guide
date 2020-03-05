@@ -56,7 +56,7 @@ Data from this endpoint is derived as part of the app reload process, and theref
 
 ## Where to get it <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-The application can be found under _%ProgramData%\Qlik\Sense\Repository\DefaultApps_ and is titled _App Metadata Analyzer.qvf_. This however might not be the most recent version of the app, as there have been bug fixes since. The most recent version of the app can be found at [Qlik Community - Sense App Metadata Analyzer](https://community.qlik.com/t5/Qlik-Monitoring-Administration/Sense-App-Metadata-Analyzer/gpm-p/1592163), and can be used from June 2018 and beyond.
+The application can be found under **_%ProgramData%\Qlik\Sense\Repository\DefaultApps_** and is titled _App Metadata Analyzer.qvf_. This however might not be the most recent version of the app, as there have been bug fixes since. The most recent version of the app can be found at [Qlik Community - Sense App Metadata Analyzer](https://community.qlik.com/t5/Qlik-Monitoring-Administration/Sense-App-Metadata-Analyzer/gpm-p/1592163), and can be used from June 2018 and beyond.
 
 -------------------------
 
