@@ -9,4 +9,3 @@ permalink: docs/asset_management
 # Asset Management
 {: .no_toc }
 
-content content content.
