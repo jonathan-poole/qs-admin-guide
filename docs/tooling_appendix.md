@@ -9,4 +9,3 @@ permalink: docs/tooling_appendix
 # Tooling Appendix
 {: .no_toc }
 
-Native and third-party tooling.
