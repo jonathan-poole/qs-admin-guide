@@ -8,4 +8,3 @@ parent: Asset Management
 # Analyze/Curate Extensions
 {: .no_toc }
 
-stuff stuff stuff.
