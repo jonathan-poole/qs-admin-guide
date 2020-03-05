@@ -9,4 +9,3 @@ permalink: docs/licensing
 # Licensing
 {: .no_toc }
 
-contentttttttttttt.
