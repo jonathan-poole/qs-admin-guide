@@ -52,6 +52,10 @@ Data from this endpoint is derived as part of the app reload process, and theref
   ```
 </details>
 
+## Demo & Analysis
+
+For a demo video and information on the benefits of the application, see: [Analyze App Metadata Analyzer](../asset_management/apps/analyze_app_metadata_analyzer.md).
+
 -------------------------
 
 ## Where to get it <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
