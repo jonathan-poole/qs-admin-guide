@@ -9,4 +9,3 @@ has_children: true
 # QVDs
 {: .no_toc }
 
-stuff stuff stuff.
