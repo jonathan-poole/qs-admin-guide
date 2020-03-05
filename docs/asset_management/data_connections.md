@@ -9,4 +9,3 @@ has_children: true
 # Data Connections
 {: .no_toc }
 
-stuff stuff stuff.
