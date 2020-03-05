@@ -9,4 +9,3 @@ permalink: docs/system_planning
 # System Planning
 {: .no_toc }
 
-contentttttttttttt.
