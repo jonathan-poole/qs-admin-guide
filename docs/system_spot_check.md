@@ -9,4 +9,3 @@ permalink: docs/system_spot_check
 # System Spot Check
 {: .no_toc }
 
-contentttttttttttt.
