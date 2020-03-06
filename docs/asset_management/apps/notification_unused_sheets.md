@@ -82,11 +82,14 @@ The script below will tag any base or community sheets with the tag _'UnusedBase
 <insert awesome rad script here>
 ```
 
-**It is highly recommended to _backup your site_ before considering taking the approach of programmatic sheet removal.**
-
 Once the script has been run above, and a review of the tagging has been confirmed as correct, the script below can be run to **permanently delete** these base/community sheets. **This process cannot be reversed.**
 
+-------------------------
+
 ### Script to Delete Tagged Sheets
+
+**It is highly recommended to _backup your site_ before considering taking the approach of programmatic sheet removal. This process cannot be reversed.**
+
 ```powershell
 
 <insert awesome rad script here>
