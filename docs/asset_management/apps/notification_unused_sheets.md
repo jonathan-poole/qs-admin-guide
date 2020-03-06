@@ -35,9 +35,9 @@ As of the **fill in release here** release, the **Audit Activity Log** capabilit
 
 This logging must be enabled on _every engine_ that the information is desired from, and is turned on by default on supporting releases.
 
-## Identification of Unused Sheets
-
 [![notification_unused_sheets_native_1.png](images/notification_unused_sheets_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_1.png)
+
+## Identification of Unused Sheets
 
 This usage information is then surfaced inside of the **Operations Monitor** on the **Sheet Usage** sheet.
 
