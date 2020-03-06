@@ -26,7 +26,7 @@ The goal of this procedure is to remove unnecessary (unused) applications from a
 
 ## Process
 
-For this task, we will use the Operations Monitor application. Make sure this application is currently being reloaded each day. If you are having issues with this reload or the application settings, please refer to [Operations Monitor - Help Site](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Operations-monitor-app.htm) for descriptions and troubleshooting of the app.	
+This task leverages the Operations Monitor application. The assumption is that the application is currently being reloaded each day. If there are issues with this reload or the application settings, please refer to the [Operations Monitor - Help Site](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Operations-monitor-app.htm) page for descriptions and troubleshooting of the app. 
 
 1. Open the Operations Monitor App
 2. Select the "Apps" sheet
