@@ -18,6 +18,8 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 
 3. In the App Details table object, sort by Last Accessed field and scroll to old dates or null dates 
 
+	  [![quarantine_unused_apps_native_7.png](images/quarantine_unused_apps_native_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_7.png)
+
     - **Priority 1**
         - Look for applications that are Published but have not been accessed. This can be quickly filtered to by selecting _Unpublished_ from the **Stream** column, and then by selecting _Select alternative_ to view all published applications.
 	  
@@ -25,7 +27,7 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 	  
 	  [![quarantine_unused_apps_native_3.png](images/quarantine_unused_apps_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_3.png)
 	  
-	  [![fig_1.png](images/fig_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/fig_1.png)
+	  [![quarantine_unused_apps_native_8.png](images/quarantine_unused_apps_native_8.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_8.png)
 	  
     - **Priority 2**
         - Look for applications that are Published and have not been used for a long time.
@@ -48,7 +50,9 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 	    4. Any applications that have been in the Quarantine stream for X number of days can be removed (you decide how many days to keep them)
 	    
 	   ```
-	   NOTE:  Instead of just deleting any apps, it is considered a best practice to export the QVF without data and store a copy somewhere to retain the code.
+	   NOTE:  Instead of just deleting any apps, it is considered a best 
+	   practice to export the QVF without data and store a copy somewhere 
+	   to retain the code.
 	   ```
 	   
     - **Links**
