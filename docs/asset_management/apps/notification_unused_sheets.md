@@ -6,8 +6,7 @@ grand_parent: Asset Management
 nav_order: 3
 ---
 
-# Notification of Unused Base/Community Sheets <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i><i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i><i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
-
+# Notification of Unused Base/Community Sheets <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
 ## Applicable Environments
@@ -62,7 +61,7 @@ This process is typically customized by the organization, however these steps an
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-**It is generally considered to always remove base and community sheets manually, leaving that responsibility to the owner of the applications. That being said, if there are potentially thousands of sheets that need to be removed, and this is the first time the organization is starting this management process, it is possible to programmatically remove these assets. This would generally be a one-time operation, as it is suggested to do this process monthly, which should be able to be maintained incrementally.**
+**When possible, one should always remove base and community sheets manually, leaving that responsibility to the owner of the applications. That being said, if there are potentially thousands of sheets that need to be removed, and this is the first time the organization is starting this management process, it is possible to programmatically remove these assets. This would generally be a one-time operation, as it is suggested to do this process monthly, which should be able to be maintained incrementally.**
 
 The script below will tag any base or community sheets with the tag _'UnusedBaseOrCommunitySheet'_. It expects a csv file as an input, where the name of the column with the **Sheet Id** is specified.
 
