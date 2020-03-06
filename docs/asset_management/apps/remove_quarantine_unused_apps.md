@@ -48,7 +48,6 @@ For this task, we will use the Operations Monitor application.   Make sure this 
         - **insert link to quarantine stream video**
         - **insert link to removing unused apps video**
 
-  
   **Tags**
   
   #monthly
