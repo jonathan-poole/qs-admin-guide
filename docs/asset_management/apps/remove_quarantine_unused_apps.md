@@ -21,6 +21,7 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 	  [![quarantine_unused_apps_native_7.png](images/quarantine_unused_apps_native_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_7.png)
 
     - **Priority 1**
+    
         Look for applications that are Published but have not been accessed. This can be quickly filtered to by selecting _Unpublished_ from the **Stream** column, and then by selecting _Select alternative_ to view all published applications.
 	  
 	[![quarantine_unused_apps_native_2.png](images/quarantine_unused_apps_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_2.png)
@@ -30,6 +31,7 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 	[![quarantine_unused_apps_native_8.png](images/quarantine_unused_apps_native_8.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_8.png)
 	  
     - **Priority 2**
+    
         Look for applications that are Published and have not been used for a long time.
           
 	[![quarantine_unused_apps_native_4.png](images/quarantine_unused_apps_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_4.png)
