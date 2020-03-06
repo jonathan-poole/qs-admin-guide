@@ -29,11 +29,13 @@ There are three primary goals:
 {:toc}
 -------------------------
 
-## QMC - Audit Activity Log <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+## Audit Activity Log <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 As of the **fill in release here** release, the **Audit Activity Log** capability is now enabled, which allows for the tracking of who is accessing what sheets in applications. This enables the ability to measure sheet adoption as well as manage the amount of sheets in the applications--keeping them trimmed to only what is being leveraged.
 
 This logging must be enabled on _every engine_ that the information is desired from, and is turned on by default on supporting releases.
+
+## Identification of Unused Sheets
 
 [![notification_unused_sheets_native_1.png](images/notification_unused_sheets_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_1.png)
 
@@ -45,7 +47,7 @@ As an example, we'll select the Telemetry Dashboard application on one of our ra
 
 [![notification_unused_sheets_native_3.png](images/notification_unused_sheets_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_3.png)
 
-It is suggested that the administrator would add the **App Owner** field to the **Sheet Usage** table, and then contact the owner's either manually or programmatically via something like NPrinting. It is suggested that it is the owner's responsibility to decide what to do with these unused sheets. Base sheets should be considered the most critical sheets to address, with community sheets following.
+It is suggested that the administrator would add the **App Owner** field to the **Sheet Usage** table, as this table already contains the relevant information needed to report on usage, and the owner field is need to know who to contact.
 
 [![notification_unused_sheets_native_4.png](images/notification_unused_sheets_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_4.png)
 
@@ -53,7 +55,9 @@ As far as the time range for sheets that are unused (or minimally used), it is s
 
 [![notification_unused_sheets_native_5.png](images/notification_unused_sheets_native_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_5.png)
 
-This process is typically customized by the organization, however these steps and high-level processes are the primary components to managing base and community sheets.
+## Suggested Actions
+
+Once the table has been built out and the filters and time ranges have been decided upon, it is suggested to then contact the owners either manually or programmatically via something like NPrinting. It is advised that it should be the owner's responsibility to decide what to do with these unused sheets. The app owners can then be responsible for contacting the community sheet owners for their individual cleanup. Base sheets should be considered the most critical sheets to address, with community sheets following.
 
 -------------------------
 
