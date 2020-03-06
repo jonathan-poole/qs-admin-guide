@@ -6,19 +6,36 @@ grand_parent: Asset Management
 nav_order: 2
 ---
 
-# Remove/Quarantine Unused Apps
+# Remove/Quarantine Unused Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+{:.no_toc}
 
-For this task, we will use the Operations Monitor application.   Make sure this application is currently being reloaded each day. If you are having issues with this reload or the application settings, please refer to [Operations Monitor - Help Site](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Operations-monitor-app.htm) for descriptions and troubleshooting of the app.			
+## Applicable Environments
+{:.no_toc}
+- All
+
+## Goal
+{:.no_toc}
+The goal of this procedure is to remove unnecessary (unused) applications from a Qlik site. This increases overall site performance, decreases clutter, and will focus users to what is pertinent.
+
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+-------------------------		
 
 ## Process
+
+For this task, we will use the Operations Monitor application. Make sure this application is currently being reloaded each day. If you are having issues with this reload or the application settings, please refer to [Operations Monitor - Help Site](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Operations-monitor-app.htm) for descriptions and troubleshooting of the app.	
+
 1. Open the Operations Monitor App
 2. Select the "Apps" sheet
 
-	[![quarantine_unused_apps_native_1.png](images/quarantine_unused_apps_native_1.png)](https://raw.githubusercontent.com/qs-admin-	guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_1.png)
+[![quarantine_unused_apps_native_1.png](images/quarantine_unused_apps_native_1.png)](https://raw.githubusercontent.com/qs-admin-	guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_1.png)
 
 3. In the App Details table object, sort by Last Accessed field and scroll to old dates or null dates 
 
-	  [![quarantine_unused_apps_native_7.png](images/quarantine_unused_apps_native_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_7.png)
+[![quarantine_unused_apps_native_7.png](images/quarantine_unused_apps_native_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_7.png)
 
 ### Priority 1
     
@@ -43,7 +60,9 @@ Look for Unpublished applications that have not been used for a long time. Clear
 [![quarantine_unused_apps_native_5.png](images/quarantine_unused_apps_native_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_5.png)
 	  
 [![quarantine_unused_apps_native_6.png](images/quarantine_unused_apps_native_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_6.png)
-		
+
+-------------------------
+
 ## Actions
     
     1. If you don't already have a stream named "Quarantine", this is a good time to create one. Ideally, the stream should be walled off to only Content Admins or the like, where they can review the applications with their respective owners.
@@ -55,6 +74,6 @@ Look for Unpublished applications that have not been used for a long time. Clear
     4. Any applications that have been in the Quarantine stream for X number of days can be removed (corporate policy on how long they should be kept.) It is considered a best practice to export them without data, at a minimum--potentially exported with data if the intent is to archive them.
 	    
 
-  **Tags**
+**Tags**
   
-  #monthly
+#monthly
