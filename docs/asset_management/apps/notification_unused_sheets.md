@@ -65,7 +65,7 @@ The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
 The script below will tag any base or community sheets with the tag _'UnusedBaseOrCommunitySheet'_. It expects a csv file as an input, where the name of the column with the **Sheet Id** is specified.
 
-### Script
+### Script to Tag Unused Base/Community Sheets
 ```powershell
 
 <insert awesome rad script here>
@@ -73,7 +73,7 @@ The script below will tag any base or community sheets with the tag _'UnusedBase
 
 Once the script has been run above, and a review of the tagging has been confirmed as correct, the script below can be run to **permanently delete** these base/community sheets. **This process cannot be reversed.**
 
-### Script
+### Script to Delete Tagged Sheets
 ```powershell
 
 <insert awesome rad script here>
