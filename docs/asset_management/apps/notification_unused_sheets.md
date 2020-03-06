@@ -20,7 +20,7 @@ There are three primary goals:
   - Keep "Community" sheets under control. In large environments where self-service is enabled, both private (personal sheets on a published application), and community sheets can grow rapidly out of control -- especially if the application's base sheets doesn't offer what the end-user is looking for, causing them to create their own sheets.
   - Finding out "why" users are not using certain base sheets and/or why they are creating and publishing many community sheets, as that content could potentially be made part of the standardized application.
 
-** Note that "Private" sheets should be handled a bit differently--please refer to: [Remove Unused Private Sheets](remove_private_unused_sheets.md)
+** Note that "Private" sheets should be handled a bit differently--please refer to: [Remove Unused Private Sheets](remove_unused_private_sheets.md)
 
 ## Table of Contents
 {:.no_toc}
