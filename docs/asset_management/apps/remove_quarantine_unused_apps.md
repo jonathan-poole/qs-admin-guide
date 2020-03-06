@@ -43,22 +43,14 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 		
     - **Actions**
     	
-        1. If you don't already have a stream named "Quarantine", this is a good time to create one. 
-            - See instructions and security rule here --> **insert link**
-        2. Contact the application owners to let them know you are moving their app(s) to Quarantine	
-	    3. Move the applications from Priorities 1,2 and 3 to the Quarantine Stream (fig 4)	
-	    4. Any applications that have been in the Quarantine stream for X number of days can be removed (you decide how many days to keep them)
+        1. If you don't already have a stream named "Quarantine", this is a good time to create one. Ideally, the stream should be walled off to only Content Admins or the like, where they can review the applications with their respective owners.
+            
+        2. Contact the application owners to let them know you are moving their app(s) to Quarantine.	
+	
+	3. Move the applications from Priorities 1, 2, and 3 to the Quarantine Stream
+	
+	4. Any applications that have been in the Quarantine stream for X number of days can be removed (corporate policy on how long they should be kept.) It is considered a best practice to export them without data, at a minimum--potentially exported with data if the intent is to archive them.
 	    
-	   ```
-	   NOTE:  Instead of just deleting any apps, it is considered a best 
-	   practice to export the QVF without data and store a copy somewhere 
-	   to retain the code.
-	   ```
-	   
-    - **Links**
-        - [Operations Monitor](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Operations-monitor-app.htm)
-        - **insert link to quarantine stream video**
-        - **insert link to removing unused apps video**
 
   **Tags**
   
