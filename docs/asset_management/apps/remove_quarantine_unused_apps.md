@@ -13,22 +13,30 @@ For this task, we will use the Operations Monitor application.   Make sure this 
 # Process
 1. Open the Operations Monitor App
 2. Select the "Apps" sheet
+
 [![quarantine_unused_apps_native_1.png](images/quarantine_unused_apps_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_1.png)
 
 3. In the App Details table object, sort by Last Accessed field and scroll to old dates or null dates 
 
     - **Priority 1**
         - Look for applications that are Published but have not been accessed. This can be quickly filtered to by selecting _Unpublished_ from the **Stream** column, and then by selecting _Select alternative_ to view all published applications.
+	  
 	  [![quarantine_unused_apps_native_2.png](images/quarantine_unused_apps_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_2.png)
+	  
 	  [![quarantine_unused_apps_native_3.png](images/quarantine_unused_apps_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_3.png)
+	  
 	  [![fig_1.png](images/fig_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/fig_1.png)
 	  
     - **Priority 2**
         - Look for applications that are Published and have not been used for a long time.
-          [![quarantine_unused_apps_native_4.png](images/quarantine_unused_apps_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_4.png)
+          
+	  [![quarantine_unused_apps_native_4.png](images/quarantine_unused_apps_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_4.png)
+	  
     - **Priority 3**	
         - Look for Unpublished applications that have not been used for a long time. Clear selections in the **Stream** field, and then select _Unpublished_ from the same field.
-          [![quarantine_unused_apps_native_5.png](images/quarantine_unused_apps_native_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_5.png)
+          
+	  [![quarantine_unused_apps_native_5.png](images/quarantine_unused_apps_native_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_5.png)
+	  
 	  [![quarantine_unused_apps_native_6.png](images/quarantine_unused_apps_native_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_6.png)
 		
     - **Actions**
