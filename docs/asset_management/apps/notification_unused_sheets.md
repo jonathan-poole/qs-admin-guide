@@ -27,6 +27,7 @@ There are three primary goals:
 
 * TOC
 {:toc}
+
 -------------------------
 
 ## Audit Activity Log <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
@@ -36,6 +37,8 @@ As of the **fill in release here** release, the **Audit Activity Log** capabilit
 This logging must be enabled on _every engine_ that the information is desired from, and is turned on by default on supporting releases.
 
 [![notification_unused_sheets_native_1.png](images/notification_unused_sheets_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_1.png)
+
+-------------------------
 
 ## Identification of Unused Sheets
 
@@ -55,13 +58,17 @@ As far as the time range for sheets that are unused (or minimally used), it is s
 
 [![notification_unused_sheets_native_5.png](images/notification_unused_sheets_native_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_5.png)
 
+-------------------------
+
 ## Suggested Actions
 
 Once the table has been built out and the filters and time ranges have been decided upon, it is suggested to then contact the owners either manually or programmatically via something like NPrinting. It is advised that it should be the owner's responsibility to decide what to do with these unused sheets. The app owners can then be responsible for contacting the community sheet owners for their individual cleanup. Base sheets should be considered the most critical sheets to address, with community sheets following.
 
+In addition to the above, it is entirely possible that users aren't leveraging sheets because they potentially aren't positioned (ordered) properly, users are unaware of them, users don't understand how to leverage them, or users possibly aren't interested in the data presented on them. Rather than simply remove them, is is encouraged for the app owners to understand _why_ they are not being leveraged to better the applications and overall Qlik experience.
+
 -------------------------
 
-## Bulk Base/Community Sheet Removal <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+## Bulk Base/Community Sheet Removal <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
