@@ -18,6 +18,12 @@ stuff stuff stuff.
 {:.no_toc}
 You have backups, right? The goal for this activity is for the administrator to verify that appropriate backups of their Qlik Sense Enterprise deployment have been made. This allows the administrator to increase the organization's fault tolerance, demonstrate preparedness, and harden out processes around backups before they are needed.
 
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
 ## What do I backup?
 
 With Qlik Sense Enterprise on Windows there are three core components (and an additional one) which need to be backed up in order to maintain a minimally functioning site:
@@ -164,7 +170,7 @@ A non-automated process is documented on Qlik's [help site](https://help.qlik.co
 
 ### Ancillary content
 
-For this section, the administrator will need to survey the other non-Qlik stuff and ensure appropriate backups of the those items have occurred. This can range from installation files (in the case of drivers) and configurations (for DSNs) to third party certificates. Initially this process will require some effort, but practically administrators should get into the habit of placing the needed non-Qlik things into a location which can be referenced in documentation for the entirity of the Qlik deployment along with the specific needed configurations. This planning and documentation can be critical in a disaster scenario or well appreciated by the next person who takes over responsibilities for administering the Qlik deployment.
+For this section, the administrator will need to survey the other non-Qlik stuff and ensure appropriate backups of those items has occurred. This can range from installation files (in the case of drivers) and configurations (for DSNs) to third party certificates. Initially this process will require some effort, but practically administrators should get into the habit of placing the needed non-Qlik things into a location which can be referenced in documentation for the entirity of the Qlik deployment along with the specific needed configurations. This planning and documentation can be critical in a disaster scenario or well appreciated by the next person who takes over responsibilities for administering the Qlik deployment.
 
 ### Full backups
 
