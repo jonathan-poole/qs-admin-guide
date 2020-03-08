@@ -305,8 +305,8 @@ Successfully cached 40c69bba-1825-4109-985c-399af8e96e63 on 04windows with selec
 02:51:52 - Scalability Sample - PT Sales Analytics-50M: Objects cached
 02:51:52 - Scalability Sample - PT Sales Analytics-50M: App cache completed
 02:51:52 - Cache initialization complete. Total time: 00:00:05.0779960
-
 ```
+
 </p>
 </details>
 
