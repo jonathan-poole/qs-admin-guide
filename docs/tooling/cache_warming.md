@@ -5,7 +5,7 @@ nav_order: 3
 parent: Tooling Appendix
 ---
 
-# Cache Warming
+# Cache Warming <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {: .no_toc }
 
 ## Applicable Environments
@@ -60,7 +60,7 @@ In order to cache warm a Qlik app, the administrator needs to run a process whic
 | `Butler-Cache Warming`         | JavaScript         | Low/Medium  | Medium       |
 | `Qlik Sense Scalability Tools` | .NET SDK           | Medium      | High         |
 
-### CacheInitializer
+### CacheInitializer <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 
 The [`CacheInitializer`](https://github.com/jparis/CacheInitializer) is a project initially developed by a Product Manager at Qlik but since taken on by the America's Presales Enterprise Architecture team. It is a project built in C# using the .NET SDK to:
 
@@ -315,7 +315,7 @@ Successfully cached 40c69bba-1825-4109-985c-399af8e96e63 on 04windows with selec
 - Concurrency : Since this tool opens applications over the Qlik Proxy Service, the user who executes the process will be limited to 5 executions in a 5 minute period. This is due to a [throttle on the number of parallel sessions](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/manage-licenses.htm) which a license can use. For most cache warming scenarios, this isn't a major issue, although this limitation may be encountered when doing initial testing of the process.
 - Multinode : If an administrator needs to open a given app across multiple Qlik Engine nodes, then they will need to have separate virtual proxies using Windows Authentication which are each attached to a single Qlik Engine. This ensures that the application will be opened across each Qlik Engine node. Building off the **Concurrency** limitation above, this means that the `CacheInitializer` tool will only be able to cache warm a given app across 5 separate Qlik Engine nodes during a 5 minute period. If attempting to build a cache warming process for multiple apps across multiple engines, then this 5 distinct session limitation needs to be accounted for.
 
-### Butler-Cache Warming
+### Butler-Cache Warming <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 
 An alternative project using NodeJS to interact with Qlik's Engine API(s) is [`Butler-Cache Warming`](https://github.com/ptarmiganlabs/butler-cw) which was developed by Göran Sander. Göran is a consultant and Qlik Luminary who previously has worked with a very large Qlik customer to help deploy Qlik at scale. The tool provides the ability to:
 
@@ -412,7 +412,7 @@ C:\temp\butler-cw-master>"C:\Program Files\Qlik\Sense\ServiceDispatcher\Node\"no
 - Connectivity : Since this tool communicates with the Qlik Engine Services directly, the Qlik Engine API port `4747` will need to be open between the server executing `Butler-CW` and the Qlik Sense node(s). The primary benefit of this approach is that the session limitation present for `CacheInitializer` and `Qlik Sense Scalability Tools` will not affect `Butler-CW`.
 - Selections : This tool does not have the ability to pass selection states to the Qlik app. This means that the **Cached result set** cache will not be warmed with selections.
 
-### Qlik Sense Scalability Tools
+### Qlik Sense Scalability Tools <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 
 The last project that we will review is the [`Qlik Sense Scalability Tools`](https://community.qlik.com/t5/Qlik-Scalability/Qlik-Sense-Scalability-Tools/gpm-p/1490846). This is a project created by Qlik's Performance and Scalability team within R&D. It is an open source release of one of the key pieces of tooling that Qlik's R&D team uses to test scalability and performance of Qlik Sense Enterprise. It is a compiled project using the .NET SDK to:
 

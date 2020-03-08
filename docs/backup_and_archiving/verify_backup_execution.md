@@ -5,7 +5,7 @@ nav_order: 2
 parent: Backup & Archiving
 ---
 
-# Verify Backup Execution
+# Verify Backup Execution  <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {: .no_toc }
 
 stuff stuff stuff.
@@ -70,7 +70,7 @@ The important component of this backup process is that it needs to be made in sy
 
 If an administrator needs to manually backup these files we will cover these in a later section where we review a complete backup solution.
 
-### PostgreSQL
+### PostgreSQL  <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 In order to backup PostgreSQL, use the `pg_dump` PostgreSQL process. This can be illustrated in this example PowerShell script:
 
@@ -114,7 +114,7 @@ Remove-Item Env:\PGPASSWORD
 
 As a note for this script, it is backing up all the databases used by Qlik Sense Enterprise as of **February 2020** including the optional [Centralized Logging database](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Qlik-Logging-Service.htm). Please reference documentation for your version of Qlik Sense Enterprise to ensure full coverage for the databases used. The ideal page for this list is Qlik's page on [installing and configuring PostgreSQL](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Installing-configuring-postgresql.htm) which outlines the databases which are needed to be present.
 
-### Certificates
+### Certificates  <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 There are three certificates on a Qlik site:
 
