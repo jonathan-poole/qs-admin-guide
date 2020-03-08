@@ -5,7 +5,7 @@ nav_order: 1
 parent: Backup & Archiving
 ---
 
-# Archive Old Archived Logs </i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+# Archive Old Archived Logs <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {: .no_toc }
 
 ## Applicable Environments
