@@ -49,4 +49,3 @@ The goal is to remove all unnecessary tasks from the site. This will make the si
   [![remove_unused_tasks_native_4.png](images/remove_unused_tasks_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/remove_unused_tasks_native_4.png)
   **Action**
     - Contact the **Owner** of the application for which the task is associated with, as well as potentially the **Modified by** user of the task.
-
