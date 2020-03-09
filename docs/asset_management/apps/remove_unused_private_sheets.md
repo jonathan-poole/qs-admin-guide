@@ -63,8 +63,7 @@ On the **Sheet Usage** table, select _Private Sheet_ under the **Sheet Type** co
 
 [![unused_private_sheets_native_4.png](images/unused_private_sheets_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_4.png)
 
-In this scenario, the _App Usage_ sheet has not been used in over one month but less than two. Ideally, private sheets should only be removed if they have not been used in > 90 days or more, but this needs to be defined by a policy decided internally. Please refer to **xxxxx** below.
-
+In this scenario, the _App Usage_ sheet has not been used in over one month but less than two. Ideally, private sheets should only be removed if they have not been used in > 90 days or more, but this needs to be defined by a policy decided internally. Please refer to the **Retention Policy** section below.
 
 -------------------------
 
