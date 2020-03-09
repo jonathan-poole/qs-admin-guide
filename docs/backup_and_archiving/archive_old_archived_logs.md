@@ -52,6 +52,7 @@ Again this is a baseline, will need to be adjusted for the legal, contractual, a
 
 ## Script for Archiving / Purging <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
+**cacheinitializer_deploy.log**
 <details>
     
 ```powershell
