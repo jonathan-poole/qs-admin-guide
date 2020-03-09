@@ -103,7 +103,7 @@ Once the script has been run above, and a review of the tagging has been confirm
 
 -------------------------
 
-### Script to Delete Tagged Sheets
+## Script to Delete Tagged Sheets
 
 **It is highly recommended to _backup your site and applications_ before considering taking the approach of programmatic sheet removal. This process cannot be reversed. The sheet pointers are stored in the repository database, and the sheets reside within the qvfs themselves.**
 
