@@ -74,6 +74,8 @@ If an administrator needs to manually backup these files we will cover these in 
 
 In order to backup PostgreSQL, use the `pg_dump` PostgreSQL process. This can be illustrated in this example PowerShell script:
 
+**Script**
+
 <details>
 
 ```powershell
@@ -123,6 +125,8 @@ There are three certificates on a Qlik site:
 3. a Client certificate
 
 (1) is used to generate (2) and (3). Each component uses either (2) or (3) depending on whether it is the client or server in the exchange. (2) likewise is bound to the API ports which can be integrated into authentication modules (i.e. using the QPS API) or automation processes (i.e. using the QRS API). It is important to keep a backup of these certificates in case of recovery. Strictly speaking there isn't a need for incremental backups of these certificates but it is wise to integrate a backup process nonetheless. An example of how to automate this process is here:
+
+**Script** 
 
 <details>
 
