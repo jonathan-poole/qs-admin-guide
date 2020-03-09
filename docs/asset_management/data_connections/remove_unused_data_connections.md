@@ -51,6 +51,7 @@ Pros and cons of the `lineage` option:
 |                                                                     |                                                                                                                                                                                         |
 |                                                                     |                                                                                                                                                                                         |
 |                                                                     |                                                                                                                                                                                         |
+
 Pros and cons of the [Data Connection Analyzer](../../tooling/data_connection_analyzer.md) option:
 
 | Pros                                                                           | Cons                                                                                           |
