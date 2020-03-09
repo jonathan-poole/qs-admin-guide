@@ -74,8 +74,8 @@ If an administrator needs to manually backup these files we will cover these in 
 
 In order to backup PostgreSQL, use the `pg_dump` PostgreSQL process. This can be illustrated in this example PowerShell script:
 
-<details><summary>postgresqlBackup.ps1</summary>
-<p>
+<details>
+    <summary>postgresqlBackup.ps1</summary>
 
 ```powershell
 
@@ -111,7 +111,6 @@ Set-Location $installPath\Repository\PostgreSQL\*\bin
 Remove-Item Env:\PGPASSWORD
 ```
 
-</p>
 </details>
 
 As a note for this script, it is backing up all the databases used by Qlik Sense Enterprise as of **February 2020** including the optional [Centralized Logging database](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Qlik-Logging-Service.htm). Please reference documentation for your version of Qlik Sense Enterprise to ensure full coverage for the databases used. The ideal page for this list is Qlik's page on [installing and configuring PostgreSQL](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Installing-configuring-postgresql.htm) which outlines the databases which are needed to be present.
@@ -126,8 +125,8 @@ There are three certificates on a Qlik site:
 
 (1) is used to generate (2) and (3). Each component uses either (2) or (3) depending on whether it is the client or server in the exchange. (2) likewise is bound to the API ports which can be integrated into authentication modules (i.e. using the QPS API) or automation processes (i.e. using the QRS API). It is important to keep a backup of these certificates in case of recovery. Strictly speaking there isn't a need for incremental backups of these certificates but it is wise to integrate a backup process nonetheless. An example of how to automate this process is here:
 
-<details><summary>certificateBackup.ps1</summary>
-<p>
+<details>
+    <summary>certificateBackup.ps1</summary>
 
 ```powershell
 # Define your backup directory
@@ -165,7 +164,7 @@ $null = certutil -f -p $pwd -exportpfx -privatekey Root $rootThumb "$backupDir\$
 $null = certutil -f -p $pwd -exportpfx -privatekey MY $serverThumb "$backupDir\$(Get-Date -Format "yyyy-MM-dd")-server.pfx" NoRoot
 $null = certutil -f -p $pwd -exportpfx -privatekey -user MY $clientThumb "$backupDir\$(Get-Date -Format "yyyy-MM-dd")-client.pfx" NoRoot
 ```
-</p>
+
 </details>
 
 A non-automated process is documented on Qlik's [help site](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Backing-up-certificates.htm).
