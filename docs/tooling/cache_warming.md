@@ -19,7 +19,6 @@ parent: Tooling Appendix
 {:toc}
 
 ## About
-{:.no_toc}
 Cache Warming in Qlik Sense Enterprise refers to programmatically opening Qlik applications so that the base application is preloaded into RAM before user's attempt to open the application. When users open and interact with a Qlik application, there are three types of caching which occur. This can be visualized using this example:
 
 [![cache_warming-1.png](images/cache_warming-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/cache_warming-1.png)
