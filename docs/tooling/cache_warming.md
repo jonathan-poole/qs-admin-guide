@@ -212,10 +212,9 @@ foreach ($vp in $vps) {
 ```
 Resulting log file:
 
-
-<details><summary>cacheinitializer_deploy.log</summary>
-<p>
-
+**cacheinitializer_deploy.log**
+<details>
+  
 ```log
 [03/07/2020 14:51:20]: Begin Cache Warm for 40c69bba-1825-4109-985c-399af8e96e63
 [03/07/2020 14:51:20]: Connecting to https://qliksense.company.com on 02windows
@@ -306,8 +305,6 @@ Successfully cached 40c69bba-1825-4109-985c-399af8e96e63 on 04windows with selec
 02:51:52 - Scalability Sample - PT Sales Analytics-50M: App cache completed
 02:51:52 - Cache initialization complete. Total time: 00:00:05.0779960
 ```
-
-</p>
 </details>
 
 #### Limitations

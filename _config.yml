@@ -6,6 +6,8 @@ relative_links:
 logo: "/assets/images/Qlik-Logo_RGB.png"
 url: "https://qs-admin-playbook.danielpilla.com"
 markdown: kramdown
+kramdown:
+  parse_block_html: true
 aux_links:
   "Diagnostic Toolkit":
     - "//diagnostictoolkit.qlik-poc.com"
