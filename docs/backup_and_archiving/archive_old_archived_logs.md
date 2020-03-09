@@ -54,6 +54,7 @@ Again this is a baseline, will need to be adjusted for the legal, contractual, a
 
 <details><summary>cacheinitializer_deploy.log</summary>
 <p>
+    
 ```powershell
 # Specify the age threshold which you want to keep
 # e.g. 60 would move all logs older than 60 days
