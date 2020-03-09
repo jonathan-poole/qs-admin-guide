@@ -52,8 +52,8 @@ Again this is a baseline, will need to be adjusted for the legal, contractual, a
 
 ## Script for Archiving / Purging <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
-<details><summary>cacheinitializer_deploy.log</summary>
-<p>
+<details>
+    <summary>cacheinitializer_deploy.log</summary>
     
 ```powershell
 # Specify the age threshold which you want to keep
@@ -90,7 +90,6 @@ If ($removelogs -eq 'y') {Remove-Item $dest -Force -Recurse}
 Else {"Files moved"}
 ```
 
-</p>
 </details>
 
 **Tags**
