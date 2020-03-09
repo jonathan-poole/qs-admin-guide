@@ -78,6 +78,7 @@ In order to backup PostgreSQL, use the `pg_dump` PostgreSQL process. This can be
 <p>
 
 ```powershell
+
 # Define your backup directory
 $backupDir = 'C:\QSR'
 
@@ -109,6 +110,7 @@ Set-Location $installPath\Repository\PostgreSQL\*\bin
 # Remove the environmental variable for PostgreSQL password
 Remove-Item Env:\PGPASSWORD
 ```
+
 </p>
 </details>
 
