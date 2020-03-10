@@ -37,7 +37,7 @@ Open up the **Operations Monitor** application and navigate to the **Export Over
 
 [![export-1.png](images/export-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/audit/images/export-1.png)
 
-Inside the app review the **Users Exporting** table for a list of users who have exported data to Excel (1) and review the **Export Details** table for the applications where the exports originated from.
+Inside the app review the **Users Exporting** table for a list of users who have exported data to Excel (1) and review the **Export Details** table for the applications where the exports originated from (2).
 
 [![export-2.png](images/export-2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/audit/images/export-2.png)
 
