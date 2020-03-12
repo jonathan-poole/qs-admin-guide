@@ -26,7 +26,7 @@ The License Monitor it is already embedded in Qlik Sense and can be found at **M
 
 The License Monitor loads service logs to populate charts and tables covering token allocation, usage of login and user passes, and errors and warnings.
 
->For a more detailed description of the sheets and visualizations, visit the story About the License Monitor that is available from the app overview page, under **Stories**.
+>For a more detailed description of the sheets and visualizations, visit the story About the License Monitor that is available from the app overview page, under Stories.
 
 For the location and naming convention of the log files, see [Logging](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Server-Logging.htm).
 
@@ -55,3 +55,21 @@ Log Details | Lists servers in the cluster and provides details about license us
  -------------------------
 
 ## Screenshots
+
+[![qs_license_monitor_01.png](images/qs_license_monitor_01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_01.png)
+
+[![qs_license_monitor_02.png](images/qs_license_monitor_02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_02.png)
+
+[![qs_license_monitor_03.png](images/qs_license_monitor_03.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_03.png)
+
+[![qs_license_monitor_04.png](images/qs_license_monitor_04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_04.png)
+
+[![qs_license_monitor_05.png](images/qs_license_monitor_05.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_05.png)
+
+[![qs_license_monitor_06.png](images/qs_license_monitor_06.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_06.png)
+
+[![qs_license_monitor_07.png](images/qs_license_monitor_07.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_07.png)
+
+[![qs_license_monitor_08.png](images/qs_license_monitor_08.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_08.png)
+
+[![qs_license_monitor_09.png](images/qs_license_monitor_09.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_09.png)
