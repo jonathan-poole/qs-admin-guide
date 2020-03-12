@@ -80,3 +80,49 @@ If ($outputFormat.ToLower() -eq 'csv') {
   $out | ConvertTo-Json | Set-Content $outFile
 } 
 ```
+
+### Example Output
+```
+[
+    {
+        "streamId":  "aaec8d41-5201-43ab-809f-3063750dfafd",
+        "streamName":  "Everyone",
+        "streamCreatedDate":  "2020/03/03 14:41",
+        "numOfApps":  1
+    },
+    {
+        "streamId":  "a70ca8a5-1d59-4cc9-b5fa-6e207978dcaf",
+        "streamName":  "Monitoring apps",
+        "streamCreatedDate":  "2020/03/03 14:41",
+        "numOfApps":  2
+    },
+    {
+        "streamId":  "974647c4-84c1-41e3-9589-24fb8f447135",
+        "streamName":  "AAI",
+        "streamCreatedDate":  "2020/03/03 15:25",
+        "numOfApps":  6
+    },
+    {
+        "streamId":  "8850146c-4fc8-46fd-80fc-f4c2bda49c4e",
+        "streamName":  "Medical - Pharma",
+        "streamCreatedDate":  "2020/03/03 15:26",
+        "numOfApps":  6
+    },
+    {
+        "streamId":  "aebcc4a9-ab9a-4a04-b297-9ad3b30153f9",
+        "streamName":  "HR",
+        "streamCreatedDate":  "2020/03/03 15:27",
+        "numOfApps":  2
+    },
+    {
+        "streamId":  "08eefa4c-e28b-4b9d-99b8-28ac131c49c9",
+        "streamName":  "Expansion Strategy",
+        "streamCreatedDate":  "2020/03/04 12:20",
+        "numOfApps":  2
+    }
+]
+```
+
+**Tags**
+
+#monthly
