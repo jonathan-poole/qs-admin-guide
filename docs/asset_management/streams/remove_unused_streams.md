@@ -6,7 +6,7 @@ grand_parent: Asset Management
 nav_order: 2
 ---
 
-# Remove Unused Streams <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+# Remove Unused Streams <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
 ## Applicable Environments
@@ -16,7 +16,7 @@ nav_order: 2
 ## Goal
 {:.no_toc}
 
-Sometimes we move applications from one stream to another one and we do not notice that the stream is now empty. Or we create a stream waiting for applications get published to it and it not. It is always a good practice to delete unused Streams.
+Sometimes we move applications from one stream to another and, we do not notice that the stream is now empty. Or we create a stream waiting for applications get published to it and they do not get published. It is always a good practice to delete unused Streams.
 
 ## Table of Contents
 {:.no_toc}
