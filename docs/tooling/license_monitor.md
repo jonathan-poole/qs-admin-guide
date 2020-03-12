@@ -73,3 +73,12 @@ Log Details | Lists servers in the cluster and provides details about license us
 [![qs_license_monitor_08.png](images/qs_license_monitor_08.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_08.png)
 
 [![qs_license_monitor_09.png](images/qs_license_monitor_09.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_09.png)
+
+-------------------------
+
+## Documentation
+
+* [License Monitor - Qlik Help](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/License-monitor-app.htm)
+* [Youtube Video - STT - Configuring Monitoring Apps in Qlik Sense](https://youtube.com/watch?v=_WywE9AXnvs)
+* [Youtube Video - Configuring Qlik Sense Enterprise Monitoring Apps for Multi Node](https://youtube.com/watch?v=ycGESqJME3E)
+* [Youtube Video - Qlik Fix: Troubleshooting Qlik Sense Monitoring Apps](https://youtube.com/watch?v=ulZw6_ZJ_ek&t=23s)

@@ -64,7 +64,6 @@ Sheet       | Content |
 
 [![qs_ops_monitor_01.png](images/qs_ops_monitor_01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_ops_monitor_01.png)
 
-
 [![qs_ops_monitor_02.png](images/qs_ops_monitor_02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_ops_monitor_02.png)
 
 [![qs_ops_monitor_03.png](images/qs_ops_monitor_03.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_ops_monitor_03.png)
@@ -86,3 +85,12 @@ Sheet       | Content |
 [![qs_ops_monitor_11.png](images/qs_ops_monitor_11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_ops_monitor_11.png)
 
 [![qs_ops_monitor_12.png](images/qs_ops_monitor_12.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_ops_monitor_12.png)
+
+-------------------------
+
+## Documentation
+
+* [Operations Monitor - Qlik Help](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Operations-monitor-app.htm)
+* [Youtube Video - STT - Configuring Monitoring Apps in Qlik Sense](https://youtube.com/watch?v=_WywE9AXnvs)
+* [Youtube Video - Configuring Qlik Sense Enterprise Monitoring Apps for Multi Node](https://youtube.com/watch?v=ycGESqJME3E)
+* [Youtube Video - Qlik Fix: Troubleshooting Qlik Sense Monitoring Apps](https://youtube.com/watch?v=ulZw6_ZJ_ek&t=23s)
