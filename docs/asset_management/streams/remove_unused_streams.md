@@ -63,11 +63,9 @@ foreach($stream in $streams) {
         $appCounter++
     }
 
-    $streamId= $stream.id
-    $streamName = $stream.name
-
-    $outLine = "" | Select streamId,streamName,numOfApps
+    $outLine = "" | Select streamId,streamName,streamCreatedDate,numOfApps
     $outLine.streamId=$stream.id
+    $outLine.streamCreatedDate=$stream.createdDate
     $outLine.streamName=$stream.name
     $outLine.numOfApps=$appCounter
 
