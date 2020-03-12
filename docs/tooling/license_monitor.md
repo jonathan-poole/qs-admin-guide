@@ -5,7 +5,65 @@ nav_order: 2
 parent: Tooling Appendix
 ---
 
-# License Monitor
-{: .no_toc }
+# License Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+{:.no_toc}
 
-stuff stuff stuff.
+## Applicable Environments
+{:.no_toc}
+- All
+
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
+-------------------------
+
+## About
+
+The License Monitor it is already embedded in Qlik Sense and can be found at **Monitoring apps** stream.
+
+The License Monitor loads service logs to populate charts and tables covering token allocation, usage of login and user passes, and errors and warnings.
+
+>For a more detailed description of the sheets and visualizations, visit the story About the License Monitor that is available from the app overview page, under **Stories**.
+
+For the location and naming convention of the log files, see [Logging](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Server-Logging.htm).
+
+>If you have a user-based license with professional and analyzer access, you will instead see figures relevant to that license type.
+
+## License Monitor sheets
+
+The License Monitor sheets display Qlik Sense performance on the current node, and, when properly configured for multi-node (as described in [Configuring multi-node environments](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Configure-monitoring-apps.htm#Configuring)), the app includes information across all nodes.
+
+---------|----------|----------
+Overview | Displays an overview of unallocated access versus total access, the available and total analyzer capacity (in minutes), summary data about login and user access sessions over the last 7, 28, and 90 days, changes in the allocation of license tokens over the last 7 days, and license usage over time.
+
+User Detail	Allows the user to select a time period over which to display user access pass sessions, the number of users starting sessions, and the individual users starting sessions.
+Usage by App	Allows the user to select a time period over which to display the apps for which access passes are being used and the number of tokens consumed by each app.
+Timeline	The Timeline sheet displays token usage over time so administrators can monitor usage and anticipate future token allocation needs.
+User Access History	
+Allows the user to select a time period over which to display user access pass sessions, the number of users starting sessions, and the individual users starting sessions.
+
+Note:Only valid for token-based license.
+Login Access History	
+Allows the user to select a time period over which to display login pass utilization, login access users, and denials of login access.
+
+Note:Only valid for token-based license.
+Allocation History	
+Displays the latest changes and changes over selected times to the allocation of license tokens to login and user access passes.
+
+Usage Snapshot	
+Overview sheet providing snapshot view of license allocation and historical usage.
+
+Unified Licensing History	
+Displays the license usage for Qlik Sense and QlikView side by side.
+
+Note:To see the QlikView license usage, the new monitor_apps_qlikview_logs data connection must point to the folder containing the QlikView Server logs. You update the data connection in the QMC.
+Log Details	Lists servers in the cluster and provides details about license usage entered in server’s logs.
+
+>Data in the License Monitor is updated when the app is reloaded. Data is not live.
+ -------------------------
+
+## Screenshots
+
