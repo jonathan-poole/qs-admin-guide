@@ -24,7 +24,7 @@ parent: Tooling Appendix
 
 ## About
 
-The Operations Monitor it is already embedded in Qlik Sense and can be found on **Monitoring apps** stream.
+The Operations Monitor it is already embedded in Qlik Sense and can be found at **Monitoring apps** stream.
 
 The Operations Monitor loads service logs to populate charts covering performance history of hardware utilization, active users, app sessions, results of reload tasks, and errors and warnings. It also tracks changes made in the QMC that affect the Operations Monitor.
 
