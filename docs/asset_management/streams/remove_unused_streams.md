@@ -6,7 +6,7 @@ grand_parent: Asset Management
 nav_order: 2
 ---
 
-# Remove Unused Streams <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+# Remove Unused Streams <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i><i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
 ## Applicable Environments
@@ -23,6 +23,30 @@ Sometimes we move applications from one stream to another and, we do not notice 
 
 * TOC
 {:toc}
+
+-------------------------
+
+## QMC - Manually Check Streams Apps  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+
+In the QMC, select **Streams**:
+
+[![remove_unused_stream_01.png](images/remove_unused_stream_01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_01.png)
+
+You will now see all the **Streams**. To view all applications that were published to a specific Stream, select the Stream name and enter to edit mode.
+
+[![remove_unused_stream_02.png](images/remove_unused_stream_02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_02.png)
+
+In **Edit** mode, select the **Apps** tab.
+
+[![remove_unused_stream_03.png](images/remove_unused_stream_03.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_03.png)
+
+You will now see applications that were published to this stream.
+
+[![remove_unused_stream_04.png](images/remove_unused_stream_04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_04.png)
+
+This process should be repeated for each **Stream** to find unused streams.
+In case you have a considerable quantity of streams, consider to use the [CLI method](#get-list-of-unused-streams-qlik-cli-).
+
 -------------------------
 
 ## Get List of Unused Streams (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
@@ -48,77 +72,63 @@ $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
 # Main
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+$streamJson = Get-QlikStream -raw -full
+$appStreamIds = Get-QlikApp -filter "published eq true" | foreach{$_.stream.id} | Sort-Object | Get-Unique
+$emptyStreamIDs = ($streamJson | foreach{$_.id}) | ?{$appStreamIds -notcontains $_}
+$streamEmptyJson = $streamJson | ?{$emptyStreamIDs -contains $_.id}
 
-$streams = Get-QlikStream -full
-
-$out = @()
-
-$streamCounter=0
-
-foreach($stream in $streams) {
-    
-    $appCounter=0
-
-    foreach($app in Get-QlikApp -full -filter "Published eq true and stream.name eq '$($stream.name)' ") {
-        $appCounter++
-    }
-
-    $outLine = "" | Select streamId,streamName,streamCreatedDate,numOfApps
-    $outLine.streamId=$stream.id
-    $outLine.streamCreatedDate=$stream.createdDate
-    $outLine.streamName=$stream.name
-    $outLine.numOfApps=$appCounter
-
-    $out+=$outLine
-
-    $streamCounter++
+(&{If($emptyStreamIDs.count -gt 0) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
+If ($emptyStreamIDs.count) {
+    (&{If($outputFormat.ToLower() -eq 'csv') {$streamEmptyJson | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile} Else {$streamEmptyJson | ConvertTo-Json | Set-Content $outFile}})
 }
-
-If ($outputFormat.ToLower() -eq 'csv') {
-  $out | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
-  }  Else {
-  $out | ConvertTo-Json | Set-Content $outFile
-} 
 ```
 
 ### Example Output
 ```
 [
     {
-        "streamId":  "aaec8d41-5201-43ab-809f-3063750dfafd",
-        "streamName":  "Everyone",
-        "streamCreatedDate":  "2020/03/03 14:41",
-        "numOfApps":  1
+        "id":  "bbab7440-e2c6-4fea-8939-d23cabb16fb0",
+        "createdDate":  "2020-03-13T13:27:55.453Z",
+        "modifiedDate":  "2020-03-13T13:27:55.453Z",
+        "modifiedByUserName":  "QLIKSENSE\\qlik",
+        "customProperties":  [
+
+                             ],
+        "owner":  {
+                      "id":  "24990cfb-d3f3-4086-979a-9bd2ff81c5f6",
+                      "userId":  "qlik",
+                      "userDirectory":  "QLIKSENSE",
+                      "name":  "qlik",
+                      "privileges":  null
+                  },
+        "name":  "Sales Team",
+        "tags":  [
+
+                 ],
+        "privileges":  null,
+        "schemaPath":  "Stream"
     },
     {
-        "streamId":  "a70ca8a5-1d59-4cc9-b5fa-6e207978dcaf",
-        "streamName":  "Monitoring apps",
-        "streamCreatedDate":  "2020/03/03 14:41",
-        "numOfApps":  2
-    },
-    {
-        "streamId":  "974647c4-84c1-41e3-9589-24fb8f447135",
-        "streamName":  "AAI",
-        "streamCreatedDate":  "2020/03/03 15:25",
-        "numOfApps":  6
-    },
-    {
-        "streamId":  "8850146c-4fc8-46fd-80fc-f4c2bda49c4e",
-        "streamName":  "Medical - Pharma",
-        "streamCreatedDate":  "2020/03/03 15:26",
-        "numOfApps":  6
-    },
-    {
-        "streamId":  "aebcc4a9-ab9a-4a04-b297-9ad3b30153f9",
-        "streamName":  "HR",
-        "streamCreatedDate":  "2020/03/03 15:27",
-        "numOfApps":  2
-    },
-    {
-        "streamId":  "08eefa4c-e28b-4b9d-99b8-28ac131c49c9",
-        "streamName":  "Expansion Strategy",
-        "streamCreatedDate":  "2020/03/04 12:20",
-        "numOfApps":  2
+        "id":  "74ab818b-c6ab-4924-aa31-d34867babd53",
+        "createdDate":  "2020-03-13T13:56:48.796Z",
+        "modifiedDate":  "2020-03-13T13:56:48.796Z",
+        "modifiedByUserName":  "QLIKSENSE\\qlik",
+        "customProperties":  [
+
+                             ],
+        "owner":  {
+                      "id":  "24990cfb-d3f3-4086-979a-9bd2ff81c5f6",
+                      "userId":  "qlik",
+                      "userDirectory":  "QLIKSENSE",
+                      "name":  "qlik",
+                      "privileges":  null
+                  },
+        "name":  "HR",
+        "tags":  [
+
+                 ],
+        "privileges":  null,
+        "schemaPath":  "Stream"
     }
 ]
 ```
