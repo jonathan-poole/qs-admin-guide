@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Analyze User Adoption
+title: Optimize Sheet Order for Adoption
 parent: Apps
 grand_parent: Asset Management
 nav_order: 4
