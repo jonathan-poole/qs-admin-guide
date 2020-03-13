@@ -16,7 +16,7 @@ nav_order: 2
 ## Goal
 {:.no_toc}
 
-Sometimes we move applications from one stream to another and, we do not notice that the stream is now empty. Or we create a stream waiting for applications get published to it and, they do not get published. It is always a good practice to delete unused Streams.
+There are several reasons why empty streams may be present in a Qlik environment. Sometimes, applications are moved from one stream to another and the admin doesn't notice that the former stream is now empty. Other times, streams are created in anticipation of new applications being published to them, yet none ever actually get published. It is always a good practice to periodically check on the validity of the streams and to remove those that are deemed unnecessary.
 
 ## Table of Contents
 {:.no_toc}
@@ -32,7 +32,7 @@ In the QMC, select **Streams**:
 
 [![remove_unused_stream_01.png](images/remove_unused_stream_01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_01.png)
 
-You will now see all the **Streams**. To view all applications that were published to a specific Stream, select the Stream name and enter to edit mode.
+To view all applications that were published to a specific stream, select the stream name and enter into edit mode.
 
 [![remove_unused_stream_02.png](images/remove_unused_stream_02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_02.png)
 
@@ -40,20 +40,18 @@ In **Edit** mode, select the **Apps** tab.
 
 [![remove_unused_stream_03.png](images/remove_unused_stream_03.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_03.png)
 
-You will now see applications that were published to this stream.
+Applications that were published to this stream will now be visible.
 
 [![remove_unused_stream_04.png](images/remove_unused_stream_04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_04.png)
 
 This process should be repeated for each **Stream** to find unused streams.
-In case you have a considerable quantity of streams, consider to use the [CLI method](#get-list-of-unused-streams-qlik-cli-).
+If there is a considerable quantity of streams, consider the [Qlik CLI method](#get-list-of-unused-streams-qlik-cli-).
 
 -------------------------
 
 ## Get List of Unused Streams (Qlik CLI) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
-
-The script will bring all streams and the number of applications inside of each one. The script will then store the output into the location of your choice in either csv or json format.
 
 ### Script
 ```powershell
@@ -77,8 +75,8 @@ $appStreamIds = Get-QlikApp -filter "published eq true" | foreach{$_.stream.id} 
 $emptyStreamIDs = ($streamJson | foreach{$_.id}) | ?{$appStreamIds -notcontains $_}
 $streamEmptyJson = $streamJson | ?{$emptyStreamIDs -contains $_.id}
 
-(&{If($emptyStreamIDs.length) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
-If ($emptyStreamIDs.length) {
+(&{If($emptyStreamIDs.count) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
+If ($emptyStreamIDs.count) {
     (&{If($outputFormat.ToLower() -eq 'csv') {$streamEmptyJson | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile} Else {$streamEmptyJson | ConvertTo-Json | Set-Content $outFile}})
 }
 ```
