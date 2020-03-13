@@ -7,6 +7,7 @@ nav_order: 4
 ---
 
 # Optimize Sheet Order for Adoption <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+{:.no_toc}
 
 ## Applicable Environments
 {:.no_toc}
