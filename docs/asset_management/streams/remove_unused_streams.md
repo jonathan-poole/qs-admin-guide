@@ -6,7 +6,7 @@ grand_parent: Asset Management
 nav_order: 2
 ---
 
-# Remove Unused Streams <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i><i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+# Remove Unused Streams <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
 ## Applicable Environments
@@ -26,7 +26,7 @@ Sometimes we move applications from one stream to another and, we do not notice 
 
 -------------------------
 
-## QMC - Manually Check Streams Apps  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+## QMC - Manually Check Published Apps For Each Stream  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 In the QMC, select **Streams**:
 
