@@ -57,7 +57,7 @@ The script will bring all streams and the number of applications inside of each 
 
 ### Script
 ```powershell
-# Function to collect streams and number of applications inside
+# Script to find any empty streams
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
@@ -77,7 +77,7 @@ $appStreamIds = Get-QlikApp -filter "published eq true" | foreach{$_.stream.id} 
 $emptyStreamIDs = ($streamJson | foreach{$_.id}) | ?{$appStreamIds -notcontains $_}
 $streamEmptyJson = $streamJson | ?{$emptyStreamIDs -contains $_.id}
 
-(&{If($emptyStreamIDs.length -gt 0) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
+(&{If($emptyStreamIDs.length) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
 If ($emptyStreamIDs.length) {
     (&{If($outputFormat.ToLower() -eq 'csv') {$streamEmptyJson | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile} Else {$streamEmptyJson | ConvertTo-Json | Set-Content $outFile}})
 }
