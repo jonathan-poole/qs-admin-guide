@@ -77,8 +77,8 @@ $appStreamIds = Get-QlikApp -filter "published eq true" | foreach{$_.stream.id} 
 $emptyStreamIDs = ($streamJson | foreach{$_.id}) | ?{$appStreamIds -notcontains $_}
 $streamEmptyJson = $streamJson | ?{$emptyStreamIDs -contains $_.id}
 
-(&{If($emptyStreamIDs.count -gt 0) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
-If ($emptyStreamIDs.count) {
+(&{If($emptyStreamIDs.lenght -gt 0) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
+If ($emptyStreamIDs.lenght) {
     (&{If($outputFormat.ToLower() -eq 'csv') {$streamEmptyJson | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile} Else {$streamEmptyJson | ConvertTo-Json | Set-Content $outFile}})
 }
 ```
