@@ -57,12 +57,12 @@ The script will bring back any data connection with a **Created Date** that is g
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'machineName'
+$computerName = 'us-ea-hybrid-qs'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$daysBack = 1
+$daysBack = 15
 $filePath = 'C:\'
 $fileName = 'output'
-$outputFormat = 'json'
+$outputFormat = 'csv'
 
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
@@ -70,12 +70,9 @@ $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
 # Main
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+$newDataConnections = Get-QlikDataConnection -filter "createdDate ge '$date'" -full
 
-If ($outputFormat.ToLower() -eq 'csv') {
-  Get-QlikDataConnection -filter "createdDate ge '$date'" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
-  }  Else {
-  Get-QlikDataConnection -filter "createdDate ge '$date'" -full | ConvertTo-Json | Set-Content $outFile
-} 
+(&{If($outputFormat.ToLower() -eq 'csv') {$newDataConnections | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile} Else {$newDataConnections | ConvertTo-Json | Set-Content $outFile}})
 ```
 
 ### Example Output
