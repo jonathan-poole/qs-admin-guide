@@ -40,7 +40,7 @@ Inside the Operations Monitor application there is a dedicated sheet to do the s
 
 Inside the **Sheet Usage** sheet you will be able to see all sheets across all the applications, for this example I will select an application named "Sample App":
 
-[![optimize_sheet_order_for_adoption03.png]](https://github.com/qs-admin-guide/qs-admin-guide/blob/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption03.png)
+[![optimize_sheet_order_for_adoption03.png](images/optimize_sheet_order_for_adoption03.png)](https://github.com/qs-admin-guide/qs-admin-guide/blob/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption03.png)
 
 Now we can see all the sheets (Base Sheets, Community Sheets and Private Sheets) that we have inside the "Sample App" application.
 
