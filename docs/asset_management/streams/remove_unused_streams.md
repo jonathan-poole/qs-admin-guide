@@ -87,48 +87,14 @@ If ($emptyStreamIDs.length) {
 ```
 [
     {
-        "id":  "bbab7440-e2c6-4fea-8939-d23cabb16fb0",
-        "createdDate":  "2020-03-13T13:27:55.453Z",
-        "modifiedDate":  "2020-03-13T13:27:55.453Z",
-        "modifiedByUserName":  "QLIKSENSE\\qlik",
-        "customProperties":  [
-
-                             ],
-        "owner":  {
-                      "id":  "24990cfb-d3f3-4086-979a-9bd2ff81c5f6",
-                      "userId":  "qlik",
-                      "userDirectory":  "QLIKSENSE",
-                      "name":  "qlik",
-                      "privileges":  null
-                  },
-        "name":  "Sales Team",
-        "tags":  [
-
-                 ],
-        "privileges":  null,
-        "schemaPath":  "Stream"
+        "id":  "b4062a80-bf90-48ad-9328-12c945743f1e",
+        "name":  "An Empty Stream",
+        "privileges":  null
     },
     {
-        "id":  "74ab818b-c6ab-4924-aa31-d34867babd53",
-        "createdDate":  "2020-03-13T13:56:48.796Z",
-        "modifiedDate":  "2020-03-13T13:56:48.796Z",
-        "modifiedByUserName":  "QLIKSENSE\\qlik",
-        "customProperties":  [
-
-                             ],
-        "owner":  {
-                      "id":  "24990cfb-d3f3-4086-979a-9bd2ff81c5f6",
-                      "userId":  "qlik",
-                      "userDirectory":  "QLIKSENSE",
-                      "name":  "qlik",
-                      "privileges":  null
-                  },
-        "name":  "HR",
-        "tags":  [
-
-                 ],
-        "privileges":  null,
-        "schemaPath":  "Stream"
+        "id":  "450e940c-13cd-48b7-bc19-2b1f51c8da22",
+        "name":  "Another Empty Stream",
+        "privileges":  null
     }
 ]
 ```
