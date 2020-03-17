@@ -88,11 +88,10 @@ $filePath = 'C:\'
 $fileName = 'output'
 $outputFormat = 'json'
 
+# Main
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
-
-# Main
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
 If ($outputFormat.ToLower() -eq 'csv') {
