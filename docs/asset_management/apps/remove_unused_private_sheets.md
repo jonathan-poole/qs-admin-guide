@@ -95,8 +95,59 @@ The script below will tag any private sheets with the tag _'UnusedPrivateSheet'_
 
 ### Script to Tag Unused Private Sheets
 ```powershell
+# Function to tag private sheet ids from excel and tag them
+# Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
+# Assumes tag exists, such as 'UnusedPrivateSheet'
+# GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
-<insert awesome rad script here>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$inputXlsxPath = 'C:\<your file>.xlsx'
+$sheetIdColumnNumber = '1'
+$tagName = 'UnusedPrivateSheet'
+$outFilePath = 'C:\'
+$outFileName = 'tagged_private_sheets'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.csv')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+function Test-IsGuid
+{
+	[OutputType([bool])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[string]$ObjectGuid
+	)
+	
+	[regex]$guidRegex = '(?im)^[{(]?[0-9A-F]{8}[-]?(?:[0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?$'
+	return $ObjectGuid -match $guidRegex
+}
+
+$data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $sheetIdColumnNumber -EndColumn $($sheetIdColumnNumber + 1)
+$sheetIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName')
+foreach ($sheetId in $sheetIds) {
+	$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
+	$sheetObjJson = Get-QlikObject -id $sheetId -raw
+	$sheetObjName = $sheetObjJson.name
+	$sheetObjAppId = $sheetObjJson.app.id
+	$sheetObjAppName = $sheetObjJson.app.name
+	$sheetObjJson.tags = @($tagsJson)
+	$sheetObjJson = $sheetObjJson | ConvertTo-Json
+
+	Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+	Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
+}
 ```
 
 Once the script has been run above, and a review of the tagging has been confirmed as correct, the script below can be run to **permanently delete** these base/community sheets. **This process cannot be reversed.**
