@@ -115,8 +115,21 @@ It might not be the worst idea to take a snapshot of all data connections before
 #### Script to Backup All Data Connections
 
 ```powershell
+# Script to backup data connections to json
 
-<insert awesome rad script here to backup all data connections>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$outFilePath = 'C:\'
+$outFileName = 'data_connection_backup'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.json')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+Get-QlikDataConnection -raw -full | ConvertTo-Json | Set-Content $outFile
 ```
 
 #### Script to Tag Data Connections from an Excel Export Containing IDs
