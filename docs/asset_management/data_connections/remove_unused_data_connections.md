@@ -176,7 +176,7 @@ Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCer
 
 foreach ($dataConnection in $dataConnectionIds) {
 	$resp = Get-QlikDataConnection -id $dataConnection | Update-QlikDataConnection -tags $tagName
-	'Tagged: ' + $dataConnection
-	Add-Content -Path $outFile -Value $dataConnection
+	'Tagged: ' + $resp.name + ',' + $dataConnection
+	Add-Content -Path $outFile -Value $($resp.name + ',' + $dataConnection)
 }
 ```
