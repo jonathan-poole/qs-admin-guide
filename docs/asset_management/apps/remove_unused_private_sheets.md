@@ -136,17 +136,22 @@ $data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $sheetIdColumnNumber 
 $sheetIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName')
+$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
 foreach ($sheetId in $sheetIds) {
-	$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
-	$sheetObjJson = Get-QlikObject -id $sheetId -raw
-	$sheetObjName = $sheetObjJson.name
-	$sheetObjAppId = $sheetObjJson.app.id
-	$sheetObjAppName = $sheetObjJson.app.name
-	$sheetObjJson.tags = @($tagsJson)
-	$sheetObjJson = $sheetObjJson | ConvertTo-Json
-
-	Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
-	Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
+	$sheetObjJson = Get-QlikObject -filter "published eq false and approved eq false and id eq $sheetId" -full -raw
+	if ($sheetObjJson) {
+		$sheetObjName = $sheetObjJson.name
+		$sheetObjAppId = $sheetObjJson.app.id
+		$sheetObjAppName = $sheetObjJson.app.name
+		$sheetObjJson.tags = @($tagsJson)
+		$sheetObjJson = $sheetObjJson | ConvertTo-Json
+	
+		Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+		Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
+	}
+	else {
+		$sheetId + ' is not a private sheet. Skipping.'
+	}
 }
 ```
 
