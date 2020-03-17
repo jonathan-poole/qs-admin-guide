@@ -59,16 +59,15 @@ The script will bring back any data connection with a **Created Date** that is g
 # Assumes default credentials are used for the Qlik CLI Connection
 $computerName = 'us-ea-hybrid-qs'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$daysBack = 15
+$daysBack = 7
 $filePath = 'C:\'
 $fileName = 'output'
 $outputFormat = 'csv'
 
+# Main
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
-
-# Main
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 $newDataConnections = Get-QlikDataConnection -filter "createdDate ge '$date'" -full
 
