@@ -129,13 +129,13 @@ It might not be the worst idea to take a snapshot of all data connections before
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'us-ea-hybrid-qs'
+$computerName = '<machine-name>'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$inputXlsxPath = 'C:\Users\QService.QLIK-POC\Desktop\184fef0c-ecc7-487c-b6c8-bb4c6294dff5.xlsx'
-$dataConnectionIdColumn = 'Data Connection ID'
-$tagName = 'UnusedDataConnection'
+$inputXlsxPath = 'C:\<filename>.xlsx'
+$dataConnectionIdColumn = '<name of column containing data connection ID>'
+$tagName = '<name of existing tag>'
 $outFilePath = 'C:\'
-$outFileName = 'tagged_unused_connections'
+$outFileName = '<output file name>'
 
 # Main
 $outFile = ($outFilePath + $outFileName + '.csv')
