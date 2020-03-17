@@ -108,21 +108,65 @@ It might not be the worst idea to take a snapshot of all data connections before
 
 -------------------------
 
-### Script to Delete Data Connections
+### Scripts to Manage Unused Data Connections
 
-**It is highly recommended to delete data connections manually, after validating with their respective owners. That being said, that might not always be possible. Please refer to the _Suggestions_ section above.**
+**It is highly recommended to delete data connections manually, after validating with their respective owners. Please refer to the _Suggestions_ section above. The scripts below show how data connections can be backed up and programmatically tagged. The tagging allows them to be essentially _disabled_ using security rules before the data connections are removed.**
+
+#### Script to Backup All Data Connections
 
 ```powershell
 
 <insert awesome rad script here to backup all data connections>
 ```
 
-```powershell
-
-<insert awesome rad script here to tag data connections from csv>
-```
+#### Script to Tag Data Connections from an Excel Export Containing IDs
 
 ```powershell
+# Function to import data connection ids from excel and tag them
+# Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
+# Assumes tag exists, such as 'DataConnectionUnused'
+# GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
-<insert awesome rad script here to remove all tagged data connections>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = 'us-ea-hybrid-qs'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$inputXlsxPath = 'C:\Users\QService.QLIK-POC\Desktop\184fef0c-ecc7-487c-b6c8-bb4c6294dff5.xlsx'
+$dataConnectionIdColumn = 'Data Connection ID'
+$tagName = 'UnusedDataConnection'
+$outFilePath = 'C:\'
+$outFileName = 'tagged_unused_connections'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.csv')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+function Test-IsGuid
+{
+	[OutputType([bool])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[string]$ObjectGuid
+	)
+	
+	[regex]$guidRegex = '(?im)^[{(]?[0-9A-F]{8}[-]?(?:[0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?$'
+	return $ObjectGuid -match $guidRegex
+}
+
+$data = Import-Excel $inputXlsxPath -HeaderName $dataConnectionIdColumn -DataOnly
+$dataConnectionIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
+
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+
+foreach ($dataConnection in $dataConnectionIds) {
+	$resp = Get-QlikDataConnection -id $dataConnection | Update-QlikDataConnection -tags $tagName
+	'Tagged: ' + $dataConnection
+	Add-Content -Path $outFile -Value $dataConnection
+}
 ```
