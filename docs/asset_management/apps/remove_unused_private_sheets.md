@@ -137,21 +137,26 @@ $sheetIds = $data | foreach { $_.psobject.Properties } | where Value -is string 
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName')
 $tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
-foreach ($sheetId in $sheetIds) {
-	$sheetObjJson = Get-QlikObject -filter "published eq false and approved eq false and id eq $sheetId" -full -raw
-	if ($sheetObjJson) {
-		$sheetObjName = $sheetObjJson.name
-		$sheetObjAppId = $sheetObjJson.app.id
-		$sheetObjAppName = $sheetObjJson.app.name
-		$sheetObjJson.tags = @($tagsJson)
-		$sheetObjJson = $sheetObjJson | ConvertTo-Json
-	
-		Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
-		Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
+if($tagsJson) {
+	foreach ($sheetId in $sheetIds) {
+		$sheetObjJson = Get-QlikObject -filter "published eq false and approved eq true and id eq $sheetId" -full -raw
+		if ($sheetObjJson) {
+			$sheetObjName = $sheetObjJson.name
+			$sheetObjAppId = $sheetObjJson.app.id
+			$sheetObjAppName = $sheetObjJson.app.name
+			$sheetObjJson.tags = @($tagsJson)
+			$sheetObjJson = $sheetObjJson | ConvertTo-Json
+		
+			Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+			Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
+		}
+		else {
+			$sheetId + ' is not a private sheet. Skipping.'
+		}
 	}
-	else {
-		$sheetId + ' is not a private sheet. Skipping.'
-	}
+}
+else {
+	"Tag: '" + $tagName + "' doesn't exist. Please create it in the QMC."
 }
 ```
 
