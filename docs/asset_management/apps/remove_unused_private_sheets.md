@@ -139,7 +139,7 @@ Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObj
 $tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
 if($tagsJson) {
 	foreach ($sheetId in $sheetIds) {
-		$sheetObjJson = Get-QlikObject -filter "published eq false and approved eq true and id eq $sheetId" -full -raw
+		$sheetObjJson = Get-QlikObject -filter "published eq false and approved eq false and id eq $sheetId" -full -raw
 		if ($sheetObjJson) {
 			$sheetObjName = $sheetObjJson.name
 			$sheetObjAppId = $sheetObjJson.app.id
