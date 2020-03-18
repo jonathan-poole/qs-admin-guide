@@ -16,7 +16,7 @@ nav_order: 4
 ## Goal
 {:.no_toc}
 
-Many times when an application is being developed there is an assumption that the sheets were properly ordered, based in a story of the application data. It is always a good practice to check the user adoption of the sheets and, reorder them to increase adoption rates and BI effectiveness.
+When an application is developed, the sheets are ordered in a logical flow(Ex: DAR methodology); the sheet optimization should not overoptimize the flow. This page will help you optimize the application sheet order using the sheet usage data, and you must combine the usage data with the logical flow to make sure that the new sheet order will increase adoption rates and BI effectiveness.
 
 ## Table of Contents
 {:.no_toc}
@@ -34,6 +34,9 @@ In the Monitoring Apps stream, select **Operations Monitor**:
 
 [![optimize_sheet_order_for_adoption01.png](images/optimize_sheet_order_for_adoption01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption01.png)
 
+
+//Add Selecting 5 Top Apps
+
 Inside the Operations Monitor application there is a dedicated sheet to do the sheet usage analysis:
 
 [![optimize_sheet_order_for_adoption02.png](images/optimize_sheet_order_for_adoption02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption02.png)
@@ -46,7 +49,12 @@ Now we can see all the sheets (Base Sheets, Community Sheets and Private Sheets)
 
 [![optimize_sheet_order_for_adoption04.png](images/optimize_sheet_order_for_adoption04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption04.png)
 
-You can notice that the usage order would be:
+The sheet usage data can be exported and shared 
+
+You should now use this data, combined with the logical flow, to reorder the sheets.
+
+
+In this case since I want to keep using the 
 
 Order | Sheet Name
 ------|--------------------------------
