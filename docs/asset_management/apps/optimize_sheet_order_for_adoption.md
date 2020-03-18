@@ -11,7 +11,7 @@ nav_order: 4
 
 ## Applicable Environments
 {:.no_toc}
-* All
+* Production
 
 ## Goal
 {:.no_toc}
