@@ -164,6 +164,41 @@ Once the script has been run above, and a review of the tagging has been confirm
 **It is highly recommended to _backup your site and applications_ before considering taking the approach of programmatic sheet removal. This process cannot be reversed. The sheet pointers are stored in the repository database, and the sheets reside within the qvfs themselves.**
 
 ```powershell
+# Function to remove any sheets with a specific tag
+# Assumes tag exists, such as 'UnusedPrivateSheet'
 
-<insert awesome rad script here>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$tagName = 'UnusedPrivateSheet'
+$outFilePath = 'C:\'
+$outFileName = 'removed_sheets'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.csv')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName,SheetOwnerId')
+$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
+$sheetsToDelete = Get-QlikObject -filter "tags.name eq '$tagName'" -full -raw
+
+Add-Content -Path $outFile -Value $($_.id + ',' + $_.name + ',' + $_.app.id + ',' + $_.app.name + ',' + $_.owner.id)
+
+foreach ($sheet in $sheetsToDelete) {
+	$sheetObjId = $sheet.id
+	$sheetObjName = $sheet.name
+	$sheetObjAppId = $sheet.app.id
+	$sheetObjAppName = $sheet.app.name
+	$sheetObjOwnerId = $sheet.owner.id
+	Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetObjId + ',' + $sheetObjAppId + ',' + $sheetObjAppName + ',' + $sheetObjOwnerId)
+}
+
+$sheetsToDelete | Remove-QlikObject
 ```
