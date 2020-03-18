@@ -57,7 +57,7 @@ The script will bring back any data connection with a **Created Date** that is g
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'us-ea-hybrid-qs'
+$computerName = '<machine-name>'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
 $daysBack = 7
 $filePath = 'C:\'
