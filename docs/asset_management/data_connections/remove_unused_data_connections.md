@@ -6,9 +6,6 @@ grand_parent: Asset Management
 nav_order: 3
 ---
 
-# Remove Unused Data Connections
-Stuff stuff stuff.
-
 # Remove Unused Data Connections <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
@@ -108,21 +105,78 @@ It might not be the worst idea to take a snapshot of all data connections before
 
 -------------------------
 
-### Script to Delete Data Connections
+### Scripts to Manage Unused Data Connections
 
-**It is highly recommended to delete data connections manually, after validating with their respective owners. That being said, that might not always be possible. Please refer to the _Suggestions_ section above.**
+**It is highly recommended to delete data connections manually, after validating with their respective owners. Please refer to the _Suggestions_ section above. The scripts below show how data connections can be backed up and programmatically tagged. The tagging allows them to be essentially _disabled_ using security rules before the data connections are removed.**
+
+#### Script to Backup All Data Connections
 
 ```powershell
+# Script to backup data connections to json
 
-<insert awesome rad script here to backup all data connections>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$outFilePath = 'C:\'
+$outFileName = 'data_connection_backup'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.json')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+Get-QlikDataConnection -raw -full | ConvertTo-Json | Set-Content $outFile
 ```
 
-```powershell
-
-<insert awesome rad script here to tag data connections from csv>
-```
+#### Script to Tag Data Connections from an Excel Export Containing IDs
 
 ```powershell
+# Function to import data connection ids from excel and tag them
+# Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
+# Assumes tag exists, such as 'DataConnectionUnused'
+# GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
-<insert awesome rad script here to remove all tagged data connections>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$inputXlsxPath = 'C:\<filename>.xlsx'
+$dataConnectionIdColumn = '<name of column containing data connection ID>'
+$tagName = '<name of existing tag>'
+$outFilePath = 'C:\'
+$outFileName = '<output file name>'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.csv')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+function Test-IsGuid
+{
+	[OutputType([bool])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[string]$ObjectGuid
+	)
+	
+	[regex]$guidRegex = '(?im)^[{(]?[0-9A-F]{8}[-]?(?:[0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?$'
+	return $ObjectGuid -match $guidRegex
+}
+
+$data = Import-Excel $inputXlsxPath -HeaderName $dataConnectionIdColumn -DataOnly
+$dataConnectionIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
+
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+
+foreach ($dataConnection in $dataConnectionIds) {
+	$resp = Get-QlikDataConnection -id $dataConnection | Update-QlikDataConnection -tags $tagName
+	'Tagged: ' + $resp.name + ',' + $dataConnection
+	Add-Content -Path $outFile -Value $($resp.name + ',' + $dataConnection)
+}
 ```

@@ -29,7 +29,7 @@ In environments where self-service is enabled, i.e. users have the ability to cr
 
 ## Audit Activity Log <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-As of the **fill in release here** release, the **Audit Activity Log** capability is now enabled, which allows for the tracking of who is accessing what sheets in applications. This enables the ability to measure sheet adoption as well as manage the amount of sheets in the applications--keeping them trimmed to only what is being leveraged.
+As of the February 2019 release, the **Audit Activity Log** capability is now enabled, which allows for the tracking of who is accessing what sheets in applications. This enables the ability to measure sheet adoption as well as manage the amount of sheets in the applications--keeping them trimmed to only what is being leveraged.
 
 This logging must be enabled on _every engine_ that the information is desired from, and is turned on by default on supporting releases.
 
@@ -95,19 +95,113 @@ The script below will tag any private sheets with the tag _'UnusedPrivateSheet'_
 
 ### Script to Tag Unused Private Sheets
 ```powershell
+# Function to tag private sheet ids from excel and tag them
+# Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
+# Assumes tag exists, such as 'UnusedPrivateSheet'
+# GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
-<insert awesome rad script here>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$inputXlsxPath = 'C:\<your file>.xlsx'
+$sheetIdColumnNumber = '1'
+$tagName = 'UnusedPrivateSheet'
+$outFilePath = 'C:\'
+$outFileName = 'tagged_private_sheets'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.csv')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+function Test-IsGuid
+{
+	[OutputType([bool])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[string]$ObjectGuid
+	)
+	
+	[regex]$guidRegex = '(?im)^[{(]?[0-9A-F]{8}[-]?(?:[0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?$'
+	return $ObjectGuid -match $guidRegex
+}
+
+$data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $sheetIdColumnNumber -EndColumn $($sheetIdColumnNumber + 1)
+$sheetIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName')
+$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
+if($tagsJson) {
+	foreach ($sheetId in $sheetIds) {
+		$sheetObjJson = Get-QlikObject -filter "published eq false and approved eq false and id eq $sheetId" -full -raw
+		if ($sheetObjJson) {
+			$sheetObjName = $sheetObjJson.name
+			$sheetObjAppId = $sheetObjJson.app.id
+			$sheetObjAppName = $sheetObjJson.app.name
+			$sheetObjJson.tags = @($tagsJson)
+			$sheetObjJson = $sheetObjJson | ConvertTo-Json
+		
+			Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+			Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
+		}
+		else {
+			$sheetId + ' is not a private sheet. Skipping.'
+		}
+	}
+}
+else {
+	"Tag: '" + $tagName + "' doesn't exist. Please create it in the QMC."
+}
 ```
 
 Once the script has been run above, and a review of the tagging has been confirmed as correct, the script below can be run to **permanently delete** these base/community sheets. **This process cannot be reversed.**
 
 -------------------------
 
-## Script to Delete Tagged Sheets
+### Script to Delete Tagged Sheets
 
 **It is highly recommended to _backup your site and applications_ before considering taking the approach of programmatic sheet removal. This process cannot be reversed. The sheet pointers are stored in the repository database, and the sheets reside within the qvfs themselves.**
 
 ```powershell
+# Function to remove any sheets with a specific tag
+# Assumes tag exists, such as 'UnusedPrivateSheet'
 
-<insert awesome rad script here>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$tagName = 'UnusedPrivateSheet'
+$outFilePath = 'C:\'
+$outFileName = 'removed_sheets'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.csv')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName,SheetOwnerId')
+$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
+$sheetsToDelete = Get-QlikObject -filter "tags.name eq '$tagName'" -full -raw
+
+foreach ($sheet in $sheetsToDelete) {
+	$sheetObjId = $sheet.id
+	$sheetObjName = $sheet.name
+	$sheetObjAppId = $sheet.app.id
+	$sheetObjAppName = $sheet.app.name
+	$sheetObjOwnerId = $sheet.owner.id
+	Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetObjId + ',' + $sheetObjAppId + ',' + $sheetObjAppName + ',' + $sheetObjOwnerId)
+}
+
+$sheetsToDelete | Remove-QlikObject
 ```
