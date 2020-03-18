@@ -189,8 +189,6 @@ Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObj
 $tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
 $sheetsToDelete = Get-QlikObject -filter "tags.name eq '$tagName'" -full -raw
 
-Add-Content -Path $outFile -Value $($_.id + ',' + $_.name + ',' + $_.app.id + ',' + $_.app.name + ',' + $_.owner.id)
-
 foreach ($sheet in $sheetsToDelete) {
 	$sheetObjId = $sheet.id
 	$sheetObjName = $sheet.name
