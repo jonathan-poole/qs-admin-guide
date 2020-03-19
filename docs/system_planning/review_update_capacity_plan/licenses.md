@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Licenses
+has_children: true
 parent: Review/Update Capacity Plan
 grand_parent: System Planning
 nav_order: 1
