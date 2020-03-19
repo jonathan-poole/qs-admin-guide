@@ -27,6 +27,14 @@ Specific areas:
 
 -------------------------
 
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
+-------------------------
+
 ## Capacity Planning Process
 
 There are four primary pillars that this process covers:
