@@ -54,6 +54,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 
 ### Licenses
+{:.no_toc}
 
 |                  | Licensed | Allocated | Remaining |
 |------------------|----------|-----------|-----------|
@@ -68,6 +69,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 
 ### Users
+{:.no_toc}
 
 |                  |  Peak    | Total     | +6 Months*| +12 Months* |
 |------------------|----------|-----------|-----------|-------------|
@@ -82,6 +84,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 
 ### System
+{:.no_toc}
 
 |                  | Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads | Users per Proxy |
 |------------------|------------|------------|---------------|-------------------|-----------------|
@@ -94,6 +97,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 
 ### Application
+{:.no_toc}
 
 Review App Metadata Analyzer for heavily used applications that are large/complex. Identify potential targets for app pinning and optimization.
 
