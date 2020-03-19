@@ -40,9 +40,13 @@ Specific areas:
 There are four primary pillars that this process covers--review each process below for details:
 
 *   ### [Licenses](review_update_capacity_plan/licenses.md)
+{: .no_toc }
 *   ### [Users](review_update_capacity_plan/users.md)
+{: .no_toc }
 *   ### [System](review_update_capacity_plan/system.md)
+{: .no_toc }
 *   ### [Applications](review_update_capacity_plan/applications.md)
+{: .no_toc }
 
 -------------------------
 
