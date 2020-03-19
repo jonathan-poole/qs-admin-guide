@@ -16,15 +16,27 @@ parent: System Planning
 ## Goal
 {:.no_toc}
 
+This page is intended to act as an example of what a high-level capacity plan could look like. It is assumed that the organization would build one themselves with some of the below considerations in mind, or would work with Qlik's Services organization to have one defined/executed.
+
 1. Document current state and expected state of several asset groups, which helps for planning
 2. Document and justify the actions that are needed for capacity/architecture changes
 
 It's important for stakeholders, budgetholders, and Qlik deployment owners to have advance notice when addition resources will be needed. This exercise helps you prepare for those requests and demonstrate the need. 
 
+-------------------------
+
+## Capacity Planning Summary
+
+There are four primary pillars that this process covers:
+
+  1. Licenses
+  2. Users
+  3. System
+  4. Applications
 
 -------------------------
 
-## Capacity Planning Summary (Example)
+## Capacity Planning Example
 
 **ACME Corp**
 
