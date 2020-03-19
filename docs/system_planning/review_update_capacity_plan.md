@@ -31,10 +31,10 @@ Specific areas:
 
 There are four primary pillars that this process covers:
 
-  - Licenses
-  - Users
-  - System
-  - Applications
+  - [Licenses](./licenses.md)
+  - [Users](./users.md)
+  - [System](./system.md)
+  - [Applications](./applications.md)
 
 -------------------------
 
@@ -43,6 +43,7 @@ There are four primary pillars that this process covers:
 The below is a high-level mockup of what a capacity plan's output could look like, including the four points from the Capacity Planning Process. For details on how to locate/calculate these metrics, please refer to the associated process item above.
 
 **ACME Corp**
+
 
 ### Licenses
 
@@ -56,6 +57,8 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 1. Analyze the allocated licenses for possible re-assignment.
 2. Expand licenses to 75 Professional and 325 Analyzer.
 
+
+
 ### Users
 
 |                  |  Peak    | Total     | +6 Months*| +12 Months* |
@@ -68,6 +71,8 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 1. Review system specs to see how it is performing with the above currently, and how it could scale.
 
+
+
 ### System
 
 |                  | Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads | Users per Proxy |
@@ -77,6 +82,8 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 #### Actions
 
 1. Going to begin offloading intra-day reloads to an isolated scheduler.
+
+
 
 ### Application
 
