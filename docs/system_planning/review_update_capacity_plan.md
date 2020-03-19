@@ -25,18 +25,20 @@ It's important for stakeholders, budgetholders, and Qlik deployment owners to ha
 
 -------------------------
 
-## Capacity Planning Summary
+## Capacity Planning Process
 
 There are four primary pillars that this process covers:
 
-  1. Licenses
-  2. Users
-  3. System
-  4. Applications
+  - Licenses
+  - Users
+  - System
+  - Applications
 
 -------------------------
 
 ## Capacity Planning Example
+
+The below is a high-level mockup of what a capacity plan's output could look like, including the four points from the Capacity Planning Process. For details on how to locate/calculate these metrics, please refer to the associated process item above.
 
 **ACME Corp**
 
@@ -58,7 +60,7 @@ There are four primary pillars that this process covers:
 |------------------|----------|-----------|-----------|-------------|
 | **Concurrency**  | 43       | 224       | 300       | 400         |
 
-\* estimated numbers.
+\* estimated numbers
 
 #### Actions
 
