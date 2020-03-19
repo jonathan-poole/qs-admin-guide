@@ -29,23 +29,13 @@ Leveraging the [App Metadata Analyzer](../../tooling/app_metadata_analyzer.md) e
 {:toc}
 -------------------------
 
-## Capacity Planning Summary (Example)
+## Demo Video
 
-**ACME Corp**
+[App Metadata Analyzer Overview/Demo Video - YouTube](https://youtu.be/M6qluodkjWQ)
 
-### Licenses
+## Documentation
 
-|                  | Licensed | Allocated | Remaining |
-|------------------|----------|-----------|-----------|
-| **Professional** | 50       | 44        | 6         |
-| **Analyzer**     | 200      | 180       | 20        |
-
-#### Actions
-
-Analyze the allocated licenses for possible re-assignment.
-
-### Users
-
+[App Metadata Analyzer](../../tooling/app_metadata_analyzer.md)
 
 **Tags**
 
