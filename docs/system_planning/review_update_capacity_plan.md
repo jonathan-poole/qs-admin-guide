@@ -39,10 +39,10 @@ Specific areas:
 
 There are four primary pillars that this process covers:
 
-  - [Licenses](./licenses.md)
-  - [Users](./users.md)
-  - [System](./system.md)
-  - [Applications](./applications.md)
+  - [Licenses](review_update_capacity_plan/licenses.md)
+  - [Users](review_update_capacity_plan/users.md)
+  - [System](review_update_capacity_plan/system.md)
+  - [Applications](review_update_capacity_plan/applications.md)
 
 -------------------------
 
