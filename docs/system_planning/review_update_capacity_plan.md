@@ -49,7 +49,8 @@ There are four primary pillars that this process covers:
 
 #### Actions
 
-Analyze the allocated licenses for possible re-assignment.
+1. Analyze the allocated licenses for possible re-assignment.
+2. Expand licenses to 75 Professional and 325 Analyzer.
 
 ### Users
 
@@ -57,23 +58,25 @@ Analyze the allocated licenses for possible re-assignment.
 |------------------|----------|-----------|-----------|-------------|
 | **Concurrency**  | 43       | 224       | 300       | 400         |
 
+\* estimated numbers.
+
 #### Actions
 
-EOY
+1. Review system specs to see how it is performing with the above currently, and how it could scale.
 
 ### System
 
-|                  | Engine CPU | Engine RAM |  Batch Window | Intra-Day Reloads | Users per Proxy |
+|                  | Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads | Users per Proxy |
 |------------------|------------|------------|---------------|-------------------|-----------------|
-| **Concurrency**  | Good       | OK         | Good          | Good              | 35              |
+|                  | Good       | Good       | Good          | 30                | 35              |
 
 #### Actions
 
-RAM footprint currently at 40% of total RAM.  Expand by EOY.
+1. Going to begin offloading intra-day reloads to an isolated scheduler.
 
 ### Application
 
-Review App Metadata Analyzer for heavily used applications that are large/complex. Identify potential targets for app pinning.
+Review App Metadata Analyzer for heavily used applications that are large/complex. Identify potential targets for app pinning and optimization.
 
 #### Actions
 
