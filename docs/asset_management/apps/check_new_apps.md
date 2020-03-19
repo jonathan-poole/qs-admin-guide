@@ -82,7 +82,7 @@ The script will bring back any application that is greater than or equal to x da
 # Assumes default credentials are used for the Qlik CLI Connection
 $computerName = 'machineName'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$daysBack = 1
+$daysBack = 7
 $byteSize = 0
 $filePath = 'C:\'
 $fileName = 'output'

@@ -30,6 +30,12 @@ There are three primary goals:
 
 -------------------------
 
+## Suggested Prerequisites
+
+- [Remove/Quarantine Unused Apps](remove_quarantine_unused_apps.md)
+
+-------------------------
+
 ## Audit Activity Log <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 As of the February 2019 release, the **Audit Activity Log** capability is now enabled, which allows for the tracking of who is accessing what sheets in applications. This enables the ability to measure sheet adoption as well as manage the amount of sheets in the applications--keeping them trimmed to only what is being leveraged.
