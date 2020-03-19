@@ -39,10 +39,10 @@ Specific areas:
 
 There are four primary pillars that this process covers:
 
-  - [Licenses](review_update_capacity_plan/licenses.md)
-  - [Users](review_update_capacity_plan/users.md)
-  - [System](review_update_capacity_plan/system.md)
-  - [Applications](review_update_capacity_plan/applications.md)
+  ### [Licenses](review_update_capacity_plan/licenses.md)
+  ### [Users](review_update_capacity_plan/users.md)
+  ### [System](review_update_capacity_plan/system.md)
+  ### [Applications](review_update_capacity_plan/applications.md)
 
 -------------------------
 
@@ -60,7 +60,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 | **Professional** | 50       | 44        | 6         |
 | **Analyzer**     | 200      | 180       | 20        |
 
-#### Actions
+**Actions**
 
 1. Analyze the allocated licenses for possible re-assignment.
 2. Expand licenses to 75 Professional and 325 Analyzer.
@@ -75,7 +75,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 \* estimated numbers
 
-#### Actions
+**Actions**
 
 1. Review system specs to see how it is performing with the above currently, and how it could scale.
 
@@ -87,7 +87,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 |------------------|------------|------------|---------------|-------------------|-----------------|
 |                  | Good       | Good       | Good          | 30                | 35              |
 
-#### Actions
+**Actions**
 
 1. Going to begin offloading intra-day reloads to an isolated scheduler.
 
@@ -97,6 +97,6 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 Review App Metadata Analyzer for heavily used applications that are large/complex. Identify potential targets for app pinning and optimization.
 
-#### Actions
+**Actions**
 
 Identified three applications for optimization and two applications for app pinning.
