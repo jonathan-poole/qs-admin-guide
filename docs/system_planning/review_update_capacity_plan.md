@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Review/Update Capacity Plan
+has_children: true
 nav_order: 1
 parent: System Planning
 ---
