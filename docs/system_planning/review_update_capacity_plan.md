@@ -99,4 +99,4 @@ Review App Metadata Analyzer for heavily used applications that are large/comple
 
 **Actions**
 
-Identified three applications for optimization and two applications for app pinning.
+1. Identified three applications for optimization and two applications for app pinning.
