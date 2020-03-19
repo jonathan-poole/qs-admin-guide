@@ -26,6 +26,12 @@ When an application is developed, the sheets are ordered in a logical flow(Ex: D
 
 -------------------------
 
+## Suggested Prerequisites
+
+- [Notification of Unused Base/Community Sheets](notification_unused_sheets.md)
+
+-------------------------
+
 ## Operations Monitor - Analyze Aplication Sheet Adopion  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 It is possible to check the application's sheets usage using the Operations Monitor App.
