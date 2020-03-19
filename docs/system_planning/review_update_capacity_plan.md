@@ -66,8 +66,3 @@ Review App Metadata Analyzer for heavily used applications that are large/comple
 #### Actions
 
 Identified three applications for optimization and two applications for app pinning.
-
-
-#### Actions
-
-RAM footprint currently at 40% of total RAM.  Expand by EOY.
