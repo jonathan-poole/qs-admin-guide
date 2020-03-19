@@ -37,12 +37,12 @@ Specific areas:
 
 ## Capacity Planning Process
 
-There are four primary pillars that this process covers:
+There are four primary pillars that this process covers--review each process below for details:
 
-### [Licenses](review_update_capacity_plan/licenses.md)
-### [Users](review_update_capacity_plan/users.md)
-### [System](review_update_capacity_plan/system.md)
-### [Applications](review_update_capacity_plan/applications.md)
+*   ### [Licenses](review_update_capacity_plan/licenses.md)
+*   ### [Users](review_update_capacity_plan/users.md)
+*   ### [System](review_update_capacity_plan/system.md)
+*   ### [Applications](review_update_capacity_plan/applications.md)
 
 -------------------------
 
