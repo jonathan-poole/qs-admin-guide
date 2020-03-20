@@ -66,6 +66,7 @@ Following, find space for two KPI objects. For example, shrink down the _User Se
 [![capacity_planning_users_6.png](images/capacity_planning_users_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_6.png)
 
 Next, select the first KPI and add the measure:
+
 `Count({<[User Name]={"=Sum([Session Count])>0"}>}DISTINCT [User Name])`
 
 [![capacity_planning_users_7.png](images/capacity_planning_users_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_7.png)
@@ -75,6 +76,7 @@ Next, select the first KPI and add the measure:
 Name this KPI: _Active Users: 1+ Sessions_
 
 Next, repeat the process above for adding the following expression to the second KPI:
+
 `Count({<[User Name]={"=Sum([Session Count])>=5"}>}DISTINCT [User Name])`
 
 Name this KPI: _Active Users: 5+ Sessions_
