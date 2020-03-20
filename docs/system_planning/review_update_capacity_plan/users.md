@@ -42,6 +42,14 @@ First and foremost, it is essential to confirm that the **Operations Monitor** i
 
 [![capacity_planning_users_2.png](images/capacity_planning_users_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_2.png)
 
+Next, select the _Session Overview_ sheet.
+
+[![capacity_planning_users_11.png](images/capacity_planning_users_11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_11.png)
+
+On this sheet, take note of the _Max Concurrent Users_ KPI. This KPI is critical to help plan for growth from an architecture perspective.
+
+[![capacity_planning_users_10.png](images/capacity_planning_users_10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_10.png)
+
 Following, select the _Session Details_ sheet.
 
 [![capacity_planning_users_3.png](images/capacity_planning_users_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_3.png)
