@@ -93,12 +93,17 @@ It is suggested that data connections be deleted _manually_, and that all data c
 
 An example of "Quarantining" a data connection can be done by following these steps:
 
-	- Rename the data connection by prepending `QUARANTINED - ` to its name. For example, `My Data Connection (directory_owner)` becomes `QUARANTINED - My Data Connection (directory_owner)`
-	- Change the owner of the data connection to `sa_repository`
-	- Creating a custom property named `QuarantinedDataConnection` where the value of `true` is applied to any quarantined connection.
-	- Modify any existing customized security rules on data connections, leveraging the `QuarantinedDataConnection` custom property to negate them. For example, `((user.group="YourGroup"))` becomes `((user.group="YourGroup" and @QuarantinedDataConnection.Empty()))`.
+- Rename the data connection by prepending `QUARANTINED - ` to its name. For example, `My Data Connection (directory_owner)` becomes `QUARANTINED - My Data Connection (directory_owner)`
+
+- Change the owner of the data connection to `sa_repository`
+
+- Creating a custom property named `QuarantinedDataConnection` where the value of `true` is applied to any quarantined connection.
+
+- Modify any existing customized security rules on data connections, leveraging the `QuarantinedDataConnection` custom property to negate them. For example, `((user.group="YourGroup"))` becomes `((user.group="YourGroup" and @QuarantinedDataConnection.Empty()))`.
 	
 These name change ensures that the data connection cannot be read in an application's script by the scheduler, and owner change confirms that the original owner of the user can no longer read the connection via the default security rule `OwnerRead`, and the security rule modifications ensure that the users cannot read the data connections by some other custom data connection rules if they have a value in the `QuarantinedDataConnection` custom property.
+
+[![unused_data_connections_native_3.png](images/unused_data_connections_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/data_connections/images/unused_data_connections_native_3.png)
 
 ### Priority
 
