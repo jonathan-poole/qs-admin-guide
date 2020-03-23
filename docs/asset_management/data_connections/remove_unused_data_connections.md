@@ -130,10 +130,14 @@ It might not be the worst idea to take a snapshot of all data connections before
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
+
 $computerName = '<machine-name>'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$outFilePath = 'C:\'	# directory for the output file
-$outFileName = 'flagged_unused_connections'	# desired filename of the output file
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# directory for the output file
+$outFilePath = 'C:\'
+# desired filename of the output file
+$outFileName = 'flagged_unused_connections'
 
 ################
 ##### Main #####
@@ -162,17 +166,26 @@ It is assumed that the **Data Connection ID** column has been added to a table i
 # Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
 # GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
-# Parameters
+# Parameters 
 # Assumes default credentials are used for the Qlik CLI Connection
+
 $computerName = '<machine-name>'
-$virtualProxyPrefix = '/default' 	# leave empty if windows auth is on default VP
-$inputXlsxPath = '<fully qualified directory>\<filename>.xlsx'		# fully qualified path to excel file with data connection ids
-$dataConnectionIdColumnNumber = '12' 	# column number of data connection id column in Excel file
-$customPropertyName = 'QuarantinedDataConnection'	# name of the custom property to put on unused data connections--if it doesn't exist it will be created
-$changeOwner = 1 	# 1 for true and 0 for false
-$changeName = 1		# 1 for true and 0 for false
-$outFilePath = 'C:\'	# directory for the output file
-$outFileName = 'flagged_unused_connections'	# desired filename of the output file
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# fully qualified path to excel file with data connection ids
+$inputXlsxPath = '<fully qualified directory>\<filename>.xlsx'
+# column number of data connection id column in Excel file
+$dataConnectionIdColumnNumber = '12'
+# name of the custom property to put on unused data connections--if it doesn't exist it will be created
+$customPropertyName = 'QuarantinedDataConnection'
+# 1 for true and 0 for false
+$changeOwner = 1
+# 1 for true and 0 for false
+$changeName = 1
+# directory for the output file
+$outFilePath = 'C:\'
+# desired filename of the output file
+$outFileName = 'flagged_unused_connections'
  
 ################
 ##### Main #####
@@ -205,10 +218,12 @@ function Test-IsGuid
 }
 
 # import data connection ids from excel
-$data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $dataConnectionIdColumnNumber -EndColumn $($dataConnectionIdColumnNumber + 1)
+$data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $dataConnectionIdColumnNumber `
+ -EndColumn $($dataConnectionIdColumnNumber + 1)
 
 # validate GUIDs and only use those (handles nulls/choosing wrong column)
-$dataConnectionIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
+$dataConnectionIds = $data | foreach { $_.psobject.Properties } | where Value -is string `
+| foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
 
 # connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
@@ -224,7 +239,8 @@ $dataConnectionCustomPropertyId = $dataConnectionCustomProperty.id
 
 # if the custom property doesn't exist, create it ($customPropertyName)
 if (!$dataConnectionCustomProperty) {
-	$dataConnectionCustomProperty = New-QlikCustomProperty -name "$customPropertyName" -objectType "DataConnection" -choiceValues "true" -raw
+	$dataConnectionCustomProperty = New-QlikCustomProperty -name "$customPropertyName" `
+	-objectType "DataConnection" -choiceValues "true" -raw
 }
 
 # for each data connection id
@@ -252,7 +268,8 @@ foreach ($dataConnection in $dataConnectionIds) {
 		}
 	}
 
-	# if the custom property isn't already there, create the JSON element for it and add it to the array
+	# if the custom property isn't already there, 
+	# create the JSON element for it and add it to the array
 	if (!$dataConnectionPropAlreadyThere) {
 
 		$newCustomProp = @{
@@ -266,7 +283,8 @@ foreach ($dataConnection in $dataConnectionIds) {
 	}
 
 	# change the name of the data connection, set by the $changeName flag
-	if ($changeName) {$resp.name = $('QUARANTINED - ' + $resp.name.Replace('QUARANTINED - ',''))}
+	if ($changeName) {$resp.name = $('QUARANTINED - ' `
+		+ $resp.name.Replace('QUARANTINED - ',''))}
 
 	# change the owner of the data connection, set by the $changeOwner flag
 	if ($changeOwner) {$resp.owner = $sa_repository}
