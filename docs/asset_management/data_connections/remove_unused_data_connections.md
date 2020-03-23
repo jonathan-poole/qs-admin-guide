@@ -97,7 +97,7 @@ An example of "Quarantining" a data connection can be done by following these st
 
 2. Change the owner of the data connection to `sa_repository`
 
-3. Creating a custom property named `QuarantinedDataConnection` where the value of `true` is applied to any quarantined connection.
+3. Create a custom property named `QuarantinedDataConnection` where the value of `true` is applied to any quarantined connection.
 
 4. Modify any existing customized security rules on data connections, leveraging the `QuarantinedDataConnection` custom property to negate them. For example, `((user.group="YourGroup"))` becomes `((user.group="YourGroup" and @QuarantinedDataConnection.Empty()))`.
 	
