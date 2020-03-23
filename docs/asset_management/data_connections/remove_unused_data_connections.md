@@ -145,6 +145,8 @@ Get-QlikDataConnection -raw -full | ConvertTo-Json | Set-Content $outFile
 
 #### Script to Add Custom Property value to Data Connections from an Excel Export
 
+It is assumed that the **Data Connection ID** column has been added to a table in the **Data Connection Analyzer** and exported to Excel. This file is then referenced in the below script.
+
 ```powershell
 # Function to import data connection ids from excel and add a custom property value to them.
 # If the custom property doesn't exist, it will be created.
