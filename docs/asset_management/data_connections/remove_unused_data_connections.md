@@ -143,23 +143,23 @@ Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCer
 Get-QlikDataConnection -raw -full | ConvertTo-Json | Set-Content $outFile
 ```
 
-#### Script to Tag Data Connections from an Excel Export Containing IDs
+#### Script to Add Custom Property value to Data Connections from an Excel Export
 
 ```powershell
-# Function to import data connection ids from excel and tag them
+# Function to import data connection ids from excel and add a custom property value to them.
+# If the custom property doesn't exist, it will be created.
 # Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
-# Assumes tag exists, such as 'DataConnectionUnused'
 # GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
 $computerName = '<machine-name>'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$inputXlsxPath = 'C:\<filename>.xlsx'
-$dataConnectionIdColumn = '<name of column containing data connection ID>'
-$tagName = '<name of existing tag>'
+$inputXlsxPath = '<path>\<file>.xlsx'
+$dataConnectionIdColumnNumber = '1' # column number of data connection id column in Excel file
+$customPropertyName = 'QuarantinedDataConnection'
 $outFilePath = 'C:\'
-$outFileName = '<output file name>'
+$outFileName = 'tagged_unused_connections'
 
 # Main
 $outFile = ($outFilePath + $outFileName + '.csv')
@@ -183,14 +183,20 @@ function Test-IsGuid
 	return $ObjectGuid -match $guidRegex
 }
 
-$data = Import-Excel $inputXlsxPath -HeaderName $dataConnectionIdColumn -DataOnly
+$data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $dataConnectionIdColumnNumber -EndColumn $($dataConnectionIdColumnNumber + 1)
 $dataConnectionIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
 
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
+$customPropertyExists = Get-QlikCustomProperty -filter "name eq '$customPropertyName'"
+
+if (!$customPropertyExists) {
+	New-QlikCustomProperty -name "$customPropertyName" -objectType "DataConnection" -choiceValues "true"
+}
+
 foreach ($dataConnection in $dataConnectionIds) {
-	$resp = Get-QlikDataConnection -id $dataConnection | Update-QlikDataConnection -tags $tagName
-	'Tagged: ' + $resp.name + ',' + $dataConnection
+	$resp = Get-QlikDataConnection -id $dataConnection | Update-QlikDataConnection -customProperties "$customPropertyName=true"
+	'Custom Property Added To: ' + $resp.name + ',' + $dataConnection
 	Add-Content -Path $outFile -Value $($resp.name + ',' + $dataConnection)
 }
 ```
