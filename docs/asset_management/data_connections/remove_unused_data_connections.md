@@ -161,10 +161,14 @@ Get-QlikDataConnection -raw -full | ConvertTo-Json | Set-Content $outFile
 It is assumed that the **Data Connection ID** column has been added to a table in the **Data Connection Analyzer** and exported to Excel. This file is then referenced in the below script.
 
 ```powershell
-# Script to import data connection ids from excel and add a custom property value to them, as well as optionally change name and ownership
+# Script to import data connection ids from excel and add a custom property value to them, 
+# as well as optionally change name and ownership.
+
 # If the custom property doesn't exist, it will be created.
-# Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
-# GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
+# Assumes the ImportExcel module: `Install-Module -Name ImportExcel`.
+
+# GUID validation code referenced from: 
+# 	https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
 # Parameters 
 # Assumes default credentials are used for the Qlik CLI Connection
