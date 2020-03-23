@@ -132,14 +132,23 @@ It might not be the worst idea to take a snapshot of all data connections before
 # Assumes default credentials are used for the Qlik CLI Connection
 $computerName = '<machine-name>'
 $virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$outFilePath = 'C:\'
-$outFileName = 'data_connection_backup'
+$outFilePath = 'C:\'	# directory for the output file
+$outFileName = 'flagged_unused_connections'	# desired filename of the output file
 
-# Main
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($outFilePath + $outFileName + '.json')
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+
+# GET all data connection's full JSON elements and write them to a file
 Get-QlikDataConnection -raw -full | ConvertTo-Json | Set-Content $outFile
 ```
 
@@ -156,22 +165,32 @@ It is assumed that the **Data Connection ID** column has been added to a table i
 # Parameters
 # Assumes default credentials are used for the Qlik CLI Connection
 $computerName = '<machine-name>'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$inputXlsxPath = '<path>\<file>.xlsx'
-$dataConnectionIdColumnNumber = '1' # column number of data connection id column in Excel file
-$customPropertyName = 'QuarantinedDataConnection'
-$outFilePath = 'C:\'
-$outFileName = 'tagged_unused_connections'
+$virtualProxyPrefix = '/default' 	# leave empty if windows auth is on default VP
+$inputXlsxPath = '<fully qualified directory>\<filename>.xlsx'		# fully qualified path to excel file with data connection ids
+$dataConnectionIdColumnNumber = '12' 	# column number of data connection id column in Excel file
+$customPropertyName = 'QuarantinedDataConnection'	# name of the custom property to put on unused data connections--if it doesn't exist it will be created
+$changeOwner = 1 	# 1 for true and 0 for false
+$changeName = 1		# 1 for true and 0 for false
+$outFilePath = 'C:\'	# directory for the output file
+$outFileName = 'flagged_unused_connections'	# desired filename of the output file
+ 
+################
+##### Main #####
+################
 
-# Main
+# set the output file path
 $outFile = ($outFilePath + $outFileName + '.csv')
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
+# if the output file already exists, remove it
 if (Test-Path $outFile) 
 {
   Remove-Item $outFile
 }
 
+# function to validate GUIDs
 function Test-IsGuid
 {
 	[OutputType([bool])]
@@ -185,20 +204,81 @@ function Test-IsGuid
 	return $ObjectGuid -match $guidRegex
 }
 
+# import data connection ids from excel
 $data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $dataConnectionIdColumnNumber -EndColumn $($dataConnectionIdColumnNumber + 1)
+
+# validate GUIDs and only use those (handles nulls/choosing wrong column)
 $dataConnectionIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
 
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
-$customPropertyExists = Get-QlikCustomProperty -filter "name eq '$customPropertyName'"
+# GET the sa_repository user
+$sa_repository = Get-QlikUser -filter "userId eq 'sa_repository' and userDirectory eq 'INTERNAL'"
 
-if (!$customPropertyExists) {
-	New-QlikCustomProperty -name "$customPropertyName" -objectType "DataConnection" -choiceValues "true"
+# GET the custom property to use for unused data connections
+$dataConnectionCustomProperty = Get-QlikCustomProperty -filter "name eq '$customPropertyName'" -raw
+
+# GET the id of the custom property
+$dataConnectionCustomPropertyId = $dataConnectionCustomProperty.id
+
+# if the custom property doesn't exist, create it ($customPropertyName)
+if (!$dataConnectionCustomProperty) {
+	$dataConnectionCustomProperty = New-QlikCustomProperty -name "$customPropertyName" -objectType "DataConnection" -choiceValues "true" -raw
 }
 
+# for each data connection id
 foreach ($dataConnection in $dataConnectionIds) {
-	$resp = Get-QlikDataConnection -id $dataConnection | Update-QlikDataConnection -customProperties "$customPropertyName=true"
-	'Custom Property Added To: ' + $resp.name + ',' + $dataConnection
-	Add-Content -Path $outFile -Value $($resp.name + ',' + $dataConnection)
+
+	# GET the existing data connection's full JSON
+	$resp = Get-QlikDataConnection -id $dataConnection -raw
+
+	# store the current name of the data connection
+	$dataConnectionName = $resp.name
+
+	# get the current custom properties assigned to the data connection, if any
+	$currentCustomProperties = $resp.customProperties
+
+	# set a flag to check if the custom property already is assigned to the data connection
+	$dataConnectionPropAlreadyThere = $false
+
+	# for each custom property in the data connection's current custom propertys
+	foreach ($customProperty in $currentCustomProperties) {
+
+		# if the custom property is already there, set the flag to "true"
+		if ($customProperty.definition.id -eq $dataConnectionCustomPropertyId) {
+			$dataConnectionPropAlreadyThere = $true
+			break
+		}
+	}
+
+	# if the custom property isn't already there, create the JSON element for it and add it to the array
+	if (!$dataConnectionPropAlreadyThere) {
+
+		$newCustomProp = @{
+			value = "true"
+			definition = @{
+				id = "$dataConnectionCustomPropertyId"
+			}
+		}
+
+		$resp.customProperties += $newCustomProp
+	}
+
+	# change the name of the data connection, set by the $changeName flag
+	if ($changeName) {$resp.name = $('QUARANTINED - ' + $resp.name.Replace('QUARANTINED - ',''))}
+
+	# change the owner of the data connection, set by the $changeOwner flag
+	if ($changeOwner) {$resp.owner = $sa_repository}
+
+	# convert the response to JSON
+	$resp = $resp | ConvertTo-Json -depth 10
+
+	# PUT the new data connection
+	Invoke-QlikPut -path /qrs/dataconnection/$dataConnection -body $resp
+
+	# logging
+	'PUT: ' + $dataConnectionName + ',' + $dataConnection
+	Add-Content -Path $outFile -Value $($dataConnectionName + ',' + $dataConnection)
 }
 ```
