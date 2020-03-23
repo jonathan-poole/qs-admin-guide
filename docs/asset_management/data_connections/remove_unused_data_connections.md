@@ -99,7 +99,7 @@ An example of "Quarantining" a data connection can be done by following these st
 
 3. Create a custom property named `QuarantinedDataConnection` where the value of `true` is applied to any quarantined connection.
 
-4. Modify any existing customized security rules on data connections, leveraging the `QuarantinedDataConnection` custom property to negate them. For example, `((user.group="YourGroup"))` becomes `((user.group="YourGroup" and @QuarantinedDataConnection.Empty()))`.
+4. Modify any existing customized security rules on data connections, leveraging the `QuarantinedDataConnection` custom property to negate them. For example, `((user.group="YourGroup"))` becomes `((user.group="YourGroup" and resource.@QuarantinedDataConnection.Empty()))`.
 	
 These name change ensures that the data connection cannot be read in an application's script by the scheduler, and owner change confirms that the original owner of the user can no longer read the connection via the default security rule `OwnerRead`, and the security rule modifications ensure that the users cannot read the data connections by some other custom data connection rules if they have a value in the `QuarantinedDataConnection` custom property.
 
@@ -157,7 +157,7 @@ Get-QlikDataConnection -raw -full | ConvertTo-Json | Set-Content $outFile
 It is assumed that the **Data Connection ID** column has been added to a table in the **Data Connection Analyzer** and exported to Excel. This file is then referenced in the below script.
 
 ```powershell
-# Function to import data connection ids from excel and add a custom property value to them.
+# Script to import data connection ids from excel and add a custom property value to them, as well as optionally change name and ownership
 # If the custom property doesn't exist, it will be created.
 # Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
 # GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
