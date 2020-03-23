@@ -121,7 +121,7 @@ It might not be the worst idea to take a snapshot of all data connections before
 
 ### Scripts to Manage Unused Data Connections
 
-**It is highly recommended to delete data connections manually, after validating with their respective owners. Please refer to the _Suggestions_ section above. The scripts below show how data connections can be backed up and programmatically tagged. The tagging allows them to be essentially _disabled_ using security rules before the data connections are removed.**
+**It is highly recommended to delete data connections manually, after validating with their respective owners. Please refer to the _Suggestions_ section above. The scripts below show how data connections can be backed up and programmatically flagged. The flagging (adding of a custom property value) allows for the administrator to temporarily "quarantine" the connections pre-removal.**
 
 #### Script to Backup All Data Connections
 
