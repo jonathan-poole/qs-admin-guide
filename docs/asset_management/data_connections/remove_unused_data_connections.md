@@ -87,9 +87,18 @@ There are two sheets that should be focused on within that application:
 
 ## Suggested Actions
 
-It is suggested that data connections be deleted _manually_, and that all data connections are validated for usage by the owner before deletion. The Data Connection Analyzer is largely accurate, but should not be treated as 100% so--validation must be done with the users. 
+It is suggested that data connections be deleted _manually_, and that all data connections are validated for usage by the owner before deletion. The Data Connection Analyzer is largely accurate, but should not be treated as 100% so--validation must be done with the users. It is also suggested to first "quarantine" the data connections before deleting them. 
 
-It would be adviseable to create a custom property such as _DataConnectionUnused_ and add it to any data connections that are to be considered for removal. With that custom property, security rules can then be leveraged to only grant read access to data connections _without that tag_. This will ensure that if a connection _was_ in fact used, it can be "re-enabled" by simply removing the custom property value from the connection. Potentially consider this type of disabling for up to a month prior to removal, as an extra pre-caution on top of the validation procedure.
+### Suggested Quarantine Method
+
+An example of "Quarantining" a data connection can be done by following these steps:
+
+	- Rename the data connection by prepending `QUARANTINED - ` to its name. For example, `My Data Connection (directory_owner)` becomes `QUARANTINED - My Data Connection (directory_owner)`
+	- Change the owner of the data connection to `sa_repository`
+	- Creating a custom property named `QuarantinedDataConnection` where the value of `true` is applied to any quarantined connection.
+	- Modify any existing customized security rules on data connections, leveraging the `QuarantinedDataConnection` custom property to negate them. For example, `((user.group="YourGroup"))` becomes `((user.group="YourGroup" and @QuarantinedDataConnection.Empty()))`.
+	
+These name change ensures that the data connection cannot be read in an application's script by the scheduler, and owner change confirms that the original owner of the user can no longer read the connection via the default security rule `OwnerRead`, and the security rule modifications ensure that the users cannot read the data connections by some other custom data connection rules if they have a value in the `QuarantinedDataConnection` custom property.
 
 ### Priority
 
