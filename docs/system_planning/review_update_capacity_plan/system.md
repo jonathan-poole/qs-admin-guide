@@ -23,8 +23,8 @@ There are a number of metrics that should be focused on, including the following
 - Engine CPU
 - Engine RAM
 - Users per Engine
-- Batch Window
 - Intra-day Reloads
+- Batch Window
 
 \* Note that more important than any of the above is the overall end-user experience. If the end-users are complaining about performance issues, even though the above metrics look to be good, it could likely be due to the application itself. Refer to: [Applications](applications.md).
 
@@ -64,9 +64,13 @@ Select the **Month** field and select the last three months, assuming this exerc
 
 [![capacity_planning_system_2.png](images/capacity_planning_system_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_2.png)
 
+#### CPU
+
 Now, focus on the _Qlik Sense Engine CPU_ chart for a moment. Ensure that the measure is set to _Max CPU_. Note that this chart defaults to viewing at the _Month_, however it can drill down to the day, hour, and ten-minute timeline. It is advised to look for extended durations of high CPU utilization, and to see if those events are recurring. In the below chart, we can see that these servers are not heavily utilized, as the maximum CPU does not go above 32%.
 
 [![capacity_planning_system_3.png](images/capacity_planning_system_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_3.png)
+
+#### RAM
 
 Next, focuse on the _Qlik Sense Engine RAM (GB)_ chart. This chart is of the same construct as the prior, except focusing on RAM utilization. It is important to note that this chart is showing not only the "base RAM footprint" of the applications, but also the "result set cache RAM", as well as RAM for calculations, etc. Take the time to review the chart below and look for extended periods of time of very high RAM utilization, say around 90%, where the server is continuously fighting to clear cache to make room for new result sets. It should be relatively clear if the server is over-taxed if it is flat-lining consistently. The servers in the chart below look healthy, however.
 
@@ -78,7 +82,7 @@ As there is no simple way here to show what applications are consuming what perc
 
 \* Of course, this is a best practice from keeping a server from going off the rails, but it is not guaranteed. If there were thousands of users hitting that box at the same time, they would more than likely consume more than the available amount of RAM left over--but in general, it is a good practice if users have been properly distributed across engines.
 
-To gather this metric, we need to leverage the [App Metadata Analyzer](../../tooling/app_metadata_analyzer.md). Confirm that it is setup, and then navigate to the _App Availability_ sheet.
+To gather this metric, we need to leverage the **[App Metadata Analyzer]**(../../tooling/app_metadata_analyzer.md). Confirm that it is setup, and then navigate to the _App Availability_ sheet.
 
 [![capacity_planning_system_5.png](images/capacity_planning_system_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_5.png)
 
@@ -88,3 +92,68 @@ In the _Engine Node: Available Apps & Base RAM Footprint_ table, one can view th
 
 Here, it is visible that all apps are available on all engine nodes--meaning there are no custom load balancing rules in place. The total application RAM footprint is 155 GB, and in this case, the servers have a total of 512 GB of RAM. This puts the total base RAM footprint at 30% of the total server RAM--which is below that 40% line from the best practice above--so all is well for the time being.
 
+#### Max Concurrent Users per Engine
+
+It is also valuable to view the distribution of users across the engines, as this metric is important for creating a custom gauge to help establish a breaking point. For example, if the engine starts performing poorly with 50 concurrent users on it (assuming uniform applications available across all engines), that number can then be used as a compelling event to expand horizontally to another engine node if breached. An admin can then review this metric quarterly to warrant if there needs to be an architectural event to keep this number below the set threshold.
+
+\* This is of course tackling the issue of performance by adding more hardware, while one will also want to consider simultaneously optimizing their applications. There is no silver bullet.
+
+To create this chart, open up the **Operations Monitor** and create a new sheet. Name it _Max Concurrent Users by Hostname_.
+
+[![capacity_planning_system_7.png](images/capacity_planning_system_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_7.png)
+
+Drag and drop a _Pivot Table_, then add the **Hostname** field as a dimension.
+
+[![capacity_planning_system_8.png](images/capacity_planning_system_8.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_8.png)
+
+Next, add the _Max Concurrent Users_ metric as the measure.
+
+[![capacity_planning_system_9.png](images/capacity_planning_system_9.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_9.png)
+
+Name the chart _Max Concurrent Users by Hostname_. Following, review the total concurrent users per engine node.
+
+[![capacity_planning_system_10.png](images/capacity_planning_system_10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_10.png)
+
+#### Intra-day Reloads
+
+The primary goal of this sub-section is to report on the number of intra-day reloads so that they can be examined. The result should be to minimize if not completely decouple intra-day reloads from end-user facing engine nodes. If the environment is smaller and reloads must operate on end-user nodes, that should at a minimum be pushed to the overnight batch window where viable. If there are intra-day reloads for hourly reloading apps or otherwise, ideally, they should be offloaded to a separate scheduler.
+
+While remaining in the **Operations Monitor**, navigate to the _Task Overview_ sheet.
+
+[![capacity_planning_system_11.png](images/capacity_planning_system_11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_11.png)
+
+Select the last three months (assuming quarterly review), and then select any hours that would be considered as "business hours".
+
+In this example, it is visible that there are 354 reloads per day within business hours--the majority of which are from several applications that reload on a frequent basis.
+
+[![capacity_planning_system_12.png](images/capacity_planning_system_12.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_12.png)
+
+Now, if all of these reloads are happening on dedicated scheduler nodes and completing successfully without overloading the server(s), then all is well. To view where the reloads are happening, a new chart can be created.
+
+Duplicate the sheet, and copy the _Reload Count_ bar chart.
+
+[![capacity_planning_system_13.png](images/capacity_planning_system_13.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_13.png)
+
+Make room for the new chart, and paste it.
+
+[![capacity_planning_system_14.png](images/capacity_planning_system_14.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_14.png)
+
+Delete the **Reload Status** dimension from the new bar chart.
+
+[![capacity_planning_system_15.png](images/capacity_planning_system_15.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_15.png)
+
+Add the **Hostname** field.
+
+[![capacity_planning_system_16.png](images/capacity_planning_system_16.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_16.png)
+
+Drag the **Hostname** field up, to be above the **Task Name** field.
+
+[![capacity_planning_system_17.png](images/capacity_planning_system_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_17.png)
+
+Review the new chart to see where reloads are occurring.
+- Select each node, and confirm whether they are scheduler nodes or end-user facing nodes.
+- Record the intra-day reloads for each.
+
+\* If there is a "sandbox" node in the production environment, this node can be ignored from this review, as that node will have hub-based reloads.
+
+#### Batch Window
