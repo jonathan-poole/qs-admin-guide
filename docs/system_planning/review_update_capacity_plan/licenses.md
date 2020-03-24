@@ -18,6 +18,15 @@ nav_order: 1
 
 The goal of this exercise is to identify license usage across your production site. The **License Monitor** application exposes this information simply, so that it can be easily referenced.
 
+There are a number of metrics that should be focused on, including the following for Professional, Analyzer, and Capacity license types. If the site is on tokens, the same principles will apply.
+
+The following should be followed for the Professional and Analyzer access types:
+
+- Licenses
+- Licenses Allocated
+- Licenses Allocated Unused
+- Licenses Remaining
+
 ## Table of Contents
 {:.no_toc}
 
@@ -42,10 +51,17 @@ First and foremost, it is essential to confirm that the **License Monitor** is o
 
 [![capacity_planning_licenses_0.png](images/capacity_planning_licenses_0.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_0.png)
 
-Following, select the _Overview: xxxxx_ sheet. This sheet's title will vary based on the license model that is in place on the Qlik site.
+Select the _Usage Snapshot_ sheet.
 
-[![capacity_planning_licenses_2.png](images/capacity_planning_licenses_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_2.png)
+[![capacity_planning_licenses_11.png](images/capacity_planning_licenses_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_2.png)
 
-Lastly, review the high-level license usage metrics found on the sheet.
+The four metrics listed in the _Goals_ section can all be found in this object
 
-[![capacity_planning_licenses_3.png](images/capacity_planning_licenses_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_3.png)
+[![capacity_planning_licenses_10.png](images/capacity_planning_licenses_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_3.png)
+
+If the image above was to be used as an example (obviously this is a rarely used testing box), a table that could be used for capacity planning could look like the following:
+
+|                  | Licenses | Licenses Allocated | Licenses Allocated Unused | Licenses Remaining |
+|------------------|----------|--------------------|---------------------------|--------------------|
+| **Professional** | 100      | 10                 | 8                         | 90                 |
+| **Analyzer**     | 100      | 0                  | 0                         | 100                |
