@@ -40,15 +40,19 @@ Please refer to the [Operations Monitor](../../tooling/operations_monitor.md) pa
 
 ## User Activity
 
+### Confirm License Monitor is Operational
+
 Navigate to the **Monitoring apps** stream and open up the **Operations Monitor** application.
 
 [![capacity_planning_users_1.png](images/capacity_planning_users_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_1.png)
 
-First and foremost, it is essential to confirm that the **Operations Monitor** is operational and up to date. Ensure that it is by selecting the _Show app information_ button, and then viewing the _Data last loaded_ section of the application's description.
+First and foremost, it is essential to confirm that the **Operations Monitor** is operational and up to date. Ensure that it is by selecting the _Show app information_ button, and then viewing the _Data last loaded_ section of the application's description. Alternatively, one could also check the task status in the QMC.
 
 [![capacity_planning_users_2.png](images/capacity_planning_users_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_2.png)
 
-Next, select the _Session Overview_ sheet.
+### Gather Metrics
+
+Select the _Session Overview_ sheet.
 
 [![capacity_planning_users_11.png](images/capacity_planning_users_11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_11.png)
 
