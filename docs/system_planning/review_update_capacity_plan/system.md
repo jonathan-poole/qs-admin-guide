@@ -172,3 +172,19 @@ After reading the optimization process, one can apply the following rules:
   - Fully congested batch window--no room for any additions. Tasks are at risk of or are running over into business hours.
   
 ## Example Takeaway
+
+| Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads |
+|------------|------------|---------------|-------------------|
+| Good       | Good       | Good          | 384               |
+
+| 	         | Max Concurrent Users Per Engine |
+|------------|---------------------------------|
+| Engine 1   | 1			                         |
+| Engine 2   | 2			                         |
+| Engine 3   | 1			                         |
+
+| 	         | Intra-day Reloads per Engine | End-User Facing |
+|------------|------------------------------|-----------------|
+| Engine 1   | 386			                    | No	            |
+| Engine 2   | 214			                    | Yes 	          |
+| Engine 3   | 0			                      | Yes	            |
