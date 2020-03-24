@@ -101,6 +101,8 @@ Name this KPI: _Active Users: 5+ Sessions_
 
 [![capacity_planning_users_9.png](images/capacity_planning_users_9.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_9.png)
 
+## Example Takeaway
+
 An example output from this site could looks like the following: 
 
 | Peak Concurrency | Total Users | Active Users 1+ Sessions | Active Users 5+ Sessions |
