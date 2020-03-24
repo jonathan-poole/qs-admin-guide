@@ -71,8 +71,6 @@ Removing unused connections makes general administration easier, as there is les
 
 ## Screenshots
 
-[![qs-data-connection-analyzer-1.png](images/qs-data-connection-analyzer-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-1.png)
-
 [![qs-data-connection-analyzer-2.png](images/qs-data-connection-analyzer-2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-2.png)
 
 [![qs-data-connection-analyzer-3.png](images/qs-data-connection-analyzer-3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs-data-connection-analyzer-3.png)
