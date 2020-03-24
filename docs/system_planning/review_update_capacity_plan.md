@@ -63,7 +63,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 |                  | Licenses | Licenses Allocated | Licenses Allocated Unused | Licenses Remaining |
 |------------------|----------|--------------------|---------------------------|--------------------|
 | **Professional** | 50       | 44                 | 2                         | 6                  |
-| **Analyzer**     | 200      | 180                | 6                         | 20                 |
+| **Analyzer**     | 200      | 180                | 15                        | 20                 |
 
 **Actions**
 
@@ -74,11 +74,11 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 ### Users
 {:.no_toc}
 
-|                  |  Peak    | Total     | +6 Months*| +12 Months* |
-|------------------|----------|-----------|-----------|-------------|
-| **Concurrency**  | 43       | 224       | 300       | 400         |
+| Peak Concurrency | Total Users | Active Users 1+ Sessions | Active Users 5+ Sessions |
+|------------------|-------------|--------------------------|--------------------------|
+| 43               | 224         | 207                      | 176                      |
 
-\* estimated numbers
+\* Activity based off last 3 months, assuming quarterly planning.
 
 **Actions**
 
