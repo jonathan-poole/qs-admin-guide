@@ -20,10 +20,8 @@ The goal of this exercise is to identify any applications that could be optimize
 
 There are a number of areas that should be focused on, including the following:
 
-- Application Usage
-- Application Base RAM Footprint
-- \# Tables/Fields
-- Engine Availability
+- Candidates for Application Pinning (Load Balancing)
+- Candidates for Data Model Optimization
 
 ## Table of Contents
 {:.no_toc}
@@ -85,7 +83,7 @@ Two steps need to occur here:
 
 1. If there are mutliple end-user facing engines in the deployment, where is this application currently available? As it is quite large and heavily used, it might not make sense to have it available on all nodes. For example, if there are more than two end-user nodes, it would be worth considering "pinning" this application to a minimum of two nodes for resiliency--allowing the other nodes to not be overloaded, and by increasing the caching of the applications to less nodes, improving response times.
 
-2. Is there an optimization event? It can be noted in the _Field Memory Footprint (MB)_ table that **Field17** consumes ~14 GB RAM. Is that field necessary, can it be optimized? For instance, is it a timestamp that can be floored, or a field that can otherwise be broken apart to reduce cardinality?
+2. Is there an optimization event? It can be noted in the _Field Memory Footprint (MB)_ table that **Field17** consumes ~14 GB RAM. Is that field necessary, can it be optimized? For instance, is it a timestamp that can be floored, or a field that can otherwise be broken apart to reduce cardinality? Other areas of interest include: total number of fields in an application, total number of records in an application and/or table, presence of synthetic keys, presence of data islands, etc.
 
 Step 1 can quickly be validated by navigating to the _App Availability_ sheet, while that application remains selected.
 
@@ -94,3 +92,9 @@ Step 1 can quickly be validated by navigating to the _App Availability_ sheet, w
 Here, it can easily be seen that out of the three available engine nodes, the application is available on all of them.
 
 [![capacity_planning_applications_5.png](images/capacity_planning_applications_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_applications_5.png)
+
+## Example Takeaway
+
+| Candidates for "App Pinning" | Candidates for Data Model Optimization |
+|------------------------------|----------------------------------------|
+| 2                            | 3                                      |
