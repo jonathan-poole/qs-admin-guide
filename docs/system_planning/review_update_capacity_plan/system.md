@@ -159,3 +159,16 @@ Review the new chart to see where reloads are occurring.
 [![capacity_planning_system_18.png](images/capacity_planning_system_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_18.png)
 
 #### Batch Window
+
+In general, this area represents the capacity of your batch window (usually nightly). The steps to optimize the batch window can be found here: [Optimize Batch Window](../optimize_batch_window.md).
+
+After reading the optimization process, one can apply the following rules:
+
+- **Good**
+  - There is plenty of room for more reloads in the batch window. Apps are available with new data prior to any morning rush, and reloads are consistent in speed from day to day.
+- **OK**
+  - There is some congestion of the batch window, and there is not a lot of room to add many more tasks. Some variation of reload speed may be occurring, but not much.
+- **Bad**
+  - Fully congested batch window--no room for any additions. Tasks are at risk of or are running over into business hours.
+  
+## Example Takeaway
