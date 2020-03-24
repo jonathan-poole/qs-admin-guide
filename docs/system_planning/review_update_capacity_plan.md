@@ -84,8 +84,6 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 1. Review system specs to see how it is performing with the above currently, and how it could scale.
 
-
-
 ### System
 {:.no_toc}
 
@@ -110,8 +108,11 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 ### Application
 {:.no_toc}
 
-Review App Metadata Analyzer for heavily used applications that are large/complex. Identify potential targets for app pinning and optimization.
+| Candidates for "App Pinning" | Candidates for Data Model Optimization |
+|------------------------------|----------------------------------------|
+| 2                            | 3                                      |
 
 **Actions**
 
 1. Identified three applications for optimization and two applications for app pinning.
+2. Review [Architecture/Scale Plan](architecture_scale_plan.md) to see if app pinning is possible with the current architectural footprint, or if it would require an architectural event, e.g. horizontally scaling (adding another proxy/engine node).
