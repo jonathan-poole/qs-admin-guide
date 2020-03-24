@@ -156,4 +156,6 @@ Review the new chart to see where reloads are occurring.
 
 \* If there is a "sandbox" node in the production environment, this node can be ignored from this review, as that node will have hub-based reloads.
 
+[![capacity_planning_system_18.png](images/capacity_planning_system_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_18.png)
+
 #### Batch Window
