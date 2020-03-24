@@ -43,13 +43,6 @@ At this stage sort by **Connection String** so that you can see the groupings of
 
 [![storage-4.png](images/storage-4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/storage-4.png)
 
-In this example we have the following locations displayed (there were more):
-
-- QTARCHLABUS03
-- QTARCHLABUS04
-- USRAL-LTU2
-- the C drive
-
 **Note**: If this is a multi-node Qlik Sense site then the presence of local paths (`C:\`, `D:\`) is concerning. See our section on [Analyzing Data Connections](..\asset_management\data_connections\analyze_data_connections.html) for guidance on converting these to UNC share paths.
 
 ### Storage used for Qlik Sense storage
