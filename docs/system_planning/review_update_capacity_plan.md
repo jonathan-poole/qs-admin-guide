@@ -115,4 +115,4 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 **Actions**
 
 1. Identified three applications for optimization and two applications for app pinning.
-2. Review [Architecture/Scale Plan](architecture_scale_plan.md) to see if app pinning is possible with the current architectural footprint, or if it would require an architectural event, e.g. horizontally scaling (adding another proxy/engine node).
+2. Review [Architecture/Scale Plan](review_architecture_scale_plan.md) to see if app pinning is possible with the current architectural footprint, or if it would require an architectural event, e.g. horizontally scaling (adding another proxy/engine node).
