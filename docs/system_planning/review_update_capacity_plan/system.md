@@ -180,9 +180,9 @@ After reading the optimization process, one can apply the following rules:
 
 Referring to the examples above (obviously this is a rarely used testing environment), tables that could be used for capacity planning could look like the following:
 
-| Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads |
-|------------|------------|---------------|-------------------|
-| Good       | Good       | Good          | 384               |
+| Engine CPU | Engine RAM |  Batch Window | Avg Intra-day Reloads per Day |
+|------------|------------|---------------|-------------------------------|
+| Good       | Good       | Good          | 354                           |
 
 | 	         | Max Concurrent Users Per Engine |
 |------------|---------------------------------|
