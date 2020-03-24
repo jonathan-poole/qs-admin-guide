@@ -86,6 +86,12 @@ To gather this metric, we need to leverage the **[App Metadata Analyzer]**(../..
 
 In the _Engine Node: Available Apps & Base RAM Footprint_ table, one can view the total base RAM footprint for all applications that are able to be lifted on each individual engine node. 
 
+**Note** - This practice should also be repeated with selecting only the highly-used applications, as it is highly unlikely that _all_ applications will be open in RAM at the same time in production, unless there are only a few applications that are deployed. It is suggested to select only highly used applications, which can be found in the **Operations Monitor** -> _Session Overview_ sheet -> _Top 50 Apps_ chart.
+
+[![capacity_planning_system_19.png](images/capacity_planning_system_19.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_19.png)
+
+With no specific applications selected:
+
 [![capacity_planning_system_6.png](images/capacity_planning_system_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_6.png)
 
 Here, it is visible that all apps are available on all engine nodes--meaning there are no custom load balancing rules in place. The total application RAM footprint is 155 GB, and in this case, the servers have a total of 512 GB of RAM. This puts the total base RAM footprint at 30% of the total server RAM--which is below that 40% line from the best practice above--so all is well for the time being.
@@ -149,12 +155,13 @@ Drag the **Hostname** field up, to be above the **Task Name** field.
 [![capacity_planning_system_17.png](images/capacity_planning_system_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_17.png)
 
 Review the new chart to see where reloads are occurring.
+
+[![capacity_planning_system_18.png](images/capacity_planning_system_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_18.png)
+
 - Select each node, and confirm whether they are scheduler nodes or end-user facing nodes.
 - Record the intra-day reloads for each.
 
 \* If there is a "sandbox" node in the production environment, this node can be ignored from this review, as that node will have hub-based reloads.
-
-[![capacity_planning_system_18.png](images/capacity_planning_system_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_18.png)
 
 ### Batch Window
 
@@ -169,7 +176,7 @@ After reading the optimization process, one can apply the following rules:
 - **Bad**
   - Fully congested batch window--no room for any additions. Tasks are at risk of or are running over into business hours.
   
-### Example Takeaway
+## Example Takeaway
 
 Referring to the examples above (obviously this is a rarely used testing environment), tables that could be used for capacity planning could look like the following:
 
