@@ -69,7 +69,7 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 
 1. Analyze the allocated licenses for possible re-assignment.
 2. Review unused licenses.
-3. Expand licenses to 75 Professional and 325 Analyzer.
+3. Notify appropriate stakeholders that additional licenses will be needed in the near future.
 
 ### Users
 {:.no_toc}
@@ -89,15 +89,13 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 ### System
 {:.no_toc}
 
-|                  | Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads | Users per Proxy |
-|------------------|------------|------------|---------------|-------------------|-----------------|
-|                  | Good       | Good       | Good          | 30                | 35              |
+| Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads | Users per Engine |
+|------------|------------|---------------|-------------------|------------------|
+| Good       | Good       | Good          | 50                | 35               |
 
 **Actions**
 
 1. Going to begin offloading intra-day reloads to an isolated scheduler.
-
-
 
 ### Application
 {:.no_toc}
