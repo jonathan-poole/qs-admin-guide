@@ -46,9 +46,13 @@ Next, select the _Session Overview_ sheet.
 
 [![capacity_planning_users_11.png](images/capacity_planning_users_11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_11.png)
 
-On this sheet, take note of the _Max Concurrent Users_ KPI. This KPI is critical to help plan for growth from an architecture perspective.
+Now, assuming this capacity plan exercise is in fact being executed quarterly, select the last three months of session data. This can easily be achieved by selecting the target months in the _User and App Count Trend_ chart in the bottom right. The _Latest Activity Measure_ field that always has one selected does not apply to this area, and only applies to sheet usage--so it can be ignored.
 
-[![capacity_planning_users_10.png](images/capacity_planning_users_10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_10.png)
+[![capacity_planning_users_12.png](images/capacity_planning_users_12.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_12.png)
+
+While remaining on this sheet, take note of the _Max Concurrent Users_ KPI. This KPI is critical to help plan for growth from an architecture perspective.
+
+[![capacity_planning_users_14.png](images/capacity_planning_users_14.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_14.png)
 
 Following, select the _Session Details_ sheet.
 
