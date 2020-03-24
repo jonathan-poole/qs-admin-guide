@@ -13,7 +13,7 @@ nav_order: 3
 {:.no_toc}
 - Prod
 
-# Goal
+## Goal
 {:.no_toc}
 
 The goal of this exercise is to identify any potential system concerns across your production site. The **Operations Monitor** application exposes this information simply, so that it can be easily referenced.
