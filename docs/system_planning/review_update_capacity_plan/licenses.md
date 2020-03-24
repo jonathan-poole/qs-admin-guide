@@ -53,11 +53,11 @@ First and foremost, it is essential to confirm that the **License Monitor** is o
 
 Select the _Usage Snapshot_ sheet.
 
-[![capacity_planning_licenses_11.png](images/capacity_planning_licenses_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_2.png)
+[![capacity_planning_licenses_11.png](images/capacity_planning_licenses_11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_11.png)
 
 The four metrics listed in the _Goals_ section can all be found in this object
 
-[![capacity_planning_licenses_10.png](images/capacity_planning_licenses_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_3.png)
+[![capacity_planning_licenses_10.png](images/capacity_planning_licenses_10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_10.png)
 
 If the image above was to be used as an example (obviously this is a rarely used testing box), a table that could be used for capacity planning could look like the following:
 
