@@ -65,7 +65,9 @@ The four metrics listed in the _Goals_ section can all be found in this object
 
 [![capacity_planning_licenses_10.png](images/capacity_planning_licenses_10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_10.png)
 
-If the image above was to be used as an example (obviously this is a rarely used testing box), a table that could be used for capacity planning could look like the following:
+## Example Takeaway
+
+If the _Usage Snapshot_ above was to be used as an example (obviously this is a rarely used testing box), a table that could be used for capacity planning could look like the following:
 
 |                  | Licenses | Licenses Allocated | Licenses Allocated Unused | Licenses Remaining |
 |------------------|----------|--------------------|---------------------------|--------------------|
