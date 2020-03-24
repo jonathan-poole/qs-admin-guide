@@ -107,4 +107,4 @@ An example output from this site could looks like the following:
 |------------------|-------------|--------------------------|--------------------------|
 | 2                | 10          | 7                        | 4                        |
 
-/* Note that the _Licenses Allocated Unused_ metric found [here](/licenses.md) is calculated on 30 days, not 90, as the above chart shows. Take this into consideration in the capacity plan.
+* Note that the _Licenses Allocated Unused_ metric found [here](/licenses.md) is calculated on 30 days, not 90, as the above chart shows. Take this into consideration in the capacity plan.
