@@ -13,7 +13,7 @@ nav_order: 2
 {:.no_toc}
 - Prod
 
-# Goal
+## Goal
 {:.no_toc}
 
 The goal of this exercise is to identify user activity over a period of time since this exercise was last ran to identify variances in usage and anticipate future growth.
