@@ -43,13 +43,19 @@ Please refer to the [License Monitor](../../tooling/license_monitor.md) page for
 
 ## License Usage
 
+### Confirm License Monitor is Operational
+
 Navigate to the **Monitoring apps** stream and open up the **License Monitor** application.
 
 [![capacity_planning_licenses_1.png](images/capacity_planning_licenses_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_1.png)
 
-First and foremost, it is essential to confirm that the **License Monitor** is operational and up to date. Ensure that it is by selecting the _Show app information_ button, and then viewing the _Data last loaded_ section of the application's description.
+First and foremost, it is essential to confirm that the **License Monitor** is operational and up to date. Ensure that it is by selecting the _Show app information_ button, and then viewing the _Data last loaded_ section of the application's description. Alternatively, one could also check the task status in the QMC.
 
 [![capacity_planning_licenses_0.png](images/capacity_planning_licenses_0.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_licenses_0.png)
+
+If the application is not operational [this support article](https://support.qlik.com/articles/000024083) is a great place to start.
+
+### Gather Metrics
 
 Select the _Usage Snapshot_ sheet.
 
