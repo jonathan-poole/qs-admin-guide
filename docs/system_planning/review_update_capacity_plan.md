@@ -89,9 +89,19 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 ### System
 {:.no_toc}
 
-| Engine CPU | Engine RAM |  Batch Window | Intra-day Reloads | Users per Engine |
-|------------|------------|---------------|-------------------|------------------|
-| Good       | Good       | Good          | 50                | 35               |
+| Engine CPU | Engine RAM |  Batch Window | Avg Intra-day Reloads per Day |
+|------------|------------|---------------|-------------------------------|
+| Good       | Good       | Good          | 354                           |
+
+| 	         | Max Concurrent Users Per Engine |
+|------------|---------------------------------|
+| Engine 1   | 43			                   |
+| Engine 2   | 40			                   |
+
+| 	         | Intra-day Reloads per Engine | End-User Facing |
+|------------|------------------------------|-----------------|
+| Engine 1   | 386			                | Yes	          |
+| Engine 2   | 214			                | Yes 	          |
 
 **Actions**
 
