@@ -42,9 +42,7 @@ Please refer to the [Operations Monitor](../../tooling/operations_monitor.md) pa
 
 -------------------------
 
-## System
-
-### Confirm Operations Monitor is Operational
+## Confirm Operations Monitor is Operational
 
 Navigate to the **Monitoring apps** stream and open up the **Operations Monitor** application.
 
@@ -54,7 +52,7 @@ First and foremost, it is essential to confirm that the **Operations Monitor** i
 
 [![capacity_planning_users_2.png](images/capacity_planning_users_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_2.png)
 
-### Gather Metrics
+## Gather Metrics
 
 Select the _Performance_ sheet.
 
@@ -64,13 +62,13 @@ Select the **Month** field and select the last three months, assuming this exerc
 
 [![capacity_planning_system_2.png](images/capacity_planning_system_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_2.png)
 
-#### CPU
+### CPU
 
 Now, focus on the _Qlik Sense Engine CPU_ chart for a moment. Ensure that the measure is set to _Max CPU_. Note that this chart defaults to viewing at the _Month_, however it can drill down to the day, hour, and ten-minute timeline. It is advised to look for extended durations of high CPU utilization, and to see if those events are recurring. In the below chart, we can see that these servers are not heavily utilized, as the maximum CPU does not go above 32%.
 
 [![capacity_planning_system_3.png](images/capacity_planning_system_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_3.png)
 
-#### RAM
+### RAM
 
 Next, focuse on the _Qlik Sense Engine RAM (GB)_ chart. This chart is of the same construct as the prior, except focusing on RAM utilization. It is important to note that this chart is showing not only the "base RAM footprint" of the applications, but also the "result set cache RAM", as well as RAM for calculations, etc. Take the time to review the chart below and look for extended periods of time of very high RAM utilization, say around 90%, where the server is continuously fighting to clear cache to make room for new result sets. It should be relatively clear if the server is over-taxed if it is flat-lining consistently. The servers in the chart below look healthy, however.
 
@@ -92,7 +90,7 @@ In the _Engine Node: Available Apps & Base RAM Footprint_ table, one can view th
 
 Here, it is visible that all apps are available on all engine nodes--meaning there are no custom load balancing rules in place. The total application RAM footprint is 155 GB, and in this case, the servers have a total of 512 GB of RAM. This puts the total base RAM footprint at 30% of the total server RAM--which is below that 40% line from the best practice above--so all is well for the time being.
 
-#### Max Concurrent Users per Engine
+### Max Concurrent Users per Engine
 
 It is also valuable to view the distribution of users across the engines, as this metric is important for creating a custom gauge to help establish a breaking point. For example, if the engine starts performing poorly with 50 concurrent users on it (assuming uniform applications available across all engines), that number can then be used as a compelling event to expand horizontally to another engine node if breached. An admin can then review this metric quarterly to warrant if there needs to be an architectural event to keep this number below the set threshold.
 
@@ -114,7 +112,7 @@ Name the chart _Max Concurrent Users by Hostname_. Following, review the total c
 
 [![capacity_planning_system_10.png](images/capacity_planning_system_10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_10.png)
 
-#### Intra-day Reloads
+### Intra-day Reloads
 
 The primary goal of this sub-section is to report on the number of intra-day reloads so that they can be examined. The result should be to minimize if not completely decouple intra-day reloads from end-user facing engine nodes. If the environment is smaller and reloads must operate on end-user nodes, that should at a minimum be pushed to the overnight batch window where viable. If there are intra-day reloads for hourly reloading apps or otherwise, ideally, they should be offloaded to a separate scheduler.
 
@@ -158,7 +156,7 @@ Review the new chart to see where reloads are occurring.
 
 [![capacity_planning_system_18.png](images/capacity_planning_system_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_system_18.png)
 
-#### Batch Window
+### Batch Window
 
 In general, this area represents the capacity of your batch window (usually nightly). The steps to optimize the batch window can be found here: [Optimize Batch Window](../optimize_batch_window.md).
 
@@ -171,7 +169,7 @@ After reading the optimization process, one can apply the following rules:
 - **Bad**
   - Fully congested batch window--no room for any additions. Tasks are at risk of or are running over into business hours.
   
-## Example Takeaway
+### Example Takeaway
 
 Referring to the examples above (obviously this is a rarely used testing environment), tables that could be used for capacity planning could look like the following:
 
