@@ -60,17 +60,16 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 ### Licenses
 {:.no_toc}
 
-|                  | Licensed | Allocated | Remaining |
-|------------------|----------|-----------|-----------|
-| **Professional** | 50       | 44        | 6         |
-| **Analyzer**     | 200      | 180       | 20        |
+|                  | Licenses | Licenses Allocated | Licenses Allocated Unused | Licenses Remaining |
+|------------------|----------|--------------------|---------------------------|--------------------|
+| **Professional** | 50       | 44                 | 2                         | 6                  |
+| **Analyzer**     | 200      | 180                | 6                         | 20                 |
 
 **Actions**
 
 1. Analyze the allocated licenses for possible re-assignment.
-2. Expand licenses to 75 Professional and 325 Analyzer.
-
-
+2. Review unused licenses.
+3. Expand licenses to 75 Professional and 325 Analyzer.
 
 ### Users
 {:.no_toc}
