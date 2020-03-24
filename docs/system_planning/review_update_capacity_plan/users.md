@@ -18,6 +18,12 @@ nav_order: 2
 
 The goal of this exercise is to identify user activity over a period of time since this exercise was last ran to identify variances in usage and anticipate future growth.
 
+There are a number of metrics that should be focused on, including the following:
+
+- Peak Concurrency
+- Active Users 1+ Sessions
+- Active Users 5+ Sessions
+
 ## Table of Contents
 {:.no_toc}
 
@@ -50,7 +56,7 @@ Now, assuming this capacity plan exercise is in fact being executed quarterly, s
 
 [![capacity_planning_users_12.png](images/capacity_planning_users_12.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_12.png)
 
-While remaining on this sheet, take note of the _Max Concurrent Users_ KPI. This KPI is critical to help plan for growth from an architecture perspective.
+While remaining on this sheet, take note of the _Max Concurrent Users_ KPI. This is the _Peak Concurrency_ KPI mentioned above, and is critical to help plan for growth from an architecture perspective.
 
 [![capacity_planning_users_14.png](images/capacity_planning_users_14.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_14.png)
 
@@ -58,11 +64,11 @@ Following, select the _Session Details_ sheet.
 
 [![capacity_planning_users_3.png](images/capacity_planning_users_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_3.png)
 
-Next, be sure to review the _App Session Summary_ object as well as the _User Session Summary_ objects as they display valuable information, such as how many individual sessions users have had, and against what applications. These are very useful metrics both for overall user usage and adoption.
+Next, be sure to review the _App Session Summary_ object as well as the _User Session Summary_ objects as they display valuable information, such as how many individual sessions users have had, and against what applications. These are very useful metrics both for overall user usage and adoption, and will impact the [Applications](applications.md) section of the capacity plan.
 
 [![capacity_planning_users_4.png](images/capacity_planning_users_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_4.png)
 
-That being said, we want to add two additional metrics that are not available by default on the sheet, as we are interested in:
+That being said, two additional metrics that are not available by default on the sheet should be added:
 
   - The total number of distinct users that have had at least _1_ session over the last _x_ days
   - The total number of distinct users that have had _5_ or more sessions over the last _x_ days
@@ -94,3 +100,11 @@ Next, repeat the process above for adding the following expression to the second
 Name this KPI: _Active Users: 5+ Sessions_
 
 [![capacity_planning_users_9.png](images/capacity_planning_users_9.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_users_9.png)
+
+An example output from this site could looks like the following: 
+
+| Peak Concurrency | Total Users | Active Users 1+ Sessions | Active Users 5+ Sessions |
+|------------------|-------------|--------------------------|--------------------------|
+| 2                | 10          | 7                        | 4                        |
+
+/* Note that the _Licenses Allocated Unused_ metric found [here](/licenses.md) is calculated on 30 days, not 90, as the above chart shows. Take this into consideration in the capacity plan.
