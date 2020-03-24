@@ -13,7 +13,7 @@ nav_order: 1
 {:.no_toc}
 - Prod
 
-# Goal
+## Goal
 {:.no_toc}
 
 The goal of this exercise is to identify license usage across your production site. The **License Monitor** application exposes this information simply, so that it can be easily referenced.
