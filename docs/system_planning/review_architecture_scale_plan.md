@@ -76,7 +76,7 @@ When it comes to load balancing within the scope of Qlik, there are three genera
 3. Load balancing rules for applications
   - Native capability allows for "pinning" of applications to specific engines
 
-For documentation/examples around load balancing rules, please refer to [Creating load balancing rules with custom properties](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/create-load-balancing-rules-with-custom-properties.htm)
+For documentation/examples around load balancing rules, please refer to [Creating load balancing rules with custom properties](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/create-load-balancing-rules-with-custom-properties.htm).
 
 -------------------------
 
@@ -87,8 +87,10 @@ When speaking about resiliency and high availability within the context of Qlik 
 1. Proxy/Engine Resiliency (consumption)
   - Requires 2+ Qlik proxy/engine nodes
   - Requires third-party network load balancer
+  
 2. Scheduler Resiliency (reloads)
   - Requires 2+ Qlik scheduler nodes
+  
 3. Site-wide High Availability
   - Requires both 1 and 2 from above
   - Requires decoupled repository database and decoupled file share
@@ -102,7 +104,33 @@ For information regarding the persistence layer (repository database and file sh
 
 ## High-level Scaling Concepts
 
+Broadly speaking, there are two primary scaling methodologies -- however, do note that these are not mutually exclusive:
 
+1. Horizontal Scaling
+  - Adding additional nodes/services, providing a wide, resilient topology.
+  
+2. Vertical Scaling
+  - Expanding current server footprints, i.e. adding additional cores/RAM.
+
+Horizontal scaling is typically common if a Qlik environment has small to medium sized applications with many users. Meaning, applications can be loaded quickly onto many different engines with little delay, and calculations are fast -- meaning that a shared cache isn't necessarily as integral for these applications. This methodology is also common in virtual environments on-premsises where VM sizes may be restricted. For instance, if an organization caps VM sizes at 96 or 128 GB of RAM, more than likely that Qlik environment will end up with a wider footprint, and will adopt practices to allow their applications to fit it.
+
+Vertical scaling is typically common where the user base is not extensive, and the applications are quite large. Less nodes with larger capacity allows for larger applications with more users taking advantage of the same cache. These applications are usually [cache warmed](../tooling_appendix/cache_warming.md) so that they are readily available for users without delay.
+
+Both of these methodologies are frequently combined when an organization has a mix of both very large apps and smaller apps with a wide user pool. It is usually common for organizations to have "small - medium app engines" and "large app engines" -- for example, maybe four of the former and two of the latter. Leveraging load balancing rules (as described above), large applications are "pinned" to the larger nodes, and vice versa.
+
+-------------------------
+
+## Example Production Architectures
+
+[![architecture-2.png](images/architecture-2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-2.png)
+
+[![architecture-3.png](images/architecture-3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-3.png)
+
+[![architecture-4.png](images/architecture-4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-4.png)
+
+[![architecture-5.png](images/architecture-5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-5.png)
+
+For additional documentation and examples, please refer to [Qlik Sense Enterprise on Windows: multi-node deployment](https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Enterprise-deployment.htm).
 
 -------------------------
 
