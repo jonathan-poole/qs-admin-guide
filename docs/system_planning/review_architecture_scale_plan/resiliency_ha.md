@@ -3,7 +3,7 @@ layout: default
 title: Resiliency & HA
 parent: Review Architecture/Scale Plan
 grand_parent: System Planning
-nav_order: 1
+nav_order: 2
 ---
 
 # Resiliency & HA
