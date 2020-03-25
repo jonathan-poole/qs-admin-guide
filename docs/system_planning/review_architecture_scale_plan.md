@@ -43,23 +43,23 @@ This is integral for:
 
 2. A set of base icons or symbols
   
-  - If the deployment is on-premises:
+    a. If the deployment is on-premises
   
-    - a server
+      - a server
     
-    - a database
+      - a database
     
-    - a file share
+      - a file share
     
-    - a network load balancer
+      - a network load balancer
     
-  - If the deployment is in the cloud:
+    b. If the deployment is in the cloud:
   
-    - AWS icons can be found [here](https://aws.amazon.com/architecture/icons/)
+      - AWS icons can be found [here](https://aws.amazon.com/architecture/icons/)
     
-    - Azure icons can be found [here](https://www.microsoft.com/en-us/download/details.aspx?id=41937)
+      - Azure icons can be found [here](https://www.microsoft.com/en-us/download/details.aspx?id=41937)
     
-    - GCP icons can be found [here](https://cloud.google.com/icons)
+      - GCP icons can be found [here](https://cloud.google.com/icons)
     
 3. Knowledge of what Qlik services are active on what nodes
 
