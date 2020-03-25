@@ -42,8 +42,8 @@ This is integral for:
 1. An editor. This could be Visio, PowerPoint, or web editors like [Gliffy](https://gliffy.com) and [Draw.io](https://draw.io).
 
 2. A set of base icons or symbols
-
-  a. If the deployment is on-premises:
+  
+  - If the deployment is on-premises:
   
     - a server
     
@@ -53,7 +53,7 @@ This is integral for:
     
     - a network load balancer
     
-  b. If the deployment is in the cloud:
+  - If the deployment is in the cloud:
   
     - AWS icons can be found [here](https://aws.amazon.com/architecture/icons/)
     
