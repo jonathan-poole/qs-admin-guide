@@ -57,7 +57,7 @@ First and foremost, it is essential to confirm that the **Operations Monitor** i
 
 If the application is not operational [this support article](https://support.qlik.com/articles/000024083) is a great place to start.
 
-## Gather Top Applications by Usage
+### Gather Top Applications by Usage
 
 Select the _Session Overview_ sheet.
 
@@ -93,8 +93,22 @@ Here, it can easily be seen that out of the three available engine nodes, the ap
 
 [![capacity_planning_applications_5.png](images/capacity_planning_applications_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_applications_5.png)
 
+## ODAG / NPrinting / InsightBot
+
+Is [ODAG](https://help.qlik.com/en-US/sense/Subsystems/Hub/Content/Sense_Hub/DataSource/Manage-big-data.htm) in play or going to be in play with any applications?
+
+It is best to simply ask the business if unaware, and one can check if ODAG is _able_ to be run by navigating to the QMC and selecting _On-demand apps service_, and then viewing whether _Enable on-demand app service_ is toggled on or off.
+
+[![capacity_planning_applications_6.png](images/capacity_planning_applications_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_applications_6.png)
+
+[![capacity_planning_applications_7.png](images/capacity_planning_applications_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/review_update_capacity_plan/images/capacity_planning_applications_7.png)
+
+Is [Qlik NPrinting](https://help.qlik.com/en-US/nprinting/Content/NPrinting/Introduction/Introduction.htm) or [Qlik InsightBot](https://help.qlik.com/en-US/insight-bot/Content/QlikInsightBot/Home.htm) on the horizon or in play?
+
+It is important here to recognize how many applications are being used against both. It is encouraged to ask the business.
+
 ## Example Takeaway
 
-| Candidates for "App Pinning" | Candidates for Data Model Optimization |
-|------------------------------|----------------------------------------|
-| 2                            | 3                                      |
+| Candidates for "App Pinning" | Candidates for Data Model Optimization | ODAG Apps | Qlik NPrinting Apps | Qlik InsightBot Apps |
+|------------------------------|----------------------------------------|-----------|---------------------|----------------------|
+| 2                            | 3                                      | 1         | 0                   | 0                    |
