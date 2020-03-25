@@ -119,7 +119,7 @@ Please take the time to review the below if unfamiliar before continuing on with
 
 ## Planning for N+1 Architectures
 
-In order to plan for an upcoming architectural event, it is imperative to have an understanding of the varying methods of scaling a site.
+In order to plan for an upcoming architectural event, it is imperative to have an understanding of the varying methods of scaling a site, as well an awareness of any architectural impacts the current [Capacity Plan](review_update_capacity_plan.md) might have.
 
 ### High-level Scaling Concepts
 
@@ -137,9 +137,29 @@ Vertical scaling is typically common where the user base is not extensive, and t
 
 Both of these methodologies are frequently combined when an organization has a mix of both very large apps and smaller apps with a wide user pool. It is usually common for organizations to have "small - medium app engines" and "large app engines" -- for example, maybe four of the former and two of the latter. Leveraging load balancing rules (as described above), large applications are "pinned" to the larger nodes, and vice versa.
 
-### Planning
+### Review Capacity Plan
 
-Review capacity plan, more here.
+In order to plan for the next architectural event, one must first review the current [Capacity Plan](review_update_capacity_plan.md).
+
+Common questions that would have impact:
+
+1. Is there a significant license growth event that would mandate additional proxy/engine nodes?
+
+2. In general across end-user engine nodes, are the CPU/RAM metrics in a healthy state consistently? If not, this might warrant the need for vertical growth or app optimization.
+
+3. Are there intra-day reloads running on end-user nodes that are affecting performance, therefore the end-user experience? That could warrant offloading them to dedicated schedulers (this is highly encouraged and preferred).
+
+4. Are there applications that are being considered for "application pinning" to specific engine nodes via load balancing rules? Could application optimization bring these applications down in size to avoid that, or are they simply monolithic by nature and need to be pinned? Are there enough engine nodes currently to support the segragation of assets while providing resliency (2+ nodes for each), or do more engine nodes need to be added. Is vertical growth required to support these large applications on less nodes, given the fact that there will be more user caching on less nodes potentially?
+
+5. Is horizontal growth preferred, or is vertical growth preferred, or is there a business event driving one or the other? Is a mix of both possible? This will involve discussions with IT to see what is possible.
+
+6. Is something outside the Qlik deployment driving an architectural event, e.g. there is money to be spent on infrastructure now, though a license event might not occur for another 6 months? This will involve speaking with the business to see what types of applications/use cases are in the pipeline to see what infrastructure should support future needs.
+
+7. Is [ODAG](https://help.qlik.com/en-US/sense/Subsystems/Hub/Content/Sense_Hub/DataSource/Manage-big-data.htm) in play or going to be in play? Should these application reloads happen on a dedicated scheduler?
+
+8. Is [Qlik NPrinting](https://help.qlik.com/en-US/nprinting/Content/NPrinting/Introduction/Introduction.htm) or [Qlik InsightBot](https://help.qlik.com/en-US/insight-bot/Content/QlikInsightBot/Home.htm) on the horizon or in play? Should these run against dedicated engines?
+
+These are all questions that should be considered while planning for the next-state architecture.
 
 -------------------------
 
