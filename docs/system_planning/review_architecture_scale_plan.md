@@ -50,7 +50,7 @@ Qlik Sense Applications (.QVF)
 
 ## Terminology
 
-[![architecture-1.png](images/architecture-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/architecture-1.png)
+[![architecture-1.png](images/architecture-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-1.png)
 
 -------------------------
 
