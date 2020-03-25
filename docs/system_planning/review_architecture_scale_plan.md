@@ -19,6 +19,8 @@ parent: System Planning
 
 The goal is to have documented Qlik architecture diagrams of n and n+1 deployments*, as well as an understanding of high-level architectural concepts within Qlik.
 
+\* n refers to the current deployment, while n+1 refers to an anticpated state of the next deployment.
+
 This is integral for:
 
 - understanding the deployment and how it is laid out
@@ -30,9 +32,6 @@ This is integral for:
 - understanding resiliency & availability
 
 - having documentation available to others
-
-
-\* n refers to the current deployment, while n+1 refers to an anticpated state of the next deployment.
 
 -------------------------
 
