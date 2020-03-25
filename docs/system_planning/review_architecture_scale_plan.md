@@ -109,26 +109,6 @@ This is integral for:
 
 -------------------------
 
-
-## Load Balancing
-
-When it comes to load balancing within the scope of Qlik, there are three general areas that are applicable:
-
-1. Load balancing across Qlik proxies
-  - Third-party network load balancer required
-    - e.g. F5 BigIP, NGINX, Netscaler, AWS ALB, Azure Application Gateway, etc
-  - Required for Qlik Proxy resilience
-2. Load balancing across Qlik Engines
-  - Native to Qlik at the proxy level
-    - pure round robin
-  - Option to plug in custom load balancer
-3. Load balancing rules for applications
-  - Native capability allows for "pinning" of applications to specific engines
-
-For documentation/examples around load balancing rules, please refer to [Creating load balancing rules with custom properties](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/create-load-balancing-rules-with-custom-properties.htm).
-
--------------------------
-
 ## Resiliency & High Availability
 
 When speaking about resiliency and high availability within the context of Qlik architecture, there are three tiers to focus on:
