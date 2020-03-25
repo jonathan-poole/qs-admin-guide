@@ -105,11 +105,9 @@ This is integral for:
 
 ## Planning for N+1 Architectures
 
+In order to plan for an upcoming architectural event, it is imperative to have an understanding of the varying methods of scaling a site.
 
-
--------------------------
-
-## High-level Scaling Concepts
+### High-level Scaling Concepts
 
 Broadly speaking, there are two primary scaling methodologies -- however, do note that these are not mutually exclusive:
 
@@ -125,17 +123,10 @@ Vertical scaling is typically common where the user base is not extensive, and t
 
 Both of these methodologies are frequently combined when an organization has a mix of both very large apps and smaller apps with a wide user pool. It is usually common for organizations to have "small - medium app engines" and "large app engines" -- for example, maybe four of the former and two of the latter. Leveraging load balancing rules (as described above), large applications are "pinned" to the larger nodes, and vice versa.
 
+### Planning
+
+Review capacity plan, more here.
+
 -------------------------
 
-## Example Production Architectures
-
-[![architecture-2.png](images/architecture-2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-2.png)
-
-[![architecture-3.png](images/architecture-3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-3.png)
-
-[![architecture-4.png](images/architecture-4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-4.png)
-
-[![architecture-5.png](images/architecture-5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-5.png)
-
-For additional documentation and examples, please refer to [Qlik Sense Enterprise on Windows: multi-node deployment](https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Enterprise-deployment.htm).
 
