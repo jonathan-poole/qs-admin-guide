@@ -69,6 +69,8 @@ When it comes to load balancing within the scope of Qlik, there are three genera
 3. Load balancing rules for applications
   - Native capability allows for "pinning" of applications to specific engines
 
+For additional documentation regarding the Qlik services, please refer to [Services](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Services.htm).
+
 -------------------------
 
 ## Resiliency & High Availability
@@ -87,7 +89,7 @@ When speaking about resiliency and high availability within the context of Qlik 
     - The file share must be resilient
   - Requires 2+ Qlik nodes with all services enabled, with 1+ nominated as failover candidates
 
-For information regarding the persistence layer (repository database and file share), please refer to [Persistence](https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Persistence.htm).
+For information regarding the persistence layer (repository database and file share), please refer to [Persistence](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Persistence.htm).
 
 -------------------------
 
