@@ -97,9 +97,8 @@ Please take the time to review the below if unfamiliar before continuing on with
 
 - Any firewall settings pertinent to Qlik
 
-### Example Diagrams
 
-#### On-Premsises
+### On-Premsises Diagram Example
 
 **Growth Environment**
 
@@ -109,7 +108,7 @@ Please take the time to review the below if unfamiliar before continuing on with
 
 [![architecture-11.png](images/architecture-11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-11.png)
 
-#### AWS
+### AWS Diagram Example
 
 \* Please note that these cloud diagrams are intended for Qlik admins and occasionaly used to translate needs to supporting LOBs like IT. The examples below do not conform to the individual cloud vendor architectural diagram standards, as these aren't designed to be consumed by cloud engineers/network admins, etc. If one would like to include VPCs, AZs, SGs, Network ACLs, all the better -- however it goes beyond the basics of this exercise.
 
@@ -120,7 +119,7 @@ Please take the time to review the below if unfamiliar before continuing on with
 \* SMB file share – either FSx (requires domain) or EBS storage on EC2 instance.
 \* One could also leverage the _Growth Environment_ in AWS, with both the repository database and fileshare on an AWS EC2 instance.
 
-#### Azure
+### Azure Diagram Example
 
 \* Please note that these cloud diagrams are intended for Qlik admins and occasionaly used to translate needs to supporting LOBs like IT. The examples below do not conform to the individual cloud vendor architectural diagram standards, as these aren't designed to be consumed by cloud engineers/network admins, etc. If one would like to include Virtual Networks, Subnets, Resource Groups, etc, all the better -- however it goes beyond the basics of this exercise.
 
