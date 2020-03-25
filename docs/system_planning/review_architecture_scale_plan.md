@@ -35,6 +35,14 @@ This is integral for:
 
 -------------------------
 
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
+-------------------------
+
 ## Building an Architecture Diagram
 
 ### Core Requirements
