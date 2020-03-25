@@ -52,7 +52,6 @@ Qlik Sense Applications (.QVF)
 
 [![architecture-1.png](images/architecture-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-1.png)
 
--------------------------
 
 ## Load Balancing
 
