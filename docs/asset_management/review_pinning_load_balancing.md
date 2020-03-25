@@ -49,27 +49,27 @@ These two areas will be supported specifically through the following examples:
 
 1. Create the custom property **AppLevelUserNode** for application and node types with the following values:
 
-  - UserNode1
+    - UserNode1
   
-  - UserNode2
+    - UserNode2
   
-  - UserNode3
+    - UserNode3
   
 2. Create the custom property **StreamLevelUserNode** for stream and node types with the following values:
 
-  - UserNode1
+    - UserNode1
   
-  - UserNode2
+    - UserNode2
   
-  - UserNode3
+    - UserNode3
   
 3. Create the custom property **ReloadNode** for application and node types with the following values:
 
-  - ReloadNode1
+    - ReloadNode1
   
-  - ReloadNode2
+    - ReloadNode2
   
-  - ReloadNode3
+    - ReloadNode3
   
 ### Apply Custom Properties to Nodes
 
