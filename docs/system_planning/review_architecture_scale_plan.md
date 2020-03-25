@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Review Architecture/Scale Plan
+has_children: true
 nav_order: 3
 parent: System Planning
 ---
