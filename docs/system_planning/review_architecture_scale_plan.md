@@ -44,6 +44,21 @@ This is integral for:
 
 -------------------------
 
+## Supporting Documentation
+
+Please take the time to review the below if unfamiliar before continuing on with this page.
+
+*   ### [Architecture 101 (Components, Terminology)](review_architecture_scale_plan/architecture_101.md)
+    {: .no_toc }
+*   ### [Load Balancing Concepts](review_architecture_scale_plan/load_balancing_concepts.md)
+    {: .no_toc }
+*   ### [Resiliency & HA](review_architecture_scale_plan/resiliency_ha.md)
+    {: .no_toc }
+*   ### [Example Production Architectures](review_architecture_scale_plan/example_production_architectures.md)
+    {: .no_toc }
+    
+-------------------------
+
 ## Building an Architecture Diagram
 
 ### Core Requirements
