@@ -32,19 +32,27 @@ This is integral for:
 
 Qlik Sense Hub
   - Drag and drop development, analysis, and self-service environment.
+  
 Qlik Sense Management Console (QMC)
   - Centralized management of all aspects of a Qlik Sense deployment.
+  
 Qlik Sense Proxy (QPS)
   - Entry point into Qlik Sense for users and administrators.
   - Manages Authentication (last mile), manages sessions / license provisioning, able to load balance across engines.
+  
 Qlik Sense Engine (QES)
   - In-memory, associative data indexing engine.
+  
 Qlik Sense Scheduler (QSS)
   - Scheduling engine for application reloads from data sources.
+  
 Qlik Sense Repository (QRS)
   - Centralized storage of deployment information.
+  
 Qlik Sense Applications (.QVF)
   - Centralized storage of Applications before loading into memory, as part of a centralized SMB file share.
+
+For additional documentation regarding the Qlik services, please refer to [Services](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Services.htm).
 
 -------------------------
 
@@ -68,7 +76,7 @@ When it comes to load balancing within the scope of Qlik, there are three genera
 3. Load balancing rules for applications
   - Native capability allows for "pinning" of applications to specific engines
 
-For additional documentation regarding the Qlik services, please refer to [Services](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Services.htm).
+For documentation/examples around load balancing rules, please refer to [Creating load balancing rules with custom properties](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Managing_QSEoW/create-load-balancing-rules-with-custom-properties.htm)
 
 -------------------------
 
