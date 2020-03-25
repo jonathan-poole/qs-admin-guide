@@ -16,7 +16,7 @@ parent: System Planning
 ## Goal
 {:.no_toc}
 
-The goal is to have documented Qlik architecture diagrams of n and n+1 deployments, as well as an understanding of high-level architectural concepts within Qlik.
+The goal is to have documented Qlik architecture diagrams of n and n+1 deployments*, as well as an understanding of high-level architectural concepts within Qlik.
 
 This is integral for:
 
@@ -25,6 +25,51 @@ This is integral for:
 - articulating change
 - understanding resiliency & availability
 - having documentation available to others
+
+\* n refers to the current deployment, while n+1 refers to an anticpated state of the next deployment.
+
+-------------------------
+
+## Building an Architecture Diagram
+
+### Core Requirements
+
+1. An editor. This could be Visio, PowerPoint, or web editors like [Gliffy](https://gliffy.com) and [Draw.io](https://draw.io).
+
+2. A set of base icons or symbols
+
+  a. If the deployment is on-premises:
+    - a server
+    - a database
+    - a file share
+    - a network load balancer
+    
+  b. If the deployment is in the cloud:
+    - AWS icons can be found [here](https://aws.amazon.com/architecture/icons/)
+    - Azure icons can be found [here](https://www.microsoft.com/en-us/download/details.aspx?id=41937)
+    - GCP icons can be found [here](https://cloud.google.com/icons)
+    
+3. Knowledge of what Qlik services are active on what nodes
+
+4. Knowledge of what each Qlik node is being used for
+
+5. Knowledge of where the Qlik file share is and the Qlik respository database is
+
+6. Server names and aliases
+
+**Nice to Haves**
+
+1. Any network load balancers/interfaces in front of Qlik
+
+2. Any firewall settings pertinent to Qlik
+
+### Example Diagrams
+
+-------------------------
+
+## Planning for N+1 Architectures
+
+
 
 -------------------------
 
@@ -134,12 +179,3 @@ Both of these methodologies are frequently combined when an organization has a m
 
 For additional documentation and examples, please refer to [Qlik Sense Enterprise on Windows: multi-node deployment](https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Enterprise-deployment.htm).
 
--------------------------
-
-## Architectural Diagram Core Requirements
-
-
-
--------------------------
-
-## Planning for N+1 Architectures
