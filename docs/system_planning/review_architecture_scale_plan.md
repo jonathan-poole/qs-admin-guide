@@ -38,42 +38,41 @@ This is integral for:
 ## Building an Architecture Diagram
 
 ### Core Requirements
+- An editor. This could be Visio, PowerPoint, or web editors like [Gliffy](https://gliffy.com) and [Draw.io](https://draw.io).
 
-1. An editor. This could be Visio, PowerPoint, or web editors like [Gliffy](https://gliffy.com) and [Draw.io](https://draw.io).
+- A set of base icons or symbols
 
-2. A set of base icons or symbols
+  - If the deployment is on-premises
   
-    a. If the deployment is on-premises
+    - a server
+        
+    - a database
+        
+    - a file share
+        
+    - a network load balancer
+    
+  - If the deployment is in the cloud:
   
-      - a server
+    - AWS icons can be found [here](https://aws.amazon.com/architecture/icons/)
     
-      - a database
+    - Azure icons can be found [here](https://www.microsoft.com/en-us/download/details.aspx?id=41937)
     
-      - a file share
+    - GCP icons can be found [here](https://cloud.google.com/icons)
     
-      - a network load balancer
-    
-    b. If the deployment is in the cloud:
-  
-      - AWS icons can be found [here](https://aws.amazon.com/architecture/icons/)
-    
-      - Azure icons can be found [here](https://www.microsoft.com/en-us/download/details.aspx?id=41937)
-    
-      - GCP icons can be found [here](https://cloud.google.com/icons)
-    
-3. Knowledge of what Qlik services are active on what nodes
+- Knowledge of what Qlik services are active on what nodes
 
-4. Knowledge of what each Qlik node is being used for
+- Knowledge of what each Qlik node is being used for
 
-5. Knowledge of where the Qlik file share is and the Qlik respository database is
+- Knowledge of where the Qlik file share is and the Qlik respository database is
 
-6. Server names and aliases
+- Server names and aliases
 
 **Nice to Haves**
 
-1. Any network load balancers/interfaces in front of Qlik
+- Any network load balancers/interfaces in front of Qlik
 
-2. Any firewall settings pertinent to Qlik
+- Any firewall settings pertinent to Qlik
 
 ### Example Diagrams
 
