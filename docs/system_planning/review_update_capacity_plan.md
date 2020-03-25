@@ -100,11 +100,16 @@ The below is a high-level mockup of what a capacity plan's output could look lik
 ### Application
 {:.no_toc}
 
-| Candidates for "App Pinning" | Candidates for Data Model Optimization |
-|------------------------------|----------------------------------------|
-| 2                            | 3                                      |
+| Candidates for "App Pinning" | Candidates for Data Model Optimization | ODAG Apps | Qlik NPrinting Apps | Qlik InsightBot Apps |
+|------------------------------|----------------------------------------|-----------|---------------------|----------------------|
+| 2                            | 3                                      | 1         | 0                   | 0                    |
 
 **Actions**
 
 1. Identified three applications for optimization and two applications for app pinning.
+
 2. Review [Architecture/Scale Plan](review_architecture_scale_plan.md) to see if app pinning is possible with the current architectural footprint, or if it would require an architectural event, e.g. horizontally scaling (adding another proxy/engine node).
+
+3. Review where ODAG reloads are being processed, and if they need to be offloaded to a dedicated scheduler if not already, or if more cores are required for additional concurrent reloads.
+
+4. If NPrinting or InsightBot were in use, it would be good to validate if there were dedicated applications for each of these components that were silo'ed off from end users. I.e., there is a duplicated, stripped down version of a production app for use with either NPrinting or InsightBot.
