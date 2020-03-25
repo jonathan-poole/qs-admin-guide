@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: no_toc_layout
 title: Review/Update Capacity Plan
 has_children: true
 nav_order: 1
