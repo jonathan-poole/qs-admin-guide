@@ -66,15 +66,31 @@ This is integral for:
 
 - Knowledge of where the Qlik file share is and the Qlik respository database is
 
-- Server names and aliases
-
 **Nice to Haves**
+
+- Server names and aliases
 
 - Any network load balancers/interfaces in front of Qlik
 
 - Any firewall settings pertinent to Qlik
 
 ### Example Diagrams
+
+#### On-Premsises
+
+[![architecture-7.png](images/architecture-7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-7.png)
+
+#### AWS
+
+\* Please note that these cloud diagrams are intended for Qlik admins and occasionaly used to translate needs to supporting LOBs like IT. The examples below do not conform to the individual cloud vendor architectural diagram standards, as these aren't designed to be consumed by cloud engineers/network admins, etc. If one would like to include VPCs, AZs, SGs, Network ACLs, all the better -- however it goes beyond the basics of this exercise.
+
+[![architecture-8.png](images/architecture-8.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-8.png)
+
+#### Azure
+
+\* Please note that these cloud diagrams are intended for Qlik admins and occasionaly used to translate needs to supporting LOBs like IT. The examples below do not conform to the individual cloud vendor architectural diagram standards, as these aren't designed to be consumed by cloud engineers/network admins, etc. If one would like to include Virtual Networks, Subnets, Resource Groups, etc, all the better -- however it goes beyond the basics of this exercise.
+
+[![architecture-9.png](images/architecture-9.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/architecture-9.png)
 
 -------------------------
 
