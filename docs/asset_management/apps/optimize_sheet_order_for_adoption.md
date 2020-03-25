@@ -118,7 +118,7 @@ To change the sheets order the application owner should clone the "Sample App".
 
 [![optimize_sheet_order_for_adoption10.png](images/optimize_sheet_order_for_adoption10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption10.png)
 
-As soon as the application gets duplicated it will be at the Personal > Work area. Now we can edit the Base Sheets order.
+As soon as the application gets duplicated the new application will be at the owner's Personal > Work area. Now the owner can edit the Base Sheets order.
 
 [![optimize_sheet_order_for_adoption11.png](images/optimize_sheet_order_for_adoption11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption11.png)
 
@@ -137,17 +137,17 @@ And the "Inventory" sheet the third sheet.
 [![optimize_sheet_order_for_adoption14.png](images/optimize_sheet_order_for_adoption14.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption14.png)
 
 
-Now the application sheet order is was optimized.
+Now the application sheet order is optimized.
 
 [![optimize_sheet_order_for_adoption15.png](images/optimize_sheet_order_for_adoption15.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption15.png)
 
 
-The "Sample App" now should be republished, replacing the old version.
-You should open Personal > Work area and Publish the application that we changed the sheets order.
+The "Sample App" now should be republished by the application owner.
+The application owner needs to go to Personal > Work area and Publish the application that we changed the sheets order.
 
 [![optimize_sheet_order_for_adoption16.png](images/optimize_sheet_order_for_adoption16.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption16.png)
 
-Make sure that the application owner is replacing the old version.
+Make sure to check the **Replace the existing app** box to make sure you are replacing the previous version.
 
 [![optimize_sheet_order_for_adoption17.png](images/optimize_sheet_order_for_adoption17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption17.png)
 
