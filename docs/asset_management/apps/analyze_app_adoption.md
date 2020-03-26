@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Analyze User Adoption
+title: Analyze App Adoption
 parent: Apps
 grand_parent: Asset Management
 nav_order: 5
 ---
 
-# Analyze User Adoption
+# Analyze App Adoption
 
 Stuff stuff stuff.
