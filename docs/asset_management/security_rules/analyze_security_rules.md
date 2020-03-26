@@ -100,4 +100,28 @@ To ensure security rule quality, the following areas are things to look out for 
 
 ## QMC - Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-In the QMC, select **Security Rules**:
+For manually reviewing security rules, start by navigating to the QMC, and then select **Security Rules**.
+
+[![security_rules_1.png](images/security_rules_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/security_rules/images/security_rules_1.png)
+
+Click on the _Column selector_, and add the **Conditions** column.
+
+[![security_rules_2.png](images/security_rules_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/security_rules/images/security_rules_2.png)
+
+Select the filter on the **Conditions** column, and then search for any of the bad practices, such as `.name`, `.id`, `*`, etc.
+
+[![security_rules_3.png](images/security_rules_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/security_rules/images/security_rules_3.png)
+
+As an additional step, filter on the **Disabled** column to _No_ to only view active security rules.
+
+[![security_rules_4.png](images/security_rules_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/security_rules/images/security_rules_4.png)
+
+This is of course a very manual process, and might prove to be rather difficult to consume. For an automated process that will sum up all of the flagged bad practices and allow for deeper analysis, please explore the application below.
+
+## Security Rule Analyzer
+
+The **qs-security-rule-analyzer** application is an application supported by the Americas Enterprise Architecture team from Qlik. It is a very straight forward application that makes to calls to the QRS (repository database) that fetches metadata around custom properties and all security rule information. The application itself takes advantage of the existing `monitor_apps_REST_app` data connection, so there is no installer and it is mostly plug and play, spare a couple of variable settings and ensuring that the user executing the reload has _RootAdmin_ rights and access to the data connection. Complete setup instructions can be found in the script.
+
+Screenshot
+
+[![security_rules_5.png](images/security_rules_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/security_rules/images/security_rules_5.png)
