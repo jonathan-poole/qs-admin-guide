@@ -88,15 +88,15 @@ To ensure security rule quality, the following areas are things to look out for 
 
 1. 1:1 style rules
 
-2. Rules that contain `.name`
+    - Rules that contain `.name`
 
-3. Rules that contain `.id`
+    - Rules that contain `.id`
 
-4. Rules that contain `*`
+2. Rules that contain `*`
 
-5. Rules that contain many `and` `or` operators
+3. Rules that contain many `and` `or` operators
 
-6. Rules that reference a custom property that has many possible values (hundreds or thousands)
+4. Rules that reference a custom property that has many possible values (hundreds or thousands)
 
 ## QMC - Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
