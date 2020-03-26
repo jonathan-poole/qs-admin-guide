@@ -9,13 +9,19 @@ nav_order: 2
 # Remove/Quarantine Unused Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+## Top Benefits
+
+- Reduce Maintenance
+
+- Increase Performance
 
 ## Goal
 {:.no_toc}
 The goal of this procedure is to remove unnecessary (unused) applications from a Qlik site. This increases overall site performance, decreases clutter, and will focus users to what is pertinent.
+
+## Applicable Environments
+{:.no_toc}
+- All
 
 ## Table of Contents
 {:.no_toc}
