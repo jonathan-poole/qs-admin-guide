@@ -26,12 +26,10 @@ For auditing, please refer to [Audit User Access](../../audit/audit_user_access.
 {:toc}
 -------------------------
 
-## Quality
-
 When writing security rules, it is essential to think about how they will scale and how easy it is for them to be read and understood by others. There are of course times when rules _must_ become quite complex and might be rather difficult to read, but generally, these should be niche scenarios for very granular requirements.
 
 
-### Readability
+## Readability
 
 When writing a security rule, try to break up the formatting into multiple lines, to make the rule more easily digested by a human being. For example, here is a perfectly valid rule:
 
@@ -62,7 +60,7 @@ The second is surely far easier to read.
 
 Lastly, include a good _description_ of the security rule. It is common to simply write out the pseudocode.
 
-### Scale
+## Scale
 
 When writing a rule, one must ensure that it can scale. While `((user.name="Rodion Romanovich Raskolnikov") or (user.name="Sofya Semyonovna Marmeladov"))` works for a couple of users, as more and more users come into the system, that 1:1 rule style quickly becomes very difficult to maintain. Also, now imagine that Mr. Raskolnikov now changes roles, and should no longer see the resource that the security rule applies to. One would have to first know that he changed roles, and second, go remove him from that security rule. This simply is not maintainable. Instead, _groups_ should be used, be that `user.group` or `user.environment.group` or `user.@SomeCustomGroup`. This 1:many style rule is highly scalable, and is generally hands off, especially when using the former two options, as they are dynamic from the source, vs hardcoded as a custom property.
 
@@ -77,6 +75,28 @@ Write something like this, where the resource has a hardcoded custom property va
 ```
 ((resource.@Department=user.group))
 ```
+
+## Performance
+
+Another area to be very mindful of is the performance of the evaluation of security rules. Of course, a rule with many _and/or_ conditions is going to take longer to evaluate. One thing to be particularly keen on here is the number of values in the custom property field that the security rule is going to be evaluated on. If there are thousands of potential values in the custom property field, this will significantly increase evaluation times.
+
+## Security Rule Flagging
+
+To ensure security rule quality, the following areas are things to look out for either manually via the QMC, or programmatically with the provided application.
+
+**Do not create**
+
+1. 1:1 style rules
+
+2. Rules that contain `.name`
+
+3. Rules that contain `.id`
+
+4. Rules that contain `*`
+
+5. Rules that contain many `and` `or` operators
+
+6. Rules that reference a custom property that has many possible values (hundreds or thousands)
 
 ## QMC - Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
