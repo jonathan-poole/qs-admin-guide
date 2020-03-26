@@ -86,7 +86,7 @@ To ensure security rule quality, the following areas are things to look out for 
 
 **Do not create**
 
-1. 1:1 style rules
+1. 1:1 style rules, e.g.
 
     - Rules that contain `.name`
 
