@@ -12,7 +12,6 @@ nav_order: 2
 ## Top Benefits
 
 - Reduce Maintenance
-
 - Increase Performance
 
 ## Goal
