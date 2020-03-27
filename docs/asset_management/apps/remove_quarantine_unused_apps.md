@@ -10,9 +10,9 @@ nav_order: 2
 {:.no_toc}
 <span class="label dev">development</span><span class="label prod">production</span>
 
-|                                  		    | Initial | Recurring |
-|---------------------------------------------------|---------|-----------|
-| Estimated Time <i class="fas fa-clock fa-lg"></i> | 30 Min  | 5 min     |
+|                                  		        | Initial | Recurring |
+|-------------------------------------------------------|---------|-----------|
+| <i class="fas fa-clock fa-lg"></i> **Estimated Time** | 30 Min  | 5 min     |
 
 ## Top Benefits
 
