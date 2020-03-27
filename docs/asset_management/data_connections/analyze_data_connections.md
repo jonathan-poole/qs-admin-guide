@@ -9,9 +9,20 @@ nav_order: 2
 # Analyze Data Connections <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Development
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|                                  		                    | Initial                            | Recurring  |
+|---------------------------------------------------------|------------------------------------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 20 min *(+ long initial reload)*   | 10 min     |
+
+Benefits:
+
+  - Decrease data connection security rule evaluation time
+  - Increase performance
+  - Increase control over data connection governance
+  - Decrease maintenance
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
