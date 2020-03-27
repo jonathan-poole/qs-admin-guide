@@ -8,7 +8,7 @@ parent: Asset Management
 # Analyze/Curate Extensions <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 {:.no_toc}
 
-## Applicable Environments
+## Applicable Environments 
 {:.no_toc}
 - All
 
