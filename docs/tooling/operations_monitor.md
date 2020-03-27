@@ -8,9 +8,11 @@ parent: Tooling Appendix
 # Operations Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|                                                    | Initial |
+|---------------------------------------------------------|---------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 5 Min  |
 
 ## Table of Contents
 {:.no_toc}
