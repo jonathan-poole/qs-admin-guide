@@ -64,7 +64,7 @@ function initSearch() {
         this.field('title', { boost: 200 });
         this.field('content', { boost: 2 });
         this.field('url');
-        this.field('searchTerm');
+        this.field('searchterm');
         this.metadataWhitelist = ['position']
         
         var searchTerm = "";
@@ -86,7 +86,7 @@ function initSearch() {
             title: data[i].title,
             content: data[i].content,
             url: data[i].url,
-            searchTerm: searchTerm
+            searchterm: searchTerm
           });
         }
       });
@@ -183,7 +183,7 @@ function initSearch() {
       var results = index.query(function (query) {
         if (input.startsWith('#'))
         {
-          input = "searchTerm:" + input.substr(1);
+          input = "searchterm:" + input.substr(1);
         }
         var tokens = lunr.tokenizer(input)
         query.term(tokens, {
