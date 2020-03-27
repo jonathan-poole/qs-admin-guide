@@ -15,6 +15,10 @@ nav_order: 2
 |---------------------------------------------------------|---------|-----------|
 | <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 30 Min  | 5 min     |
 
+Benefits:
+
+  - Reduce Maintenance
+  - Increase Performance
 -------------------------
 
 ## Goal
