@@ -8,7 +8,7 @@ parent: Tooling Appendix
 # Cache Warming <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {: .no_toc }
 
-<span class="label dev">development</span><span class="label prod">production</span>
+<span class="label prod">production</span>
 
 |<i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1:30 Hrs  |
 
