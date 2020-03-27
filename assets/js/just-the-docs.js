@@ -64,7 +64,7 @@ function initSearch() {
         this.field('title', { boost: 200 });
         this.field('content', { boost: 2 });
         this.field('url');
-        this.field('searchterm');
+        this.field('searchterm', { boost: 100 });
         this.metadataWhitelist = ['position']
         
         var searchTerm = "";
