@@ -9,9 +9,18 @@ nav_order: 4
 # Remove Unused Private Sheets <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Production (w/ Self-Service Enabled)
+<span class="label dev">development</span><span class="label prod">production w/ self-service</span>
+
+|                                  		          | Initial | Recurring |
+|---------------------------------------------------------|---------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1-2 hr  | 30 min     |
+
+Benefits:
+
+  - Increase performance
+  - Reduce maintenance
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
