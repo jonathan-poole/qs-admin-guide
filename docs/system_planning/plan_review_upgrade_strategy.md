@@ -7,9 +7,7 @@ parent: System Planning
 
 # Plan/Review Upgrade Strategy
 {: .no_toc }
-
 <span class="label all">all</span>
-
 |                                  		                  | Initial | Recurring |
 |---------------------------------------------------------|---------|-----------|
 | <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 20 Min  | 5 min     |
