@@ -9,10 +9,18 @@ nav_order: 1
 # Check for New Streams <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label dev">development</span><span class="label prod">production</span>
 
+|                                  		                    | Initial   | Recurring  |
+|---------------------------------------------------------|-----------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 2 min     | 2 min     |
+
+Benefits:
+
+  - Increase awareness
+  - Increase reaction times
+  
+-------------------------
 ## Goal
 {:.no_toc}
 Checking for new streams and ensuring that stream governance is tightly controlled is an important aspect of Qlik management. If streams are being created regularly, it is a potential sign that the way assets are organized might not be optimal, or potentially that users/LOBs' are trying to go around a certain process. Ideally, very few individuals should have the right to create streams, so it is an important thing to keep an eye on to ensure nothing is out of the ordinary.
