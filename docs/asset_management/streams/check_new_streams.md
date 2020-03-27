@@ -21,6 +21,7 @@ Benefits:
   - Increase reaction times
   
 -------------------------
+
 ## Goal
 {:.no_toc}
 Checking for new streams and ensuring that stream governance is tightly controlled is an important aspect of Qlik management. If streams are being created regularly, it is a potential sign that the way assets are organized might not be optimal, or potentially that users/LOBs' are trying to go around a certain process. Ideally, very few individuals should have the right to create streams, so it is an important thing to keep an eye on to ensure nothing is out of the ordinary.
