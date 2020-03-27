@@ -9,10 +9,18 @@ nav_order: 1
 # Check for New Data Connections <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Development
-- Production
+<span class="label prod">production</span>
+
+|                                  		                  | Initial | Recurring |
+|---------------------------------------------------------|---------|-----------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 5 Min   | 5 min     |
+
+Benefits:
+
+  - Decrease redundancy
+  - Increase awareness
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
