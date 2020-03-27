@@ -10,7 +10,7 @@ parent: Tooling Appendix
 
 <span class="label dev">development</span><span class="label prod">production</span>
 
-|<i class="far fa-clock fa-sm"></i> **Estimated Time**   | 30 Min  |
+|<i class="far fa-clock fa-sm"></i> **Estimated Configuration Time**   | 30 Min  |
 
 ## Table of Contents
 {:.no_toc}
