@@ -8,7 +8,7 @@ nav_order: 2
 
 # Remove/Quarantine Unused Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
-<span class="label dev">DEV</span><span class="label prod">PROD</span>
+<span class="label dev">development</span><span class="label prod">production</span>
 
 ## Top Benefits
 
