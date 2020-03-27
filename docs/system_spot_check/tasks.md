@@ -8,10 +8,18 @@ nav_order: 1
 # Spot-Check: Tasks <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Development
-- Production
+<span class="label prod">production</span>
+
+|                                  		                    | Initial | Recurring  |
+|---------------------------------------------------------|---------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 3 Min   | 3 min      |
+
+Benefits:
+
+  - Improve app availability
+  - Increase awareness
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
