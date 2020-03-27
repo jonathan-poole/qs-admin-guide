@@ -67,7 +67,7 @@ function initSearch() {
         this.metadataWhitelist = ['position']
 
         for (var i in data) {
-          data[i].content = data[i].content.replace(/#monthly/g, "monthlySearchTerm");
+          data[i].content = data[i].content.replace(/#/g, "hashtagSearch");
           this.add({
             id: i,
             title: data[i].title,
@@ -95,7 +95,7 @@ function initSearch() {
     var index = index;
     var docs = data;
     var searchInput = document.querySelector('.js-search-input');
-    searchInput = searchInput.replace(/#monthly/g, "monthlySearchTerm");
+    //searchInput = searchInput.replace(/#monthly/g, "monthlySearchTerm");
     var searchResults = document.querySelector('.js-search-results');
 
     function hideResults() {
