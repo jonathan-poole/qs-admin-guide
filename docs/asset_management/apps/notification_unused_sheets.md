@@ -9,9 +9,19 @@ nav_order: 3
 # Notification of Unused Base/Community Sheets <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Production (w/ Self-Service Enabled)
+<span class="label prod">production</span>
+
+|                                  		                    | Initial    | Recurring |
+|---------------------------------------------------------|------------|-----------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1-2 hrs    | 30 min    |
+
+Benefits:
+
+  - Increase performance
+  - Reduce maintenance
+  - Improve focus
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
