@@ -7,4 +7,16 @@ nav_order: 1
 ---
 
 # Review/Optimize QVD Structures
-Stuff stuff stuff.
+
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|                                  		                    | Initial  | Recurring  |
+|---------------------------------------------------------|----------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1/2 Day  | 1 hr       |
+
+Benefits:
+
+  - Optimize QVD structure
+  - Reduce Maintenance
+  
+-------------------------
