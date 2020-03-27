@@ -64,32 +64,14 @@ function initSearch() {
         this.field('title', { boost: 200 });
         this.field('content', { boost: 2 });
         this.field('url');
-        this.field('searchterm', { boost: 100 });
         this.metadataWhitelist = ['position']
         
-        var searchTerm = "";
         for (var i in data) {
-          if (data[i].content.includes("#daily"))
-          {
-            data[i].searchterm = "daily";
-            searchTerm = "daily";
-          }
-          else if (data[i].content.includes("#weekly"))
-          {
-            data[i].searchterm = "weekly";
-            searchTerm = "weekly";
-          }
-          else if (data[i].content.includes("#monthly"))
-          {
-            data[i].searchterm = "monthly";
-            searchTerm = "monthly";
-          }
           this.add({
             id: i,
             title: data[i].title,
             content: data[i].content,
-            url: data[i].url,
-            searchterm: searchTerm
+            url: data[i].url
           });
         }
       });
@@ -184,10 +166,6 @@ function initSearch() {
       }
       
       var results = index.query(function (query) {
-        if (input.startsWith('#'))
-        {
-          input = "searchterm:" + input.substr(1);
-        }
         var tokens = lunr.tokenizer(input)
         query.term(tokens, {
           boost: 10
