@@ -12,7 +12,7 @@ parent: Tooling Appendix
 
 |                                                    | Initial |
 |---------------------------------------------------------|---------|
-| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 5 Min  |
+| <i class="far fa-clock fa-sm"></i> **Estimated Configuration Time**   | 5 Min  |
 
 ## Table of Contents
 {:.no_toc}
