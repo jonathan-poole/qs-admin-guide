@@ -9,9 +9,18 @@ parent: Security Rules
 # Analyze Security Rules <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>  <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|                                  		                  | Initial   | Recurring  |
+|---------------------------------------------------------|-----------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 30 min    | 10 min     |
+
+Benefits:
+
+  - Decrease security rule evaluation time (increase performance)
+  - Ensure readable/scalable rules
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
