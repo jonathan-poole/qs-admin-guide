@@ -8,10 +8,9 @@ parent: Asset Management
 # Review Pinning/Load Balancing <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {: .no_toc }
 
-| Index                   |                   |
+| Applicable Environments |  Time to complete |
 | ----------------------- | ----------------- |
-| Applicable Environments | Production        |
-| Time to complete        | 20 minutes        |
+| Production              | 1 hour            |
 
 ## Goal
 {:.no_toc}
