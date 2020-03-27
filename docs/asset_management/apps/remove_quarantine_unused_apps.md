@@ -11,11 +11,6 @@ nav_order: 2
 
 <span class="label dev">development</span><span class="label prod">production</span>
 
-**Benefits** 
-
-  - Reduce Maintenance
-  - Increase Performance
-
 |                                  		          | Initial | Recurring |
 |---------------------------------------------------------|---------|-----------|
 | <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 30 Min  | 5 min     |
