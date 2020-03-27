@@ -11,9 +11,9 @@ nav_order: 2
 
 <span class="label prod">production</span>
 
-|                                  		                      | Initial   | Recurring  |
-|-----------------------------------------------------------|-----------|------------|
-| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 2 min     | 2 min      |
+|                                  		                      | Initial    | Recurring   |
+|-----------------------------------------------------------|------------|-------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 20 min     | 10 min      |
 
 Benefits:
 
