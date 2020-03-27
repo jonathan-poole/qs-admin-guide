@@ -9,10 +9,20 @@ nav_order: 3
 # Remove Unused Data Connections <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Development
-- Production
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|                                  		          | Initial   | Recurring  |
+|---------------------------------------------------------|-----------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1/2 day   | 30 min     |
+
+Benefits:
+
+  - Decrease data connection security rule evaluation time (increase performance)
+  - Decrease maintenance
+  - Increase focus
+  - Eliminate redundancy
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
