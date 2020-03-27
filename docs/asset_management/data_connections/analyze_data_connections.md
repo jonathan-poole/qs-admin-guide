@@ -17,10 +17,10 @@ nav_order: 2
 
 Benefits:
 
-  - Decrease data connection security rule evaluation time
-  - Increase performance
-  - Increase control over data connection governance
-  - Decrease maintenance
+  - Map data connections to owners
+  - Track data connection usage
+  - Enable auditing
+  - Allow for elegant data connection deprecation
   
 -------------------------
 
