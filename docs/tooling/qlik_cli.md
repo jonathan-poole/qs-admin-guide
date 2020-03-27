@@ -8,9 +8,9 @@ parent: Tooling Appendix
 # Qlik CLI <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i> 
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|<i class="far fa-clock fa-sm"></i> **Estimated Time**   | 15 Min  |
 
 ## Table of Contents
 {:.no_toc}

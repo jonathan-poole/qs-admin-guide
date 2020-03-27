@@ -8,9 +8,9 @@ parent: Tooling Appendix
 # Data Connection Analyzer <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|<i class="far fa-clock fa-sm"></i> **Estimated Time**   | 15 Min  |
 
 ## Table of Contents
 {:.no_toc}
@@ -24,7 +24,7 @@ parent: Tooling Appendix
 
 The Qlik Sense Data Connection Analyzer is a Qlik application that parses script log files and queries the QRS API, allowing analysis of data connection usage, patterns, age, and cleanliness across a Qlik Sense site. In short, this app will help to run a leaner, more performant, and more easily and holistically governed Qlik Sense site. 
 
-The application is supported by Qlik’s Americas Enterprise Architecture team, and uses only native connections and capabilities of the Qlik platform— making it plug-and-play
+The application is supported by Qlik's Americas Enterprise Architecture team, and uses only native connections and capabilities of the Qlik platform— making it plug-and-play
 
 -------------------------
 

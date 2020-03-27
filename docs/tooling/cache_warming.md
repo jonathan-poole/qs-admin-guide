@@ -8,9 +8,9 @@ parent: Tooling Appendix
 # Cache Warming <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
-- Production
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|<i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1:30 Hrs  |
 
 ## Table of Contents
 {:.no_toc}
@@ -333,7 +333,7 @@ Since configuration of this tool is covered on the tool's [GitHub](https://githu
 - Edit `butler-cw-master\config\production.yaml`
   - Set an appropriate logDirectory
 - If running on one of the members of the Qlik Sense cluster, then proceed to execution
-  - If not, then you’ll need to grab the `client.pem` and `client_key.pem` from `C:\ProgramData\Qlik\Sense\Repository\Exported Certificates\.Local Certificates` on one of the members
+  - If not, then you'll need to grab the `client.pem` and `client_key.pem` from `C:\ProgramData\Qlik\Sense\Repository\Exported Certificates\.Local Certificates` on one of the members
     - You'll also need NodeJS installed on the server
   - Then adjust the `clientCertPath` & `clientCertKeyPath` paths in `production.yaml` to the path where those certificates live
 - Execute in a command prompt:

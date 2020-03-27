@@ -8,9 +8,9 @@ parent: Tooling Appendix
 # Telemetry Dashboard <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
-- All Tiers
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|<i class="far fa-clock fa-sm"></i> **Estimated Time**   | 30 Min  |
 
 ## Table of Contents
 {:.no_toc}
