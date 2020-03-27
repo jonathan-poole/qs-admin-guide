@@ -69,15 +69,15 @@ function initSearch() {
         
         var searchTerm = "";
         for (var i in data) {
-          if (data[i].content.contains("#daily"))
+          if (data[i].content.includes("#daily"))
           {
               searchTerm = "daily";
           }
-          else if (data[i].content.contains("#weekly"))
+          else if (data[i].content.includes("#weekly"))
           {
               searchTerm = "weekly";
           }
-          else if (data[i].content.contains("#monthly"))
+          else if (data[i].content.includes("#monthly"))
           {
               searchTerm = "monthly";
           }
