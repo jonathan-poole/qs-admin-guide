@@ -6,6 +6,22 @@ grand_parent: Asset Management
 nav_order: 2
 ---
 
-# Analyze Tasks
+# Analyze Tasks <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+{:.no_toc}
 
-Stuff stuff stuff.
+## Goal
+{:.no_toc}
+Checking for new tasks regularly helps not only to curate what is necessary (cadence, duplicates, etc), but also allows for you to review your batch window, task concurrencies, and any implications against the Qlik schedulers. The above may influence architectural patterns and dictate the need for reload task pinning.
+
+## Applicable Environments
+{:.no_toc}
+- Production
+
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+-------------------------
+
+## QMC - Tasks <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
