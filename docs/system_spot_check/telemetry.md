@@ -8,9 +8,19 @@ nav_order: 3
 # Review Expensive Objects (Telemetry) <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Production
+<span class="label prod">production</span>
+
+|                                  		                    | Initial  | Recurring  |
+|---------------------------------------------------------|----------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 15 Min   | 8 min      |
+
+Benefits:
+
+  - Optimize objects
+  - Increase performance
+  - Control thresholds
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
