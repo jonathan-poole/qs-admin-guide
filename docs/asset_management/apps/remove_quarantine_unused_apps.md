@@ -8,6 +8,9 @@ nav_order: 2
 
 # Remove/Quarantine Unused Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
+
+-------------------------
+
 <span class="label dev">development</span><span class="label prod">production</span>
 
 |                                  		          | Initial | Recurring |
@@ -15,6 +18,8 @@ nav_order: 2
 | <i class="far fa-clock fa-sm"></i> **Estimated Time** | 30 Min  | 5 min     |
 
 **Benefits:** Reduce Maintenance \| Increase Performance
+
+-------------------------
 
 ## Goal
 {:.no_toc}
