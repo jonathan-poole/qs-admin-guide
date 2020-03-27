@@ -9,9 +9,19 @@ nav_order: 6
 # Analyze App Metadata Analyzer <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label dev">development</span><span class="label prod">production</span>
+
+|                                  		          | Initial | Recurring |
+|---------------------------------------------------------|---------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 45 Min  | 10 min     |
+
+Benefits:
+
+  - Visibility/standardization of data models (e.g., gating mechanism to Prod)
+  - Optimization of data models
+  - Load balancing visibility/validation
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
