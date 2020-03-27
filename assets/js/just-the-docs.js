@@ -95,7 +95,6 @@ function initSearch() {
     var index = index;
     var docs = data;
     var searchInput = document.querySelector('.js-search-input');
-    //searchInput = searchInput.replace(/#monthly/g, "monthlySearchTerm");
     var searchResults = document.querySelector('.js-search-results');
 
     function hideResults() {
@@ -166,6 +165,8 @@ function initSearch() {
       if (input === '') {
         return;
       }
+      
+      input = input.replace(/#/g, "hashtagSearch");
 
       var results = index.query(function (query) {
         var tokens = lunr.tokenizer(input)
