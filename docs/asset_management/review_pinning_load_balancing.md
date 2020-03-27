@@ -8,10 +8,6 @@ parent: Asset Management
 # Review Pinning/Load Balancing <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
-* Production
-
 ## Goal
 {:.no_toc}
 
@@ -26,6 +22,11 @@ By reading through the exercise on this page, the Qlik administrator is expected
 The output of the [Capacity Plan](../system_planning/review_update_capacity_plan.md) should be a good indicator if this capability is necessary.
 
 This guide will cover two specific scenarios (2 and 3) from above and link to coverage of scenario 1 so that the administrator has a template of a few options should they need to implement customized load balancing for their Qlik site.
+
+
+## Applicable Environments
+{:.no_toc}
+* Production
 
 ## Table of Contents
 {:.no_toc}
