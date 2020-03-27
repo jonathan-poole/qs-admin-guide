@@ -8,9 +8,17 @@ parent: System Planning
 # Review Disk Space
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
-- All tiers
+<span class="label all">all</span>
+
+|                                  		                      | Initial     | Recurring  |
+|-----------------------------------------------------------|-------------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 20 min      | 20 min     |
+
+Benefits:
+
+  - Increase stability
+  
+-------------------------
 
 ## Goal
 {:.no_toc}

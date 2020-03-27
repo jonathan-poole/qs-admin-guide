@@ -9,10 +9,19 @@ parent: System Planning
 # Review Architecture/Scale Plan
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
+<span class="label prod">production</span>
 
-- Production 
+|                                  		                    | Initial     | Recurring  |
+|-----------------------------------------------------------|-------------|------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 2-3 hrs     | 1 hr       |
+
+Benefits:
+
+  - Provide documentation
+  - Increase architectural knowledge
+  - Plan for future deployments
+  
+-------------------------
 
 ## Goal
 {:.no_toc}

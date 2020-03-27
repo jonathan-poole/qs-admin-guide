@@ -49,4 +49,4 @@ Leveraging the [App Metadata Analyzer](../../tooling/app_metadata_analyzer.md) e
 
 **Tags**
 
-#weekly
+@weekly
