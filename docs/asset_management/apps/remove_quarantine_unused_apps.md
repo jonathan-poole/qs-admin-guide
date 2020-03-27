@@ -10,7 +10,7 @@ nav_order: 2
 {:.no_toc}
 <span class="label dev">development</span><span class="label prod">production</span>
 
-<i class="fas fa-clock fa-xs"</i>
+<i class="fas fa-clock fa-xs"></i>
 
 |                   | Initial | Recurring |
 |-------------------|---------|-----------|
