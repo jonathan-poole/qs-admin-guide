@@ -49,30 +49,30 @@ Login Access History | Allows the user to select a time period over which to dis
 Allocation History | Displays the latest changes and changes over selected times to the allocation of license tokens to login and user access passes.
 Usage Snapshot | Overview sheet providing snapshot view of license allocation and historical usage.
 Unified Licensing History | Displays the license usage for Qlik Sense and QlikView side by side. ```To see the QlikView license usage, the new monitor_apps_qlikview_logs data connection must point to the folder containing the QlikView Server logs. You update the data connection in the QMC.```
-Log Details | Lists servers in the cluster and provides details about license usage entered in server’s logs.
+Log Details | Lists servers in the cluster and provides details about license usage entered in server's logs.
 
 >Data in the License Monitor is updated when the app is reloaded. Data is not live.
  -------------------------
 
 ## Screenshots
 
-[![qs_license_monitor_01.png](images/qs_license_monitor_01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_01.png)
+[![qs_license_monitor_01.png](images/qs_license_monitor_01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_01.png)
 
-[![qs_license_monitor_02.png](images/qs_license_monitor_02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_02.png)
+[![qs_license_monitor_02.png](images/qs_license_monitor_02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_02.png)
 
-[![qs_license_monitor_03.png](images/qs_license_monitor_03.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_03.png)
+[![qs_license_monitor_03.png](images/qs_license_monitor_03.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_03.png)
 
-[![qs_license_monitor_04.png](images/qs_license_monitor_04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_04.png)
+[![qs_license_monitor_04.png](images/qs_license_monitor_04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_04.png)
 
-[![qs_license_monitor_05.png](images/qs_license_monitor_05.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_05.png)
+[![qs_license_monitor_05.png](images/qs_license_monitor_05.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_05.png)
 
-[![qs_license_monitor_06.png](images/qs_license_monitor_06.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_06.png)
+[![qs_license_monitor_06.png](images/qs_license_monitor_06.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_06.png)
 
-[![qs_license_monitor_07.png](images/qs_license_monitor_07.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_07.png)
+[![qs_license_monitor_07.png](images/qs_license_monitor_07.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_07.png)
 
-[![qs_license_monitor_08.png](images/qs_license_monitor_08.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_08.png)
+[![qs_license_monitor_08.png](images/qs_license_monitor_08.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_08.png)
 
-[![qs_license_monitor_09.png](images/qs_license_monitor_09.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/qs_license_monitor_09.png)
+[![qs_license_monitor_09.png](images/qs_license_monitor_09.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/qs_license_monitor_09.png)
 
 -------------------------
 
