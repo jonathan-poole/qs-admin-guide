@@ -10,7 +10,7 @@ nav_order: 2
 {:.no_toc}
 <span class="label dev">development</span><span class="label prod">production</span>
 
-<i class="fas fa-clock fa-xs"</i> Intial: 30 min | Recurring: 5 min
+<i class="fas fa-clock fa-xs"</i><p>Intial: 30 min | Recurring: 5 min</p>
 
 ## Top Benefits
 
