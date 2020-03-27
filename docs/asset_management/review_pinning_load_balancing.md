@@ -16,7 +16,8 @@ parent: Asset Management
 
 Benefits:
 
-  - Increase Performance
+  - Increase performance
+  - Segregation/isolation of resources
 
 ## Goal
 {:.no_toc}
