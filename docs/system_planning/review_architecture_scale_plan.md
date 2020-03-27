@@ -9,7 +9,7 @@ parent: System Planning
 # Review Architecture/Scale Plan
 {: .no_toc }
 
-<span class="label dev">development</span><span class="label prod">production</span>
+<span class="label prod">production</span>
 
 |                                  		                    | Initial     | Recurring  |
 |-----------------------------------------------------------|-------------|------------|
