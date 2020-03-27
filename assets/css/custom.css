@@ -1,7 +1,9 @@
 .dev {
-    background-color: #17a2b8
+    background-color: #17a2b8;
+    opacity: 0.5;
 }
 
 .prod {
-    background-color: #007bff
+    background-color: #007bff;
+    opacity: 0.5;
 }
