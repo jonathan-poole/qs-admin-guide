@@ -10,8 +10,8 @@ nav_order: 5
 
 <span class="label prod">production</span>
 
-|                                  		                    | Initial | Recurring |
-|---------------------------------------------------------|---------|-----------|
+|                                  		                    | Initial | Recurring  |
+|---------------------------------------------------------|---------|------------|
 | <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 25 Min  | 10 min     |
 
 Benefits:
@@ -92,15 +92,11 @@ The metrics above are valuable for discerning which applications are used the mo
 
 A new chart can be created to easily visualize session usage and users to answer all of the above questions.
 
-Duplicate the _Session Details_ sheet.
-
-**image here**
-
-Clear some real estate on the dashboard to make room for a new chart object.
+Duplicate the _Session Details_ sheet, and clear some real estate on the dashboard to make room for a new chart object.
 
 [![app_adoption_1.png](images/app_adoption_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_1.png)
 
-Drag and drop the _Mekko chart_ (released in **x release**), select _Add dimension_ and insert the **Session App Name** field.
+Drag and drop the _Mekko chart_ (available as of the **November 2019** release), select _Add dimension_ and insert the **Session App Name** field.
 
 [![app_adoption_2.png](images/app_adoption_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_2.png)
 
