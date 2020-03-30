@@ -31,4 +31,4 @@ In the QMC, select **Tasks**:
 
 Find the "Reload License Monitor" Task and check if the status is "Success"
 
-[![Analyze_Audit_License_Allocations_QMC_START_TASKS_Highlighted.png](images/Analyze_Audit_License_Allocations_QMC_START_TASKS_Highlighted.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_START_TASKS_Highlighted.png)
+[![Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_SUCCESS.png](images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_SUCCESS.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_SUCCESS.png)
