@@ -25,13 +25,34 @@ The goal of this activity is to evaluate license growth and needs using the buil
 
 ### Check License Monitor Status <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
+In the HUB, go to the "Monitoring Apps" stream and select the "License Monitor" App to open it
+
+[![Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png](images/Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png)
+
+From App Overview, select the "Overview" sheet
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)
+
+Check the 'reload date' to see if the License Monitor has refreshed today
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png)
+
+If the date is old , then you may be missing the latest license usage data. Skip to "debugging the License Monitor" below. 
+
+If the status is 'Success' skip to 'Analyzing the License Data' 
+<skip ahead>
+
+### Debugging the License Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
+
 In the QMC, select **Tasks**:
 
 [![Analyze_Audit_License_Allocations_QMC_START_TASKS_Highlighted.png](images/Analyze_Audit_License_Allocations_QMC_START_TASKS_Highlighted.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_START_TASKS_Highlighted.png)
 
-Find the "Reload License Monitor" Task and check if the status is "Success"
+Find the "Reload License Monitor" Task and check if the status is "Failed". 
 
 [![Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_SUCCESS.png](images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_SUCCESS.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_SUCCESS.png)
+
+If you did not find the reload license monitor then either its been renamed or deleted. Simply recreate a new reload task. The default interval to refresh is every hour, but it can also be run less frequently. 
 
 If the status is "Failed" then download the script log to see where it might be failing
 
@@ -45,11 +66,11 @@ Also consult help.qlik.com for assistance in configuring the monitoring tools
 
 https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Configure-monitoring-apps.htm
 
-[![Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png](images/Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png)
 
-[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)
+### Analyze License Data <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
-[![Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png)
+
+
 
 
 
