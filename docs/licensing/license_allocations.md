@@ -37,8 +37,12 @@ If the status is "Failed" then download the script log to see where it might be 
 
 [![Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_FAILED.png](images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_FAILED.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_FAILED.png)
 
+SAMPLE error :  in the following example the script log shows a 401 error where a required data connection had the wrong credentials
+
 [![Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_FAILED_Sample.png](images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_FAILED_Sample.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_TASKS_Reload_License_Monitor_FAILED_Sample.png)
 
 Also consult help.qlik.com for assistance in configuring the monitoring tools
+
+https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Configure-monitoring-apps.htm
 
 
