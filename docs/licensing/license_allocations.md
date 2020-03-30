@@ -39,8 +39,9 @@ Check the 'reload date' to see if the License Monitor has refreshed today
 
 If the date is old , then you may be missing the latest license usage data. Skip to "debugging the License Monitor" below. 
 
-If the status is 'Success' skip to 'Analyzing the License Data' 
-<skip ahead>
+If the data is within the last 24 hours then skip ahead to 'Analyzing the License Data' 
+
+
 
 ### Debugging the License Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
@@ -68,6 +69,10 @@ https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdminister
 
 
 ### Analyze License Data <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
+
+Go to the 'Overview' sheet of the Qlik Sense "License Monitor" app
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)
 
 
 
