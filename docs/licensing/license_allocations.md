@@ -45,4 +45,13 @@ Also consult help.qlik.com for assistance in configuring the monitoring tools
 
 https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Configure-monitoring-apps.htm
 
+[![Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png](images/Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_Monitoring_Apps_License_Monitor.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_Overview_Date.png)
+
+
+
+
 
