@@ -140,12 +140,12 @@ The script below will tag any private sheets with the tag _'UnusedPrivateSheet'_
 # Assumes default credentials are used for the Qlik CLI Connection
 
 # machine name
-$computerName = 'machineName'
+$computerName = '<machine-name>'
 # leave empty if windows auth is on default VP
 $virtualProxyPrefix = '/default'
 # set the number of days back for the app created date
 # fully qualified path to excel file with sheet ids
-$inputXlsxPath = 'C:\<your file>.xlsx'
+$inputXlsxPath = 'C:\Users\Qservice.QLIK-POC\Desktop\831833da-b80c-4807-8f31-2978231f1877.xlsx'
 # column number of sheet id column in Excel file
 $sheetIdColumnNumber = '1'
 # the desired name of the tag to tag sheets with - it must exist in the QRS
@@ -200,6 +200,9 @@ Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObj
 # GET desired tag JSON
 $tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
 
+# get the id of the tag
+$tagId = $tagsJson.id
+
 # if the tag exists
 if($tagsJson) {
 
@@ -211,20 +214,39 @@ if($tagsJson) {
 		
 		# if the object exists and is a private sheet
 		if ($sheetObjJson) {
+
+			# set a flag to check if the tag is already assigned to the sheet
+			$tagAlreadyThere = $false
+
+			# get the current tags assigned to sheet, if any
+			$currentTags = $sheetObjJson.tags
+			$currentTags
+
+			# for each tag
+			foreach ($tag in $currentTags) {
+
+				# if the target tag is already there, set the flag to "true"
+				if ($tagId -eq $tag.id) {
+					$tagAlreadyThere = $true
+					break
+				}
+			}
 		
 			# get the sheet name, app id, and app name
 			$sheetObjName = $sheetObjJson.name
 			$sheetObjAppId = $sheetObjJson.app.id
 			$sheetObjAppName = $sheetObjJson.app.name
-			
-			# add the tag to the object JSON
-			$sheetObjJson.tags = @($tagsJson)
-			
-			# convert to JSON for the PUT
-			$sheetObjJson = $sheetObjJson | ConvertTo-Json
-		
-			# PUT the sheet with the new tag
-			Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+
+			# if the tag isn't already there, add it
+			if (!$tagAlreadyThere) {
+				$sheetObjJson.tags += $tagsJson
+
+				# convert to JSON for the PUT
+				$sheetObjJson = $sheetObjJson | ConvertTo-Json
+
+				# PUT the sheet with the new tag
+				Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+			}
 			
 			# write output
 			Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
