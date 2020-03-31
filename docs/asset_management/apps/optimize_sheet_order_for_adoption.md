@@ -81,11 +81,11 @@ Before analyzing the sheet usage data, it is a good practice to select specific 
 
 Open up the **Operations Monitor** application, inside of **Monitoring Apps** stream.
 
-[![optimize_sheet_order_for_adoption01.png](images/optimize_sheet_order_for_adoption01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption01.png)
+[![app_adoption_17.png](images/app_adoption_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_17.png)
 
 Open the **Session Details** sheet.
 
-[![optimize_sheet_order_for_adoption02.png](images/optimize_sheet_order_for_adoption02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption02.png)
+[![session_details.png](images/session_details.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/session_details.png)
 
 In the _App Session Summary_ table, sort the **Sessions** column descending.
 
