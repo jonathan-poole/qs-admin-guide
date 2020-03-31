@@ -24,7 +24,7 @@ Benefits:
 
 ## Goal
 {:.no_toc}
-Checking for new data connections on a regular basis is one of the ways to help curb the amount of connections that exist in your environment. It allows you to spot duplicates ahead of time, track what sources are being used, and catch any potential out-of-process additions. For a much deeper analysis of your data connections, please refer to the [Data Connection Analyzer](../../tooling/data_connection_analyzer.md).
+Checking for new data connections on a regular basis is one of the ways to help curb the amount of connections that exist in the environment. It allows for the ability to spot duplicates ahead of time, track what sources are being used, and catch any potential out-of-process additions. For a much deeper analysis of data connections, please refer to the [Data Connection Analyzer](../../tooling/data_connection_analyzer.md).
 
 ## Table of Contents
 {:.no_toc}
@@ -43,11 +43,11 @@ In the upper right hand side of the screen, select the **Column selector**, and 
 
 [![check_new_data_connections_native_2.png](images/check_new_data_connections_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/data_connections/images/check_new_data_connections_native_2.png)
 
-Now select the filter icon for the **Created** column, and then select the filter of **Today** (or **Last seven days** if you'd like a slightly larger rolling window).
+Now select the filter icon for the **Created** column, and then select the filter of **Last seven days**, or the desired range.
 
 [![check_new_data_connections_native_3.png](images/check_new_data_connections_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/data_connections/images/check_new_data_connections_native_3.png)
 
-Lastly, you can review the resulting table and view any new data connections.
+Lastly, review the resulting table and view any new data connections.
 
 [![check_new_data_connections_native_4.png](images/check_new_data_connections_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/data_connections/images/check_new_data_connections_native_4.png)
 
@@ -57,7 +57,7 @@ Lastly, you can review the resulting table and view any new data connections.
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-The script will bring back any data connection with a **Created Date** that is greater than or equal to x days old. The script will then store the output into the location of your choice in either csv or json format.
+The script will bring back any data connection with a **Created Date** that is greater than or equal to x days old. The script will then store the output into a desired location in either csv or json format.
 
 ### Script
 ```powershell
