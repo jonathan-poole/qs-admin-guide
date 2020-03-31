@@ -56,11 +56,9 @@ This logging must be enabled on _every engine_ that the information is desired f
 
 Open up the **Operations Monitor** application, inside of **Monitoring Apps** stream:
 
-[![optimize_sheet_order_for_adoption01.png](images/optimize_sheet_order_for_adoption01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption01.png) 
+[![app_adoption_17.png](images/app_adoption_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_17.png) 
 
 Navigate to the **Sheet Usage** sheet.
-
-[![notification_unused_sheets_native_1.5.png](images/notification_unused_sheets_native_1.5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_1.5.png)
 
 [![unused_private_sheets_native_1.png](images/unused_private_sheets_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_1.png)
 
