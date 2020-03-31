@@ -118,25 +118,45 @@ The below script assumes that the desired **Tag** has already been created, e.g.
 # Assumes tag exists, such as 'UnusedCommunitySheet'
 # GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = '<machine-name>'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+
+# machine name
+$computerName = 'machineName'
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# set the number of days back for the app created date
+# fully qualified path to excel file with sheet ids
 $inputXlsxPath = 'C:\<your file>.xlsx'
+# column number of sheet id column in Excel file
 $sheetIdColumnNumber = '1'
+# the desired name of the tag to tag sheets with - it must exist in the QRS
 $tagName = 'UnusedCommunitySheet'
+# directory for the output file
 $outFilePath = 'C:\'
+# desired filename of the output file
 $outFileName = 'tagged_community_sheets'
 
-# Main
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($outFilePath + $outFileName + '.csv')
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
+# if the output file already exists, remove it
 if (Test-Path $outFile) 
 {
   Remove-Item $outFile
 }
 
+# function to validate GUIDs
 function Test-IsGuid
 {
 	[OutputType([bool])]
@@ -150,29 +170,59 @@ function Test-IsGuid
 	return $ObjectGuid -match $guidRegex
 }
 
+# import sheet ids from excel
 $data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $sheetIdColumnNumber -EndColumn $($sheetIdColumnNumber + 1)
+
+# validate GUIDs and only use those (handles nulls/choosing wrong column)
 $sheetIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
+
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+
+# add headers to output csv
 Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName')
+
+# GET desired tag JSON
 $tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
+
+# if the tag exists
 if($tagsJson) {
+
+	# for each tag
 	foreach ($sheetId in $sheetIds) {
+	
+		# GET the object, ensuring it is a community sheet
 		$sheetObjJson = Get-QlikObject -filter "published eq true and approved eq false and id eq $sheetId" -full -raw
+		
+		# if the object exists and is a community sheet
 		if ($sheetObjJson) {
+		
+			# get the sheet name, app id, and app name
 			$sheetObjName = $sheetObjJson.name
 			$sheetObjAppId = $sheetObjJson.app.id
 			$sheetObjAppName = $sheetObjJson.app.name
+			
+			# add the tag to the object JSON
 			$sheetObjJson.tags = @($tagsJson)
+			
+			# convert to JSON for the PUT
 			$sheetObjJson = $sheetObjJson | ConvertTo-Json
 		
+			# PUT the sheet with the new tag
 			Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+			
+			# write output
 			Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
 		}
+		
+		# the sheet is not a community sheet
 		else {
-			$sheetId + ' is not a private sheet. Skipping.'
+			$sheetId + ' is not a community sheet. Skipping.'
 		}
 	}
 }
+
+# the tag doesn't exist
 else {
 	"Tag: '" + $tagName + "' doesn't exist. Please create it in the QMC."
 }
