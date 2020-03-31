@@ -57,7 +57,25 @@ This logging must be enabled on _every engine_ that the information is desired f
 
 -------------------------
 
-## Operations Monitor - Select Applications with Higher or Lower Quantity of Sessions  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+## Operations Monitor
+
+This page leverages the **Operations Monitor**. Please refer to the [Operations Monitor](../../tooling/operations_monitor.md) page for an overview and relevant documentation links.
+
+### Confirm License Monitor is Operational
+
+Navigate to the **Monitoring apps** stream and open up the **Operations Monitor** application.
+
+[![app_adoption_17.png](images/app_adoption_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_17.png)
+
+First and foremost, it is essential to confirm that the **Operations Monitor** is operational and up to date. Ensure that it is by selecting the _Show app information_ button, and then viewing the _Data last loaded_ section of the application's description. Alternatively, one could also check the task status in the QMC.
+
+[![app_adoption_18.png](images/app_adoption_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_18.png)
+
+If the **Operations Monitor** is not properly configured, please refer to the [Operations Monitor Documentation](../../tooling/operations_monitor.md#documentation).
+
+-------------------------
+
+## Select Applications with Higher or Lower Quantity of Sessions  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 Before we check the Sheets usage data, it is a good practice to select specific applications to analyze, we recommend you start with the 5 top applications with the higher (to improve more used applications) or lower (to improve applications adoption) quantity of sessions.
 
@@ -79,7 +97,7 @@ You can now select the applications that you want to analyze the sheet usage by 
 
 -----------------------
 
-## Operations Monitor - Analyze Aplication Sheet Adopion  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+## Analyze Aplication Sheet Adopion  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
 After selecting some applications in the previous step, we should now get the sheets usage data to help us in the sheet optimization process.
 
@@ -114,7 +132,7 @@ This process should be repeated for 5 selected applications that you previously 
 
 -------------------------
 
-## Reorder Application Sheet
+## Reorder Application Sheets
 
 Before reordering the sheets we need to analyze the sheet's logical flow and combined with the sheets usage data that we got from the previous step.
 
