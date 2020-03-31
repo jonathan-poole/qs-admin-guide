@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 # NPM
 
 If Qlik Sense Server is installed, which means that the Node.js standalone installer has *not* been downloaded, NPM will need to be downloaded and installed. If the Node.js installer has already been run, this process can be skipped.
