@@ -30,7 +30,7 @@ Leveraging the [App Metadata Analyzer](../../tooling/app_metadata_analyzer.md) e
   - Visibility into what apps have synthetic keys, data islands, and circular references.
   - Understanding of application's base RAM footprints--which allows for sizing/load balancing considerations.
   - Indicators of what fields could be dropped/optimized by clearly displaying their size/proportion of the application.
-  - Ability to apply thresholds at the appliaction level such as: total records, total number of fields, total number of tables, disk size, etc -- allowing you to employ gating-like mechanisms to ensure data modeling standards and best practices across the site.
+  - Ability to apply thresholds at the appliaction level such as: total records, total number of fields, total number of tables, disk size, etc -- allowing one to employ gating-like mechanisms to ensure data modeling standards and best practices across the site.
 
 ## Table of Contents
 {:.no_toc}
