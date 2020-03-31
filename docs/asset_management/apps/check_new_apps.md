@@ -23,7 +23,7 @@ Benefits:
 
 ## Goal
 {:.no_toc}
-While the idea of simply checking for new applications seems relatively trivial and not particularly actionable, it is a good practice as it only takes a couple of minutes and could save you finding out about a very large app in a more unpleasant fashion (i.e. your engine node locking up). This page shows you three methods of visualizing/gathering that high-level application data on newly created applications so that you can be aware/potentially report on it.
+While the idea of simply checking for new applications seems relatively trivial and not particularly actionable, it is a good practice as it only takes a couple of minutes and can increase reaction times to the presence of large applications. This page illustrates three methods of visualizing/gathering that high-level application data on newly created applications, so that the administrator can be aware/potentially report on it.
 
 ## Table of Contents
 {:.no_toc}
@@ -38,23 +38,41 @@ In the QMC, select **Apps**:
 
 [![check_new_apps_native_1.png](images/check_new_apps_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_1.png)
 
-In the upper right hand side of the screen, select the **Column selector**, and then select the **File size (MB)** and **Created** columns. If you'd like to make the resulting table a bit more manageable, you can also optionally deselect additional columns like **Version** and **Tags**.
+In the upper right hand side of the screen, select the **Column selector**, and then select the **File size (MB)** and **Created** columns. To make the resulting table a bit more manageable, optionally deselect additional columns like **Version** and **Tags**.
 
 [![check_new_apps_native_2.png](images/check_new_apps_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_2.png)
 
-Now select the filter icon for the **Created** column, and then select the filter of **Today** (or **Last seven days** if you'd like a slightly larger rolling window).
+Now select the filter icon for the **Created** column, and then select the filter of **Last seven days**, or the desired range.
 
 [![check_new_apps_native_3.png](images/check_new_apps_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_3.png)
 
-Lastly, you can review the resulting table and view any new apps, noting their file sizes. If any are particularly large, it might be worthwhile to follow-up with the owner of the application, and possibly do further analysis in with the App Metadata Analyzer.
+Lastly, one can review the resulting table and view any new apps, noting their file sizes. If any are particularly large, it might be worthwhile to follow-up with the owner of the application, and possibly do further analysis in with the App Metadata Analyzer.
 
 [![check_new_apps_native_4.png](images/check_new_apps_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_4.png)
 
 -------------------------
 
+## Operations Monitor
+
+The following section leverages the **Operations Monitor**. Please refer to the [Operations Monitor](../../tooling/operations_monitor.md) page for an overview and relevant documentation links.
+
+### Confirm License Monitor is Operational
+
+Navigate to the **Monitoring apps** stream and open up the **Operations Monitor** application.
+
+[![app_adoption_17.png](images/app_adoption_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_17.png)
+
+First and foremost, it is essential to confirm that the **Operations Monitor** is operational and up to date. Ensure that it is by selecting the _Show app information_ button, and then viewing the _Data last loaded_ section of the application's description. Alternatively, one could also check the task status in the QMC.
+
+[![app_adoption_18.png](images/app_adoption_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_18.png)
+
+If the **Operations Monitor** is not properly configured, please refer to the [Operations Monitor Documentation](../../tooling/operations_monitor.md#documentation).
+
+-------------------------
+
 ## Hub - Operations Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-Open up the Hub and navigate to your **Monitoring apps** stream. Select the **Operations Monitor** application.
+Open up the Hub and navigate to the **Monitoring apps** stream. Select the **Operations Monitor** application.
 
 [![check_new_apps_native_2_1.png](images/check_new_apps_native_2_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_2_1.png)
 
@@ -62,7 +80,7 @@ From the **App overview** page, select the **Apps** sheet.
 
 [![check_new_apps_native_2_2.png](images/check_new_apps_native_2_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_2_2.png)
 
-Select **Duplicate**, as we are going to add a column that isn't currently in a table.
+Select **Duplicate**, as a column will be added that isn't currently in a table.
 
 [![check_new_apps_native_2_3.png](images/check_new_apps_native_2_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_2_3.png)
 
@@ -70,7 +88,7 @@ In **Edit** mode, select the **App Details** table, and add the **App Created Da
 
 [![check_new_apps_native_2_4.png](images/check_new_apps_native_2_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_2_4.png)
 
-You can now sort by that column to view new apps. In addition, feel free to add the **App File Size** field as well to filter by large applications only.
+It is now possible to sort by that column to view new apps. In addition, feel free to add the **App File Size** field as well to filter by large applications only.
 
 [![check_new_apps_native_2_5.png](images/check_new_apps_native_2_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_apps_native_2_5.png)
 
@@ -80,7 +98,7 @@ You can now sort by that column to view new apps. In addition, feel free to add 
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-The script will bring back any application that is greater than or equal to x days old _and_ greater than or equal to z bytes. The script will then store the output into the location of your choice in either csv or json format.
+The script will bring back any application that is greater than or equal to x days old _and_ greater than or equal to z bytes. The script will then store the output into a desired location in either csv or json format.
 
 ### Script
 ```powershell
