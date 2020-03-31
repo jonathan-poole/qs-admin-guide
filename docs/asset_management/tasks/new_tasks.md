@@ -43,11 +43,11 @@ In the upper right hand side of the screen, select the **Column selector**, and 
 
 [![check_tasks_native_2.png](images/check_tasks_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_2.png)
 
-Now select the filter icon for the **Created** column, and then select the filter of **Today** (or **Last seven days** if you'd like a slightly larger rolling window).
+Now select the filter icon for the **Created** column, and then select the filter of **Last seven days**, or the desired range.
 
 [![check_tasks_native_3.png](images/check_tasks_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_3.png)
 
-Lastly, you can review the resulting table and view any new tasks.
+Lastly, review the resulting table and view any new tasks.
 
 [![check_tasks_native_4.png](images/check_tasks_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_4.png)
 
@@ -55,7 +55,7 @@ Lastly, you can review the resulting table and view any new tasks.
 
 ## Hub - Operations Monitor <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-Open up the Hub and navigate to your **Monitoring apps** stream. Select the **Operations Monitor** application.
+Open up the Hub and navigate to **Monitoring apps** stream. Select the **Operations Monitor** application.
 
 [![check_tasks_native_1_1.png](images/check_tasks_native_1_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_1.png)
 
@@ -63,21 +63,21 @@ From the **App overview** page, select the **Task Details** sheet.
 
 [![check_tasks_native_1_2.png](images/check_tasks_native_1_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_2.png)
 
-Select **Duplicate**, as we are going to add a column that isn't currently in a table.
+Select **Duplicate**, as wa column will be added that isn't currently in a table.
 
 [![check_tasks_native_1_3.png](images/check_tasks_native_1_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_3.png)
 
-In **Edit** mode, select the **Reload Summary Statistics** table and shrink it to allow for more real estate, as we will be adding another table.
+In **Edit** mode, select the **Reload Summary Statistics** table and shrink it to allow for more real estate, as another table will be added.
 
 Drag in a new table object, and add the dimension of **Task Name**.
 
 [![check_tasks_native_1_4.png](images/check_tasks_native_1_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_4.png)
 
-Now we also need to add the **Task Created** dimension to that table. Note that reloads from the Hub and manual reloads will not show a created date.
+Next, the **Task Created** dimension needs to be added to that table. Note that reloads from the Hub and manual reloads will not show a created date.
 
 [![check_tasks_native_1_5.png](images/check_tasks_native_1_5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_5.png)
 
-You can now sort by that **Task Created** column to view new tasks.
+It is now possible to sort by the **Task Created** column to view new tasks.
 
 [![check_tasks_native_1_6.png](images/check_tasks_native_1_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/tasks/images/check_tasks_native_1_6.png)
 
@@ -90,7 +90,7 @@ For deeper analysis into tasks, refer to [Analyze Tasks](analyze_tasks.md)
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-The script will bring back any reload tasks with a **Created Date** that is greater than or equal to x days old. The script will then store the output into the location of your choice in either csv or json format.
+The script will bring back any reload tasks with a **Created Date** that is greater than or equal to x days old. The script will then store the output into a desired location in either csv or json format.
 
 ### Script
 ```powershell
