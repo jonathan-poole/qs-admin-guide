@@ -98,31 +98,84 @@ In addition to the above, it is entirely possible that users aren't leveraging s
 
 -------------------------
 
-## Bulk Base/Community Sheet Removal <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
+## Bulk Community Sheet Removal <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-**When possible, one should always remove base and community sheets manually, leaving that responsibility to the owner of the applications. That being said, if there are potentially thousands of sheets that need to be removed, and this is the first time the organization is starting this management process, it is possible to programmatically remove these assets. This would generally be a one-time operation, as it is suggested to do this process monthly, which should be able to be maintained incrementally.**
+**Base sheets should never be removed programmatically.**
 
-The script below will tag any base or community sheets with the tag _'UnusedBaseOrCommunitySheet'_. It expects a csv file as an input, where the name of the column with the **Sheet Id** is specified.
+**When possible, one should always remove community sheets manually, leaving that responsibility to the owner of the applications. That being said, if there are potentially thousands of community sheets that need to be removed, and this is the first time the organization is starting this management process, it is possible to programmatically remove these assets. This would generally be a one-time operation, as it is suggested to do this process monthly, which should be able to be maintained incrementally.**
 
-### Script to Tag Unused Base/Community Sheets
-```powershell
+The script below will tag any community sheets with the tag _'UnusedCommunitySheet'_. It expects a csv file as an input, where the name of the column with the **Sheet Id** is specified.
 
-<insert awesome rad script here>
-```
+The below script assumes that the desired **Tag** has already been created, e.g. `UnusedCommunitySheet`.
 
-Once the script has been run above, and a review of the tagging has been confirmed as correct, the script below can be run to **permanently delete** these base/community sheets. **This process cannot be reversed.**
-
--------------------------
-
-### Script to Delete Tagged Sheets
-
-**It is highly recommended to _backup your site and applications_ before considering taking the approach of programmatic sheet removal. This process cannot be reversed. The sheet pointers are stored in the repository database, and the sheets reside within the qvfs themselves.**
+### Script to Tag Unused Community Sheets
 
 ```powershell
+# Function to tag community sheet ids from excel and tag them
+# Assumes the ImportExcel module: `Install-Module -Name ImportExcel`
+# Assumes tag exists, such as 'UnusedCommunitySheet'
+# GUID validation code referenced from: https://pscustomobject.github.io/powershell/functions/PowerShell-Validate-Guid-copy/
 
-<insert awesome rad script here>
+# Parameters
+# Assumes default credentials are used for the Qlik CLI Connection
+$computerName = '<machine-name>'
+$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+$inputXlsxPath = 'C:\<your file>.xlsx'
+$sheetIdColumnNumber = '1'
+$tagName = 'UnusedCommunitySheet'
+$outFilePath = 'C:\'
+$outFileName = 'tagged_community_sheets'
+
+# Main
+$outFile = ($outFilePath + $outFileName + '.csv')
+$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+function Test-IsGuid
+{
+	[OutputType([bool])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[string]$ObjectGuid
+	)
+	
+	[regex]$guidRegex = '(?im)^[{(]?[0-9A-F]{8}[-]?(?:[0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?$'
+	return $ObjectGuid -match $guidRegex
+}
+
+$data = Import-Excel $inputXlsxPath -DataOnly -StartColumn $sheetIdColumnNumber -EndColumn $($sheetIdColumnNumber + 1)
+$sheetIds = $data | foreach { $_.psobject.Properties } | where Value -is string | foreach { If(Test-IsGuid -ObjectGuid $_.Value) {$_.Value} }
+Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
+Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName')
+$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
+if($tagsJson) {
+	foreach ($sheetId in $sheetIds) {
+		$sheetObjJson = Get-QlikObject -filter "published eq true and approved eq false and id eq $sheetId" -full -raw
+		if ($sheetObjJson) {
+			$sheetObjName = $sheetObjJson.name
+			$sheetObjAppId = $sheetObjJson.app.id
+			$sheetObjAppName = $sheetObjJson.app.name
+			$sheetObjJson.tags = @($tagsJson)
+			$sheetObjJson = $sheetObjJson | ConvertTo-Json
+		
+			Invoke-QlikPut -path /qrs/app/object/$sheetId -body $sheetObjJson
+			Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetId + ',' + $sheetObjAppId + ',' + $sheetObjAppName)
+		}
+		else {
+			$sheetId + ' is not a private sheet. Skipping.'
+		}
+	}
+}
+else {
+	"Tag: '" + $tagName + "' doesn't exist. Please create it in the QMC."
+}
 ```
 
 **Tags**
