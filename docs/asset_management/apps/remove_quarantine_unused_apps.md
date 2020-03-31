@@ -31,11 +31,27 @@ The goal of this procedure is to remove unnecessary (unused) applications from a
 
 * TOC
 {:toc}
--------------------------		
+-------------------------
+
+## Operations Monitor
+
+This page leverages the **Operations Monitor**. Please refer to the [Operations Monitor](../../tooling/operations_monitor.md) page for an overview and relevant documentation links.
+
+### Confirm License Monitor is Operational
+
+Navigate to the **Monitoring apps** stream and open up the **Operations Monitor** application.
+
+[![app_adoption_17.png](images/app_adoption_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_17.png)
+
+First and foremost, it is essential to confirm that the **Operations Monitor** is operational and up to date. Ensure that it is by selecting the _Show app information_ button, and then viewing the _Data last loaded_ section of the application's description. Alternatively, one could also check the task status in the QMC.
+
+[![app_adoption_18.png](images/app_adoption_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_18.png)
+
+If the **Operations Monitor** is not properly configured, please refer to the [Operations Monitor Documentation](../../tooling/operations_monitor.md#documentation).
+
+-------------------------
 
 ## Process
-
-This task leverages the Operations Monitor application. The assumption is that the application is currently being reloaded each day. If there are issues with this reload or the application settings, please refer to the [Operations Monitor - Help Site](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Administer_QSEoW/Monitoring_QSEoW/Operations-monitor-app.htm) page for descriptions and troubleshooting of the app. 
 
 1. Open the Operations Monitor App
 2. Select the "Apps" sheet
