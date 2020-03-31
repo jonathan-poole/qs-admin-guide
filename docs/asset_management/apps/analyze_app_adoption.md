@@ -60,6 +60,8 @@ First and foremost, it is essential to confirm that the **Operations Monitor** i
 
 [![app_adoption_18.png](images/app_adoption_18.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_18.png)
 
+If the **Operations Monitor** is not properly configured, please refer to the [Operations Monitor Documentation](../../tooling/operations_monitor.md#documentation).
+
 ## User & Session Metrics
 
 Select the _Session Details_ sheet.
