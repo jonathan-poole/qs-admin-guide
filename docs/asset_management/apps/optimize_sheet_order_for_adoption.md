@@ -25,7 +25,7 @@ Benefits:
 ## Goal
 {:.no_toc}
 
-This page can support both the administrator and the application owner in optimizing application the order of sheets, supported by usage data. 
+This supports both the administrator and the application owner in optimizing application the order of sheets, supported by usage data. 
 
 When an application is developed, the sheets are ordered in a logical flow (Ex: [DAR methodology](https://community.qlik.com/t5/Qlik-Design-Blog/DAR-methodology/ba-p/1466733), a methodology that suggests flowing data from high-level down to the detail. When considering re-ordering sheets, ensure that this methodology isn't lost if already in place.
 
