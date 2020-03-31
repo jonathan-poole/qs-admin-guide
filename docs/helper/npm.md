@@ -10,10 +10,10 @@ If Qlik Sense Server is installed, which means that the Node.js standalone insta
 
 First, the latest version of NPM must be downloaded from [here](https://github.com/npm/npm/releases). The release tagged **Latest release** with a green tag is the likely the desired version. Scroll down to **Downloads** and click on **Source code (zip)**.
 
-1 - Once the source code has been downloaded, unzip the file and navigate into the `npm-<version>/bin` folder.  
-2 - **Copy** the three npm files (`npm`, `npm.cmd`, nad `npm-cli.js`) in to `C:\Program Files\Qlik\Sense\ServiceDispatcher\Node`.  
-3 - Create a folder called `node_modules` in `C:\Program Files\Qlik\Sense\ServiceDispatcher\Node`. Admin rights are required.  
-4 - Rename the downloaded and extracted `npm-<version>` folder to `npm`, then **move** the entire `npm` folder into `node_modules`. The end result should be: `C:\Program Files\Qlik\Sense\ServiceDispatcher\Node\node_modules\npm\`. The npm folder should have all the root files from the downloaded source.  
+1. Once the source code has been downloaded, unzip the file and navigate into the `npm-<version>/bin` folder.  
+2. **Copy** the three npm files (`npm`, `npm.cmd`, nad `npm-cli.js`) in to `C:\Program Files\Qlik\Sense\ServiceDispatcher\Node`.  
+3. Create a folder called `node_modules` in `C:\Program Files\Qlik\Sense\ServiceDispatcher\Node`. Admin rights are required.  
+4. Rename the downloaded and extracted `npm-<version>` folder to `npm`, then **move** the entire `npm` folder into `node_modules`. The end result should be: `C:\Program Files\Qlik\Sense\ServiceDispatcher\Node\node_modules\npm\`. The npm folder should have all the root files from the downloaded source.  
 
 Following, add the `Node` folder to the Windows _Path_.
 
