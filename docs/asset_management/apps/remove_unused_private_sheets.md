@@ -201,40 +201,15 @@ Once the script has been run above, and a review of the tagging has been confirm
 
 **It is highly recommended to _backup your site and applications_ before considering taking the approach of programmatic sheet removal. This process cannot be reversed. The sheet pointers are stored in the repository database, and the sheets reside within the qvfs themselves.**
 
-```powershell
-# Function to remove any sheets with a specific tag
-# Assumes tag exists, such as 'UnusedPrivateSheet'
+In order to completely remove sheets from both an application and the repository database, the [Qlik Engine JSON API](https://help.qlik.com/en-US/sense-developer/February2020/Subsystems/EngineAPI/Content/Sense_EngineAPI/introducing-engine-API.htm) must be used. To work with this API, the sample script leverages [Enigma.js](https://help.qlik.com/en-US/sense-developer/February2020/Subsystems/APIs/Content/Sense_ClientAPIs/enigmajs/enigmajs-introduction.htm).
 
-# Parameters
-# Assumes default credentials are used for the Qlik CLI Connection
-$computerName = '<machine-name>'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$tagName = 'UnusedPrivateSheet'
-$outFilePath = 'C:\'
-$outFileName = 'removed_sheets'
+_Note that if it is attempted to use the QRS API to remove sheets instead of the Engine API, only the "pointers" to those sheets will be removed from the repository database--the sheet information itself stored inside of the qvf will not be removed. This is why the Engine API must be leveraged for programmatic deletion, as it purges both._
 
-# Main
-$outFile = ($outFilePath + $outFileName + '.csv')
-$computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
-
-if (Test-Path $outFile) 
-{
-  Remove-Item $outFile
-}
-
-Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
-Add-Content -Path $outFile -Value $('SheetObjectName,SheetObjectSheetId,SheetObjectAppId,SheetObjectAppName,SheetOwnerId')
-$tagsJson = Get-QlikTag -filter "name eq '$tagName'" -raw
-$sheetsToDelete = Get-QlikObject -filter "tags.name eq '$tagName'" -full -raw
-
-foreach ($sheet in $sheetsToDelete) {
-	$sheetObjId = $sheet.id
-	$sheetObjName = $sheet.name
-	$sheetObjAppId = $sheet.app.id
-	$sheetObjAppName = $sheet.app.name
-	$sheetObjOwnerId = $sheet.owner.id
-	Add-Content -Path $outFile -Value $($sheetObjName + ',' + $sheetObjId + ',' + $sheetObjAppId + ',' + $sheetObjAppName + ',' + $sheetObjOwnerId)
-}
-
-$sheetsToDelete | Remove-QlikObject
-```
+1. Download the following files from [here](https://github.com/qs-admin-guide/qs-admin-guide/tree/master/scripts/remove_tagged_private_sheets) and place them in a desired folder.
+  - `remove_tagged_private_sheets.js`
+  - `package.json`
+2. Refer to the following page regarding NPM configuration, which is required to run the script. In short, if the script is being run on a server with Qlik Sense Enterprise running on it, the instance of NodeJS that is installed with Qlik can be leveraged with little effort: [NPM Configuration](remove_tagged_private_sheets/npm.md)
+3. Ensure both `npm` and `node` are in the _Path_. Refer to step 2 above.
+4. Open a cmd prompt, and navigate to the folder from step 1.
+5. Enter `npm install`
+6. To execute the program, enter `node remove_tagged_private_sheets.js`
