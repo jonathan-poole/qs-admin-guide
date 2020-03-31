@@ -54,13 +54,17 @@ This logging must be enabled on _every engine_ that the information is desired f
 
 ## Identification of Unused Private Sheets
 
-Open up the **Operations Monitor**, and navigate to the **Sheet Usage** sheet.
+Open **Operations Monitor**, inside of **Monitoring Apps** stream:
 
-[![unused_private_sheets_native_1.5.png](images/unused_private_sheets_native_1.5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_1.5.png)
+[![optimize_sheet_order_for_adoption01.png](images/optimize_sheet_order_for_adoption01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption01.png) 
+
+Navigate to the **Sheet Usage** sheet.
+
+[![notification_unused_sheets_native_1.5.png](images/notification_unused_sheets_native_1.5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/notification_unused_sheets_native_1.5.png)
 
 [![unused_private_sheets_native_1.png](images/unused_private_sheets_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_1.png)
 
-We now want to sort by **Unused Private Sheets** descending.
+Sort by **Unused Private Sheets** descending.
 
 [![unused_private_sheets_native_2.png](images/unused_private_sheets_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_2.png)
 
