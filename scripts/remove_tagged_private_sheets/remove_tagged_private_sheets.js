@@ -28,6 +28,10 @@ const ca = fs.readFileSync(certificatesPath + 'root.pem');
 const cert = fs.readFileSync(certificatesPath + 'client.pem');
 const key = fs.readFileSync(certificatesPath + 'client_key.pem');
 
+var dateObject = new Date();
+var outputFilePath = "output-" + dateObject.toISOString() + ".csv";
+var logFilePath = "log-" + dateObject.toISOString() + ".txt";
+
 var defaultHeaders = {
     'X-Qlik-User': userHeader,
     'Content-Type': 'application/json',
@@ -79,8 +83,8 @@ function createDictionary(listOfSheets) {
 
 function removeSheet(doc, appId, sheetList) {
     var sheetId = sheetList.pop();
-    fs.appendFileSync("output.csv", appId + ',' + sheetId + '\n');
-    fs.appendFileSync("log.txt", "Removing sheet '" + sheetId + "' from app '" + appId + "'.\n");
+    fs.appendFileSync(outputFilePath, appId + ',' + sheetId + '\n');
+    fs.appendFileSync(logFilePath, "Removing sheet '" + sheetId + "' from app '" + appId + "'.\n");
     return doc.destroyObject(sheetId).then(() => {
         if (sheetList.length == 0) {
             return;
@@ -94,23 +98,23 @@ async function doEngineWork(appSheetsDictionary) {
     var session = createSession();
     for (var app in appSheetsDictionary) {
         await session.open().then((global) => {
-            fs.appendFileSync("log.txt", "Session opened, connecting to app '" + app + "'.\n");
+            fs.appendFileSync(logFilePath, "Session opened, connecting to app '" + app + "'.\n");
             return global.openDoc(app, "", "", "", true).then((doc) => {
-                fs.appendFileSync("log.txt", "Opened the app.\n");
+                fs.appendFileSync(logFilePath, "Opened the app.\n");
                 return removeSheet(doc, app, appSheetsDictionary[app]);
             });
         }).then(() => {
             session.close();
-            fs.appendFileSync("log.txt", "Session closed.\n");
+            fs.appendFileSync(logFilePath, "Session closed.\n");
         }).catch((err) => {
-            fs.appendFileSync("log.txt", "Error opening session: " + err + '\n');
+            fs.appendFileSync(logFilePath, "Error opening session: " + err + '\n');
         });
     }
-    fs.appendFileSync("log.txt", "Done.");
+    fs.appendFileSync(logFilePath, "Done.");
 };
 
-fs.writeFileSync("output.csv", "appId, sheetId\n");
-fs.writeFileSync("log.txt", "Preparing to remove any private sheet with tag '" + TAG_TO_SEARCH_FOR + "'.\n");
+fs.writeFileSync(outputFilePath, "appId, sheetId\n");
+fs.writeFileSync(logFilePath, "Preparing to remove any private sheet with tag '" + TAG_TO_SEARCH_FOR + "'.\n");
 
 try {
     requestParams['method'] = 'GET';
@@ -119,7 +123,7 @@ try {
         var responseString = "";
         var statusCode = res.statusCode;
         res.on('error', function(err) {
-            fs.appendFileSync("log.txt", "Error performing sheet request: " + err + '\n');
+            fs.appendFileSync(logFilePath, "Error performing sheet request: " + err + '\n');
         });
         res.on('data', function(data) {
             responseString += data;
@@ -131,17 +135,17 @@ try {
                     var dictionary = createDictionary(jsonBody);
                     doEngineWork(dictionary);
                 } else {
-                    fs.appendFileSync("log.txt", "No private sheets with tag '" + TAG_TO_SEARCH_FOR + "' found.\nDone.\n");
+                    fs.appendFileSync(logFilePath, "No private sheets with tag '" + TAG_TO_SEARCH_FOR + "' found.\nDone.\n");
                     return;
                 }
             } else {
-                fs.appendFileSync("log.txt", "Error finding sheets, invalid status code returned - Status code returned was: " + statusCode + '.\n');
+                fs.appendFileSync(logFilePath, "Error finding sheets, invalid status code returned - Status code returned was: " + statusCode + '.\n');
             }
         });
     }).on('error', function(requestError) {
-        fs.appendFileSync("log.txt", "Error connecting to server '" + host + "'.\n");
+        fs.appendFileSync(logFilePath, "Error connecting to server '" + host + "'.\n");
     });
     req.end();
 } catch (e) {
-    fs.appendFileSync("log.txt", "Error connecting to server '" + host + "'.\n");
+    fs.appendFileSync(logFilePath, "Error connecting to server '" + host + "'.\n");
 }
