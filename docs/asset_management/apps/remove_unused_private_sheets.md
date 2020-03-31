@@ -54,7 +54,9 @@ This logging must be enabled on _every engine_ that the information is desired f
 
 ## Identification of Unused Private Sheets
 
-This usage information is then surfaced inside of the **Operations Monitor** on the **Sheet Usage** sheet.
+Open up the **Operations Monitor**, and navigate to the **Sheet Usage** sheet.
+
+[![unused_private_sheets_native_1.5.png](images/unused_private_sheets_native_1.5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_1.5.png)
 
 [![unused_private_sheets_native_1.png](images/unused_private_sheets_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_1.png)
 
@@ -62,7 +64,7 @@ We now want to sort by **Unused Private Sheets** descending.
 
 [![unused_private_sheets_native_2.png](images/unused_private_sheets_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/unused_private_sheets_native_2.png)
 
-Now ideally, any unused applications should be removed **_before_** this sheet pruning activity. This will allow for bulk removal of those private sheets as the _entire_ app has been identified as unused. In this example, we just want to remove private sheets from _published_ applications that are _used_. Ensure that [Remove/Quarantine Unused Apps](remove_quarantine_unused_apps.md) has been followed first.
+Now ideally, any unused applications should be removed _before_ this sheet pruning activity. This will allow for bulk removal of those private sheets as the _entire_ app has been identified as unused. This example is intended to only remove private sheets from _published_ applications that are _used_. Ensure that [Remove/Quarantine Unused Apps](remove_quarantine_unused_apps.md) has been followed first.
 
 From the **App Stream** column, select _Unpublished_, and then select _Select alternative_ so that all streams are selected (all _published_ applications). Ensure that if a _Quarantine_ stream exists, that it is also deselected -- as there is no need to prune applications that are already marked for potential removal.
 
