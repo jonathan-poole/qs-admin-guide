@@ -125,12 +125,12 @@ The below script assumes that the desired **Tag** has already been created, e.g.
 # Assumes default credentials are used for the Qlik CLI Connection
 
 # machine name
-$computerName = 'us-ea-hybrid-qs'
+$computerName = '<machine-name>'
 # leave empty if windows auth is on default VP
 $virtualProxyPrefix = '/default'
 # set the number of days back for the app created date
 # fully qualified path to excel file with sheet ids
-$inputXlsxPath = 'C:\Users\Qservice.QLIK-POC\Desktop\831833da-b80c-4807-8f31-2978231f1877.xlsx'
+$inputXlsxPath = '<absolute file path>/<filename>.xlsx'
 # column number of sheet id column in Excel file
 $sheetIdColumnNumber = '1'
 # the desired name of the tag to tag sheets with - it must exist in the QRS
