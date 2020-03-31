@@ -64,6 +64,10 @@ If the **Operations Monitor** is not properly configured, please refer to the [O
 
 ## User & Session Metrics
 
+Navigate to the **Monitoring apps** stream and open up the **Operations Monitor** application.
+
+[![app_adoption_17.png](images/app_adoption_17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_17.png)
+
 Select the _Session Details_ sheet.
 
 [![app_adoption_19.png](images/app_adoption_19.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_19.png)
