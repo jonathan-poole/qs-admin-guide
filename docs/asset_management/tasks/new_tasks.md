@@ -94,82 +94,51 @@ The script will bring back any reload tasks with a **Created Date** that is grea
 
 ### Script
 ```powershell
-# Function to collect reload tasks that were created in the last x days
+# Function to collect tasks that were created within the last x days
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'machineName'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$daysBack = 1
+
+# machine name
+$computerName = '<machine-name>'
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# set the number of days back for the app created date
+$daysBack = 7
+# directory for the output file
 $filePath = 'C:\'
+# desired filename of the output file
 $fileName = 'output'
+# desired format of the output file (can be 'json' or 'csv')
 $outputFormat = 'json'
 
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
+
+# set the date to the current time minus $daysback
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
-# Main
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
+# check the output format
+# get all apps that are created >= $date and >= $byteSize
+# output results to $outfile
 If ($outputFormat.ToLower() -eq 'csv') {
   Get-QlikReloadTask -filter "createdDate ge '$date'" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
   }  Else {
   Get-QlikReloadTask -filter "createdDate ge '$date'" -full | ConvertTo-Json | Set-Content $outFile
-}
-```
-
-### Example Output
-```
-{
-    "id":  "16c2f8d0-7d46-4c79-8ab6-6a75f90a38a9",
-    "createdDate":  "2020/03/03 19:40",
-    "modifiedDate":  "2020/03/03 19:40",
-    "modifiedByUserName":  "QLIK-POC\\dpi",
-    "customProperties":  [
-
-                         ],
-    "app":  {
-                "id":  "9625626c-71bb-4062-a00d-6406c7829ac5",
-                "name":  "Test New",
-                "appId":  "",
-                "publishTime":  "1753/01/01 00:00",
-                "published":  false,
-                "stream":  null,
-                "savedInProductVersion":  "12.475.3",
-                "migrationHash":  "21ecc792c56e18162f1785d3d41f28fdaced5c96",
-                "availabilityStatus":  "NotApplicable",
-                "privileges":  null
-            },
-    "isManuallyTriggered":  false,
-    "operational":  {
-                        "id":  "56e8e612-8bbc-42db-bde0-b4173210d15d",
-                        "lastExecutionResult":  {
-                                                    "id":  "17f49de9-dfc6-4c4c-aa04-bdf39d10bd87",
-                                                    "executingNodeName":  "us-ea-hybrid-qs",
-                                                    "status":  "FinishedSuccess",
-                                                    "startTime":  "2020/03/03 19:45",
-                                                    "stopTime":  "2020/03/03 19:45",
-                                                    "duration":  1428,
-                                                    "fileReferenceID":  "dcc50f73-7957-4371-8f32-6a275922f58e",
-                                                    "scriptLogAvailable":  false,
-                                                    "details":  "    ",
-                                                    "scriptLogLocation":  "us-ea-hybrid-qs\\Script\\9625626c-71bb-4062-a00d-6406c7829ac5.20200303T194515.553+0000.F5AFCAF853712D5B7DBC.log",
-                                                    "scriptLogSize":  6964,
-                                                    "privileges":  null
-                                                },
-                        "nextExecution":  "2020/03/04 19:45",
-                        "privileges":  null
-                    },
-    "name":  "Delete Me",
-    "taskType":  "Reload",
-    "enabled":  true,
-    "taskSessionTimeout":  1440,
-    "maxRetries":  0,
-    "tags":  null,
-    "privileges":  null,
-    "schemaPath":  "ReloadTask"
-}
+} 
 ```
 
 **Tags**
