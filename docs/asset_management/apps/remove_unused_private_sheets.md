@@ -54,7 +54,7 @@ This logging must be enabled on _every engine_ that the information is desired f
 
 ## Identification of Unused Private Sheets
 
-Open **Operations Monitor**, inside of **Monitoring Apps** stream:
+Open up the **Operations Monitor** application, inside of **Monitoring Apps** stream:
 
 [![optimize_sheet_order_for_adoption01.png](images/optimize_sheet_order_for_adoption01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption01.png) 
 
