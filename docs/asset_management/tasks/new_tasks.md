@@ -24,7 +24,7 @@ Benefits:
 
 ## Goal
 {:.no_toc}
-Checking for new tasks regularly helps not only to curate what is necessary (cadence, duplicates, etc), but also allows for you to review your batch window, task concurrencies, and any implications against the Qlik schedulers. The above may influence architectural patterns and dictate the need for reload task pinning.
+Checking for new tasks regularly helps not only to curate what is necessary (cadence, duplicates, etc), but also encourages batch window review, task concurrencies, and any implications against the Qlik schedulers. The above may influence architectural patterns and dictate the need for reload task pinning.
 
 ## Table of Contents
 {:.no_toc}
