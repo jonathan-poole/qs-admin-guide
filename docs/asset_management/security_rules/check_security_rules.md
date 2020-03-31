@@ -43,11 +43,11 @@ In the upper right hand side of the screen, select the **Column selector**, and 
 
 [![check_new_rules_native_2.png](images/check_new_rules_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/security_rules/images/check_new_rules_native_2.png)
 
-Now select the filter icon for the **Created** column, and then select the filter of **Today** (or **Last seven days** if you'd like a slightly larger rolling window).
+Now select the filter icon for the **Created** column, and then select the filter of **Last seven days**, or the desired range.
 
 [![check_new_rules_native_3.png](images/check_new_rules_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/security_rules/images/check_new_rules_native_3.png)
 
-Lastly, you can review the resulting table and view any new streams. You will want to repeat this process for the **Last modified** column, reviewing what security rules were modified and by whom.
+Lastly, review the resulting table and view any new streams. Repeat this process for the **Last modified** column, reviewing what security rules were modified and by whom.
 
 -------------------------
 
@@ -55,28 +55,50 @@ Lastly, you can review the resulting table and view any new streams. You will wa
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-The script will bring back any security rules with a **Created Date** or **Modified Date** that is greater than or equal to x days old. The script will then store the output into the location of your choice in either csv or json format.
+The script will bring back any security rules with a **Created Date** or **Modified Date** that is greater than or equal to x days old. The script will then store the output into a desired location in either csv or json format.
 
 ### Script
 ```powershell
 # Function to collect security rules that were created or modified in the last x days
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'machineName'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$daysBack = 1
+
+# machine name
+$computerName = '<machine-name>'
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# set the number of days back for the app created date
+$daysBack = 7
+# directory for the output file
 $filePath = 'C:\'
+# desired filename of the output file
 $fileName = 'output'
+# desired format of the output file (can be 'json' or 'csv')
 $outputFormat = 'json'
 
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
+
+# set the date to the current time minus $daysback
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
-# Main
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
+# check the output format
+# get all security rules that were modified or created >= $date
+# output results to $outfile
 If ($outputFormat.ToLower() -eq 'csv') {
   Get-QlikRule -filter "(createdDate ge '$date' or modifiedDate ge '$date') and category eq 'Security'" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
   }  Else {
@@ -84,34 +106,9 @@ If ($outputFormat.ToLower() -eq 'csv') {
 }
 ```
 
-### Example Output
-```
-{
-    "id":  "165958b3-1ad3-4eab-aee2-d1bb3203b17d",
-    "createdDate":  "2020/03/03 21:37",
-    "modifiedDate":  "2020/03/03 21:37",
-    "modifiedByUserName":  "QLIK-POC\\dpi",
-    "category":  "Security",
-    "subcategory":  "",
-    "type":  "Custom",
-    "name":  "Delete",
-    "rule":  "((user.name=\"\"))",
-    "resourceFilter":  "*",
-    "actions":  2,
-    "comment":  "",
-    "disabled":  false,
-    "ruleContext":  "BothQlikSenseAndQMC",
-    "seedId":  "00000000-0000-0000-0000-000000000000",
-    "version":  0,
-    "tags":  null,
-    "privileges":  null,
-    "schemaPath":  "SystemRule"
-}
-```
-
 ## Backup Security Rules
 
-Given the Qlik CLI script above, that script could actually be modified to pull security rules on a scheduled basis and store them out to separate files at your desired cadence, so that if an administrator wanted to "roll back" changes, they could. Refer to an example here: [Qlik Support - Exporting and Importing Security Rules](https://support.qlik.com/articles/000040012).
+Given the Qlik CLI script above, that script could actually be modified to pull security rules (by removing the filter) on a scheduled basis and store them out to separate files at a desired cadence, so that if an administrator wanted to "roll back" changes, they could. Refer to an example here: [Qlik Support - Exporting and Importing Security Rules](https://support.qlik.com/articles/000040012).
 
 **Tags**
 
