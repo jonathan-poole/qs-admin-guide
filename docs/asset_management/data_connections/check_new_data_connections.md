@@ -63,53 +63,49 @@ The script will bring back any data connection with a **Created Date** that is g
 ```powershell
 # Function to collect data connections that were created in the last x days
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
+
+# machine name
 $computerName = '<machine-name>'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# set the number of days back for the app created date
 $daysBack = 7
+# directory for the output file
 $filePath = 'C:\'
+# desired filename of the output file
 $fileName = 'output'
-$outputFormat = 'csv'
+# desired format of the output file (can be 'json' or 'csv')
+$outputFormat = 'json'
 
-# Main
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
+
+# set the date to the current time minus $daysback
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
-$newDataConnections = Get-QlikDataConnection -filter "createdDate ge '$date'" -full
 
-(&{If($outputFormat.ToLower() -eq 'csv') {$newDataConnections | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile} Else {$newDataConnections | ConvertTo-Json | Set-Content $outFile}})
-```
-
-### Example Output
-```
-{
-    "id":  "47693209-0b1a-4809-9346-d62677bbd997",
-    "createdDate":  "2020/03/03 18:50",
-    "modifiedDate":  "2020/03/03 18:50",
-    "modifiedByUserName":  "QLIK-POC\\qservice",
-    "customProperties":  [
-
-                         ],
-    "owner":  {
-                  "id":  "4800913a-578e-4050-bf2e-e5074172ed05",
-                  "userId":  "qservice",
-                  "userDirectory":  "QLIK-POC",
-                  "name":  "qservice",
-                  "privileges":  null
-              },
-    "name":  "delete (qlik-poc_qservice)",
-    "connectionstring":  "C:\\Packages\\",
-    "type":  "folder",
-    "engineObjectId":  "47693209-0b1a-4809-9346-d62677bbd997",
-    "username":  "",
-    "logOn":  "LOG_ON_SERVICE_USER",
-    "architecture":  "Undefined",
-    "tags":  null,
-    "privileges":  null,
-    "schemaPath":  "DataConnection"
-}
+# check the output format
+# get all data connections that are created >= $date
+# output results to $outfile
+If ($outputFormat.ToLower() -eq 'csv') {
+    Get-QlikDataConnection -filter "createdDate ge '$date'" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
+    }  Else {
+    Get-QlikDataConnection -filter "createdDate ge '$date'" -full | ConvertTo-Json | Set-Content $outFile
+  }
 ```
 
 **Tags**
