@@ -53,12 +53,11 @@ If the **Operations Monitor** is not properly configured, please refer to the [O
 
 ## Process
 
-1. Open the Operations Monitor App
-2. Select the "Apps" sheet
+Open the Operations Monitor App, and select the "Apps" sheet
 
 [![quarantine_unused_apps_native_1.png](images/quarantine_unused_apps_native_1.png)](https://raw.githubusercontent.com/qs-admin-	guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_1.png)
 
-3. In the App Details table object, sort by Last Accessed field and scroll to old dates or null dates 
+In the App Details table object, sort by Last Accessed field and scroll to old dates or null dates 
 
 [![quarantine_unused_apps_native_7.png](images/quarantine_unused_apps_native_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_7.png)
 
@@ -66,7 +65,9 @@ If the **Operations Monitor** is not properly configured, please refer to the [O
     
 Look for applications that are Published but have not been accessed. This can be quickly filtered to by selecting _Unpublished_ from the **Stream** column, and then by selecting _Select alternative_ to view all published applications.
 	  
-[![quarantine_unused_apps_native_2.png](images/quarantine_unused_apps_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_2.png)[![quarantine_unused_apps_native_3.png](images/quarantine_unused_apps_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_3.png)
+[![quarantine_unused_apps_native_2.png](images/quarantine_unused_apps_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_2.png)
+
+[![quarantine_unused_apps_native_3.png](images/quarantine_unused_apps_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_3.png)
 	  
 [![quarantine_unused_apps_native_8.png](images/quarantine_unused_apps_native_8.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/quarantine_unused_apps_native_8.png)
 	  
@@ -88,13 +89,13 @@ Look for Unpublished applications that have not been used for a long time. Clear
 
 ## Actions
     
-1. If you don't already have a stream named "Quarantine", this is a good time to create one. Ideally, the stream should be walled off to only Content Admins or the like, where they can review the applications with their respective owners.
+1. If the stream **Quarantine** doesn't already exist, this is a good time to create it. Ideally, the stream should be walled off to only Content Admins or the like, where they can review the applications with their respective owners.
 
-2. Contact the application owners to let them know you are moving their app(s) to Quarantine.	
+2. Contact the application owners to let them know that their applications are being relocated to the **Quarantine** stream.	
 
-3. Move the applications from Priorities 1, 2, and 3 to the Quarantine Stream
+3. Move the applications from Priorities 1, 2, and 3 to the **Quarantine** stream.
 
-4. Any applications that have been in the Quarantine stream for X number of days can be removed (corporate policy on how long they should be kept.) It is considered a best practice to export them without data, at a minimum--potentially exported with data if the intent is to archive them.
+4. Any applications that have been in the **Quarantine** stream for X number of days can be removed (corporate policy on how long they should be kept.) It is considered a best practice to export them without data, at a minimum--potentially exported with data if the intent is to archive them.
 	    
 
 **Tags**
