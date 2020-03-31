@@ -100,65 +100,51 @@ The script will bring back any application that is greater than or equal to x da
 ```powershell
 # Function to collect applications that were created in the last x days over z size in bytes
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
+
+# machine name
 $computerName = 'machineName'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# set the number of days back for the app created date
 $daysBack = 7
+# set the byte size threshold for application disk size (if only large apps are desired)
 $byteSize = 0
+# directory for the output file
 $filePath = 'C:\'
+# desired filename of the output file
 $fileName = 'output'
+# desired format of the output file (can be 'json' or 'csv')
 $outputFormat = 'json'
 
-# Main
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
+
+# set the date to the current time minus $daysback
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
+
+# set the computer name for the Qlik connection call
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
+# check the output format
+# GET all apps that are created >= $date and >= $byteSize
+# output results to $outfile
 If ($outputFormat.ToLower() -eq 'csv') {
   Get-QlikApp -filter "createdDate ge '$date' and fileSize ge $byteSize" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
   }  Else {
   Get-QlikApp -filter "createdDate ge '$date' and fileSize ge $byteSize" -full | ConvertTo-Json | Set-Content $outFile
 } 
-```
-
-### Example Output
-```
-{
-    "id":  "71c2361f-024b-4079-8487-5c442b50db8f",
-    "createdDate":  "2020/03/03 16:04",
-    "modifiedDate":  "2020/03/03 16:04",
-    "modifiedByUserName":  "QLIK-POC\\dpi",
-    "customProperties":  [
-
-                         ],
-    "owner":  {
-                  "id":  "27a825fe-3cad-488a-9dcd-d436a90e319c",
-                  "userId":  "dpi",
-                  "userDirectory":  "QLIK-POC",
-                  "name":  "dpi",
-                  "privileges":  null
-              },
-    "name":  "New App!",
-    "appId":  "",
-    "sourceAppId":  "00000000-0000-0000-0000-000000000000",
-    "targetAppId":  "00000000-0000-0000-0000-000000000000",
-    "publishTime":  "1753/01/01 00:00",
-    "published":  false,
-    "tags":  null,
-    "description":  "",
-    "stream":  null,
-    "fileSize":  139762,
-    "lastReloadTime":  "1753/01/01 00:00",
-    "thumbnail":  "",
-    "savedInProductVersion":  "12.475.3",
-    "migrationHash":  "21ecc792c56e18162f1785d3d41f28fdaced5c96",
-    "dynamicColor":  "",
-    "availabilityStatus":  "Available",
-    "privileges":  null,
-    "schemaPath":  "App"
-}
 ```
 
 **Tags**
