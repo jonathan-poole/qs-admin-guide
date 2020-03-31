@@ -25,13 +25,13 @@ Benefits:
 ## Goal
 {:.no_toc}
 
-This page will help you, or the application owner, optimize the application sheet order using the sheet usage data. 
+This page can support both the administrator and the application owner in optimizing application the order of sheets, supported by usage data. 
 
-When an application is developed, the sheets are ordered in a logical flow (Ex: [DAR methodology](https://community.qlik.com/t5/Qlik-Design-Blog/DAR-methodology/ba-p/1466733), a methodology that was created for QlikView and it is also applicable for Qlik Sense). The sheet optimization should not overoptimize the flow. 
+When an application is developed, the sheets are ordered in a logical flow (Ex: [DAR methodology](https://community.qlik.com/t5/Qlik-Design-Blog/DAR-methodology/ba-p/1466733), a methodology that suggests flowing data from high-level down to the detail. When considering re-ordering sheets, ensure that this methodology isn't lost if already in place.
 
-You must combine the usage data with the logical flow to make sure that the new sheet order will increase adoption rates and BI effectiveness.
+It is integral to combine the usage data with the logical flow to make sure that the new sheet order will increase adoption rates and BI effectiveness.
 
-This activity should be fractionalized and you can do this for just a few applications once a quarter, otherwise it could turn in to an exhaustive activity.
+This activity should not be attempted for every application, and should be prioritized to highly-used applications.
 
 ## Table of Contents
 {:.no_toc}
@@ -75,23 +75,23 @@ If the **Operations Monitor** is not properly configured, please refer to the [O
 
 -------------------------
 
-## Select Applications with Higher or Lower Quantity of Sessions  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
+## Select Applications with a Higher or Lower Quantity of Sessions  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-Before we check the Sheets usage data, it is a good practice to select specific applications to analyze, we recommend you start with the 5 top applications with the higher (to improve more used applications) or lower (to improve applications adoption) quantity of sessions.
+Before analyzing the sheet usage data, it is a good practice to select specific applications to analyze. It is recommended that one starts with the top five applications with the highest quantity of sessions.
 
-Open **Operations Monitor**, inside of **Monitoring Apps** stream:
+Open up the **Operations Monitor** application, inside of **Monitoring Apps** stream.
 
 [![optimize_sheet_order_for_adoption01.png](images/optimize_sheet_order_for_adoption01.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption01.png)
 
-Open **Session Details** sheet to have detailed information of applications with the higher or lower quantity of sessions:
+Open the **Session Details** sheet.
 
 [![optimize_sheet_order_for_adoption02.png](images/optimize_sheet_order_for_adoption02.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption02.png)
 
-In the **App Session Summary** table, you have all the applications with the related quantity of sessions. To reorder the table by the sessions, to the higher or lower quantity you should click in the **Sessions** column title (the gray arrow below the title will show if it is being ordered by ascending or descending order, to change between ascending to descending you just need to click again in the Sessions column title):
+In the _App Session Summary_ table, sort the **Sessions** column descending.
 
 [![optimize_sheet_order_for_adoption03.png](images/optimize_sheet_order_for_adoption03.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption03.png)
 
-You can now select the applications that you want to analyze the sheet usage by clicking in the application names, in this example, I am selecting the top 5 applications:
+Select the top five applications.
 
 [![optimize_sheet_order_for_adoption04.png](images/optimize_sheet_order_for_adoption04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption04.png)
 
@@ -99,33 +99,31 @@ You can now select the applications that you want to analyze the sheet usage by 
 
 ## Analyze Aplication Sheet Adopion  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 
-After selecting some applications in the previous step, we should now get the sheets usage data to help us in the sheet optimization process.
+After selecting the top five applications in the previous step, the next step is to take a look at the sheet usage data for each application.
 
-The sheet usage data it is inside the **Sheet Usage** sheet.
+While keeping the five applications selected, navigate to the **Sheet Usage** sheet.
 
 [![optimize_sheet_order_for_adoption05.png](images/optimize_sheet_order_for_adoption05.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption05.png)
 
-You can now see the number of sheets (Base Sheets, Community Sheets, and Private Sheets) that we have in each application that we previously selected.
+One can now visualize the number of sheets (Base, Community, and Private) that are in each selected application.
 
-To make it an easier process we encourage you to select one application per time. In this example, I will start with the "Sample App".
+To simply the process, it is suggested to select only one application at a time. Feel free to _bookmark_ the five applications if it is more convenient. In this example, "Sample App" has been selected.
 
 [![optimize_sheet_order_for_adoption06.png](images/optimize_sheet_order_for_adoption06.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption06.png)
 
-With only one application selected, inside the **Sheet Usage** you will have the sheets usage data.
+To reorder the table by the sheet usage, sort the **Users Accessing Sheets** column descending.
 
-To reorder the table by the sheet usage, to the higher or lower quantity you should click in the **Users Accessing Sheets** column title (the gray arrow below the title will show if it is being ordered by ascending or descending order, to change between ascending to descending you just need to click again in the Users Accessing Sheet column title).
-
-You can also export the **Users Accessing Sheets** table and share it with the application owner to optimize the sheets order.
+At this point, it is also an option to export the **Users Accessing Sheets** table and share it with the application owner to optimize the order, as the owner of the application likely knows the content the best.
 
 > **Protip:**
-> You can use Qlik NPrinting to distribute the Sheet Usage table to distribute sheet usage data to application owners.
+> It is possible to use Qlik NPrinting to distribute the _Sheet Usage_ table to distribute sheet usage data to application owners.
 
 [![optimize_sheet_order_for_adoption07.png](images/optimize_sheet_order_for_adoption07.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption07.png)
 
 > **Protip:**
-> If you have Community Sheets with a higher quantity of sessions than base sheets, you can check what are the objects inside and potentially add them to a base sheet. You can also promote the community sheet to a Base Sheet after your performance check.
+> If there are Community Sheets with a higher quantity of sessions than base sheets, it is worth investigating the content of those sheets with the application owners and considering either promoting the sheet to base, or incorporating the content into the base app otherwise.
 
-This process should be repeated for 5 selected applications that you previously selected, to return to the previous selection state and select another application, click in the previous selection button.
+This process should be repeated for each of the selected applications.
 
 [![optimize_sheet_order_for_adoption08.png](images/optimize_sheet_order_for_adoption08.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption08.png)
 
@@ -134,47 +132,42 @@ This process should be repeated for 5 selected applications that you previously 
 
 ## Reorder Application Sheets
 
-Before reordering the sheets we need to analyze the sheet's logical flow and combined with the sheets usage data that we got from the previous step.
+Before reordering the sheets, it is important to analyze the sheet's logical flow from one to the next combined with the sheet's usage data.
 
-In this example I will keep the Dashboard sheet as the first one, even not being the most accessed, to do not break the application logical flow, and move the Sales Analysis and Inventory.
+In this example, the _Dashboard_ sheet should remain first, even though it is not the most accessed, so that it doesn't break the application's logical flow. The _Sales Analysis_ and _Inventory_ will be moved.
 
 
 [![optimize_sheet_order_for_adoption09.png](images/optimize_sheet_order_for_adoption09.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption09.png)
 
-To change the sheets order the application owner should clone the "Sample App".
+To change the sheets order, the administrator or application owner should clone the application.
 
 [![optimize_sheet_order_for_adoption10.png](images/optimize_sheet_order_for_adoption10.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption10.png)
 
-As soon as the application gets duplicated the new application will be at the owner's Personal > Work area. Now the owner can edit the Base Sheets order.
+As soon as the application gets duplicated, the new duplicated application will reside in the owner's "My work" area.
 
 [![optimize_sheet_order_for_adoption11.png](images/optimize_sheet_order_for_adoption11.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption11.png)
 
-As soon as the application is open, make sure that the "Touch screen mode" feature is turned off.
+Open the application, and ensure that the _Touch screen mode_ feature is turned off.
 
 [![optimize_sheet_order_for_adoption12.png](images/optimize_sheet_order_for_adoption12.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption12.png)
 
-
-To move sheets we just need to drag and drop them to the desired order. In this case, I will make the "Sales Analysis by Region"  sheet the second one.
+Sheets can be moved by dragging and dropping them to a new position. In this case, the _Sales Analysis by Region_ will be moved to the second position.
 
 [![optimize_sheet_order_for_adoption13.png](images/optimize_sheet_order_for_adoption13.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption13.png)
 
-
-And the "Inventory" sheet the third sheet.
+The _Inventory_ sheet will be shifted to the third position.
 
 [![optimize_sheet_order_for_adoption14.png](images/optimize_sheet_order_for_adoption14.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption14.png)
 
-
-Now the application sheet order is optimized.
+The sheet order has now been optimized.
 
 [![optimize_sheet_order_for_adoption15.png](images/optimize_sheet_order_for_adoption15.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption15.png)
 
-
-The "Sample App" now should be republished by the application owner.
-The application owner needs to go to Personal > Work area and Publish the application that we changed the sheets order.
+Following, the application should now "publish and replace" the original.
 
 [![optimize_sheet_order_for_adoption16.png](images/optimize_sheet_order_for_adoption16.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption16.png)
 
-Make sure to check the **Replace the existing app** box to make sure you are replacing the previous version.
+Make sure to check the **Replace the existing app** box.
 
 [![optimize_sheet_order_for_adoption17.png](images/optimize_sheet_order_for_adoption17.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/optimize_sheet_order_for_adoption17.png)
 
