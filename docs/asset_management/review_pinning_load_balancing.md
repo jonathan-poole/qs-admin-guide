@@ -60,11 +60,11 @@ In this scenario the administrator wishes to create an ad-hoc development node w
 
 ## Scenario 2 - Segregation of Larger Qlik Apps
 
-In this scenario, the Qlik administrator is intending to isolate specific, larger Qlik apps to a dedicated node in the cluster. This scenario can be ideal in situations where a site hosts a few, select large Qlik apps with the remaining apps in the site's portfolio being of modest size. This isolation allows the site to not attempt to evenly distribute the load for these select apps which will cause duplicative RAM use across the nodes in the cluster. Duplication for smaller apps may be ideal for resiliency purposes but the site may not have the compute capacity to have resiliency for these larger Qlik apps or the administrator would like to ensure a more predictable user experience by re-using the cache on a single Engine.
+In this scenario, the Qlik administrator is intending to isolate specific, larger Qlik apps to a dedicated node in the cluster. This scenario can be ideal in situations where a site hosts a few, select large Qlik apps with the remaining apps in the site's portfolio being of modest size. This isolation allows the site to not attempt to evenly distribute the load for these select apps which will cause duplicative RAM use across the nodes in the cluster. Duplication for smaller apps may be ideal for resiliency purposes but the site may not have the compute capacity to have resiliency for these larger Qlik apps or the administrator would like to ensure a more predictable user experience by re-using the cache on a single Engine (or 2+ for resiliency).
 
 The [App Metadata Analyzer](../tooling/app_metadata_analyzer.md) can be helpful in determing whether there are abnormally large apps in your Qlik Sense site.
 
-### Configuration Walk-Through:
+### Configuration Walk-Through
 
 * Create the custom property **NodeType** for apps and nodes with the value option of `Dedicated`.
 
@@ -82,7 +82,7 @@ The [App Metadata Analyzer](../tooling/app_metadata_analyzer.md) can be helpful 
 
 [![load_balancing-5.png](images/load_balancing-5.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/images/load_balancing-5.png)
 
-* In the **Load balancing rules** section of the QMC, disable the default rule `ResourcesOnNonCentralNodes`. This default rule load balances all apps which are not in the Monitoring Apps stream to all RIM nodes. If you have other customized load balancing rules which are enabled consider disabling those if they are not integral to your Qlik site.
+* In the **Load balancing rules** section of the QMC, disable the default rule `ResourcesOnNonCentralNodes`. This default rule load balances all apps which are not in the Monitoring Apps stream to all RIM nodes. If there are other customized load balancing rules which are enabled, consider disabling those if they are not integral to your Qlik site.
 
 * Create a new Load balancing rule with the following values:
   * **Name**: Dedicated Apps to Dedicated Node
@@ -111,9 +111,9 @@ The [App Metadata Analyzer](../tooling/app_metadata_analyzer.md) can be helpful 
 
 [![load_balancing-9.png](images/load_balancing-9.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/images/load_balancing-9.png)
 
-## Scenario 2 - Segregation of apps by line of business (streams)
+## Scenario 3 - Segregation of apps by line of business (streams)
 
-In the previous scenario, the Qlik administrator isolated specific Qlik apps to a dedicated node in a cluster. For this scenario the Qlik administrator will isolate all apps in specific streams to specific nodes. This use case makes sense when a Qlik site is servicing multiple tenants or departments and the adminstrator wants to isolate the consumption of Qlik apps by those departments / tenants. This scenario will use a custom property at the _stream_ layer rather than at the _app_ layer.
+In the previous scenario, the Qlik administrator isolated specific Qlik apps to a dedicated node in a cluster. For this scenario, the Qlik administrator will isolate all apps in specific streams to specific nodes. This use case makes sense when a Qlik site is servicing multiple tenants or departments and the adminstrator wants to isolate the consumption of Qlik apps by those departments / tenants. This scenario will use a custom property at the _stream_ layer rather than at the _app_ layer.
 
 ### Configuration Walk-Through:
 
@@ -129,7 +129,7 @@ In the previous scenario, the Qlik administrator isolated specific Qlik apps to 
 
 [![load_balancing-12.png](images/load_balancing-12.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/images/load_balancing-12.png)
 
-* In the **Load balancing rules** section of the QMC, disable the default rule `ResourcesOnNonCentralNodes`. This default rule load balances all apps which are not in the Monitoring Apps stream to all RIM nodes. If you have other customized load balancing rules which are enabled consider disabling those if they are not integral to your Qlik site.
+* In the **Load balancing rules** section of the QMC, disable the default rule `ResourcesOnNonCentralNodes`. This default rule load balances all apps which are not in the Monitoring Apps stream to all RIM nodes. If there are other customized load balancing rules which are enabled, consider disabling those if they are not integral to your Qlik site.
 
 * Create a new Load balancing rule with the following values:
   * **Name**: Dedicated Apps to Dedicated Node
@@ -144,11 +144,11 @@ In the previous scenario, the Qlik administrator isolated specific Qlik apps to 
 
 ### Validation:
 
-* Ensure that the Virtual Proxy that will be used by the end users includes all RIM nodes. **Note** In this example we are only load balancing across the two RIM nodes. In your environment, the administrator will likely want to include at least one additional Engine in order to ensure availability of apps which are not members of the streams which have been isolated.
+* Ensure that the Virtual Proxy that will be used by the end users includes all RIM nodes. **Note** In this example, apps are only load balanced across two RIM nodes. In another, more robust environment, the administrator will likely want to include at least one additional Engine in order to ensure availability of apps which are not members of the streams which have been isolated.
 
 [![load_balancing-14.png](images/load_balancing-14.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/images/load_balancing-14.png)
 
-* As a user who would be expected to see one of the streams who apps are pinned to an isolated node, Open the Hub.
+* As a user who would be expected to see one of the streams who apps are pinned to an isolated node, open the Hub.
 
 [![load_balancing-15.png](images/load_balancing-15.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/images/load_balancing-15.png)
 
