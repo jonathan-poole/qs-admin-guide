@@ -16,7 +16,7 @@ nav_order: 1
 ## Goal
 {:.no_toc}
 
-The goal of this exercise is to identify license usage across your production site. The **License Monitor** application exposes this information simply, so that it can be easily referenced.
+The goal of this exercise is to identify license usage across a production site. The **License Monitor** application exposes this information simply, so that it can be easily referenced.
 
 There are a number of metrics that should be focused on, including the following for Professional, Analyzer, and Capacity license types. If the site is on tokens, the same principles will apply.
 
