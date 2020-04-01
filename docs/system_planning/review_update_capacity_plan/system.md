@@ -16,7 +16,7 @@ nav_order: 3
 ## Goal
 {:.no_toc}
 
-The goal of this exercise is to identify any potential system concerns across your production site. The **Operations Monitor** application exposes this information simply, so that it can be easily referenced.
+The goal of this exercise is to identify any potential system concerns across a production site. The **Operations Monitor** application exposes this information simply, so that it can be easily referenced.
 
 There are a number of metrics that should be focused on, including the following:
 
@@ -165,7 +165,7 @@ Review the new chart to see where reloads are occurring.
 
 ### Batch Window
 
-In general, this area represents the capacity of your batch window (usually nightly). The steps to optimize the batch window can be found here: [Optimize Batch Window](../optimize_batch_window.md).
+In general, this section represents the capacity of the site's batch window (which is predominantly nightly). The steps to optimize the batch window can be found here: [Optimize Batch Window](../optimize_batch_window.md).
 
 After reading the optimization process, one can apply the following rules:
 
