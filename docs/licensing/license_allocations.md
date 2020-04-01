@@ -70,9 +70,29 @@ https://help.qlik.com/en-US/sense-admin/February2020/Subsystems/DeployAdminister
 
 ### Analyze License Data <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
+First check the QMC to see how many total license are available for Professional and Analyzers. Go to the 'License Management' Section of the QMC. 
+
+[![Analyze_Audit_License_Allocations_QMC_License_Management.png](images/Analyze_Audit_License_Allocations_QMC_License_Management.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_License_Management.png)
+
+Ensure 'License Usage Summary' is selected on the right , and then check the total licenses on the left for both Professional and Analyzers
+
+[![Analyze_Audit_License_Allocations_QMC_License_Management_UserMaximums.png](images/Analyze_Audit_License_Allocations_QMC_License_Management_UserMaximums.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_License_Management_UserMaximums.png)
+
+
+Next, go to the 'Monitoring Apps' section of the QMC
+
+[![Analyze_Audit_License_Allocations_QMC_MonitoringApps.png](images/Analyze_Audit_License_Allocations_QMC_MonitoringApps.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_MonitoringApps.png)
+
+And select the 'License Monitor'
+
+[![Analyze_Audit_License_Allocations_QMC_MonitoringApps_LicenseMonitor.png](images/Analyze_Audit_License_Allocations_QMC_MonitoringApps_LicenseMonitor.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_MonitoringApps_LicenseMonitor.png)
+
 Go to the 'Overview' sheet of the Qlik Sense "License Monitor" app
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)
+
+And select the 'License Monitor'
 
 Click the 'Duplicate' Button on the toolbar
 
