@@ -130,11 +130,14 @@ Select 'Analyzer' in the filter pane and view/analyze the growth rate in Analyze
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AnalyzerTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AnalyzerTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AnalyzerTrend.png)
 
-Repeart for 'Professional'. In this sample, the growth line is flat. 
+Repeat for 'Professional'. In this sample, the growth line is flat. 
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)
 
-To make it faster for next time, rename the sheet to 'User License Trend' by clicking in the white space above the app objects as shown by the arrow in the image below, then alter the 'Lable' to 'User License Trend'
+In this exercise we found that 100 analyzer licenses are available. Since the most recent month shows '32' in use, we can expect that licenses will max out in  (100-32)/2.5  or  ~ 27 months.
+
+
+The work done to customize the sheet is auto-saved in Qlik Sense. To make it faster for next time, rename the sheet to 'User License Trend' by clicking in the white space above the app objects as shown by the arrow in the image below, then alter the 'Lable' to 'User License Trend'
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
 guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)
