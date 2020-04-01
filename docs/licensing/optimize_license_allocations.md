@@ -23,13 +23,12 @@ The goal of this activity is to evaluate license growth and needs using the buil
 {:toc}
 -------------------------
 
-### Remove license allocations for users that have left the organization or will no longer need access
+### Remove license allocations for users that have left the organization or will no longer need access  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
 To get a list of current allocations, go to the HUB , select the "Monitoring apps" stream and select the "License monitor" application
 
-[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)
- the organization or no longer need access <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
+
+ 
 
 
 
