@@ -19,7 +19,7 @@ parent: System Planning
 
 This page is intended to act as an example of what a high-level capacity plan could look like. It is assumed that the organization would build one themselves with some of the below considerations in mind, or would work with Qlik's Services organization to have one defined/executed.
 
-It's important for stakeholders, budgetholders, and Qlik deployment owners to have advance notice when addition resources will be needed. This exercise helps you prepare for those requests and demonstrate the need. 
+It's important for stakeholders, budgetholders, and Qlik deployment owners to have advance notice when addition resources will be needed. This exercise helps an administrator prepare for those requests and demonstrate the need. 
 
 Specific areas:
 - Document current state and expected state of several asset groups, which helps for planning.
