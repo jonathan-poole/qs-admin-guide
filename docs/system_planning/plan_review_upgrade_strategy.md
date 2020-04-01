@@ -22,7 +22,7 @@ Benefits:
 ## Goal
 {:.no_toc}
 
-The goal of this activity is to review the strategy for upgrading Qlik Sense Enterprise on Windows for the administrator's organization. This includes both reviewing / creating an upgrade strategy, reviewing / creating an upgrade plan, and monitoring the adherence to the plan. Ensuring that your organization's Qlik deployment is up-to-date enables the organization to leverage new features which have been added to Qlik Sense Enterprise on Windows, decreases the risk from an upgrade (an upgrade of N+1 release is inherently less risky than an upgrade of N+5 releases), and ensures readiness should a critical issue be uncovered which requires an out-of-cycle upgrade.
+The goal of this activity is to review the strategy for upgrading Qlik Sense Enterprise on Windows for the administrator's organization. This includes both reviewing / creating an upgrade strategy, reviewing / creating an upgrade plan, and monitoring the adherence to the plan. Ensuring that the Qlik deployment is up-to-date enables the organization to leverage new features which have been added to Qlik Sense Enterprise on Windows, decreases the risk from an upgrade (an upgrade of N+1 release is inherently less risky than an upgrade of N+5 releases), and ensures readiness should a critical issue be uncovered which requires an out-of-cycle upgrade.
 
 When creating / reviewing an upgrade plan, the Qlik administrator may not be responsible for all portions (e.g. defining the validation procedure on whether apps work as designed), but the expected responsibility here is to build a framework where those responsible can contribute and sign-off where needed.
 
