@@ -91,7 +91,6 @@ Go to the 'Overview' sheet of the Qlik Sense "License Monitor" app
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)
 
-And select the 'License Monitor'
 
 Click the 'Duplicate' Button on the toolbar
 
