@@ -27,6 +27,34 @@ The goal of this activity is to evaluate license growth and needs using the buil
 
 To get a list of current allocations, go to the HUB , select the "Monitoring apps" stream and select the "License monitor" application
 
+[![Analyze_Audit_License_Allocations_QMC_MonitoringApps_LicenseMonitor.png](images/Analyze_Audit_License_Allocations_QMC_MonitoringApps_LicenseMonitor.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_QMC_MonitoringApps_LicenseMonitor.png)
+
+
+
+
+[![Optimize_License_Allocations_HUB_License_Monitor_AddTable.png](images/Optimize_License_Allocations_HUB_License_Monitor_AddTable.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_AddTable.png)
+
+[![Optimize_License_Allocations_HUB_License_Monitor_AddTable_AddDimension.png](images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_AddDimension.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_AddDimension.png)
+
+[![Optimize_License_Allocations_HUB_License_Monitor_AddTable_AddUserID.png](images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_AddUserID.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_AddUserID.png)
+
+
+[![Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_AllocatedAccessType.png](images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_AllocatedAccessType.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_AllocatedAccessType.png)
+
+[![Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_ExcludeNullValues.png](images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_ExcludeNullValues.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_ExcludeNullValues.png)
+
+[![Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_Resort.png](images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_Resort.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Add_Resort.png)
+
+[![Optimize_License_Allocations_HUB_License_Monitor_AddTable_Resorted.png](images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Resorted.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_AddTable_Resorted.png)
+
+
 
  
 
