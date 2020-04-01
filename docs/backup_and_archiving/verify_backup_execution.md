@@ -16,7 +16,7 @@ stuff stuff stuff.
 
 ## Goal
 {:.no_toc}
-You have backups, right? The goal for this activity is for the administrator to verify that appropriate backups of their Qlik Sense Enterprise deployment have been made. This allows the administrator to increase the organization's fault tolerance, demonstrate preparedness, and harden out processes around backups before they are needed.
+The goal for this activity is for the administrator to verify that appropriate backups of their Qlik Sense Enterprise deployment have been made. This allows the administrator to increase the organization's fault tolerance, demonstrate preparedness, and harden out processes around backups before they are needed.
 
 ## Table of Contents
 {:.no_toc}
@@ -77,10 +77,10 @@ In order to backup PostgreSQL, use the `pg_dump` PostgreSQL process. This can be
 **Script**
 
 ```powershell
-# Define your backup directory
+# Define the backup directory
 $backupDir = 'C:\QSR'
 
-# Define your PostgreSQL password
+# Define the PostgreSQL password
 $pwd = 'MySuperSecretPassword'
 
 # Pass the password to an environmental variable for PostgreSQL
@@ -109,7 +109,7 @@ Set-Location $installPath\Repository\PostgreSQL\*\bin
 Remove-Item Env:\PGPASSWORD
 ```
 
-As a note for this script, it is backing up all the databases used by Qlik Sense Enterprise as of **February 2020** including the optional [Centralized Logging database](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Qlik-Logging-Service.htm). Please reference documentation for your version of Qlik Sense Enterprise to ensure full coverage for the databases used. The ideal page for this list is Qlik's page on [installing and configuring PostgreSQL](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Installing-configuring-postgresql.htm) which outlines the databases which are needed to be present.
+As a note for this script, it is backing up all the databases used by Qlik Sense Enterprise as of **February 2020** including the optional [Centralized Logging database](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Qlik-Logging-Service.htm). Please reference documentation of the version of Qlik Sense Enterprise that is running to ensure full coverage for the databases used. The ideal page for this list is Qlik's page on [installing and configuring PostgreSQL](https://help.qlik.com/en-US/sense-admin/Subsystems/DeployAdministerQSE/Content/Sense_DeployAdminister/QSEoW/Deploy_QSEoW/Installing-configuring-postgresql.htm) which outlines the databases which are needed to be present.
 
 ### Certificates  <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 
@@ -124,10 +124,10 @@ There are three certificates on a Qlik site:
 **Script** 
 
 ```powershell
-# Define your backup directory
+# Define the backup directory
 $backupDir = 'C:\QSR'
 
-# Define your certificate password
+# Define the certificate password
 $pwd = 'MySuperSecretPassword'
 
 # Create backup directory if needed
