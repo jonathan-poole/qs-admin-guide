@@ -63,6 +63,8 @@ If there is a considerable quantity of streams, consider the [Qlik CLI method](#
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
+**Streams should always be removed manually. The below script is only used to identify what streams are empty.**
+
 ### Script
 ```powershell
 # Script to find empty streams
