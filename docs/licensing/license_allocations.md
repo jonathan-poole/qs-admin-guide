@@ -89,6 +89,15 @@ Go to the 'Overview' sheet of the Qlik Sense "License Monitor" app
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_Duplicate.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_Duplicate.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_Duplicate.png)
 
 
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessTypeAdded.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessTypeAdded.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessTypeAdded.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddAccessType.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddAccessType.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddAccessType.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AnalyzerTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AnalyzerTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AnalyzerTrend.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_DragFilterPane.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_DragFilterPane.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_DragFilterPane.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)
 
 
 
