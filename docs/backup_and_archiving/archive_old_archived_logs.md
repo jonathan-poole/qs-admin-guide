@@ -55,7 +55,7 @@ Again this is a baseline, will need to be adjusted for the legal, contractual, a
 **cacheinitializer_deploy.log**
 
 ```powershell
-# Specify the age threshold which you want to keep
+# Specify the age threshold which is desired
 # e.g. 60 would move all logs older than 60 days
 $days = "60"
 
@@ -68,7 +68,7 @@ $option2 = "/e"
 # Path of Qlik Sense Logs, typically the Archived Logs
 $source = "C:\QlikShare\ArchivedLogs"
 
-# Path of where you want the log files moved
+# Path of where the log files should be moved
 $dest = "C:\OldLogs"
 
 # Remove logs y/n
