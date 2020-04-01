@@ -133,3 +133,13 @@ Select 'Analyzer' in the filter pane and view/analyze the growth rate in Analyze
 Repeart for 'Professional'. In this sample, the growth line is flat. 
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)
+
+TO make it faster for next time, rename the sheet to 'User License Trend' by clicking in the white space above the app objects as shown by the arrow in the image below, then alter the 'Lable' to 'User License Trend'
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)
+
+Note that the renamed sheet is available as 'My Sheet'. The sheet will persist until next time. 
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend2.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend2.png)
