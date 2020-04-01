@@ -43,11 +43,11 @@ In the upper right hand side of the screen, select the **Column selector**, and 
 
 [![check_new_streams_native_2.png](images/check_new_streams_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/check_new_streams_native_2.png)
 
-Now select the filter icon for the **Created** column, and then select the filter of **Today** (or **Last seven days** if you'd like a slightly larger rolling window).
+Now select the filter icon for the **Created** column, and then select the filter of **Last seven days**, or the desired range.
 
 [![check_new_streams_native_3.png](images/check_new_streams_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/check_new_streams_native_3.png)
 
-Lastly, you can review the resulting table and view any new streams.
+Lastly, review the resulting table and view any new streams.
 
 [![check_new_streams_native_4.png](images/check_new_streams_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/check_new_streams_native_4.png)
 
@@ -57,56 +57,54 @@ Lastly, you can review the resulting table and view any new streams.
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-The script will bring back any streams with a **Created Date** that is greater than or equal to x days old. The script will then store the output into the location of your choice in either csv or json format.
+The script will bring back any streams with a **Created Date** that is greater than or equal to x days old. The script will then store the output into a desired location in either csv or json format.
 
 ### Script
 ```powershell
-# Function to collect streams that were created in the last x days
+# Script to collect streams that were created in the last x days
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'machineName'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$daysBack = 1
+
+# machine name
+$computerName = '<machine-name>'
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# set the number of days back for the app created date
+$daysBack = 7
+# directory for the output file
 $filePath = 'C:\'
+# desired filename of the output file
 $fileName = 'output'
+# desired format of the output file (can be 'json' or 'csv')
 $outputFormat = 'json'
 
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
+
+# set the date to the current time minus $daysback
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
-# Main
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
+# check the output format
+# get all streams that are created >= $date
+# output results to $outfile
 If ($outputFormat.ToLower() -eq 'csv') {
   Get-QlikStream -filter "createdDate ge '$date'" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
   }  Else {
   Get-QlikStream -filter "createdDate ge '$date'" -full | ConvertTo-Json | Set-Content $outFile
-}
-```
-
-### Example Output
-```
-{
-    "id":  "b4062a80-bf90-48ad-9328-12c945743f1e",
-    "createdDate":  "2020/03/03 21:13",
-    "modifiedDate":  "2020/03/03 21:13",
-    "modifiedByUserName":  "QLIK-POC\\dpi",
-    "customProperties":  [
-
-                         ],
-    "owner":  {
-                  "id":  "27a825fe-3cad-488a-9dcd-d436a90e319c",
-                  "userId":  "dpi",
-                  "userDirectory":  "QLIK-POC",
-                  "name":  "dpi",
-                  "privileges":  null
-              },
-    "name":  "Delete",
-    "tags":  null,
-    "privileges":  null,
-    "schemaPath":  "Stream"
 }
 ```
 
