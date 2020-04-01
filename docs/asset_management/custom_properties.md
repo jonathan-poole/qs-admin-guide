@@ -23,13 +23,13 @@ Benefits:
 
 ## Goal
 {:.no_toc}
-Regularly checking for new/modified custom properties allows you to track what/how users are controlling security and management across your Qlik environment.
+Regularly checking for new/modified custom properties allows the administrator to track what/how users are controlling security and management across the Qlik environment.
 
-Some of the goals:
-  - Discover new custom properties so that their usage can be identified (e.g. through contacting the creator)
-  - Identify modified custom properties so that their expanded usage can be identified and tracked
-  - Regulate the amount of custom property value options, as there can be performance impacts if there are many
-  - Identify whether individual custom properties are being leveraged for security rules or for management/automation purposes
+Some of the outcomes:
+  - Discover new custom properties so that their usage can be identified (e.g. through contacting the creator).
+  - Identify modified custom properties so that their expanded usage can be identified and tracked.
+  - Regulate the amount of custom property value options, as there can be performance impacts if there are many.
+  - Identify whether individual custom properties are being leveraged for security rules or for management/automation purposes.
 
 ## Table of Contents
 {:.no_toc}
@@ -48,7 +48,7 @@ In the upper right hand side of the screen, select the **Column selector**, and 
 
 [![check_new_custom_properties_native_2.png](images/check_new_custom_properties_native_2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_custom_properties_native_2.png)
 
-Now select the filter icon for the **Created** column, and then select the filter of **Today** (or **Last seven days** if you'd like a slightly larger rolling window).
+Now select the filter icon for the **Created** column, and then select the filter of **Last seven days**, or the desired range.
 
 [![check_new_custom_properties_native_3.png](images/check_new_custom_properties_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_custom_properties_native_3.png)
 
@@ -70,7 +70,7 @@ Now select the filter icon for the **Conditions** column, and then enter the nam
 
 [![check_new_custom_properties_native_6.png](images/check_new_custom_properties_native_6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_custom_properties_native_6.png)
 
-If any security rules are using this rule, they will be visible, and you can then explore the rule and confirm whether it is enabled or disabled.
+If any security rules are using this rule, they will be visible, so the rule can then be explored to confirm whether it is enabled or disabled.
 
 [![check_new_custom_properties_native_7.png](images/check_new_custom_properties_native_7.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/check_new_custom_properties_native_7.png)
 
@@ -80,57 +80,54 @@ If any security rules are using this rule, they will be visible, and you can the
 
 The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
-The script will bring back any custom properties that have been created or modified within the las x days. The script will then store the output into the location of your choice in either csv or json format.
+The script will bring back any custom properties that have been created or modified within the las x days. The script will then store the output into a desired location in either csv or json format.
 
 ### Script
 ```powershell
-# Function to collect custom properties that were created or modified within the last x days
+# Function to collect custom properties that were created or modified in the last x days
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
-$computerName = 'machineName'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
-$daysBack = 1
-$filePath = 'C:\'
-$fileName = 'output'
-$outputFormat = 'json' # can be 'json' or 'csv'
 
+# machine name
+$computerName = '<machine-name>'
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# set the number of days back for the app created date
+$daysBack = 7
+# directory for the output file
+$filePath = 'C:\'
+# desired filename of the output file
+$fileName = 'output'
+# desired format of the output file (can be 'json' or 'csv')
+$outputFormat = 'json'
+
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
+
+# set the date to the current time minus $daysback
 $date = (Get-Date -date $(Get-Date).AddDays(-$daysBack) -UFormat '+%Y-%m-%dT%H:%M:%S.000Z').ToString()
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
-# Main
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
 
+# check the output format
+# get all custom properties that are created/modified >= $date
+# output results to $outfile
 If ($outputFormat.ToLower() -eq 'csv') {
-  Get-QlikReloadTask -filter "createdDate ge '$date'" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
+  Get-QlikCustomProperty -filter "createdDate ge '$date' or modifiedDate ge '$date'" -full | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile
   }  Else {
-  Get-QlikReloadTask -filter "createdDate ge '$date'" -full | ConvertTo-Json | Set-Content $outFile
-}
-```
-
-### Example Output
-```
-{
-    "id":  "776ac36a-084b-4d1b-989a-877c83d22efb",
-    "createdDate":  "2020/03/04 03:20",
-    "modifiedDate":  "2020/03/04 03:31",
-    "modifiedByUserName":  "QLIK-POC\\dpi",
-    "name":  "Department",
-    "valueType":  "Text",
-    "choiceValues":  [
-                         "HR",
-                         "Finance",
-                         "Marketing",
-                         "Sales"
-                     ],
-    "objectTypes":  [
-                        "Stream",
-                        "User"
-                    ],
-    "description":  "",
-    "privileges":  null,
-    "schemaPath":  "CustomPropertyDefinition"
+  Get-QlikCustomProperty -filter "createdDate ge '$date' or modifiedDate ge '$date'" -full | ConvertTo-Json | Set-Content $outFile
 }
 ```
 
