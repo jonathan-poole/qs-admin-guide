@@ -12,3 +12,12 @@
     background-color: #eb7734;
     opacity: 0.8;
 }
+
+.img {
+  max-width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#171717)";
+  -moz-box-shadow: 4px 4px 13px 1px rgba(23,23,23,0.7);
+  -webkit-box-shadow: 4px 4px 13px 1px rgba(23,23,23,0.7);
+  -box-shadow: 4px 4px 13px 1px rgba(23,23,23,0.7);
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#171717);
+}
