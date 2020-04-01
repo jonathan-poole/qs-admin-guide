@@ -54,6 +54,7 @@ Applications that were published to this stream will now be visible.
 [![remove_unused_stream_04.png](images/remove_unused_stream_04.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/streams/images/remove_unused_stream_04.png)
 
 This process should be repeated for each **Stream** to find unused streams.
+
 If there is a considerable quantity of streams, consider the [Qlik CLI method](#get-list-of-unused-streams-qlik-cli-).
 
 -------------------------
@@ -64,46 +65,63 @@ The below script snippet requires the [Qlik CLI](../../tooling/qlik_cli.md).
 
 ### Script
 ```powershell
-# Script to find any empty streams
+# Script to find empty streams
 
-# Parameters
+################
+## Parameters ##
+################
+
 # Assumes default credentials are used for the Qlik CLI Connection
+
+# machine name
 $computerName = 'machineName'
-$virtualProxyPrefix = '/default' # leave empty if windows auth is on default VP
+# leave empty if windows auth is on default VP
+$virtualProxyPrefix = '/default'
+# directory for the output file
 $filePath = 'C:\'
+# desired filename of the output file
 $fileName = 'output'
+# desired format of the output file (can be 'json' or 'csv')
 $outputFormat = 'json'
 
+################
+##### Main #####
+################
+
+# set the output file path
 $outFile = ($filePath + $fileName + '.' + $outputFormat)
+
+# if the output file already exists, remove it
+if (Test-Path $outFile) 
+{
+  Remove-Item $outFile
+}
+
+# set the computer name for the Qlik connection call
 $computerNameFull = ($computerName + $virtualProxyPrefix).ToString()
 
-# Main
+# connect to Qlik
 Connect-Qlik -ComputerName $computerNameFull -UseDefaultCredentials -TrustAllCerts
-$streamJson = Get-QlikStream -raw -full
-$appStreamIds = Get-QlikApp -filter "published eq true" | foreach{$_.stream.id} | Sort-Object | Get-Unique
-$emptyStreamIDs = ($streamJson | foreach{$_.id}) | ?{$appStreamIds -notcontains $_}
-$streamEmptyJson = $streamJson | ?{$emptyStreamIDs -contains $_.id}
 
-(&{If($emptyStreamIDs.count) {$("Empty Streams Found: " + $emptyStreamIDs.count) ; $streamEmptyJson} Else {"No Empty Streams Found"}})
-If ($emptyStreamIDs.count) {
+# GET all streams
+$streamJson = Get-QlikStream -raw
+
+# GET all applications, and then get all unique stream ids
+$appStreamIds = Get-QlikApp -filter "published eq true" | foreach{$_.stream.id} | Sort-Object | Get-Unique
+
+# compare both lists to see if any stream ids belong to no apps
+$emptyStreamIds = ($streamJson | foreach{$_.id}) | ?{$appStreamIds -notcontains $_}
+
+# if there are any empty streams, retain the full detail of them
+$streamEmptyJson = $streamJson | ?{$emptyStreamIds -contains $_.id}
+
+# see if there are any empty streams
+(&{If($emptyStreamIds.count) {$("Empty Streams Found: " + $emptyStreamIDs.count); $streamEmptyJson} Else {"No Empty Streams Found"}})
+
+# if there are any empty streams, write them to $outfile
+If ($emptyStreamIds.count) {
     (&{If($outputFormat.ToLower() -eq 'csv') {$streamEmptyJson | ConvertTo-Csv -NoTypeInformation | Set-Content $outFile} Else {$streamEmptyJson | ConvertTo-Json | Set-Content $outFile}})
 }
-```
-
-### Example Output
-```
-[
-    {
-        "id":  "b4062a80-bf90-48ad-9328-12c945743f1e",
-        "name":  "An Empty Stream",
-        "privileges":  null
-    },
-    {
-        "id":  "450e940c-13cd-48b7-bc19-2b1f51c8da22",
-        "name":  "Another Empty Stream",
-        "privileges":  null
-    }
-]
 ```
 
 **Tags**
