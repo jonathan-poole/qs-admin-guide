@@ -75,6 +75,18 @@ Go to the 'Overview' sheet of the Qlik Sense "License Monitor" app
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview.png)
 
 
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessType.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessType.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessType.png)
+
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessType_Delete.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessType_Delete.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AccessType_Delete.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend_Linear.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend_Linear.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend_Linear.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend_Linear_TwoPoints.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend_Linear_TwoPoints.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_AddTrend_Linear_TwoPoints.png)
+
+[![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_Duplicate.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_Duplicate.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_Duplicate.png)
 
 
 
