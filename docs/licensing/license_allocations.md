@@ -134,7 +134,7 @@ Repeart for 'Professional'. In this sample, the growth line is flat.
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_ProfessionalTrend.png)
 
-TO make it faster for next time, rename the sheet to 'User License Trend' by clicking in the white space above the app objects as shown by the arrow in the image below, then alter the 'Lable' to 'User License Trend'
+To make it faster for next time, rename the sheet to 'User License Trend' by clicking in the white space above the app objects as shown by the arrow in the image below, then alter the 'Lable' to 'User License Trend'
 
 [![Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png](images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
 guide/master/docs/license/images/Analyze_Audit_License_Allocations_HUB_License_Monitor_App_Overview_UserLicenseTrend.png)
