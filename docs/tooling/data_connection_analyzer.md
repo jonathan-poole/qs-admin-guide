@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Connection Analyzer
-nav_order: 6
+nav_order: 3
 parent: Tooling Appendix
 ---
 
