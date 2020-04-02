@@ -37,7 +37,7 @@ The goal of this procedure is to remove unnecessary (unused) applications from a
 
 This page leverages the **Operations Monitor**. Please refer to the [Operations Monitor](../../tooling/operations_monitor.md) page for an overview and relevant documentation links.
 
-### Confirm License Monitor is Operational
+### Confirm Operations Monitor is Operational
 
 Navigate to the **Monitoring apps** and select the _Details_ button (info icon) on the **Operations Monitor** application. Confirm that the application's data is up-to-date.
 
