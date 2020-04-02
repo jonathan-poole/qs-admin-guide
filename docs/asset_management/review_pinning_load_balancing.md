@@ -2,7 +2,8 @@
 layout: default
 title: Review Pinning/Load Balancing
 nav_order: 9
-parent: Asset Management
+grand_parent: Asset Management
+parent: Apps
 ---
 
 # Review Pinning/Load Balancing <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
