@@ -3,7 +3,7 @@ layout: default
 title: Analyze Data Connections
 parent: Data Connections
 grand_parent: Asset Management
-nav_order: 2
+nav_order: 1
 ---
 
 # Analyze Data Connections <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
