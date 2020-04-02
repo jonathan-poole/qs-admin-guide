@@ -22,7 +22,7 @@ Benefits:
 
 ## Goal
 {:.no_toc}
-The goal for this monthly activity is to review the available disk space on the storage devices which are used by Qlik Sense Enterprise. For some organizations, IT groups have monitoring configured for shared storage. In these instances this activity may not be needed by administrators of those Qlik Sense deployments. This activity will instruct the administrator on how to enumerate the storage dependencies for their Qlik Sense Enterprise cluster and thus allow the administrator to manually check for disk space usage or confirm with their IT groups that those devices are already monitored.
+The goal for this monthly activity is to review the available disk space on the storage devices which are used by Qlik Sense Enterprise. For some organizations, IT groups have monitoring configured for shared storage. In these instances, this activity may not be needed by administrators of those Qlik Sense deployments. This activity will instruct the administrator on how to enumerate the storage dependencies for their Qlik Sense Enterprise cluster and thus allow the administrator to manually check for disk space usage or confirm with their IT groups that those devices are already monitored.
 
 ## Table of Contents
 {:.no_toc}
@@ -35,11 +35,11 @@ The goal for this monthly activity is to review the available disk space on the 
 
 ### Storage used for Data Connections
 
-In the QMC, select **Data Connections**:
+In the QMC, select **Data Connections**.
 
 [![storage-1.png](images/storage-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/storage-1.png)
 
-In the upper right hand side of the screen, select the **Column selector**, and then select the **Connection String** and **Type** columns. If you'd like to make the resulting table a bit more manageable, you can also optionally deselect the **Tags** column.
+In the upper right hand side of the screen, select the **Column selector**, and then select the **Connection String** and **Type** columns. To make the resulting table a bit more manageable, optionally deselect the **Tags** column.
 
 [![storage-2.png](images/storage-2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/storage-2.png)
 
@@ -47,11 +47,11 @@ Now select the filter icon for the **Type** column and then filter on `folder`.
 
 [![storage-3.png](images/storage-3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/storage-3.png)
 
-At this stage sort by **Connection String** so that you can see the groupings of paths that are used for data sources for your Qlik Sense Enterprise cluster:
+At this stage sort by **Connection String** so that the groupings are visible for paths that are used for data sources.
 
 [![storage-4.png](images/storage-4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/system_planning/images/storage-4.png)
 
-**Note**: If this is a multi-node Qlik Sense site then the presence of local paths (`C:\`, `D:\`) is concerning. See our section on [Analyzing Data Connections](..\asset_management\data_connections\analyze_data_connections.html) for guidance on converting these to UNC share paths.
+**Note**: If this is a multi-node Qlik Sense site then the presence of local paths (`C:\`, `D:\`) is concerning. Refer to [Analyzing Data Connections](..\asset_management\data_connections\analyze_data_connections.html) for guidance on converting these to UNC share paths.
 
 ### Storage used for Qlik Sense storage
 
@@ -77,7 +77,7 @@ After completing each step, the administrator will have an enumerated list of st
 
 At this juncture, the administrator should check the percentage of available free space on each device. For shared storage which is administered by other teams (e.g. SAN or NAS devices) confirm with the relevant team(s) as to percentage of available free space.
 
-If monitoring is **not** configured for any of the enumerated storage dependencies then the administrator should record the percentage in a location for reference on the following month. This will allow the administrator to build out projections for the storage needs over the next 6-24 months. This projection then can be used to justify budget for additional storage for shared storage devices or to anticipate where additional storage should be allocated to VMs (if virtualization is used).
+If monitoring is **not** configured for any of the enumerated storage dependencies, then the administrator should record the percentage in a location for reference on the following month. This will allow the administrator to build out projections for the storage needs over the next 6-24 months. This projection then can be used to justify budget for additional storage for shared storage devices or to anticipate where additional storage should be allocated to VMs (if virtualization is used).
 
 **Tags**
 
