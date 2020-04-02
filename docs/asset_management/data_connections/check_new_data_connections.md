@@ -3,7 +3,7 @@ layout: default
 title: Check for New Data Connections
 parent: Data Connections
 grand_parent: Asset Management
-nav_order: 1
+nav_order: 2
 ---
 
 # Check for New Data Connections <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
