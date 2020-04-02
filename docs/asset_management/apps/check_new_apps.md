@@ -3,7 +3,7 @@ layout: default
 title: Check for New Apps
 parent: Apps
 grand_parent: Asset Management
-nav_order: 1
+nav_order: 3
 ---
 
 # Check for New Apps <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
