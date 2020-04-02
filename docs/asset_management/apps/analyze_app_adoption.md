@@ -3,7 +3,7 @@ layout: default
 title: Analyze App Adoption
 parent: Apps
 grand_parent: Asset Management
-nav_order: 5
+nav_order: 1
 ---
 
 # Analyze App Adoption <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
