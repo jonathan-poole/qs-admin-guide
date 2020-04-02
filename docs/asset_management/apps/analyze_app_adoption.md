@@ -178,3 +178,7 @@ Insert the expression `count({<[Session Count]={1}>} DISTINCT UserId)`. Name the
 View the the completed chart. It is easy to spot when there are many distinct users with few sessions each, or when there are only a few users with many sessions. Ensure that you select each of the top five applications (as well as the bottom five) and view the trends.
 
 [![app_adoption_16.png](images/app_adoption_16.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/app_adoption_16.png)
+
+**Tags**
+
+#monthly
