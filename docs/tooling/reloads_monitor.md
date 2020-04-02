@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reloads Monitor
-nav_order: 3
+nav_order: 8
 parent: Tooling Appendix
 ---
 
