@@ -19,7 +19,7 @@ parent: Tooling Appendix
 {:toc}
 
 ## About
-Cache Warming in Qlik Sense Enterprise refers to programmatically opening Qlik applications so that the base application is preloaded into RAM before user's attempt to open the application. When users open and interact with a Qlik application, there are three types of caching which occur. This can be visualized using this example:
+Cache Warming in Qlik Sense Enterprise refers to programmatically opening Qlik applications so that the base application is preloaded into RAM before users attempt to open the application. When users open and interact with a Qlik application, there are three types of caching which occur. This can be visualized using this example:
 
 [![cache_warming-1.png](images/cache_warming-1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/tooling/images/cache_warming-1.png)
 
@@ -31,7 +31,7 @@ In this example, the types are symbolized by colors:
 - Dark Green : User session cache
 - Light Green : Cached result set cache
 
-The **Base App** cache is the result of the Qlik Engine opening the Qlik app from disk and uncompressing it into RAM. This process is what is occurring when a user opens an app and must wait for the list of sheets to load. The **user session** cache is the meta-data of a user's session with a given app. This includes things like the current selections and all previous selections. This cache is generally quite low in terms of a percentage since it's pure metadata; think metadata like `country=canada` rather than any resulting calculations from that selection. The **Cached result set** cache is the cache of the _calculations_ which resulted from all user's selections. This would be something like `SUM(Sales)` or `SUM(Sales)` when the user had `country=canada` selected.
+The **Base App** cache is the result of the Qlik Engine opening the Qlik app from disk and uncompressing it into RAM. This process is what is occurring when a user first opens an app (or if the app opens on a new engine) and must wait for the app to render. The **user session** cache is the meta-data of a user's session with a given app. This includes things like the current selections and all previous selections. This cache is generally quite low in terms of a percentage since it's pure metadata; think metadata like `country=canada` rather than any resulting calculations from that selection. The **Cached result set** cache is the cache of the _calculations_ which resulted from all user's selections. This would be something like `Sum(Sales)` or `Count(DISTINCT ProductId)` when the user had `country=canada` selected.
 
 For many deployments of Qlik Sense Enterprise, an administrator may want to reduce the time spent waiting for an app to *initially* load. To achieve this, a cache warming process needs to be run.
 
@@ -61,7 +61,7 @@ In order to cache warm a Qlik app, the administrator needs to run a process whic
 
 ### CacheInitializer <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 
-The [`CacheInitializer`](https://github.com/jparis/CacheInitializer) is a project initially developed by a Product Manager at Qlik but since taken on by the America's Presales Enterprise Architecture team. It is a project built in C# using the .NET SDK to:
+The [`CacheInitializer`](https://github.com/jparis/CacheInitializer) is a project initially developed by a Product Manager at Qlik, but has since been taken on by the America's Presales Enterprise Architecture team. It is a project built in C# using the .NET SDK to:
 
 1. open apps
 2. (optionally) pre-cache the visualizations on the app's sheets
@@ -71,7 +71,7 @@ It is a very lightweight tool which is ideal for an initial introduction to cach
 
 #### Usage
 
-To use the `CacheInitializer` tool, the administrator will download the tool from the project's [releases page](https://INSERTWHENWEFINALIZE) (or optionally download the source files and compile themselves in Visual Studio). The release will include the primary executable and supporting files for the tool's execution. Available parameters are:
+To use the `CacheInitializer` tool, the administrator will download the tool from the project's [releases page](https://github.com/eapowertools/CacheInitializer/releases) (or optionally download the source files and compile themselves in Visual Studio). The release will include the primary executable and supporting files for the tool's execution. Available parameters are:
 
 ```
   -s, --server     Required. URL to the server.
@@ -83,9 +83,10 @@ To use the `CacheInitializer` tool, the administrator will download the tool fro
   -v, --values     values to select e.g  "France","Germany","Spain"
   --help           Display this help screen.
 ```
+
 The required parameters are `server` and `app` (specified by Name or ID). The optional parameters allow the administrator to specify a virtual proxy (`-p` or `--proxy`) if Windows authentication is not the prefixless virtual proxy, open up the objects on each sheet in the app (`-o` or `--objects`), pass through selections (`-v` or `--values`) on given fields (`-f` or `--field`).
 
-The tool will use _windows_ authentication to open the app as the user who is executing the process. This means that if this tool is used, the administrator should execute it in the context of a dedicated user who both has a license assigned to them and the required permissions to open the app using security rules (and section access if used).
+The tool will use _Windows_ authentication to open the app as the user who is executing the process. This means that if this tool is used, the administrator should execute it in the context of a dedicated user who both has a license assigned to them and the required permissions to open the app using security rules (and section access if used).
 
 - **Note**: While the parameters have both short and long forms, this guide will use the long forms for consumability purposes.
 - **Note**: This guide will use `--appname` for consumability purposes. It is recommended to use `--appid` to ensure precision of the app being opened.
@@ -101,7 +102,8 @@ the tool will then provide the resulting style of output:
 02:27:55 - Cache initialization complete. Total time: 00:00:07.3192225
 ```
 
-The for a more complex scenario we will open a Qlik app on a specified server and opening all visualizations on the Qlik App. This will build out the **Base App** cache as well as seed the **Cached result sets** cache. Example:
+A more complex scenario involves opening a Qlik app on a specified server and opening all visualizations within the Qlik App. This will build out the **Base App** cache as well as seed the **Cached result sets** cache. Example:
+
 `CacheInitializer.exe --server https://qliksense.company.com --appname "Operations Monitor" --objects`
 the tool will then provide the resulting style of output:
 
@@ -117,7 +119,8 @@ the tool will then provide the resulting style of output:
 02:30:51 - Cache initialization complete. Total time: 00:00:06.5812126
 ```
 
-For the next example we will combine the previous example along with specifying a specific virtual proxy (named `windows`) and passing selections for the **Cached result sets** cache. Example:
+The next example will combine the previous example along with specifying a specific virtual proxy (named `windows`) and passing selections for the **Cached result sets** cache. Example:
+
 `CacheInitializer.exe --server https://qliksense.company.com --proxy windows --appname "Operations Monitor" --objects --field "App Name" --values "Operations Monitor","License Monitor"`
 the tool will then provide the resulting style of output:
 
@@ -139,7 +142,8 @@ the tool will then provide the resulting style of output:
 02:33:57 - Operations Monitor: App cache completed
 02:33:57 - Cache initialization complete. Total time: 00:00:09.1996060
 ```
-In this last example, we will open a specific application across multiple Qlik Engine nodes (using dedicated virtual proxies for each Engine) both with no selections and with defined selections:
+
+In this last example, a specific application is opened across multiple Qlik Engine nodes (using dedicated virtual proxies for each Engine) both with no selections and with defined selections:
 
 ```powershell
 # Function for logging
@@ -209,6 +213,7 @@ foreach ($vp in $vps) {
 }
 
 ```
+
 Resulting log file:
 
 **cacheinitializer_deploy.log**
@@ -333,9 +338,9 @@ Since configuration of this tool is covered on the tool's [GitHub](https://githu
 - Edit `butler-cw-master\config\production.yaml`
   - Set an appropriate logDirectory
 - If running on one of the members of the Qlik Sense cluster, then proceed to execution
-  - If not, then you'll need to grab the `client.pem` and `client_key.pem` from `C:\ProgramData\Qlik\Sense\Repository\Exported Certificates\.Local Certificates` on one of the members
-    - You'll also need NodeJS installed on the server
-  - Then adjust the `clientCertPath` & `clientCertKeyPath` paths in `production.yaml` to the path where those certificates live
+  - If not, grab the `client.pem` and `client_key.pem` from `C:\ProgramData\Qlik\Sense\Repository\Exported Certificates\.Local Certificates` on one of the members
+    - NodeJS needs to be installed on the server
+  - Adjust the `clientCertPath` & `clientCertKeyPath` paths in `production.yaml` to the path where those certificates live
 - Execute in a command prompt:
   - If on one of the members of the Qlik Sense Cluster, this works:
     - `cd C:\temp\butler-cw-master`
@@ -410,13 +415,13 @@ C:\temp\butler-cw-master>"C:\Program Files\Qlik\Sense\ServiceDispatcher\Node\"no
 
 ### Qlik Sense Scalability Tools <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 
-The last project that we will review is the [`Qlik Sense Scalability Tools`](https://community.qlik.com/t5/Qlik-Scalability/Qlik-Sense-Scalability-Tools/gpm-p/1490846). This is a project created by Qlik's Performance and Scalability team within R&D. It is an open source release of one of the key pieces of tooling that Qlik's R&D team uses to test scalability and performance of Qlik Sense Enterprise. It is a compiled project using the .NET SDK to:
+The last project that will be reviewied is the [`Qlik Sense Scalability Tools`](https://community.qlik.com/t5/Qlik-Scalability/Qlik-Sense-Scalability-Tools/gpm-p/1490846). This is a project created by Qlik's Performance and Scalability team within R&D. It is an open source release of one of the key pieces of tooling that Qlik's R&D team uses to test scalability and performance of Qlik Sense Enterprise. It is a compiled project using the .NET SDK to:
 
 1. open apps
 2. (optionally) pre-cache the visualizations on the app's sheets
 3. (optionally) pass selections
 
-While the Scalability Tools package is _primarily_ used for scale testing Qlik applications, it does allow for command line execution which means that it can be used for cache warming activities. When using this approach, the administrator needs to ensure that the user/users being simulated both has/have a license assigned to them and the required permissions to open the app using security rules (and section access if used).
+While the Scalability Tools package is _primarily_ used for scale testing Qlik applications, it does allow for command line execution, which means that it can be used for cache warming activities. When using this approach, the administrator needs to ensure that the user/users being simulated both has/have a license assigned to them and the required permissions to open the app using security rules (and section access if used).
 
 #### Usage
 
@@ -426,7 +431,7 @@ Once the scenario is built and initial success is found using the process, the a
 
 `C:\scalabilitytools\SDKExerciser\Sep2018\SDKExerciserConsole.exe config="C:\scalabilitytools\Scenario\app1-cachewarm.json" configname="1-app1-cachewarm" server=qliksenseserver02 app="325c3daa-1aeb-434c-9c1d-c7ce14ee201a" ssl=True headername=X-Qlik-User virtualproxyprefix=header iterations=1 usernameprefix=CacheWarmUser concurrentusers=1 rampupdelay=2.00 executiontime=3600 instancenumber=1 appmode=Open newuserforeachiteration=True afteriterationwait=NoWait afteriterationwaittime=0 logDir="C:\scalabilitytools\Results\cachewarm"`
 
-In this execution we are defining the scenario that we want to run (`config`), the Qlik Proxy that we want to connect to (`server`), the header based virtual proxy that we will authenticate to (`virtualproxyprefix` + it's corresponding `headername`), the app that we want to open (`app`), and the user that we are simulating's prefix (`usernameprefix`).
+This execution defines the scenario to run (`config`), the Qlik Proxy to connect to (`server`), the header based virtual proxy to authenticate against (`virtualproxyprefix` + it's corresponding `headername`), the app to open (`app`), and the user's prefix (`usernameprefix`).
 
 #### Limitations
 
