@@ -2,7 +2,7 @@
 search_exclude: true
 ---
 
-## Qlik Sense Admin Playbook
+## Home | Playbook
 
 A repository of administrative best practices, organized by time and type.
 
