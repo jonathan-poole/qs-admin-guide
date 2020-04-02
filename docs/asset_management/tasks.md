@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tasks
-nav_order: 3
+nav_order: 8
 parent: Asset Management
 has_children: true
 ---
