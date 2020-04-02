@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Review Pinning/Load Balancing
-nav_order: 9
+nav_order: 6
 grand_parent: Asset Management
 parent: Apps
 ---
