@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Check for New/Modified Security Rules
-nav_order: 1
+nav_order: 2
 grand_parent: Asset Management
 parent: Security Rules
 ---
