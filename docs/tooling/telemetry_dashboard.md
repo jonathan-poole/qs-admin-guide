@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Telemetry Dashboard
-nav_order: 4
+nav_order: 9
 parent: Tooling Appendix
 ---
 
