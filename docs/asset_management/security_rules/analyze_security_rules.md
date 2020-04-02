@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Analyze Security Rules
-nav_order: 2
+nav_order: 1
 grand_parent: Asset Management
 parent: Security Rules
 ---
