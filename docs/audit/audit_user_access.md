@@ -67,9 +67,9 @@ In this example, Andrew has **Read** and **Publish** access to the `Monitoring A
 ### Tips
 
 
-- Be sure to set an appropriate context. Security rules can be applied to the QMC, Hub, or Both. The default value for this is Both which will result in showing access if the user has access to the asset _either_ in the QMC and/or Hub. If this is the intended audit, then the default choice is acceptable. But for most use cases, the administrator will want to be specific about the context.[!
+- Be sure to set an appropriate context. Security rules can be applied to the QMC, Hub, or Both. The default value for this is Both which will result in showing access if the user has access to the asset _either_ in the QMC and/or Hub. If this is the intended audit, then the default choice is acceptable. But for most use cases, the administrator will want to be specific about the context.
 
-[user_access-6.png](images/user_access-6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/audit/images/user_access-6.png)
+[![user_access-6.png](images/user_access-6.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/audit/images/user_access-6.png)
 
 - (1) : In the Upper right hand corner the administrator can select **Privileges to audit** which will allow the administrator to select which security rule actions they are auditing.
 - (2) : The list of available Privileges changes as the administrator changes the `Target Resource` since the types of action(s) which can be applied to a Qlik entity inside of a security rule varies. For example, the Export Data action is applied at the App level. That action neither exists nor makes sense at the Stream level since Streams do not contain data.
