@@ -1,6 +1,6 @@
 ---
 search_exclude: true
-title: Home \| Playbook
+title: Home | Playbook
 ---
 
 ## Qlik Sense Admin Playbook
