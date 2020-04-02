@@ -52,7 +52,7 @@ In this example the administrator has pinned apps 1 & 2 to the Consume 1 node an
 
 While the scenarios which will be covered in this guide will focus on isolation of apps from the vantage of end users, the same principles can be applied to reload tasks. When a task is started, any node which has a Scheduler and Engine which has an app load balanced to it is eligable to execute this reload. 
 
-* **Note**: Qlik Sense Enterprise has a default and unmodifiable rule named `ResourcesOnCentralNode` which means that the Central node will need to have all Qlik apps available on it. This rule cannot be modified due to architectural assumptions in the design of Qlik Sense Enterprise. For example, that apps which need to be migrated will be migrated by the Central node's Engine. Practically this means that when configuring load balancing rules, the Central node's Engine cannot be configured as a Load Balancing Engine for any Virtual Proxy. Otherwise applications will be opened by the Central node's Engine.
+* **Note**: Qlik Sense Enterprise has a default and unmodifiable rule named `ResourcesOnCentralNode` which means that the Central node will need to have all Qlik apps available on it. This rule cannot be modified due to architectural assumptions in the design of Qlik Sense Enterprise. For example, that apps which need to be migrated will be migrated by the Central node's Engine. Practically this means that when attempting to segregate / isolate apps using load balancing rules, the Central node's Engine should not be configured as a Load Balancing Engine for any Virtual Proxy. Otherwise applications may be opened by the Central node's Engine.
 
 ## Scenario 1 - Isolation of Production from Development
 
