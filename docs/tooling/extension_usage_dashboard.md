@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Extension Usage Dashboard
-nav_order: 5
+nav_order: 4
 parent: Tooling Appendix
 ---
 
