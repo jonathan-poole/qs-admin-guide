@@ -35,9 +35,9 @@ The goal for this spot-check is use the [Qlik Sense Telemetry Dashboard](../tool
 
 ## Prerequisite
 
-The Qlik Sense Telemetry Dashboard is a project created and maintained by the Enterprise Architecture team in Qlik’s Americas Presales organization. It leverages additional logging which can be enabled in Qlik Sense Enterprise February 2018 and newer releases of Qlik Sense with some data enrichment with API calls to provide visualization-level performance data for Qlik apps. The goal of the tool is to present this performance data in actionable ways for administrators / developers to have precision when focusing on performance improvements for Qlik apps.
-
 - [Telemetry Dashboard](../tooling/telemetry_dashboard.md)
+
+The Qlik Sense Telemetry Dashboard is a project created and maintained by the Enterprise Architecture team in Qlik’s Americas Presales organization. It leverages additional logging which can be enabled in Qlik Sense Enterprise February 2018 and newer releases of Qlik Sense with some data enrichment with API calls to provide visualization-level performance data for Qlik apps. The goal of the tool is to present this performance data in actionable ways for administrators / developers to have precision when focusing on performance improvements for Qlik apps.
 
 -------------------------
 
