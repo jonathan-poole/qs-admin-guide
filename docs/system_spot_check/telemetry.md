@@ -12,7 +12,7 @@ nav_order: 3
 
 |                                  		                    | Initial  | Recurring  |
 |---------------------------------------------------------|----------|------------|
-| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1 hr     | 8 min      |
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 35 min   | 8 min      |
 
 Benefits:
 
