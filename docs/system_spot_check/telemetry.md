@@ -12,7 +12,7 @@ nav_order: 3
 
 |                                  		                    | Initial  | Recurring  |
 |---------------------------------------------------------|----------|------------|
-| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 15 Min   | 8 min      |
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**   | 1 hr     | 8 min      |
 
 Benefits:
 
@@ -31,6 +31,14 @@ The goal for this spot-check is use the [Qlik Sense Telemetry Dashboard](../tool
 
 * TOC
 {:toc}
+-------------------------
+
+## Prerequisite
+
+The Qlik Sense Telemetry Dashboard is a project created and maintained by the Enterprise Architecture team in Qlik’s Americas Presales organization. It leverages additional logging which can be enabled in Qlik Sense Enterprise February 2018 and newer releases of Qlik Sense with some data enrichment with API calls to provide visualization-level performance data for Qlik apps. The goal of the tool is to present this performance data in actionable ways for administrators / developers to have precision when focusing on performance improvements for Qlik apps.
+
+- [Telemetry Dashboard](../tooling/telemetry_dashboard.md)
+
 -------------------------
 
 ## Telemetry Dashboard - Details <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
