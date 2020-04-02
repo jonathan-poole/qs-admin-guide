@@ -3,7 +3,7 @@ layout: default
 title: Analyze App Metadata Analyzer
 parent: Apps
 grand_parent: Asset Management
-nav_order: 6
+nav_order: 2
 ---
 
 # Analyze App Metadata Analyzer <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
