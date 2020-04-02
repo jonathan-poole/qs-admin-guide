@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Analyze/Curate Extensions
+parent: Extensions
+grand_parent: Asset Management
 nav_order: 1
-parent: Asset Management
 ---
 
 # Analyze/Curate Extensions <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
