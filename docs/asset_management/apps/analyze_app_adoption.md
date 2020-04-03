@@ -181,4 +181,4 @@ View the the completed chart. It is easy to spot when there are many distinct us
 
 **Tags**
 
-#monthly
+#quarterly
