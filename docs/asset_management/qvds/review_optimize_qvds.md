@@ -6,7 +6,7 @@ grand_parent: Asset Management
 nav_order: 1
 ---
 
-# Review/Optimize QVD Structures  <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
+# Review/Optimize QVDs  <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 
 <span class="label dev">development</span><span class="label prod">production</span>
 
