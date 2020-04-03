@@ -1,8 +1,9 @@
 ---
 search_exclude: true
+title: Home | Playbook
 ---
 
-## Home | Playbook
+## Qlik Sense Admin Playbook
 
 A repository of administrative best practices, organized by time and type.
 
