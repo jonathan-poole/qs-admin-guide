@@ -9,9 +9,19 @@ nav_order: 1
 # Analyze/Curate Extensions <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 {:.no_toc}
 
-## Applicable Environments 
-{:.no_toc}
-- All
+<span class="label all">all</span>
+
+|                                  		                      | Initial    | Recurring   |
+|-----------------------------------------------------------|------------|-------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 45 min     | 10 min      |
+
+Benefits:
+
+  - Reduce/eliminate unsupported extensions
+  - Increase stability
+  - Decrease upgrade maintenance/time
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
@@ -80,4 +90,4 @@ The last activity that will be covered is a bit more difficult to operationalize
 
 **Tags**
 
-#monthly
+#quarterly
