@@ -9,9 +9,19 @@ nav_order: 3
 # Remove/Disable Unused Tasks <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label prod">production</span>
+
+|                                  		                      | Initial    | Recurring   |
+|-----------------------------------------------------------|------------|-------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 20 min     | 5 min       |
+
+Benefits:
+
+  - Increase performance
+  - Increase focus
+  - Decrease redundancy
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
