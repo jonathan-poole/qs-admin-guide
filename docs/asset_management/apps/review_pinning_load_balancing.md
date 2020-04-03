@@ -161,5 +161,5 @@ In the previous scenario, the Qlik administrator isolated specific Qlik apps to 
 
 **Tags**
 
-#monthly
+#quarterly
 

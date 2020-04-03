@@ -9,9 +9,19 @@ nav_order: 3
 # Remove/Disable Unused Tasks <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
+<span class="label prod">production</span>
+
+|                                  		                      | Initial    | Recurring   |
+|-----------------------------------------------------------|------------|-------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 20 min     | 5 min       |
+
+Benefits:
+
+  - Increase performance
+  - Increase focus
+  - Decrease redundancy
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
@@ -31,7 +41,7 @@ The goal is to remove all unnecessary tasks from the site. This will make the si
 
 ### Priority
 
-1. _"Manually triggered reload of..."_ tasks. These tasks should always be routinely cleaned out, as they are created to run once and then typically left to live out their long and lonely lives to never be run again. These are "one-off" tasks that are created and triggered by the **Reload now** option under the **Apps** section in the QMC when selecting a single application.
+  1. _"Manually triggered reload of..."_ tasks. These tasks should always be routinely cleaned out, as they are created to run once and then typically left to live out their long and lonely lives to never be run again. These are "one-off" tasks that are created and triggered by the **Reload now** option under the **Apps** section in the QMC when selecting a single application.
   
   [![remove_unused_tasks_native_1.png](images/remove_unused_tasks_native_1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/remove_unused_tasks_native_1.png)
   
@@ -41,7 +51,7 @@ The goal is to remove all unnecessary tasks from the site. This will make the si
   **Suggested Policy**
     - Do nothing. This is an easy way to clear out reloads that were used for testing, that might otherwise be more difficult to discern.
   
-2. Disabled tasks.
+  2. Disabled tasks.
   
   [![remove_unused_tasks_native_3.png](images/remove_unused_tasks_native_3.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/remove_unused_tasks_native_3.png)
   
@@ -51,9 +61,13 @@ The goal is to remove all unnecessary tasks from the site. This will make the si
   **Suggested Policy**
     - Any disabled task older than 90 days can be deleted without prior validation.
 
-3. Active tasks with no **Next execution**
+  3. Active tasks with no **Next execution**
   
   [![remove_unused_tasks_native_4.png](images/remove_unused_tasks_native_4.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/apps/images/remove_unused_tasks_native_4.png)
   
   **Action**
     - Contact the **Owner** of the application for which the task is associated with, as well as potentially the **Modified by** user of the task.
+
+**Tags**
+
+#monthly

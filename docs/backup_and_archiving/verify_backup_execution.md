@@ -8,11 +8,19 @@ parent: Backup & Archiving
 # Verify Backup Execution  <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {: .no_toc }
 
-stuff stuff stuff.
+<span class="label all">all</span>
 
-## Applicable Environments
-{:.no_toc}
-- All tiers
+|                                  		                      | Initial    | Recurring   |
+|-----------------------------------------------------------|------------|-------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 2 hrs     | 1 hr      |
+
+Benefits:
+
+  - Reduce/eliminate unsupported extensions
+  - Increase stability
+  - Decrease upgrade maintenance/time
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
