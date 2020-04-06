@@ -127,3 +127,10 @@ html *
        font-size: 15px !important;
    }
 }
+
+/* adjust navbar spacing */
+.navigation-list-link {
+    display: block;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
