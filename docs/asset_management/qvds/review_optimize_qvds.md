@@ -88,6 +88,21 @@ Select a column in this table to filter the main table down, and view the detail
 
 "QVD Overlap" is a term for when _many_ column names from two or more QVDs overlap heavily, say 50% or more. Sometimes this is done by design, for example, having a summary and detail version of the QVD can be great for performance, and having segmented QVDs for large datasets is in fact considered a best practices. However, when it is unintended that QVDs greatly overlap each other or are duplicates of each other, it could imply extra reload work, storage bloat, extra maintenance, and could cause confusion among developers, designers, and users.
 
+Navigate to the _QVD Overlap_ sheet.
+
+[![Screnshot - QVD Overlap.png](images/Screnshot - QVD Overlap.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/qvds/images/Screnshot - QVD Overlap.png)
+
+In the _Source → Target Overlap_ table on the right, find and select QVDs that have a large percentage of overlap with other QVDs. 
+
+[![screenshot - Source-Target Overlap 1.png](images/screenshot - Source-Target Overlap 1.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/qvds/images/screenshot - Source-Target Overlap 1.png)
+
+Then individually select the Target QVDs to see the column overlaps between the QVDs.
+
+[![Screenshot - Source Target 2.png](images/Screenshot - Source Target 2.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/asset_management/qvds/images/Screenshot - Source Target 2.png)
+
+Analyze the overlap to determine whether or not it is something to react to. For example, if the two QVDs have a 95% overlap, and they are the same granularity of data, this may be duplicative work and might be confusing to your Qlik Sense developers.   It may also result in inconsistencies down the road, if the QVDs get differing logic in how they are loaded. Though, this can occur if new fields are added to QVDs that are written out monthly. Naturally, as new fields become added, they will begin to differ--which is natural.
+
+
 **Tags**
 
 #quarterly
