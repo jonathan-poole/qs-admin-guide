@@ -24,7 +24,8 @@
   @include mq(md) {
     flex-wrap: nowrap;
     position: absolute;
-    width: $nav-width-md;
+//     width: $nav-width-md;
+    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
     height: 100%;
     flex-direction: column;
     border-right: $border $border-color;
