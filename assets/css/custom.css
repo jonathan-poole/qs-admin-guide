@@ -109,7 +109,13 @@ html *
     }
 }
 
+/* navbar */
+@media (min-width: 59.1111111111rem)
+.navigation, .site-header, .site-footer {
+    width: 325px;
+}
+
 /* limit page content width */
 .page-content {
-   max-width: 1200px;
+   max-width: 1050px;
 }
