@@ -55,6 +55,7 @@ html *
 
 @media (min-width: 59.1111111111rem) {
     .main-content {
+        max-width: 1200px !important;
         margin-left: 248px !important;
     }
 }
@@ -63,5 +64,13 @@ html *
     .side-bar {
         width: 248px;
         min-width: 248px;
+    }
+}
+
+@media (min-width: 44.4444444444rem) {
+    .main-content {
+        position: relative;
+        max-width: 1200px;
+        margin-left: 248px
     }
 }
