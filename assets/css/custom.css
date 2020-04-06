@@ -112,7 +112,7 @@ html *
 /* navbar */
 @media (min-width: 59.1111111111rem)
 .navigation, .site-header, .site-footer {
-    width: 325px;
+    width: 325px !important;
 }
 
 /* limit page content width */
