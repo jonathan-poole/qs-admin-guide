@@ -131,6 +131,6 @@ html *
 /* adjust navbar spacing */
 .navigation-list-link {
     display: block;
-    padding-top: .1rem;
-    padding-bottom: .1rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
 }
