@@ -3,7 +3,7 @@ html *
 {
 /*    font-size: 1em !important;
    color: #000 !important; */
-  font-family: 'Source Sans Pro', sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* buttons for production, development, and all */
