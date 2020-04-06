@@ -1,5 +1,10 @@
 /* update font */
-font-family: 'Source Sans Pro', sans-serif;
+html *
+{
+/*    font-size: 1em !important;
+   color: #000 !important; */
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
 
 /* buttons for production, development, and all */
 .dev {
