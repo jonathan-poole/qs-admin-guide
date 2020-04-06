@@ -124,6 +124,6 @@ html *
 /* adjust navbar font size */
 @media (min-width: 25rem) and (min-width: 40rem) {
    .navigation-list-item {
-       font-size: 16px !important;
+       font-size: 15px !important;
    }
 }
