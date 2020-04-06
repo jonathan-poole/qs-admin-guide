@@ -123,10 +123,10 @@ $header-height: 65px;
 //// Media queries in pixels
 ////
 
-//$media-queries: (
-//xs: 320px,
-//sm: 500px,
-//md: $content-width,
-//lg: $content-width + $nav-width,
-//xl: 1400px
-//);
+$media-queries: (
+xs: 320px,
+sm: 500px,
+md: $content-width,
+lg: $content-width + $nav-width,
+xl: 1400px
+);
