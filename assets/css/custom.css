@@ -78,7 +78,7 @@ html *
 @media (min-width: 44.4444444444rem) {
     .main-content {
         position: relative;
-        max-width: 1200px;
+        max-width: 4000px;
         margin-left: 248px
     }
 }
@@ -107,4 +107,9 @@ html *
     .side-bar {
         width: 375px;
     }
+}
+
+/* limit page content width */
+.page-content {
+   max-width: 1200px;
 }
