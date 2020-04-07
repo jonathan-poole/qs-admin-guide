@@ -6,7 +6,7 @@ grand_parent: Asset Management
 nav_order: 1
 ---
 
-# Analyze/Curate Extensions <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i> <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
+# Analyze/Curate Extensions <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {:.no_toc}
 
 <span class="label all">all</span>
