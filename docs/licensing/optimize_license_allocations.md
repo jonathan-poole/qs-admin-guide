@@ -101,10 +101,6 @@ guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monito
 
 ### 2 - Removing license allocations for users that have not recently logged in or have never logged in  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
-In this section, we import a customized Qlik Sense application 
-
-### 3 - Downgrading Professional allocations to Analyzer allocations for users who are not exercising their 'professional' capabilities  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
-
 
 [![Optimize_License_Allocations_HUB_License_Monitor_Open_UserDetail_Sheet.png](images/Optimize_License_Allocations_HUB_License_Monitor_Open_UserDetail_Sheet.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
 guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_Open_UserDetail_Sheet.png)
@@ -152,6 +148,10 @@ guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monito
 
 [![Optimize_License_Allocations_HUB_OppsMonitor_CreateNewSheet.png](images/Optimize_License_Allocations_HUB_OppsMonitor_CreateNewSheet.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
 guide/master/docs/license/images/Optimize_License_Allocations_HUB_OppsMonitor_CreateNewSheet.png)
+
+### 3 - Downgrading Professional allocations to Analyzer allocations for users who are not exercising their 'professional' capabilities  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
+
+In this section, we import a customized Qlik Sense application 
 
 
 [![Optimize_License_Allocations_QMC_Start_Apps.png](images/Optimize_License_Allocations_QMC_Start_Apps.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
