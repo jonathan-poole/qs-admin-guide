@@ -204,6 +204,10 @@ If YES, then enter a comma delimitted list of App IDs of the ODAG Template Apps 
 If NO, please skip this step and go to the next step
 
 
+[![Optimize_License_Allocations_HUB_LicenseOptimization_ODAGApps.png](images/Optimize_License_Allocations_HUB_LicenseOptimization_ODAGApps.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
+guide/master/docs/license/images/Optimize_License_Allocations_HUB_LicenseOptimization_ODAGApps.png)
+
+
 
 
 
@@ -224,5 +228,9 @@ The summary sheet opens first.  It counts and highlights users with license allo
 
 [![Optimize_License_Allocations_HUB_LicenseOptimization_Summary.png](images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
 guide/master/docs/license/images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary.png)
+
+
+[![Optimize_License_Allocations_HUB_LicenseOptimization_Summary_Filtered.png](images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary_Filtered.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary_Filtered.png)
+
 
 
