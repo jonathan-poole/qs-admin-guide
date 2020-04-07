@@ -183,7 +183,6 @@ function initSearch() {
 
         for (var i in results) {
           var result = results[i];
-          console.log('Result: ' + result);
           var doc = docs[result.ref];
 
           var resultsListItem = document.createElement('li');
@@ -268,6 +267,8 @@ function initSearch() {
               resultPreview.classList.add('search-result-preview');
               resultPreview.innerHTML = preview;
               resultLink.appendChild(resultPreview);
+              console.log('resultPreview: ' + resultPreview);
+
             }
           }
         }
