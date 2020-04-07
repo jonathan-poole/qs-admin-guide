@@ -132,14 +132,17 @@ html *
    }
 }
 
+/* body line height */
 body {
    line-height: 1.6;
 }
 
+/* page content line height */
 .page-content {
    line-height: 1.6;
 }
 
+/* playbook table line height */
 #playbook {
    line-height: 1.2 !important;  
 }
