@@ -221,16 +221,19 @@ Once the app reloads, select 'Analysis' at the top
 [![Optimize_License_Allocations_HUB_LicenseOptimization_Analysis.png](images/Optimize_License_Allocations_HUB_LicenseOptimization_Analysis.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
 guide/master/docs/license/images/Optimize_License_Allocations_HUB_LicenseOptimization_Analysis.png)
 
-The summary sheet opens first.  It counts and highlights users with license allocations that have 
+The summary sheet opens first.  
 
-1) Never logged in
-2) Logged in at the 
+It will show candidates for license removal and license downgrade
 
 [![Optimize_License_Allocations_HUB_LicenseOptimization_Summary.png](images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-
 guide/master/docs/license/images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary.png)
 
+As in section 2 above, when filtering on 'User Access Last Used', it will show users who have not logged since the selected time period as well as users with a license allocation who have never logged in 
 
 [![Optimize_License_Allocations_HUB_LicenseOptimization_Summary_Filtered.png](images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary_Filtered.png)](https://raw.githubusercontent.com/qs-admin-guide/qs-admin-guide/master/docs/license/images/Optimize_License_Allocations_HUB_LicenseOptimization_Summary_Filtered.png)
+
+It also shows professionals who currently do not own any non-ODAG generated Apps or App Objects and could be candidates for license downgrade. 
+
 
 
 
