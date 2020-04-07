@@ -9,10 +9,18 @@ parent: System Planning
 # Review/Update Capacity Plan
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
+<span class="label prod">production</span>
 
-- Production
+|                                  		                      | Initial    | Recurring   |
+|-----------------------------------------------------------|------------|-------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 1/2 day     | 2 hrs      |
+
+Benefits:
+
+  - Plan for growth
+  - Anticipate user/architectural events
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
