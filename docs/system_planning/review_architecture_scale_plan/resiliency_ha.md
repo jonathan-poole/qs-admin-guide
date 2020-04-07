@@ -9,10 +9,6 @@ nav_order: 2
 # Resiliency & HA
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Prod
-
 ## Goal
 {:.no_toc}
 
