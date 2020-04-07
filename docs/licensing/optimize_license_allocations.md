@@ -16,6 +16,14 @@ parent: Licensing
 {:.no_toc}
 The goal of this activity is to evaluate license growth and needs using the built in "License Monitor" application. At the same time, Qlik Sense administrators should check to ensure its working and collecting usage data. 
 
+There are a three recommendations that license allocations can be monitored and optimized. 
+
+These are:
+
+1 - Removing license allocations for users that have left the organization
+2 - Removing license allocations for users that have not recently logged in or have never logged in
+3 - Downgrading Professional allocations to Analyzer allocations for users who are not exercising their 'professional' capabilities
+
 ## Table of Contents
 {:.no_toc}
 
@@ -23,9 +31,8 @@ The goal of this activity is to evaluate license growth and needs using the buil
 {:toc}
 -------------------------
 
-There are a few ways that license allocations that can be optimized. The following sections will walk through some recommended optimizations.
 
-### Remove license allocations for users that have left the organization or will no longer need access  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
+### 1 - Removing license allocations for users that have left the organization  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
 To get a list of current allocations, go to the HUB , select the "Monitoring apps" stream and select the "License monitor" application
 
@@ -92,6 +99,9 @@ The sample final result is as follows:
 guide/master/docs/license/images/Optimize_License_Allocations_HUB_License_Monitor_CurrentLicenseAllocationsCOMPLETE.png)
 
 
-### Change unused Professional Allocations to Analyzers  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
+### 2 - Removing license allocations for users that have not recently logged in or have never logged in  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
+In this section, we import a customized Qlik Sense application 
+
+### 3 - Downgrading Professional allocations to Analyzer allocations for users who are not exercising their 'professional' capabilities  <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> 
 
