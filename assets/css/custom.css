@@ -75,6 +75,7 @@ html *
 @media (min-width: 59.1111111111rem) {
     .main-content {
         margin-left: 375px;
+        max-width: 4000px;
     }
 }
 
