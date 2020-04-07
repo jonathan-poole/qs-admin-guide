@@ -16,7 +16,8 @@ parent: Audit
 
 Benefits:
 
-  - Ensure Security
+  - Understand user behavior
+  - Increase analysis within Qlik
   
 -------------------------
 
