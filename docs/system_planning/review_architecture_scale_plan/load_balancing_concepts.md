@@ -9,10 +9,6 @@ nav_order: 3
 # Load Balancing Concepts
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
-
 ## Goal
 {:.no_toc}
 
