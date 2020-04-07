@@ -50,16 +50,6 @@ html *
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-
-/* Fix CSS Scaling issue */
-
-@media (min-width: 59.1111111111rem) {
-    .side-bar {
-        width: 248px;
-        min-width: 248px;
-    }
-}
-
 /* .main-content */
 
 @media (min-width: 44.4444444444rem) {
@@ -78,7 +68,6 @@ html *
 @media (min-width: 44.4444444444rem) {
     .main-content {
         position: relative;
-        max-width: 4000px;
         margin-left: 248px
     }
 }
