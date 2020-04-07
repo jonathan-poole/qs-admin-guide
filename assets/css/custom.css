@@ -130,3 +130,7 @@ html *
        font-size: 15px !important;
    }
 }
+
+#playbook {
+   line-height: 1.2 !important;  
+}
