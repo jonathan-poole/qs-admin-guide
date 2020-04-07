@@ -188,7 +188,7 @@ function initSearch() {
           var resultsListItem = document.createElement('li');
           resultsListItem.classList.add('search-results-list-item');
           resultsList.appendChild(resultsListItem);
-
+          
           var resultLink = document.createElement('a');
           resultLink.classList.add('search-result');
           resultLink.setAttribute('href', doc.url);
@@ -267,7 +267,6 @@ function initSearch() {
               resultPreview.classList.add('search-result-preview');
               resultPreview.innerHTML = preview;
               resultLink.appendChild(resultPreview);
-              console.log('preview: ' + preview);
 
             }
           }
