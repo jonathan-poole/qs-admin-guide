@@ -8,9 +8,18 @@ parent: Backup & Archiving
 # Archive Old Archived Logs <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i>
 {: .no_toc }
 
-## Applicable Environments
-{:.no_toc}
-- All tiers
+<span class="label all">all</span>
+
+|                                  		                      | Initial    | Recurring   |
+|-----------------------------------------------------------|------------|-------------|
+| <i class="far fa-clock fa-sm"></i> **Estimated Time**     | 30 min     | 15 min      |
+
+Benefits:
+
+  - Reduce storage costs
+  - Simplify troubleshooting
+  
+-------------------------
 
 ## Goal
 {:.no_toc}
