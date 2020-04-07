@@ -5,7 +5,7 @@ nav_order: 1
 parent: Audit
 ---
 
-# Audit User Access<i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
+# Audit User Access <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i> <i class="fas fa-file-code fa-xs" title="API | Requires Script"></i> <i class="fas fa-tools fa-xs" title="Tooling | Pre-Built Solutions"></i>
 {:.no_toc}
 
 
