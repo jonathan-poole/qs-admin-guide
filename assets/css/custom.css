@@ -135,6 +135,10 @@ body {
    line-height: 1.6;
 }
 
+.page-content {
+   line-height: 1.6;
+}
+
 #playbook {
    line-height: 1.2 !important;  
 }
