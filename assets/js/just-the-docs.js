@@ -61,13 +61,9 @@ function initSearch() {
       
       var index = lunr(function () {
         this.ref('id');
-        console.log('ID: ' + this.ref('id'));
         this.field('title', { boost: 200 });
-        console.log('title: ' + this.ref('title'));
         this.field('content', { boost: 2 });
-        console.log('content: ' + this.ref('content'));
         this.field('url');
-        console.log('url: ' + this.ref('url'));
         this.metadataWhitelist = ['position']
         
         for (var i in data) {
@@ -79,9 +75,6 @@ function initSearch() {
           });
         }
       });
-       
-      console.log(index);
-      console.log(data);
 
       searchResults(index, data);
     } else {
@@ -190,6 +183,7 @@ function initSearch() {
 
         for (var i in results) {
           var result = results[i];
+          console.log('Result: ' + result);
           var doc = docs[result.ref];
 
           var resultsListItem = document.createElement('li');
