@@ -267,7 +267,7 @@ function initSearch() {
               resultPreview.classList.add('search-result-preview');
               resultPreview.innerHTML = preview;
               resultLink.appendChild(resultPreview);
-              console.log('resultPreview: ' + resultPreview);
+              console.log('preview: ' + preview);
 
             }
           }
