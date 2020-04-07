@@ -9,10 +9,6 @@ nav_order: 1
 # Architecture 101 (Components, Terminology)
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- All
-
 ## Goal
 {:.no_toc}
 
