@@ -131,6 +131,10 @@ html *
    }
 }
 
+.body {
+   line-height: 1.6;
+}
+
 #playbook {
    line-height: 1.2 !important;  
 }
