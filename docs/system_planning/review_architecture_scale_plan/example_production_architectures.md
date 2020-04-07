@@ -9,10 +9,6 @@ nav_order: 4
 # Example Production Architectures
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Prod
-
 ## Goal
 {:.no_toc}
 
