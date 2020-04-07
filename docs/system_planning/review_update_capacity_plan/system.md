@@ -9,10 +9,6 @@ nav_order: 3
 # Capacity Plan: System <i class="fas fa-dolly-flatbed fa-xs" title="Shipped | Native Capability"></i>
 {:.no_toc}
 
-## Applicable Environments
-{:.no_toc}
-- Prod
-
 ## Goal
 {:.no_toc}
 
