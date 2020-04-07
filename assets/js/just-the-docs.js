@@ -79,6 +79,9 @@ function initSearch() {
           });
         }
       });
+       
+      console.log(index);
+      console.log(data);
 
       searchResults(index, data);
     } else {
